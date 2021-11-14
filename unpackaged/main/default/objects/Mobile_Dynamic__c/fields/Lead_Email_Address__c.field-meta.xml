@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Email_Address__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Lead email address based on app users territory, either defined on the user record or contact record
+*this is the internal biocomposites email address</inlineHelpText>
+    <label>Biocomposites email address for lead</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

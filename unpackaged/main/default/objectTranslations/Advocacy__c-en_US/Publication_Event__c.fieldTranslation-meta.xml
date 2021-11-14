@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Name of publication / in-house collateral / paper / event --></help>
+        <label><!-- Publication / Event --></label>
+        <name>Publication_Event__c</name>
+    </CustomFieldTranslation>

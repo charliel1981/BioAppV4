@@ -1,0 +1,3 @@
+<apex:page standardController="DOF__c" sidebar="false" showHeader="false">
+  <apex:image height="200px" value="{!DOF__c.Signature_Capture__c}" />
+</apex:page>

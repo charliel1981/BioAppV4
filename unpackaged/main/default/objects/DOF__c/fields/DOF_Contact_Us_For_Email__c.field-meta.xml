@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOF_Contact_Us_For_Email__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Bio_Email_To_Send_To__c = &quot;usorders@biocomposites.com&quot;, 
+&quot;Tel: 910-350-8015&quot;&amp;BR()&amp;&quot;email: infous@biocomposites.com&quot;, 
+&quot;Tel: +44 (0) 1782 338580&quot;&amp;BR()&amp;&quot;email: info@biocomposites.com&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DOF Contact Us For Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

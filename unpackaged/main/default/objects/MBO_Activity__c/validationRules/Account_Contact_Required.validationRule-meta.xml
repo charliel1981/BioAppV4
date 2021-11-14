@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Contact_Required</fullName>
+    <active>false</active>
+    <description>Checks if at least an account of contact has been added to the MBO record.</description>
+    <errorConditionFormula>AND(Contact__c = &#39;&#39;,Surgeon__c = &#39;&#39;)</errorConditionFormula>
+    <errorMessage>You must enter a Distributor / Hospital / Surgeon or a Contact to proceed</errorMessage>
+</ValidationRule>

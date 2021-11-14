@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The hospital email address. 
+if the email address is stated on this record then it will be that 
+otherwise it takes the address from the hospital record
+If the field is &quot;do not send&quot; then this field will be blank --></help>
+        <label><!-- Hospital email for order conf. --></label>
+        <name>Hospital_Email_Address__c</name>
+    </CustomFieldTranslation>

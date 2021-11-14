@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indicates whether to send a confirmation email. If no alternative address is provided use the main email address --></help>
+        <label><!-- Send Confirmation --></label>
+        <name>Send_Confirmation__c</name>
+        <picklistValues>
+            <masterLabel>Do not send</masterLabel>
+            <translation><!-- Do not send --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send to address on file</masterLabel>
+            <translation><!-- Send to address on file --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send to alternative address</masterLabel>
+            <translation><!-- Send to alternative address --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

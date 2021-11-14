@@ -1,0 +1,332 @@
+<ion-view cache-view="false" hide-back-button="true">
+  <ion-nav-title>
+    New account
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button ng-show="vm.showCancel" class="ng-hide button button-icon icon ion-android-close" ng-click="vm.cancelNewAccount()"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <div ng-switch="vm.step">
+
+      <!-- default -->
+      <div ng-switch-default>
+        <div class="row row-no-padding responsive-sm">
+          <div class="col col-50">
+            <ion-list>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-click="vm.gotoStep('hosp-details')">
+                Add new account
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-href="#/app/newaccounthistory">
+                History
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+            </ion-list>
+          </div>
+        </div>
+      </div> <!-- / default -->
+
+      <!-- hosp-details -->
+      <div ng-switch-when="hosp-details">
+        <div>
+          <h4 class="bio-sub-heading">Hospital details</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Hospital name:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.account.hospitalName" placeholder="Hospital name..." class="bio-card-input-width" maxlength="200" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Address:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <textarea ng-model="vm.account.address" rows="7" placeholder="Street address, city, state, zip code..." class="bio-card-input-full-width" maxlength="255"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button ng-show="vm.showBackButton" class="button button-positive bio-button-prev" ng-click="vm.gotoStep('default')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.inputValidation('bill-address')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / hosp-details -->
+
+      <!-- bill-address -->
+      <div ng-switch-when="bill-address">
+        <div>
+          <h4 class="bio-sub-heading">Billing address</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="item item-input-inset item-text-wrap bio-card-item">
+              <ion-checkbox ng-model="vm.billingAddress.isSameAsMainAddress" class="bio-new-account-checkbox-wide checkbox-dark" ng-change="vm.billAddressCheckboxChange('isSameAsMainAddress')">Same as main address</ion-checkbox>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="item item-input-inset item-text-wrap bio-card-item">
+              <ion-checkbox ng-model="vm.billingAddress.isAlternativeAddress" class="bio-new-account-checkbox-wide checkbox-dark" ng-change="vm.billAddressCheckboxChange('isAlternativeAddress')">Alternative billing address</ion-checkbox>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="item item-input-inset bio-card-item bio-card-input-full-width">
+              <textarea ng-model="vm.account.alternateBillingAddressDetails" rows="7" placeholder="Street address, city, state, zip code..." class="bio-card-input-full-width" maxlength="255"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('hosp-details')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.inputValidation('products')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / bill-address -->
+
+      <!-- products -->
+      <div ng-switch-when="products">
+        <div>
+          <h4 class="bio-sub-heading">Products</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="col bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Confirm products and pricing agreed.</div>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="item item-input-inset item-text-wrap bio-card-item bio-new-account-product">
+              <ion-checkbox ng-model="vm.account.STIMULANRapidCure5cc" class="bio-new-account-checkbox-wide checkbox-dark">STIMULAN Rapid Cure 5cc</ion-checkbox>
+              <div class="bio-new-account-product-price">
+                <div class="bio-currency-sign">{{::vm.currencySymbol}}</div>
+                <input type="number" style="width:65px;" ng-model="vm.account.STIMULANRapidCure5ccPrice" step="0.01" min="0" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="item item-input-inset item-text-wrap bio-card-item bio-new-account-product">
+              <ion-checkbox ng-model="vm.account.STIMULANRapidCure10cc" class="bio-new-account-checkbox-wide checkbox-dark">STIMULAN Rapid Cure 10cc</ion-checkbox>
+              <div class="bio-new-account-product-price">
+                <div class="bio-currency-sign">{{::vm.currencySymbol}}</div>
+                <input type="number" style="width:65px;" ng-model="vm.account.STIMULANRapidCure10ccPrice" step="0.01" min="0" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="item item-input-inset item-text-wrap bio-card-item bio-new-account-product">
+              <ion-checkbox ng-model="vm.account.STIMULANRapidCure20cc" class="bio-new-account-checkbox-wide checkbox-dark">STIMULAN Rapid Cure 20cc</ion-checkbox>
+              <div class="bio-new-account-product-price">
+                <div class="bio-currency-sign">{{::vm.currencySymbol}}</div>
+                <input type="number" style="width:65px;" ng-model="vm.account.STIMULANRapidCure20ccPrice" step="0.01" min="0" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="item item-input-inset item-text-wrap bio-card-item bio-new-account-product">
+              <ion-checkbox ng-model="vm.account.STIMULANKit5cc" class="bio-new-account-checkbox-wide checkbox-dark">STIMULAN Kit 5cc</ion-checkbox>
+              <div class="bio-new-account-product-price">
+                <div class="bio-currency-sign">{{::vm.currencySymbol}}</div>
+                <input type="number" style="width:65px;" ng-model="vm.account.STIMULANKit5ccPrice" step="0.01" min="0" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="item item-input-inset item-text-wrap bio-card-item bio-new-account-product">
+              <ion-checkbox ng-model="vm.account.STIMULANKit10cc" class="bio-new-account-checkbox-wide checkbox-dark">STIMULAN Kit 10cc</ion-checkbox>
+              <div class="bio-new-account-product-price">
+                <div class="bio-currency-sign">{{::vm.currencySymbol}}</div>
+                <input type="number" style="width:65px;" ng-model="vm.account.STIMULANKit10ccPrice" step="0.01" min="0" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="item item-input-inset item-text-wrap bio-card-item bio-new-account-product">
+              <ion-checkbox ng-model="vm.account.STIMULANBullet" class="bio-new-account-checkbox-wide checkbox-dark">STIMULAN Bullet Mat and Introducer</ion-checkbox>
+              <div class="bio-new-account-product-price">
+                <div class="bio-currency-sign">{{::vm.currencySymbol}}</div>
+                <input type="number" style="width:65px;" ng-model="vm.account.STIMULANBulletPrice" step="0.01" min="0" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="col bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Additional products</div>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="item item-input-inset bio-card-item bio-card-input-full-width">
+              <textarea ng-model="vm.account.otherProductDetails" rows="3" placeholder="Insert additional product details here..." class="bio-card-input-full-width" maxlength="255"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('bill-address')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.inputValidation('add-info')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / products -->
+
+      <!-- add-info -->
+      <div ng-switch-when="add-info">
+        <div>
+          <h4 class="bio-sub-heading">Additional information</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Hospital contact for further information:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <textarea ng-model="vm.account.hospitalContactInfo" rows="5" placeholder="Name, extension number..." class="bio-card-input-full-width" maxlength="255"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Additional comments:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <textarea ng-model="vm.account.additionalComments" rows="7" placeholder="Additional comments..." class="bio-card-input-full-width" maxlength="255"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('products')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.inputValidation('confirm')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / add-info -->
+
+      <!-- confirm -->
+      <div ng-switch-when="confirm">
+        <div>
+          <h4 class="bio-sub-heading">New account confirmation</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label>Name:</ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.account.hospitalName}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top">Address:</ion-label>
+            <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.account.address}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top">Billing address:</ion-label>
+            <div ng-show="vm.billingAddress.isAlternativeAddress" class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.account.alternateBillingAddressDetails}}</div>
+            <div ng-show="!vm.billingAddress.isAlternativeAddress" class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">Same as above</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top">Products:</ion-label>
+            <div>
+              <div ng-show="vm.account.STIMULANRapidCure5cc" class="bio-flex bio-new-account-product-confirm">
+                <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 5cc</div>
+                <div ng-show="vm.account.STIMULANRapidCure5ccPrice" class="bio-new-account-product-price">
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{vm.account.STIMULANRapidCure5ccPrice}}</div>
+                </div>
+              </div>
+              <div ng-show="vm.account.STIMULANRapidCure10cc" class="bio-flex bio-new-account-product-confirm">
+                <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 10cc</div>
+                <div ng-show="vm.account.STIMULANRapidCure10ccPrice" class="bio-new-account-product-price">
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{vm.account.STIMULANRapidCure10ccPrice}}</div>
+                </div>
+              </div>
+              <div ng-show="vm.account.STIMULANRapidCure20cc" class="bio-flex bio-new-account-product-confirm">
+                <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 20cc</div>
+                <div ng-show="vm.account.STIMULANRapidCure20ccPrice" class="bio-new-account-product-price">
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{vm.account.STIMULANRapidCure20ccPrice}}</div>
+                </div>
+              </div>
+              <div ng-show="vm.account.STIMULANKit5cc" class="bio-flex bio-new-account-product-confirm">
+                <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Kit 5cc</div>
+                <div ng-show="vm.account.STIMULANKit5ccPrice" class="bio-new-account-product-price">
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{vm.account.STIMULANKit5ccPrice}}</div>
+                </div>
+              </div>
+              <div ng-show="vm.account.STIMULANKit10cc" class="bio-flex bio-new-account-product-confirm">
+                <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Kit 10cc</div>
+                <div ng-show="vm.account.STIMULANKit10ccPrice" class="bio-new-account-product-price">
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{vm.account.STIMULANKit10ccPrice}}</div>
+                </div>
+              </div>
+              <div ng-show="vm.account.STIMULANBullet" class="bio-flex bio-new-account-product-confirm">
+                <div ng-show="vm.account.STIMULANBulletPrice" class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-md">STIMULAN Bullet Mat and...</div>
+                <div ng-show="!vm.account.STIMULANBulletPrice" class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-md">STIMULAN Bullet Mat and Introducer</div>
+                <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-sd">STIMULAN Bullet Mat and Introducer</div>
+                <div ng-show="vm.account.STIMULANBulletPrice" class="bio-new-account-product-price">
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+                  <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{vm.account.STIMULANBulletPrice}}</div>
+                </div>
+              </div>
+              <div ng-show="vm.account.otherProductDetails!==''" class="bio-flex bio-new-account-product-confirm">
+                <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.account.otherProductDetails}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top">Hospital contact:</ion-label>
+            <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.account.hospitalContactInfo}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top">Comments:</ion-label>
+            <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.account.additionalComments}}</div>
+          </div>
+          <div class="bio-row-spacer-sd">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('add-info')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-submit" ng-click="vm.inputValidation('submit')">Submit</button>
+          </div>
+        </div>
+      </div> <!-- / confirm -->
+
+    </div>
+
+  </ion-content>
+</ion-view

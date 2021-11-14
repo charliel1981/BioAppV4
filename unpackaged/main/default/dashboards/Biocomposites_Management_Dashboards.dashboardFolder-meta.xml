@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>Biocomposites_Manager</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>US_Marketing</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <name>01.Biocomposites Management Dashboards</name>
+</DashboardFolder>

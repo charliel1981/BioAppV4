@@ -1,0 +1,20 @@
+<table>
+<tr><td style="height:10px;"><div style="padding-top:4px;padding-bottom:3px;">Dear  {!Contact.FirstName},</br></br></div></td></tr>
+
+<tr><td><div style="color:#31B404;padding-top:0px;padding-bottom:2px;"><H1 style="margin:10px 0px"><span style="font-family:Arial;font-size:18px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:31B404;">
+Update your New Hospital Account Form today.</span></H1></br></div></td></tr>
+
+<tr><td ><div style="padding-bottom:25px;"> <b>Beginning on <u>June 20th</u>, the Customer Service team will only accept the current version of the New Hospital Account Form.</b><br>Please ensure that you have the current form saved  or printed and delete or discard any previous versions.
+<br /><br />
+ The Distributor Hub is your resource for the most up-to-date forms and information. The current New Hospital Account Form can be found under the account management section of the Distributor Hub. Login <a href=http://hub.biocomposites.com>here</a>  to access and download the form today.   Please contact your Customer Service Representative for further information.<br><br>Kind regards,</br></div></td></tr>
+
+<tr><td colspan="3" ><div style="padding-bottom:10px;"></div></td>
+<tr><td>{!User.FirstName} {!User.LastName} M.S.<br />
+{!User.Title} <br />
+{!User.CompanyName} <br />
+{!User.Street} <br />
+{!User.City}, {!User.StateCode} {!User.PostalCode} <br />
+Office: {!User.Phone} <br />
+Fax: {!User.Fax}<br />
+</td></tr>
+</table>

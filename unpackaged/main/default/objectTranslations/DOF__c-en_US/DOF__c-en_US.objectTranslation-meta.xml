@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DOF</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DOFs</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>DOF Layout</layout>
+        <sections>
+            <label><!-- Auto populated fields --></label>
+            <section>Auto populated fields</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Email fields --></label>
+            <section>Email fields</section>
+        </sections>
+        <sections>
+            <label><!-- Signature --></label>
+            <section>Signature</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- DOF --></label>
+        <name>DOF</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Stock Take --></label>
+        <name>Stock_Take</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_Dof --></label>
+        <name>Create_Dof</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Mobile_App_Email_Sent</name>
+        <subject><!-- Mobile App Email Sent --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

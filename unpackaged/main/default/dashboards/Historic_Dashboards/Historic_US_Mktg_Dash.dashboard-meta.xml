@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>false</isGridLayout>
+    <leftSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Number of US Sales Representatives with Hub logins up to today&#39;s date in current month.  Logins by Historic users are not counted as their profiles have been disabled.</footer>
+            <groupingSortProperties />
+            <header># Reps with Hub Logins</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Last_Login_Current_Month_US</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Current Month</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Monthly total Sales Reps with Hub Logins broken down by # each region contributed to total in current year.  Logins by Historic users are not counted as their profiles have been disabled.</footer>
+            <groupingSortProperties />
+            <header># Reps with Hub Logins by Month</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Reps_with_Logins_x_Month_2016_17_US</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Current Year</title>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Number of current US reps who have logged onto hub in current year. Logins by Historic users are not counted as their profiles have been disabled.</footer>
+            <groupingSortProperties />
+            <header>Total # Reps with Hub Logins by Region</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Regional_Logins_Last_Login_US</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Current Year</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Number of current US reps who have logged onto hub since the beginning of time. Logins by Historic users are not counted as their profiles have been disabled.</footer>
+            <groupingSortProperties />
+            <header>Total # Reps with Logins - By Region</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Regional_Logins_Last_Login_All_Time</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>All Time</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Number of current US reps within region who have never logged onto Distributor Hub, but do have accounts and access to do so.</footer>
+            <groupingSortProperties />
+            <header># Reps without Logins</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Reps_without_Logins_by_Region_US</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>All Time</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Number of reps given Distributor Hub access by region in the last 30 days.</footer>
+            <groupingSortProperties />
+            <header># New Reps Added to Hub By Region</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/New_Reps_Added_to_Hub_US</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Last 30 Days</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties />
+            <header>Contacts Marked as Historic</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Contacts_marked_historic_current_year</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Current Year</title>
+            <useReportChart>true</useReportChart>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>BarGrouped</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>All time total number of DOFS submitted via app by Distributorship with name of Sales Rep who submitted order.</footer>
+            <groupingColumn>DOF__c.Distributor__c</groupingColumn>
+            <groupingColumn>CUST_CREATED_NAME</groupingColumn>
+            <groupingSortProperties />
+            <header># DOFS Submitted via app x Distributorship</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/DOFS_Submitted_via_App_x_Distributor_US</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>All time</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Number of DOFS submitted via app by Internal Biocomposites staff. All time.</footer>
+            <groupingSortProperties />
+            <header>DOFS Submitted via App - Internal Biocomposites Staff</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>Marketing/DOFS_Submitted_via_App_US</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>All time</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Number of new hospital, distributor and surgeon accounts created in the last 90 days by region.</footer>
+            <groupingSortProperties />
+            <header>New Hospital/Distributor/Surgeon Accounts x Region</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/New_Hospitals_Accounts1</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Created in Last 90 Days</title>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Total number of surgeons attributed to each region. All accounts will show in app order form.</footer>
+            <groupingSortProperties />
+            <header># of Surgeon Accounts x Region</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Surgeons_in_Region_US</report>
+            <showPercentage>true</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>All current</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Number of hospitals in Salesforce covered by each region from largest to smallest.</footer>
+            <groupingSortProperties />
+            <header>Total Number of Hospitals in Region</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Hospitals_in_Region1</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>true</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>All US Regions</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Number of hospitals covered by each Distributorship.</footer>
+            <groupingSortProperties />
+            <header># of Hospitals in Distributorship</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>X06_FMS_Reports/Hospitals_In_Distributorship</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>true</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>All US Distributorships</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Donut</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>All regions, all distributorships, all reps. Progress tracking toward goal of 100% completion.</footer>
+            <groupingColumn>BucketField_14419151</groupingColumn>
+            <groupingSortProperties />
+            <header>Compliance Training Status - US</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Compliance_Training_Status_US</report>
+            <showPercentage>true</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Total Number / Percent Pass vs. Fail</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>% of current US reps who have passed or failed compliance out of entire region (100%).</footer>
+            <groupingSortProperties />
+            <header>Compliance Training Status - US</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Marketing/Compliance_Training_Status_US</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>% of Pass/Fail Contacts by Region</title>
+            <useReportChart>true</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardTableColumn>
+                <column>Maxemail__MaxemailEmail__c.Maxemail__subject_line__c</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>true</calculatePercent>
+                <column>Maxemail__MaxemailEmail__c.Maxemail__total_opens__c</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>true</calculatePercent>
+                <column>Maxemail__MaxemailEmail__c.Maxemail__total_clickthrus__c</column>
+                <showTotal>true</showTotal>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>true</calculatePercent>
+                <column>Maxemail__MaxemailEmail__c.Maxemail__total_sent__c</column>
+                <showTotal>true</showTotal>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Total sends, clicks and opens for most popular Hub Notifications sent via Max Email over the last 120 days. Opens and Clickthrus are not necessarily unique - Multiple Opens and Clickthrus by each e-mail recipient are counted in total.</footer>
+            <groupingSortProperties />
+            <header>Hub Notification Engagement - Sales reps only</header>
+            <indicatorBreakpoint1>300.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>600.0</indicatorBreakpoint2>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#FFFFFF</indicatorLowColor>
+            <indicatorMiddleColor>#FFFFFF</indicatorMiddleColor>
+            <report>Marketing/US_E_Notification_Engagement_All_reps</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Last 120 days</title>
+        </components>
+    </rightSection>
+    
+    <textColor>#000000</textColor>
+    <title>Historic_US Marketing Dashboard</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

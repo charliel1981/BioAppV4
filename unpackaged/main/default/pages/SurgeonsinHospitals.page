@@ -1,0 +1,5 @@
+<apex:page standardController="Account" >
+ <iframe id="gridFrame" scrolling="auto" height="300" width="100%" frameborder="0"
+   src="/apex/gbfree__Grid?gname=Surgeons_in_Hosipitals&fpf=Surgeon__c&fpv={!Account.PersonContactId}&sh=0&ssb=0&sbb=2&ea=1&ps=50">
+ </iframe>
+</apex:page>

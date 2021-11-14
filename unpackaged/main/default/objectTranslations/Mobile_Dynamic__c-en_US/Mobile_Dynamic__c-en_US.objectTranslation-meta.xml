@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Mobile Dynamic</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Mobile Dynamic</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Favourite</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mobile Lead</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Email Addresses For Sending --></label>
+            <section>Email Addresses For Sending</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Account</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Email Feilds --></label>
+            <section>Email Feilds</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Product --></label>
+            <section>Product</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Unsolicited Request</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Email Addresses For Sending --></label>
+            <section>Email Addresses For Sending</section>
+        </sections>
+        <sections>
+            <label><!-- Email fields --></label>
+            <section>Email fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Used to create a Favourite for an App User to a Hospital (SIH record) --></description>
+        <label><!-- Favourite Hospital --></label>
+        <name>Favourite_Hospital</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to create a Favourite for an App User to a Surgeon in Hospital (SIH record) --></description>
+        <label><!-- Favourite Surgeon --></label>
+        <name>Favourite_Surgeon</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to record Leads from the Bio Hub Mobile Apps --></description>
+        <label><!-- Mobile Lead --></label>
+        <name>Mobile_Lead</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to record New Accounts from the Bio Hub Mobile Apps --></description>
+        <label><!-- New Account --></label>
+        <name>New_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to record unsolicited requests from the Bio Hub Mobile Apps --></description>
+        <label><!-- Unsolicited Request --></label>
+        <name>Unsolicited_Request</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <workflowTasks>
+        <name>App_Email_Sent</name>
+        <subject><!-- App Email Sent --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

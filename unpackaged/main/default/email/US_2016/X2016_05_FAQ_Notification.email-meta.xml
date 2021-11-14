@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>May 2016 FAQ Hub Notification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2016 05 FAQ Notification</name>
+    <style>none</style>
+    <subject>What questions need answering for increased confidence selling STIMULAN?</subject>
+    <textOnly>Dear  {!Contact.FirstName},
+Don&#39;t let unanswered questions interfere with your sales calls.
+Do you have questions about the indications, mixing and setting times or compressive strength of STIMULAN? Do you ever receive questions from your surgeons related to drainage, heterotopic ossification or the risk of hypercalcemia when discussing STIMULAN? If so...your questions are now answered!
+
+An updated FAQs document is now available that answers the questions above and many more. This document can be found under the sales tools section of the Distributor Hub. Please login here to view the new FAQs document.
+
+Kind regards,
+{!User.FirstName} {!User.LastName} M.S.
+{!User.Title}
+{!User.CompanyName}
+{!User.Street}
+{!User.City}, {!User.StateCode} {!User.PostalCode}
+Office: {!User.Phone}
+Fax: {!User.Fax}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

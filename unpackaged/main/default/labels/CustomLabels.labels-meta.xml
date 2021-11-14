@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Community_Year</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community Copyright Year</shortDescription>
+        <value>2019</value>
+    </labels>
+    <labels>
+        <fullName>PushHubEmailFailureNotifier</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PushHubEmailFailureNotifier</shortDescription>
+        <value>chandu@ceterna.com</value>
+    </labels>
+    <labels>
+        <fullName>SurgeonInHospitalAdminLimit</fullName>
+        <categories>MC Boilerplate</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SurgeonInHospitalAdminLimit</shortDescription>
+        <value>6000</value>
+    </labels>
+    <labels>
+        <fullName>SurgeonInHospitalAdminLimitV2i3</fullName>
+        <categories>MC Boilerplate</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SurgeonInHospitalAdminLimitV2i3</shortDescription>
+        <value>50000</value>
+    </labels>
+    <labels>
+        <fullName>SurgeonInHospitalCommunityUserLimit</fullName>
+        <categories>MC Boilerplate</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SurgeonInHospitalCommunityUserLimit</shortDescription>
+        <value>6000</value>
+    </labels>
+    <labels>
+        <fullName>SurgeonInHospitalCommunityUserLimitV2i3</fullName>
+        <categories>MC Boilerplate</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SurgeonInHospitalCommunityUserLimitV2i3</shortDescription>
+        <value>50000</value>
+    </labels>
+    <labels>
+        <fullName>SurgeonInHospitalStandardUserLimit</fullName>
+        <categories>MC Boilerplate</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SurgeonInHospitalStandardUserLimit</shortDescription>
+        <value>6000</value>
+    </labels>
+    <labels>
+        <fullName>SurgeonInHospitalStandardUserLimitV2i3</fullName>
+        <categories>MC Boilerplate</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SurgeonInHospitalStandardUserLimitV2i3</shortDescription>
+        <value>50000</value>
+    </labels>
+    <labels>
+        <fullName>ToAddresssesForContactUs</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ToAddresssesForContactUs</shortDescription>
+        <value>web_marketing@biocomposites.com</value>
+    </labels>
+</CustomLabels>

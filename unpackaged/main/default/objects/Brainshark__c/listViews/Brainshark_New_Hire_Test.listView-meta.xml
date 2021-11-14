@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brainshark_New_Hire_Test</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>GBFirstName__c</columns>
+    <columns>GBLastName__c</columns>
+    <columns>GBEMail__c</columns>
+    <columns>Sort_Title__c</columns>
+    <columns>Viewing_Time_Mins__c</columns>
+    <columns>ViewTotalPctofSlides__c</columns>
+    <columns>PercentScore__c</columns>
+    <columns>ViewTotalSlidesViewed__c</columns>
+    <columns>ViewTotalScore__c</columns>
+    <columns>ViewTotalPoints__c</columns>
+    <columns>ViewTotalPctofDuration__c</columns>
+    <columns>ViewingTime__c</columns>
+    <columns>ViewCompleted__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>GBCustom2__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>GBFirstName__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>GBCustom1__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Brainshark New Hire Test</label>
+    <sharedTo>
+        <role>US_Marketing</role>
+    </sharedTo>
+</ListView>

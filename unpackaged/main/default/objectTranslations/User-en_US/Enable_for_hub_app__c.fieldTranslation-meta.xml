@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This function is active for &apos;community&apos; uers only.
+Full licences can access the app whether this is ticked or not. --></help>
+        <label><!-- Enable for hub app --></label>
+        <name>Enable_for_hub_app__c</name>
+    </CustomFieldTranslation>

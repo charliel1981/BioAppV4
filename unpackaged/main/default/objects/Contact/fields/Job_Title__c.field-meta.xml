@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Title__c</fullName>
+    <externalId>false</externalId>
+    <label>Job Title</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts</fullName>
+                <default>false</default>
+                <label>Accounts</label>
+            </value>
+            <value>
+                <fullName>Inventory Planner</fullName>
+                <default>false</default>
+                <label>Inventory Planner</label>
+            </value>
+            <value>
+                <fullName>Logistics Coordinator</fullName>
+                <default>false</default>
+                <label>Logistics Coordinator</label>
+            </value>
+            <value>
+                <fullName>PA</fullName>
+                <default>false</default>
+                <label>PA</label>
+            </value>
+            <value>
+                <fullName>Procurement</fullName>
+                <default>false</default>
+                <label>Procurement</label>
+            </value>
+            <value>
+                <fullName>Sales &amp; Marketing</fullName>
+                <default>false</default>
+                <label>Sales &amp; Marketing</label>
+            </value>
+            <value>
+                <fullName>Sales Representative</fullName>
+                <default>false</default>
+                <label>Sales Representative</label>
+            </value>
+            <value>
+                <fullName>CEO</fullName>
+                <default>false</default>
+                <label>CEO</label>
+            </value>
+            <value>
+                <fullName>Managing Director</fullName>
+                <default>false</default>
+                <label>Managing Director</label>
+            </value>
+            <value>
+                <fullName>Consultant Orthopaedic Surgeon</fullName>
+                <default>false</default>
+                <label>Consultant Orthopaedic Surgeon</label>
+            </value>
+            <value>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+                <label>Dentist</label>
+            </value>
+            <value>
+                <fullName>Microbiologist</fullName>
+                <default>false</default>
+                <label>Microbiologist</label>
+            </value>
+            <value>
+                <fullName>Pharmacist</fullName>
+                <default>false</default>
+                <label>Pharmacist</label>
+            </value>
+            <value>
+                <fullName>Professor of Orthopaedics</fullName>
+                <default>false</default>
+                <label>Professor of Orthopaedics</label>
+            </value>
+            <value>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+                <label>Registrar</label>
+            </value>
+            <value>
+                <fullName>Theatre Manager</fullName>
+                <default>false</default>
+                <label>Theatre Manager</label>
+            </value>
+            <value>
+                <fullName>Theatre Nurse</fullName>
+                <default>false</default>
+                <label>Theatre Nurse</label>
+            </value>
+            <value>
+                <fullName>Theatre Staff</fullName>
+                <default>false</default>
+                <label>Theatre Staff</label>
+            </value>
+            <value>
+                <fullName>Theatre Stores</fullName>
+                <default>false</default>
+                <label>Theatre Stores</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

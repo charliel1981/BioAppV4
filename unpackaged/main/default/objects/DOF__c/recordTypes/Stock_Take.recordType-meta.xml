@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stock_Take</fullName>
+    <active>true</active>
+    <label>Stock Take</label>
+    <picklistValues>
+        <picklist>Send_Confirmation__c</picklist>
+        <values>
+            <fullName>Do not send</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send to address on file</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send to alternative address</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stock_Instructions__c</picklist>
+        <values>
+            <fullName>Don%27t replace stock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replace stock to</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Procedure__c</picklist>
+        <values>
+            <fullName>Foot %26 ankle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total joint reconstruction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trauma</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

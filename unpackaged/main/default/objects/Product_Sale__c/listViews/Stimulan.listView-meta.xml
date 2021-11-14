@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stimulan</fullName>
+    <columns>Transaction_Date__c</columns>
+    <columns>Product_Code__c</columns>
+    <columns>Product_Name__c</columns>
+    <columns>Order_Quantity__c</columns>
+    <columns>Invoiced_Value__c</columns>
+    <columns>Hospital__c</columns>
+    <columns>Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Name__c</field>
+        <operation>contains</operation>
+        <value>Stimulan</value>
+    </filters>
+    <label>Stimulan</label>
+</ListView>

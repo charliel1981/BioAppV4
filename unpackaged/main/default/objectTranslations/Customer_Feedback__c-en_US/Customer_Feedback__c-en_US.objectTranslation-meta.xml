@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Incident Report / General Feedback</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Incident Reports / General Feedbacks</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Customer Satisfaction Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Satisfaction Survey Information --></label>
+            <section>Customer Satisfaction Survey Information</section>
+        </sections>
+        <sections>
+            <label><!-- Preferred form of communication --></label>
+            <section>Preferred form of communication</section>
+        </sections>
+        <sections>
+            <label><!-- Service Rating --></label>
+            <section>Service Rating</section>
+        </sections>
+        <sections>
+            <label><!-- Standard of Communication --></label>
+            <section>Standard of Communication</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>General Feedback Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- General Feedback Information --></label>
+            <section>General Feedback Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product Details --></label>
+            <section>Product Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Incident layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description of Event --></label>
+            <section>Description of Event</section>
+        </sections>
+        <sections>
+            <label><!-- Incident Report Information --></label>
+            <section>Incident Report Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product and Patient Information --></label>
+            <section>Product and Patient Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Any positive or negative feedback about the company and our products that isn’t covered by the incident report, such as future product development. --></description>
+        <label><!-- General Feedback --></label>
+        <name>General_Feedback</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- The incident report should be used to report any dissatisfaction relating to the identity, quality, durability, reliability, safety or performance of a device after release for use from the manufacturing facility. --></description>
+        <label><!-- Incident Report --></label>
+        <name>Incident_Report</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

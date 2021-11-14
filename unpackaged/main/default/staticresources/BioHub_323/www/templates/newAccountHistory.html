@@ -1,0 +1,25 @@
+<ion-view cache-view="false" hide-back-button="true">
+  <ion-nav-title>
+    New account
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button ng-click="$ionicGoBack()" class="button back-button buttons button-clear header-item">
+      <i class="icon ion-ios-arrow-back"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-android-close" ng-click="vm.goHome()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div>
+      <h4 class="bio-sub-heading">Account history</h4>
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="account in vm.accounts track by $index" ng-click="vm.showModal(account)" class="item item-icon-right bio-history-list-item-add-gold-line bio-history-list-item">
+        <div class="bio-history-item-heading">{{::account.Hospital_Name__c}}</div>
+        <div class="bio-text item-text-wrap">{{::account.Address__c}}</div>
+        <i class="icon ion-ios-arrow-right bio-history-item-more">more</i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

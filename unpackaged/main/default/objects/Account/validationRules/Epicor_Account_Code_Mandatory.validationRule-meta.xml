@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Epicor_Account_Code_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Customer_Code__c  = &quot;&quot;, Record_ERP__c = TRUE)</errorConditionFormula>
+    <errorDisplayField>Customer_Code__c</errorDisplayField>
+    <errorMessage>Account Code is needed if record is to be transferred to Epicor</errorMessage>
+</ValidationRule>

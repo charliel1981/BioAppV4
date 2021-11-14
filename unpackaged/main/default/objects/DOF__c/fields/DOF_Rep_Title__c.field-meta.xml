@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOF_Rep_Title__c</fullName>
+    <description>IF( Bio_Email_To_Send_To__c = &quot;usorders@biocomposites.com&quot;,
+&quot;Distributor Representative &quot;,
+NULL
+)</description>
+    <externalId>false</externalId>
+    <formula>&quot;Distributor Representative &quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DOF Rep Title</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

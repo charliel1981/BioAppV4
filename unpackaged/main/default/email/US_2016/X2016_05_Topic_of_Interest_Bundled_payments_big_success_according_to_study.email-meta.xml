@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>May 2016 Marketing email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2016 05 Topic of Interest: Bundled payments big success, according to study</name>
+    <style>none</style>
+    <subject>Topic of Interest: Bundled payments big success, according to study</subject>
+    <textOnly>Dear  {!Contact.FirstName},
+News for you...
+Will bundled payments do for the costs of joint and hip replacement surgeries what CMS wants them to do?  According to the results from a three-year pilot study conducted by New York University’s Langone Medical Center, they will and they do.
+
+This article can be found under the Topics of Interest section of the Distributor Hub. Please login here to read the full article.
+{!User.FirstName} {!User.LastName}.
+{!User.Title}
+{!User.CompanyName}
+{!User.Street}
+{!User.City}, {!User.StateCode} {!User.PostalCode}
+Cell: {!User.MobilePhone}
+Office: {!User.Phone}
+Fax: {!User.Fax}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

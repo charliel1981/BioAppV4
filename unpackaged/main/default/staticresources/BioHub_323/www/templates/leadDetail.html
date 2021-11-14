@@ -1,0 +1,95 @@
+<div class="modal bio-modal" ng-click="vm.closeModal()">
+  <ion-header-bar>
+    <h1 class="title nav-bar-title">Lead history</h1>
+    <button class="button button-icon ion-android-close"></button>
+  </ion-header-bar>
+  <ion-content>
+    <div>
+      <h4 ng-show="!vm.modal.lead.Lead_Photo_Base64__c" class="bio-sub-heading">{{::vm.modal.lead.Title_Designation__c}} {{::vm.modal.lead.First_Name__c}} {{::vm.modal.lead.Last_Name__c}}</h4>
+      <h4 ng-show="vm.modal.lead.Lead_Photo_Base64__c" class="bio-sub-heading">{{::vm.modal.lead.Date_Entered__c | dateDDMMMYYYY}}</h4>
+    </div>
+    <div class="card bio-card">
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Event name:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.lead.Event_Name__c}}</div>
+      </div>
+      <!-- non photo lead -->
+      <div ng-show="!vm.modal.lead.Lead_Photo_Base64__c">
+        <!-- non photo V1 fields -->
+        <div ng-show="!vm.modal.lead.Name_Title_Institution__c">
+          <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label>Lead job title:</ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.lead.Job_Title__c}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top">Lead hospital/institution:</ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.lead.Hospital_Institution__c}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label>Lead e-mail:</ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.lead.Email__c}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label>Lead telephone:</ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.lead.Telephone__c}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top bio-no-padding-bottom">Lead address:</ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-bottom bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.lead.Address__c}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label></ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-top bio-no-padding-bottom bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.lead.State__c}}</div>
+          </div>
+          <div ng-show="vm.modal.lead.ZIP__c" class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label></ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-top bio-no-padding-bottom bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.lead.ZIP__c}}</div>
+          </div>
+          <div ng-show="vm.modal.lead.Country__c" class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label></ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-top bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.lead.Country__c}}</div>
+          </div>
+        </div>
+        <!-- non photo V2 fields -->
+        <div ng-show="vm.modal.lead.Name_Title_Institution__c">
+          <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top">Name/title/institute:</ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.lead.Name_Title_Institution__c}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+            <ion-label class="bio-flex-align-top">e-mail/telephone/address:</ion-label>
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.lead.Contact_Information__c}}</div>
+          </div>
+        </div>
+      </div>
+      <!-- photo lead -->
+      <div ng-show="vm.modal.lead.Lead_Photo_Base64__c">
+        <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label class="bio-flex-align-top">Photo:</ion-label>
+          <div>
+            <img data-ng-src="data:image/jpg;base64,{{vm.modal.lead.Lead_Photo_Base64__c}}" class="bio-image-detail" />
+          </div>
+        </div>
+      </div>
+
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Product:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.lead.Product__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Notes:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.lead.Notes__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Date entered:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.lead.Date_Entered__c | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Sync date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.lead.CreatedDate | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="bio-row-spacer-sd">
+      </div>
+    </div>
+  </ion-content>
+</div>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This indicates if this record is used for the hub app sharing. 
+When the surgeon is blank it allows the hub app users to see the hospital records --></help>
+        <label><!-- This record is used for hub app sharing --></label>
+        <name>This_blank_record_is_used_for_app_sharin__c</name>
+    </CustomFieldTranslation>

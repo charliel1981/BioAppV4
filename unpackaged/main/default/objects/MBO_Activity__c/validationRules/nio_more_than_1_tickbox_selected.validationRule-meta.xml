@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nio_more_than_1_tickbox_selected</fullName>
+    <active>false</active>
+    <description>you can not select more than 1 of the objectives</description>
+    <errorConditionFormula>Number_of_boxes_ticked__c  &gt;= 2</errorConditionFormula>
+    <errorMessage>You are not permitted to select more than 1 objective</errorMessage>
+</ValidationRule>

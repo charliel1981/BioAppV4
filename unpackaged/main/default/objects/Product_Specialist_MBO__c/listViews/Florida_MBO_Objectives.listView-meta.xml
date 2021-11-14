@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Florida_MBO_Objectives</fullName>
+    <columns>NAME</columns>
+    <columns>Product_Specialist_Formula__c</columns>
+    <columns>Quarter__c</columns>
+    <columns>Pre_Quarter_Meeting_Date__c</columns>
+    <columns>Post_Quarter_Review_Date__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>contains</operation>
+        <value>Florida</value>
+    </filters>
+    <filters>
+        <field>Quarter__c</field>
+        <operation>notEqual</operation>
+        <value>Q1</value>
+    </filters>
+    <label>Florida MBO Objectives</label>
+    <sharedTo>
+        <role>RM_Florida_USA</role>
+    </sharedTo>
+</ListView>

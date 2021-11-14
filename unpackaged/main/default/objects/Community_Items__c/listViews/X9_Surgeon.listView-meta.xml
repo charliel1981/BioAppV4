@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X9_Surgeon</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <columns>Text_For_Brainshark_Tile__c</columns>
+    <columns>DO_NOT_SHOW__c</columns>
+    <columns>Sort_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Community_Items__c.Surgeon</value>
+    </filters>
+    <label>09. Surgeon</label>
+</ListView>

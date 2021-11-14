@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_Title_Inst_for_email__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( Name_Title_Institution__c ), Lead_name__c&amp;BR() &amp; Job_Title__c &amp;BR()&amp; Hospital_Institution__c ,
+Name_Title_Institution__c)</formula>
+    <label>Name Title Inst for email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+    <c:SearchBar />
+    <c:AccountList />
+    
+
+</aura:component>

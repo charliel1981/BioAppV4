@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>lower_extremity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>lower_extremity</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>screen1</name>
+        <label>screen1</label>
+        <locationX>347</locationX>
+        <locationY>157</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>disp1</name>
+            <fieldText>&lt;p&gt;&lt;b&gt;Lower Extremity Analysis Help&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;This data has been extracted from the Definitive Healthcare database.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;It is Medicare’s policy not to provide a claim count for procedures that have 10 or fewer patients. For these procedures, the value of the claim total is provided, but not the number of patients who involved.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;DRG codes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;470: Major joint replacement or reattachment of lower extremity W/O MCC (without major complication and/or comorbidity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;469: Major joint replacement or reattachment of lower extremity W MCC (with major complication and/or comorbidity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;468: Revision of hip or knee replacement W/O CC/MCC (without complication and/or comorbidity/ major complication and/or comorbidity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;467: Revision of hip or knee replacement W CC (with complication and/or comorbidity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;466: Revision of hip or knee replacement W MCC (with major complication and/or comorbidity)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;Est total # claims&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;This includes private payer (estimated), Medicare and Medicaid claims&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;Est total payments&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;This is the amount paid to the hospital after negotiated discounts have been applied. The charge submitted by the hospital to the payer is much higher.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;Readmission rate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;This is based on Medicare data only and produced by CMS.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;The calculation is based on qualifying claims (there are a number of exclusions including: patients with an incomplete Medicare history, discharge takes place at the end of the period and any readmission would be in the next period etc).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;A zero means there were no admissions (numerator=0). A blank field means there are no qualifying claims (denominator=0).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;Readmission rate rank&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;This is based on Medicare data only. Ranking is based on percentiles; a rank of 99 is best.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;Average LOS&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;This is the average length of stay and is based on Medicare data only.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;Veterans Health Administration Hospitals&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;There is limited data available for VA hospitals. Apporximately 50% of veterans enrolled in the VA Healthcare System are eligible for Medicare.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;Ambulatory Surgery Center&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;We do not currently subsribe to the Definitive Healthcare ASC database.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;Kaiser Permanente&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 34, 34);&quot;&gt;This hospital system provides the legal minimum data to CMS and therefore you will see some gaps.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>screen1</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

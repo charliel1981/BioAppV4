@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aggregates>
+        <calculatedFormula>MBO_Activity__c.Grow_top_5_revenue__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Grow Top 5 Revenue Count</masterLabel>
+        <reportType>CustomEntity$MBO_Activity__c@MBO_Activity__c.Surgeon__c</reportType>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>MBO_Activity__c.Add_new_surgeons__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Add New Surgeons Count</masterLabel>
+        <reportType>CustomEntity$MBO_Activity__c@MBO_Activity__c.Surgeon__c</reportType>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>MBO_Activity__c.Maximise_Rep_performance__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Maximize Rep Performance Count</masterLabel>
+        <reportType>CustomEntity$MBO_Activity__c@MBO_Activity__c.Surgeon__c</reportType>
+        <scale>0</scale>
+    </aggregates>
+    <block>
+        <blockInfo>
+            <aggregateReferences>
+                <aggregate>FORMULA1</aggregate>
+            </aggregateReferences>
+            <aggregateReferences>
+                <aggregate>FORMULA2</aggregate>
+            </aggregateReferences>
+            <aggregateReferences>
+                <aggregate>FORMULA3</aggregate>
+            </aggregateReferences>
+            <blockId>B1</blockId>
+            <joinTable>x</joinTable>
+        </blockInfo>
+        <columns>
+            <field>MBO_Activity__c.MBO_Objective_s__c</field>
+        </columns>
+        <columns>
+            <field>MBO_Activity__c.Type__c</field>
+        </columns>
+        <columns>
+            <field>MBO_Activity__c.Date__c</field>
+        </columns>
+        <columns>
+            <field>MBO_Activity__c.Details__c</field>
+        </columns>
+        <currency>USD</currency>
+        <filter>
+            <criteriaItems>
+                <column>FK_$Account.Incentive_Type__c</column>
+                <columnToColumn>false</columnToColumn>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Protect Account,Key Account</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>MBO Activities with Hospital block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>CustomEntity$MBO_Activity__c@MBO_Activity__c.Surgeon__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <sortColumn>MBO_Activity__c.Date__c</sortColumn>
+        <sortOrder>Asc</sortOrder>
+        <timeFrameFilter>
+            <dateColumn>CUST_LAST_UPDATE</dateColumn>
+            <interval>INTERVAL_CURRENTQ</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>x</joinTable>
+    </blockInfo>
+    <format>MultiBlock</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Account.Incentive_Type__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Objective Counter - MBOs x FMS x Hosp CQ</name>
+    <reportType>CustomEntity$MBO_Activity__c@MBO_Activity__c.Surgeon__c</reportType>
+    <showDetails>false</showDetails>
+</Report>

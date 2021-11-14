@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Resources</fullName>
+    <active>true</active>
+    <label>Marketing Resources</label>
+    <picklistValues>
+        <picklist>Featured_Item_Type__c</picklist>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Profile__c</picklist>
+        <values>
+            <fullName>Biocomposites - SALES MANAGER CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR CANADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - Mid Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - Mid West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - North East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - North West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - South Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - South East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - South West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - West Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Community Login User cloned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distributors - EU %28English%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distributors - India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distributors - USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Development %E2%80%93 UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Managers %E2%80%93 USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Administrator</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subtype__c</picklist>
+        <values>
+            <fullName>External Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stimulan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>genex</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Account management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing collateral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales tools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tutorial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

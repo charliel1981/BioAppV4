@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Allogran-N</fullName>
+        <default>false</default>
+        <label>Allogran-N</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Allogran-R</fullName>
+        <default>false</default>
+        <label>Allogran-R</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bilok Screws</fullName>
+        <default>false</default>
+        <label>Bilok Screws</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Biosteon Crosspins</fullName>
+        <default>false</default>
+        <label>Biosteon Crosspins</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Biosteon Screws</fullName>
+        <default>false</default>
+        <label>Biosteon Screws</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Doubleplay</fullName>
+        <default>false</default>
+        <label>Doubleplay</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fortoss Vital</fullName>
+        <default>false</default>
+        <label>Fortoss Vital</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fortss Resorb</fullName>
+        <default>false</default>
+        <label>Fortss Resorb</label>
+    </standardValue>
+    <standardValue>
+        <fullName>geneX</fullName>
+        <default>false</default>
+        <label>geneX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>geneX DS</fullName>
+        <default>false</default>
+        <label>geneX DS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>geneX Putty</fullName>
+        <default>false</default>
+        <label>geneX Putty</label>
+    </standardValue>
+    <standardValue>
+        <fullName>geneX S</fullName>
+        <default>false</default>
+        <label>geneX S</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Intraline</fullName>
+        <default>false</default>
+        <label>Intraline</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Spinewave geneX DS</fullName>
+        <default>false</default>
+        <label>Spinewave geneX DS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stimulan Dispensers</fullName>
+        <default>false</default>
+        <label>Stimulan Dispensers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stimulan DS</fullName>
+        <default>false</default>
+        <label>Stimulan DS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stimulan Kit</fullName>
+        <default>false</default>
+        <label>Stimulan Kit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stimulan Pellets</fullName>
+        <default>false</default>
+        <label>Stimulan Pellets</label>
+    </standardValue>
+</StandardValueSet>

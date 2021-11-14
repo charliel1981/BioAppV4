@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Docs_ACCOUNT_MANAGEMENT</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <columns>ALT_Tag__c</columns>
+    <columns>Sort_Number__c</columns>
+    <columns>Type__c</columns>
+    <columns>Subtype__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Account management</value>
+    </filters>
+    <label>02. Docs - Account Management</label>
+</ListView>

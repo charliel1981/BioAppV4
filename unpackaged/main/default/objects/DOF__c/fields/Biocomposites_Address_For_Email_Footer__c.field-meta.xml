@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Biocomposites_Address_For_Email_Footer__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Bio_Email_To_Send_To__c = &quot;usorders@biocomposites.com&quot;, 
+&quot;700 Military Cutoff Road,&quot; &amp; BR() &amp;&quot;Suite 320,&quot; &amp; BR() &amp;&quot;Wilmington,&quot; &amp; BR() &amp;&quot;NC 28405,&quot; &amp; BR() &amp;&quot;USA&quot;, 
+&quot;Keele Science Park,&quot; &amp; BR() &amp;&quot; Keele,&quot; &amp; BR() &amp;&quot; Staffordshire,&quot; &amp; BR() &amp;&quot; England &quot; &amp; BR() &amp;&quot;ST5 5NL&quot;
+)</formula>
+    <label>Biocomposites Address For Email Footer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

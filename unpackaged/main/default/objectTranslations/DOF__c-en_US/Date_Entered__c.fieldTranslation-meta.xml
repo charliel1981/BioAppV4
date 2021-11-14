@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The date/time the record was submitted and saved on the device --></help>
+        <label><!-- Date Entered --></label>
+        <name>Date_Entered__c</name>
+    </CustomFieldTranslation>

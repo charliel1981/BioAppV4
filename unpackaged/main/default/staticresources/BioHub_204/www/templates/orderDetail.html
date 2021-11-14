@@ -1,0 +1,79 @@
+<div class="modal bio-modal" ng-click="vm.closeModal()">
+  <ion-header-bar>
+    <h1 class="title nav-bar-title">Order history</h1>
+    <button class="button button-icon ion-android-close"></button>
+  </ion-header-bar>
+  <ion-content>
+    <div>
+      <h4 class="bio-sub-heading">{{::vm.modal.order.record.Date_Entered__c | dateDDMMMYYYY}}</h4>
+    </div>
+    <div class="card bio-card">
+      <div class="item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom">
+        <div class="bio-label bio-label-padded bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.Related_Hospital_Name__c ? vm.modal.order.record.Related_Hospital_Name__c : vm.modal.order.record.Hospital_Name__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>PO number:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.PO_Number__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Stock instruction:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.Stock_Instructions__c}}</div>
+      </div>
+      <div ng-show="vm.modal.order.record.Replace_Stock_Details__c" class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-no-padding-top bio-no-padding-bottom"></ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-top bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.order.record.Replace_Stock_Details__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Surgeon name:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.Related_Surgeon_Name__c ? vm.modal.order.record.Related_Surgeon_Name__c : vm.modal.order.record.Surgeon_First_Name__c + " " + vm.modal.order.record.Surgeon_Last_Name__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Type of procedure:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.Type_of_Procedure__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Procedure date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.Procedure_Date__c | dateDDMMMYYYY}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Hospital notification:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.hospitalNotification}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Hospital representative:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.First_Name__c}} {{::vm.modal.order.record.Last_Name__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Comments:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.order.record.Procedure_Comments__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Date entered:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.Date_Entered__c | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Sync date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.order.record.CreatedDate | dateDDMMMYYYYHHMM}}</div>
+      </div>
+    </div>
+    <div class="card bio-card" ng-repeat="product in vm.modal.order.items track by $index">
+      <div ng-show="product.productName" class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Product:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-top">{{::product.productName}}</div>
+      </div>
+      <div ng-show="product.lotNumber" class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Lot number:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-top">{{::product.lotNumber}}</div>
+      </div>
+      <div ng-show="{{product.price !== undefined}}" class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Price:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="product.priceEntered !== 'No Charge'">{{vm.currencySymbol}}{{product.price | number:2}}</div>
+        <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="product.priceEntered === 'No Charge'">No Charge</div>
+      </div>
+      <div ng-show="product.expiryDate" class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Expiry date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-top">{{::product.expiryDate | dateYYYYMMDD}}</div>
+      </div>
+    </div>
+  </ion-content>
+</div>

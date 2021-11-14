@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Est_Total_Pmts__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the amount paid to the hospital after negotiated discounts have been applied.  The charge submitted by the hospital to the payer is much higher.</inlineHelpText>
+    <label>Est Total Pmts (USD)</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Historic_Since__c</fullName>
+    <description>Date when Contact was set as Historic.</description>
+    <externalId>false</externalId>
+    <label>Historic Since</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>36.0</apiVersion>
+    <available>false</available>
+    <description>NOT USED - Visualforce template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Hub App - Order Confirmation to Hospital</name>
+    <style>none</style>
+    <subject>Hospital confirmation of Biocomposites order</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- List the other manufacturers the distributor supports --></help>
+        <label><!-- Other Distribution Agreements --></label>
+        <name>Other_distribution_Agreements__c</name>
+    </CustomFieldTranslation>

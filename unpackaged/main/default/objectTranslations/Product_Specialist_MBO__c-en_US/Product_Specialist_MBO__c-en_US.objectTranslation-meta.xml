@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>MBO Objectives</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>MBO Objectives</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Product Specialist MBO Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Orthopedic (STIMULAN) objectives - available reward: $500 --></label>
+            <section>Orthopedic (STIMULAN) objectives - available reward: $500</section>
+        </sections>
+        <sections>
+            <label><!-- Spine (STIMULAN &amp; genex) objectives - available reward: $1000 --></label>
+            <section>Spine (STIMULAN &amp; genex) objectives - available reward: $1000</section>
+        </sections>
+        <sections>
+            <label><!-- genex objectives - available reward: $1000 --></label>
+            <section>genex objectives - available reward: $1000</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Product Specialist MBO Layout 07042021</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Orthopedic (STIMULAN) - available reward: $500 ($100 x 5 Hospitals) --></label>
+            <section>Orthopedic (STIMULAN) - available reward: $500 ($100 x 5 Hospitals)</section>
+        </sections>
+        <sections>
+            <label><!-- Spine (STIMULAN) - available reward: $1000 ($200 x 5 Hospitals) --></label>
+            <section>Spine (STIMULAN) - available reward: $1000 ($200 x 5 Hospitals)</section>
+        </sections>
+        <sections>
+            <label><!-- genex objectives - available reward: $1000 ($333 x 3 Hospitals) --></label>
+            <section>genex objectives - available reward: $1000 ($333 x 3 Hospitals)</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

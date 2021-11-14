@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>49.0</apiVersion>
+    <constants>
+        <name>SystemAdministrator</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>System Administrator</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Dec_Biocomposites_MANAGEMENT</name>
+        <label>Dec Biocomposites - MANAGEMENT</label>
+        <locationX>698</locationX>
+        <locationY>256</locationY>
+        <defaultConnectorLabel>bypass</defaultConnectorLabel>
+        <rules>
+            <name>Add</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Biocomposites_MANAGEMENT</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Biocomposites_MANAGEMENT</targetReference>
+            </connector>
+            <label>Add</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_community_Item_populated</name>
+        <label>Is community Item populated</label>
+        <locationX>42</locationX>
+        <locationY>121</locationY>
+        <defaultConnector>
+            <targetReference>Community_Item_Exists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varCommItem</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lookup_Recordtype</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <dynamicChoiceSets>
+        <name>Selectprofile</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true" />
+        <object xsi:nil="true" />
+        <picklistField>Profile__c</picklistField>
+        <picklistObject>Community_Item_Permission_Link__c</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>Create Community Item {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Community Item</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Biocomposites_MANAGEMENT</name>
+        <label>Create - Biocomposites - MANAGEMENT</label>
+        <locationX>896</locationX>
+        <locationY>258</locationY>
+        <inputAssignments>
+            <field>Community_Item__c</field>
+            <value>
+                <elementReference>CommunityIte</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Profile__c</field>
+            <value>
+                <stringValue>Biocomposites - MANAGEMENT</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Community_Item_Permission_Link__c</object>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Community_Item</name>
+        <label>Create Community Item</label>
+        <locationX>386</locationX>
+        <locationY>118</locationY>
+        <assignRecordIdToReference>CommunityIte</assignRecordIdToReference>
+        <connector>
+            <targetReference>update_App_Item</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>varRecordType</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Title__c</field>
+            <value>
+                <stringValue>test</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Community_Items__c</object>
+    </recordCreates>
+    <recordLookups>
+        <name>Lookup_Recordtype</name>
+        <label>Lookup Recordtype</label>
+        <locationX>244</locationX>
+        <locationY>121</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Community_Item</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Mobile_App_Permission</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>varRecordType</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>update_App_Item</name>
+        <label>update App Item</label>
+        <locationX>538</locationX>
+        <locationY>119</locationY>
+        <connector>
+            <targetReference>Profile_Selection</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varAppItemID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Community_Item__c</field>
+            <value>
+                <elementReference>CommunityIte</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Content_Item__c</object>
+    </recordUpdates>
+    <screens>
+        <name>Community_Item_Exists</name>
+        <label>Community Item Exists</label>
+        <locationX>38</locationX>
+        <locationY>308</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>exists</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;a community item already exists&lt;/FONT&gt;&lt;/SPAN&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Profile_Selection</name>
+        <label>Profile Selection</label>
+        <locationX>692</locationX>
+        <locationY>122</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Dec_Biocomposites_MANAGEMENT</targetReference>
+        </connector>
+        <fields>
+            <name>title</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Please select a profile&lt;/FONT&gt;&lt;/SPAN&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Biocomposites_MANAGEMENT</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Biocomposites - MANAGEMENT</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Biocomposites_MARKET_DEVELOPMENT_MANAGER_UK</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Biocomposites - MARKET DEVELOPMENT MANAGER UK</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Biocomposites_REGIONAL_MANAGER_CANADA</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Biocomposites - REGIONAL MANAGER CANADA</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Biocomposites_REGIONAL_MANAGER_USA</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Biocomposites - REGIONAL MANAGER USA</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Biocomposites_SALES_MANAGER_INDIA</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Biocomposites - SALES MANAGER INDIA</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_CANADA</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR CANADA</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_EU_English</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR EU (English)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_INDIA</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR INDIA</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_SOUTH_AMERICA</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR SOUTH AMERICA</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA_Mid_Atlantic</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA - Mid Atlantic</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA_Mid_West</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA - Mid West</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA_North_East</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA - North East</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA_North_West</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA - North West</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA_South_Central</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA - South Central</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA_South_East</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA - South East</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA_South_West</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA - South West</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Community_DISTRIBUTOR_USA_West_Central</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Community - DISTRIBUTOR USA - West Central</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>System_Administrator</name>
+            <dataType>Boolean</dataType>
+            <fieldText>System Administrator</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Lookup_Recordtype</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>CommunityIte</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>CommunityItemPermission</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Community_Item_Permission_Link__c</objectType>
+    </variables>
+    <variables>
+        <name>varAppItemID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varCommItem</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>varRecordType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

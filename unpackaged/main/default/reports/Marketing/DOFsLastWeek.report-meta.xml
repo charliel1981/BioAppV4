@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_ROLE</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>DOF_Item__c.DOF__c</field>
+    </columns>
+    <columns>
+        <field>DOF_Item__c.Lot_Number__c</field>
+    </columns>
+    <columns>
+        <field>DOF_Item__c.Entered_Price__c</field>
+    </columns>
+    <columns>
+        <field>DOF_Item__c.Product_Name__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <description>Report to show DOFs created in the last week</description>
+    <format>Tabular</format>
+    <name>DOFs Last Week</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$DOF_Item__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_LASTWEEK</interval>
+    </timeFrameFilter>
+</Report>

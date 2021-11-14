@@ -1,0 +1,66 @@
+<ion-view hide-tabs hide-back-button="true" ng-controller="NewExpenseCtrl">
+  <ion-nav-title>
+    New {{paramType}}
+  </ion-nav-title>
+  <ion-content padding="true">
+    <form name="forms.expenseForm" ng-submit="submitForm()">
+      <div class="list">
+        <span ng-switch="paramType">
+           <span name="timesheetspan" ng-switch-when="Order">
+              <label class="item item-input item-stacked-label">
+                <h3>For Hospital</h3>
+                <p>{{project.Name}}</p>
+              </label>
+              <label class="item item-input item-stacked-label" ng-click="showSurgeons()">
+                <i class="icon ion-chevron-right icon-accessory pull-right"></i>
+                <h3>For Surgeon</h3>
+                <p>{{selectedSurgeon}}</p>
+              </label>
+              <label class="item item-input item-stacked-label" ng-click="showProducts()">
+                <i class="icon ion-chevron-right icon-accessory pull-right"></i>
+                <h3>Product</h3>
+                <p>{{selectedProduct}}</p>
+              </label>
+           </span>
+
+           <span ng-switch-when="Surgeon">
+              <label class="item item-input item-stacked-label">
+               <span class="input-label">Surgeon Name</span>
+                  <input name="expenseType" ng-model="expenseType"  type="text" />
+              </label>
+              <label class="item item-input item-stacked-label">
+                <span class="input-label">Surgeon Title</span>
+                <input name="description" ng-model="description"  type="text" placeholder="eg. FRCS" required/>
+              </label>
+           </span>
+        </span>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button
+            ng-disabled="expenseForm.$invalid"
+            class="button-full button icon-left ion-checkmark button-positive submit-expense">Submit</button>
+        </div>
+        <div class="col">
+          <a class="button-full button icon-left ion-close button-assertive" href="#/tab/project/{{projectId}}">Cancel</a>
+        </div>
+      </div>
+    </form>
+      <div class="row" ng-show="paramType=='Order'">
+        <div class="col">
+          <button class="button-full button button-positive" ng-click="scanBarcode()">Scan Barcode</button>
+        </div>
+        <div class="col">
+          <button class="button-full button button-positive" ng-click="capturePhoto()">Take Picture</button>
+        </div>
+      </div>
+      <div class="row" ng-show="paramType=='Order'">
+        <div class="col" ng-show="scanImageData">
+          <h4>{{scanImageData}}</h4>
+        </div>
+        <div class="col" ng-show="photoImageData">
+          <img data-ng-src="data:image/jpg;base64,{{photoImageData}}" />
+        </div>
+      </div>
+  </ion-content>
+</ion-view>

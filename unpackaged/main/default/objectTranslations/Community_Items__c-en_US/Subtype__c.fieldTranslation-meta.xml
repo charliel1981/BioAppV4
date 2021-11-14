@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Sub-Type --></label>
+        <name>Subtype__c</name>
+        <picklistValues>
+            <masterLabel>External Documents</masterLabel>
+            <translation><!-- External Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Documents</masterLabel>
+            <translation><!-- Internal Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stimulan</masterLabel>
+            <translation><!-- Stimulan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subtype 5</masterLabel>
+            <translation><!-- Subtype 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subtype 6</masterLabel>
+            <translation><!-- Subtype 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>genex</masterLabel>
+            <translation><!-- genex --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

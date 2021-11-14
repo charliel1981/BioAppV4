@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Sub Specialty 1 --></label>
+        <name>Speciality_Sub__c</name>
+        <picklistValues>
+            <masterLabel>Adult facial deformity</masterLabel>
+            <translation><!-- Adult facial deformity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ankle and Foot</masterLabel>
+            <translation><!-- Ankle and Foot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bone tumour surgery</masterLabel>
+            <translation><!-- Bone tumour surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Breast</masterLabel>
+            <translation><!-- Breast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleft surgery</masterLabel>
+            <translation><!-- Cleft surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorectal</masterLabel>
+            <translation><!-- Colorectal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complex Trauma surgery</masterLabel>
+            <translation><!-- Complex Trauma surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultant</masterLabel>
+            <translation><!-- Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Endocrine</masterLabel>
+            <translation><!-- Endocrine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facial trauma management</masterLabel>
+            <translation><!-- Facial trauma management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functional neurosurgery</masterLabel>
+            <translation><!-- Functional neurosurgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GI surgery</masterLabel>
+            <translation><!-- GI surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hand and Upper limb</masterLabel>
+            <translation><!-- Hand and Upper limb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head and neck</masterLabel>
+            <translation><!-- Head and neck --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head and neck oncology</masterLabel>
+            <translation><!-- Head and neck oncology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head injury</masterLabel>
+            <translation><!-- Head injury --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hepatobiliary surgery</masterLabel>
+            <translation><!-- Hepatobiliary surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hip surgery</masterLabel>
+            <translation><!-- Hip surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knee surgery</masterLabel>
+            <translation><!-- Knee surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lower Limb joint reconstruction</masterLabel>
+            <translation><!-- Lower Limb joint reconstruction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neonatal surgery</masterLabel>
+            <translation><!-- Neonatal surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neuro-oncology</masterLabel>
+            <translation><!-- Neuro-oncology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neurovascular surgery</masterLabel>
+            <translation><!-- Neurovascular surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oncological surgery</masterLabel>
+            <translation><!-- Oncological surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orthognathic surgery</masterLabel>
+            <translation><!-- Orthognathic surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paediatric Orthopaedics</masterLabel>
+            <translation><!-- Paediatric Orthopaedics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paediatric neurosurgery</masterLabel>
+            <translation><!-- Paediatric neurosurgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhematoid Surgery</masterLabel>
+            <translation><!-- Rhematoid Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skin and soft tissue</masterLabel>
+            <translation><!-- Skin and soft tissue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skull-base surgery</masterLabel>
+            <translation><!-- Skull-base surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spinal surgery</masterLabel>
+            <translation><!-- Spinal surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spine</masterLabel>
+            <translation><!-- Spine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports and exercise surgery</masterLabel>
+            <translation><!-- Sports and exercise surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transplant</masterLabel>
+            <translation><!-- Transplant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upper Gastrointestinal</masterLabel>
+            <translation><!-- Upper Gastrointestinal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upper Limb(hands)</masterLabel>
+            <translation><!-- Upper Limb(hands) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upper limb (Should &amp; Elbow)</masterLabel>
+            <translation><!-- Upper limb (Should &amp; Elbow) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urological surgery</masterLabel>
+            <translation><!-- Urological surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vascular</masterLabel>
+            <translation><!-- Vascular --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>asethetic or cosmetic surgery</masterLabel>
+            <translation><!-- asethetic or cosmetic surgery --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

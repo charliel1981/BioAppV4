@@ -1,0 +1,106 @@
+<apex:page standardController="Community_Items__c" extensions="UserCommunityViewValCon" sidebar="false" showHeader="false" id="pid" >
+<style type="text/css">
+  #footer {
+    position : absolute;
+    bottom : 0;
+    height : 40px;
+    margin-top : 40px;
+    margin-left : 250px
+  }
+  
+  .bPageBlock{
+    border:none !important;
+    background:#fff !important; 
+}
+  
+</style>
+            <apex:form id="fid">
+            <apex:PageMessages id="errorMsg" escape="false"/>
+            <apex:actionstatus id="counterStatus" >
+                <apex:facet name="start">
+                    <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb; height:100%;opacity:0.65;width:100%;">
+                    <div class="waitingHolder" style="top: 100px; width: 91px;">
+                    <span class="waitingDescription">Please Wait...</span>
+                    </div>
+                </div>
+            </apex:facet>
+                </apex:actionstatus>
+            <div id="Maindiv" >
+                
+                <apex:inputhidden id="hdnErrMsg" value="{!ErrorMessage}"></apex:inputhidden>
+                <apex:inputhidden id="respMsg" value="{!responceMessage}"></apex:inputhidden>
+            
+                <apex:panelGrid columns="3" id="abcd">
+                    <apex:selectList id="ProfIds" value="{!leftselected}" multiselect="true" style="width:350px;Height:276px;">
+                        <apex:selectOptions value="{!Items}"/>
+                    </apex:selectList>
+                    <apex:panelGroup >
+                        <br/>
+                        <apex:image value="{!$Resource.multiselected}" >
+                            <apex:actionSupport event="onclick"  action="{!selectedValues}" rerender="abcd"/>
+                        </apex:image>
+                            <br/><br/>
+                        <apex:image value="{!$Resource.multiunselected}">
+                            <apex:actionSupport event="onclick"  action="{!unselectclick}" rerender="abcd"/>
+                        </apex:image>   
+                    </apex:panelGroup>
+                    <apex:selectList id="sel2" value="{!rightselected}" multiselect="true" style="width:350px;Height:276px" >
+                        <apex:selectOptions value="{!UnSelectedValues}"/>
+                            </apex:selectList>
+            </apex:panelGrid>
+               <div style="padding-top:20px;">
+                    <apex:commandbutton value="Send mail" action="{!Preparedata}" onComplete="checkvalues();return false;" rerender="errorMsg,hdnErrMsg,tblHTML" status="counterStatus" style="margin-left: 308px;"/>
+                    <apex:commandbutton value="Cancel" OnClick="refreshdataChild();return false;" rerender="errorMsg,hdnErrMsg" status="counterStatus" style="margin-left: 5px;"/>
+                </div>
+            </div>
+            <div id="divid" style="display:none">
+            <apex:pageBlock id="pbsdata">
+                
+            <apex:outputtext value="{!strBocy}" escape="false" id="tblHTML"/>
+            
+            <apex:pageblockbuttons location="bottom" id="pbbuttonid">
+            
+                <apex:commandbutton value="Send Mail" id="Confirmid" action="{!SendMail}" status="counterStatus" rerender="errorMsg,respMsg,tblHTML" onComplete="refreshdata();return false;"></apex:commandbutton><!-- onComplete="refreshdata();return false;"  -->
+                <apex:commandbutton value="Cancel" id="cancleid" onclick="refreshdataChild();return false;"></apex:commandbutton>
+            
+            </apex:pageblockbuttons>
+            
+            </apex:pageBlock>
+            
+            </div>
+        </apex:form>
+<script>
+  function checkvalues(){
+         var ErrorVal = '';
+       
+         ErrorVal = document.getElementById('pid:fid:hdnErrMsg').value;
+         if(ErrorVal != ''){
+             alert(ErrorVal);
+         }else{
+            ShowPreview();
+         }
+  }
+  
+  function ShowPreview(){
+    document.getElementById("divid").style.display = "block";
+    document.getElementById("Maindiv").style.display = "none";
+    document.getElementById("FDivid3").style.display = "none";
+  }
+  
+
+  function refreshdata(){
+     
+      var ErrorVal = '';       
+         ErrorVal = document.getElementById('pid:fid:respMsg').value;
+         if(ErrorVal == 'Success'){
+             alert('Email sent successfully');
+              window.top.location.href='/'+'{!$CurrentPage.parameters.id}';            
+         }      
+
+  }
+function refreshdataChild(){
+      window.top.location.href='/'+'{!$CurrentPage.parameters.id}';
+}
+
+</script>
+</apex:page>

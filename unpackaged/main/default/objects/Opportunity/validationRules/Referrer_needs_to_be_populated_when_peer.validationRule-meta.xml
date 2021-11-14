@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referrer_needs_to_be_populated_when_peer</fullName>
+    <active>true</active>
+    <errorConditionFormula>ispickval( LeadSource , &quot;Peer Referral&quot;) &amp;&amp; isblank( Referrer__c )</errorConditionFormula>
+    <errorDisplayField>Referrer__c</errorDisplayField>
+    <errorMessage>Please fill in the name of the Referrer when Lead source is peer referral.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Roll_This_Record_Up__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+OR( 
+Sort_Title__c = &quot;Compliance MA00005150419 (#662697667)&quot;,
+Sort_Title__c = &quot;USA compliance e-learning module MA0219R1 (#449321226)&quot;,
+Sort_Title__c = &quot;USA compliance e-learning module MA0219R2 (#449321226)&quot;,
+Sort_Title__c = &quot;USA Compliance e-learning module MA0219R3 (#390951584)&quot;,
+Sort_Title__c = &quot;Canada Compliance e-learning module MA0233R1 (#336138884)&quot;,
+Sort_Title__c = &quot;Canada Compliance e-learning module MA0233R2 (#802471996)&quot;)
+,true, false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Roll This Record Up</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

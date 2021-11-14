@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>mobilecaddy1__Connection_Session__c.mobilecaddy1__SF_User__c</field>
+    </columns>
+    <columns>
+        <field>mobilecaddy1__Connection_Session__c.mobilecaddy1__Session_Type__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>mobilecaddy1__Connection_Session__c.mobilecaddy1__Device_Model__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <criteriaItems>
+            <column>mobilecaddy1__Connection_Session__c.mobilecaddy1__Session_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>New Install</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>mobilecaddy1__Connection_Session__c.mobilecaddy1__SF_User__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Apple Submission</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>New Installs before 20/08/2016</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$mobilecaddy1__Connection_Session__c@mobilecaddy1__Connection_Session__c.mobilecaddy1__Application_User_Device_AUD__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>mobilecaddy1__Connection_Session__c.mobilecaddy1__Created_Date_Time__c</dateColumn>
+        <endDate>2016-08-20</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

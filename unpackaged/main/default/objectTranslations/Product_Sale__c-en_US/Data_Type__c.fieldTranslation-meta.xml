@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Data Type --></label>
+        <name>Data_Type__c</name>
+        <picklistValues>
+            <masterLabel>CRN</masterLabel>
+            <translation><!-- CRN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INV</masterLabel>
+            <translation><!-- INV --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

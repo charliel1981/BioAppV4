@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formats_Details__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( I_D__c = TRUE, &quot;I&amp;D, &quot;, NULL)+
+IF(  Open_Fractures__c  = TRUE, &quot;Open Fractures, &quot;, NULL)+
+IF(  Voids__c  = TRUE, &quot;Voids, &quot;, NULL)+
+IF( Stage_1__c  = TRUE, &quot;Stage 1, &quot;, NULL)+
+IF(  Stage_2__c  = TRUE, &quot;Stage 2, &quot;, NULL)+
+IF(  Other__c  = TRUE, &quot;Other, &quot;  , NULL)</formula>
+    <label>Format Details</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

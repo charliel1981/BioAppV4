@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- New surgeons and/or indications --></help>
+        <label><!-- 2. Add New Surgeons --></label>
+        <name>Add_new_surgeons__c</name>
+    </CustomFieldTranslation>

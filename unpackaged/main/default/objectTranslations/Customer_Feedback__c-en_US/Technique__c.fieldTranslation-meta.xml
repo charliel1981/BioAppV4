@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Technique (trans-tibial or antero-medial portal approach)
+if applicable --></help>
+        <label><!-- Technique --></label>
+        <name>Technique__c</name>
+    </CustomFieldTranslation>

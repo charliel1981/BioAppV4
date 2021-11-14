@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialty__c</fullName>
+    <externalId>false</externalId>
+    <label>Specialty</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Job_Role__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Surgery</fullName>
+                <default>false</default>
+                <label>General Surgery</label>
+            </value>
+            <value>
+                <fullName>Neurosurgery</fullName>
+                <default>false</default>
+                <label>Neurosurgery</label>
+            </value>
+            <value>
+                <fullName>Oral &amp; Maxillofacial Surgery</fullName>
+                <default>false</default>
+                <label>Oral &amp; Maxillofacial Surgery</label>
+            </value>
+            <value>
+                <fullName>Paediatric Surgery</fullName>
+                <default>false</default>
+                <label>Paediatric Surgery</label>
+            </value>
+            <value>
+                <fullName>Plastic Surgery</fullName>
+                <default>false</default>
+                <label>Plastic Surgery</label>
+            </value>
+            <value>
+                <fullName>Trauma &amp; Orthopaedic Surgery</fullName>
+                <default>false</default>
+                <label>Trauma &amp; Orthopaedic Surgery</label>
+            </value>
+            <value>
+                <fullName>Microbiologist</fullName>
+                <default>false</default>
+                <label>Microbiologist</label>
+            </value>
+            <value>
+                <fullName>Total Joint Recon</fullName>
+                <default>false</default>
+                <label>Total Joint Recon</label>
+            </value>
+            <value>
+                <fullName>Trauma</fullName>
+                <default>false</default>
+                <label>Trauma</label>
+            </value>
+            <value>
+                <fullName>Foot &amp; Ankle</fullName>
+                <default>false</default>
+                <label>Foot &amp; Ankle</label>
+            </value>
+            <value>
+                <fullName>Spine</fullName>
+                <default>false</default>
+                <label>Spine</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <controllingFieldValue>Surgeon</controllingFieldValue>
+            <controllingFieldValue>Fellow</controllingFieldValue>
+            <valueName>Total Joint Recon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <controllingFieldValue>Surgeon</controllingFieldValue>
+            <controllingFieldValue>Fellow</controllingFieldValue>
+            <valueName>Trauma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <controllingFieldValue>Surgeon</controllingFieldValue>
+            <controllingFieldValue>Fellow</controllingFieldValue>
+            <valueName>Foot &amp; Ankle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <controllingFieldValue>Surgeon</controllingFieldValue>
+            <controllingFieldValue>Fellow</controllingFieldValue>
+            <valueName>Spine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <controllingFieldValue>Surgeon</controllingFieldValue>
+            <controllingFieldValue>Fellow</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professor</controllingFieldValue>
+            <controllingFieldValue>Registrar</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>General Surgery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professor</controllingFieldValue>
+            <controllingFieldValue>Registrar</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Neurosurgery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professor</controllingFieldValue>
+            <controllingFieldValue>Registrar</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Oral &amp; Maxillofacial Surgery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professor</controllingFieldValue>
+            <controllingFieldValue>Registrar</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Paediatric Surgery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professor</controllingFieldValue>
+            <controllingFieldValue>Registrar</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Plastic Surgery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professor</controllingFieldValue>
+            <controllingFieldValue>Registrar</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Trauma &amp; Orthopaedic Surgery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professor</controllingFieldValue>
+            <controllingFieldValue>Registrar</controllingFieldValue>
+            <controllingFieldValue>Consultant</controllingFieldValue>
+            <valueName>Microbiologist</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

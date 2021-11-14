@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>DOF__c.Hospital__c</field>
+    </columns>
+    <columns>
+        <field>DOF__c.Surgeon__c</field>
+    </columns>
+    <columns>
+        <field>DOF__c.Distributor_Name__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <columns>
+        <field>DOF__c.DOF_Item_Count__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>DOF__c.Distributor_Type__c</field>
+    </columns>
+    <columns>
+        <field>DOF__c.Type_of_Procedure__c</field>
+    </columns>
+    <columns>
+        <field>DOF__c.Procedure_Comments__c</field>
+    </columns>
+    <columns>
+        <field>DOF__c.Surgeon_First_Name__c</field>
+    </columns>
+    <columns>
+        <field>DOF__c.Surgeon_Last_Name__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>For KPI reports</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_CREATED_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Apple Submission</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_CREATED_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>AAOS Demo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>DOF__c.Distributor_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Biocomposites Ltd</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>DOF__c.Created_By_Email__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>apple.submission@mobilecaddy.net</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>DOF__c.Created_By_Email__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>ceterna</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_CREATED_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Hamish M White</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_CREATED_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>MobileCaddy Test</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_CREATED_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Michelle Braga</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Monthly DOF Submissions</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$DOF__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CUST_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DOF__c.Date_Entered__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

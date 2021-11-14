@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Information_for_email__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( Contact_Information__c ), 
+&quot;Email: &quot;&amp; Email__c &amp;BR()&amp;
+&quot;Telephone: &quot;&amp; Telephone__c &amp;BR()&amp;
+&quot;Address: &quot;&amp; Address__c &amp;BR()&amp;
+&quot;State: &quot;&amp; State__c &amp;BR()&amp;
+&quot;Zip: &quot;&amp; ZIP__c &amp;BR()&amp;
+&quot;Country: &quot;&amp; Country__c 
+, Contact_Information__c)</formula>
+    <label>Contact Information for email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

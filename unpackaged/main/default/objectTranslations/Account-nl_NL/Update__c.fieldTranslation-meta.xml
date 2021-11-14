@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Account Owner&apos;s progression with their Key Account stragey --></help>
+        <label><!-- Update --></label>
+        <name>Update__c</name>
+    </CustomFieldTranslation>

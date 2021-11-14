@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Private</cacheControl>
+    <contentType>application/zip</contentType>
+    <description>mobilecaddy1	MobileCaddy JS libs needed. 
+* mobilecaddy-utils.min.js (StartupMobileSupport) v0.1.0
+* underscore 
+* Promise polyfill 
+* jquery 
+*etc</description>
+</StaticResource>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Was surgery completed successfully using the initial device, an equivalent device used or an alternative device? --></help>
+        <label><!-- Surgery Completed Successfully? --></label>
+        <name>Surgery_Completed_Successfully__c</name>
+    </CustomFieldTranslation>

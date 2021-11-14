@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fellowship_Ends__c</fullName>
+    <description>Planned_End_Date__c</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date that this Surgeon&#39;s Fellowship ends at this Hospital.</inlineHelpText>
+    <label>Fellowship Ends</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

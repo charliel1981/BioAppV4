@@ -1,0 +1,68 @@
+<apex:page showHeader="false" standardStylesheets="false" contentType="text/cache-manifest" controller="mobilecaddy1.StartPageCacheCtrl001_mc">CACHE MANIFEST
+
+NETWORK:
+*
+
+CACHE:
+
+#SECTION 1A MOBILECADDY CACHED PAGES
+
+#The page below is a dummy page to cause the cache to fail and check the behaviour and logging uncomment to test
+#/pagetofailcache
+
+
+#SECTION 1B MOBILECADDY CACHED JS
+
+{!vfremotepath}
+/static/111213/js/perf/stub.js
+{!URLFOR($Resource.mobilecaddy1__MC_Resource_008, 'jquery.min.js')}
+{!URLFOR($Resource.mobilecaddy1__cordovaSF3v1)}
+{!URLFOR($Resource.mobilecaddy1__MC_Resource_008, 'mobilecaddy-utils.min.js')}
+{!URLFOR($Resource.mobilecaddy1__MC_Resource_008, 'promise-1.0.0.min.js')}
+{!URLFOR($Resource.mobilecaddy1__MC_Resource_008, 'underscore-min.js')}
+
+
+#SECTION 1C MOBILECADDY CACHED CSS
+
+
+#SECTION 1D MOBILECADDY CACHED IMAGES
+
+
+#SECTION 2A MOBILE APPLICATION CACHED PAGES / JS / ASSETS
+
+{!URLFOR($Resource.SeedApp001_020, 'www/css/app.css')}
+{!URLFOR($Resource.SeedApp001_020, 'www/fonts/ionicons.eot')}
+{!URLFOR($Resource.SeedApp001_020, 'www/fonts/ionicons.svg')}
+{!URLFOR($Resource.SeedApp001_020, 'www/fonts/ionicons.ttf')}
+{!URLFOR($Resource.SeedApp001_020, 'www/fonts/ionicons.woff')}
+{!URLFOR($Resource.SeedApp001_020, 'www/img/logo.png')}
+{!URLFOR($Resource.SeedApp001_020, 'www/img/logo_old.png')}
+{!URLFOR($Resource.SeedApp001_020, 'www/js/app.js')}
+{!URLFOR($Resource.SeedApp001_020, 'www/js/controllers.js')}
+{!URLFOR($Resource.SeedApp001_020, 'www/js/services.js')}
+{!URLFOR($Resource.SeedApp001_020, 'www/lib/js/angular-ios9-uiwebview.patch.js')}
+{!URLFOR($Resource.SeedApp001_020, 'www/lib/js/ionic.bundle.min.js')}
+{!URLFOR($Resource.SeedApp001_020, 'www/lib/js/ng-cordova.min.js')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/productIndex.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/productSelection.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/projectDetail.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/projectIndex.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/projectTimeExpNew.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/projectTimeExpList.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/settings.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/settingsDeploy.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/settingsDevMTI.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/settingsDevMTIDetail.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/settingsDevTools.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/settingsTesting.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/surgeonSelection.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/tabsMain.html')}
+{!URLFOR($Resource.SeedApp001_020, 'www/templates/webView.html')}
+
+
+
+#sessionid to force reload cache everytime the app is online:{!GETSESSIONID()}
+
+#This is done as a work around to a limitation of JS Remoting that causes remoting actions to fail on subsequent app login.
+
+</apex:page>

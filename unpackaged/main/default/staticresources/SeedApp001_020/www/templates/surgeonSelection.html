@@ -1,0 +1,32 @@
+<ion-view title="Select Surgeon">
+  <ion-content>
+    <div class="item item-input search-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" ng-model="search.query" />
+      <button ng-if="search.query.length"
+        class="button button-icon ion-android-close search-clear-button"
+        ng-click="clearSearch()">
+      </button>
+    </div>
+    <ion-refresher on-refresh="doRefreshFromPulldown()"
+                   pulling-text="Pull to refresh">
+    </ion-refresher>
+    <ion-scroll zooming="false" direction="y" id="surgeon-list">
+      <ion-item class="item mti-item"
+        item-height: "80px"
+        item-width: "100%"
+        collection-repeat="record in expenses | filter:search.query" type="item-text-wrap"
+        ng-click="setSelectedSurgeonAndReturn(record)"
+        >
+        <h3>{{record.mobilecaddy1__Short_Description__c}}, {{record.mobilecaddy1__Expense_Type__c}}</h3>
+        <p>
+           <span >{{record.mobilecaddy1__Expense_Amount__c}}</span>
+         </span
+         </br>ID: {{record.Name}}
+        </p>
+      </ion-item>
+    </ion-scroll>
+  </ion-content>
+  <button id="products-sync-button" class="ng-hide sync-button button button-small button-positive" ng-click="doRefreshAndSync()">
+  </button>
+</ion-view>

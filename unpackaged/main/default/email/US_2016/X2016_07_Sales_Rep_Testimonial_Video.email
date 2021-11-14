@@ -1,0 +1,23 @@
+<table>
+<tr><td style="height:10px;"><div style="padding-top:4px;padding-bottom:3px;">Dear  {!Contact.FirstName},</br></br></div></td></tr>
+
+<tr><td><br><span style="font-family:Arial;font-size:18px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:#31B404;">
+Watch the new "Why should I sell STIMULAN?" testimonial video to find out more.<br><br></div></span></td></tr>
+
+
+<tr><td >Biocomposites interviewed two sales representatives at the 2016 AAOS meeting for feedback on their experience selling STIMULAN. These reps shared valuable insight, detailing how STIMULAN helps create opportunities to approach competitive surgeons and gain entry into new hospitals. <br><br> 
+
+This video is now located on the Distributor Hub. Please login <a href=http://www.biocomposites.com/hub>here<a/a> to discover the first-hand advantages of selling STIMULAN.
+
+<br><br><br>Kind regards,</br></div></td></tr>
+
+<tr><td colspan="3" ><div style="padding-bottom:10px;"></div></td>
+<tr><td>{!User.FirstName} {!User.LastName} M.S.<br />
+{!User.Title} <br />
+{!User.CompanyName} <br />
+{!User.Street} <br />
+{!User.City}, {!User.StateCode} {!User.PostalCode} <br />
+Office: {!User.Phone} <br />
+Fax: {!User.Fax}<br />
+</td></tr>
+</table>

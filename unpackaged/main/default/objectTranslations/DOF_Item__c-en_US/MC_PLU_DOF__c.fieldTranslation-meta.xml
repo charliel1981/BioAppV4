@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used by the Mobile App to relate the child DOF Item to the parent DOF --></help>
+        <label><!-- MC_PLU_DOF --></label>
+        <name>MC_PLU_DOF__c</name>
+    </CustomFieldTranslation>

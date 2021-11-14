@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>App Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>App Items</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Content Item Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Image --></label>
+            <section>Image</section>
+        </sections>
+        <sections>
+            <label><!-- Image Data/Copy --></label>
+            <section>Image Data/Copy</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Copy --></label>
+        <name>Copy</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Image and Copy --></label>
+        <name>Image_and_Copy</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Landscape Image --></label>
+        <name>Landscape_Image</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Menu List --></label>
+        <name>Menu_List</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Portrait Image --></label>
+        <name>Portrait_Image</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Twin Images --></label>
+        <name>Twin_Images</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_Community_Item --></label>
+        <name>Create_Community_Item</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Link_to_Community_Item --></label>
+        <name>Link_to_Community_Item</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Open_Online_HTML_Editor --></label>
+        <name>Open_Online_HTML_Editor</name>
+    </webLinks>
+</CustomObjectTranslation>

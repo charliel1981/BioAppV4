@@ -1,0 +1,33 @@
+<ion-view cache-view="false" hide-back-button="true">
+  <ion-nav-title>
+    My accounts
+  </ion-nav-title>
+
+  <ion-content>
+    <div class="row row-no-padding padding-top bio-search-wrapper">
+      <div class="col col-67">
+        <input type="text" ng-model="vm.searchQuery" ng-change="vm.scrollTop()" class='item-input' placeholder="Search...">
+      </div>
+      <div class="col col-33 text-right">
+        <button ng-if="vm.searchQuery.length"
+                class="button button-small button-icon icon ion-android-close"
+                ng-click="vm.clearSearch()">
+        </button>
+      </div>
+    </div>
+    <ion-scroll direction="y">
+      <!-- note. the height of this scroll area is dynamically set in code using it's id -->
+      <div class="list" id="accounts-list">
+        <ion-item ng-repeat="account in vm.accounts | filter:vm.searchQuery track by $index"
+                  ng-click="vm.showModal(account)"
+                  class="item item-icon-right bio-history-list-item-add-gold-line bio-history-list-item">
+          <div class="bio-history-item-heading">{{account.Hospital_Name__c}}</div>
+          <div class="bio-text item-text-wrap">{{account.Hospital_Street__c}} {{account.Hospital_City1__c}}</div>
+          <i class="icon ion-ios-arrow-right bio-history-item-more">more</i>
+        </ion-item>
+      </div>
+    </ion-scroll>
+
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobile_App_Items</fullName>
+    <columns>NAME</columns>
+    <columns>Brainshark_9_Digit_Number__c</columns>
+    <columns>Title__c</columns>
+    <columns>ALT_Tag__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Community_Items__c.Mobile_App_Permission</value>
+    </filters>
+    <label>Mobile App Items</label>
+</ListView>

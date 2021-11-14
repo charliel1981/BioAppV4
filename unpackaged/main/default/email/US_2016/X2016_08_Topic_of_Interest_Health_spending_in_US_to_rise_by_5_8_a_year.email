@@ -1,0 +1,21 @@
+<table>
+<tr><td style="height:10px;"><div style="padding-top:4px;padding-bottom:3px;">Dear  {!Contact.FirstName},</br></br></div></td></tr>
+
+<tr><td><div style="color:#31B404;padding-top:4px;padding-bottom:0px;"><H1 style="margin:10px 0px"><span style="font-family:Arial;font-size:18px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:31B404;">
+News for you...</span></H1></br></div></td></tr>
+
+<tr><td ><div style="padding-bottom:10px;">Healthcare spending in the United States will likely grow by an average of 5.8 percent per year over the next decade, a bit faster than the past two years, due to an aging population, rising medical prices and faster economic growth, according to updated projections from the federal government. <br /><br /> The spending will represent 20.1 percent of the country's total economy by 2025, up from 17.5 percent in 2014. Total health expenditures this year are expected to reach $3.2 trillion, rising to $5.6 trillion in 2025. 
+<br /><br />
+This article can be found under the Topics of Interest section of the Distributor Hub. Please login <a href=http://hub.biocomposites.com>here</a> to read the full article.<br /><br / > Kind regards, </div></td></tr>
+
+<tr><td colspan="3" ><div style="padding-bottom:10px;"></div></td>
+<tr><td>{!User.FirstName} {!User.LastName}. <br />
+{!User.Title} <br />
+{!User.CompanyName} <br />
+{!User.Street} <br />
+{!User.City}, {!User.StateCode} {!User.PostalCode} <br />
+Cell: {!User.MobilePhone} <br />
+Office: {!User.Phone} <br />
+Fax: {!User.Fax}<br />
+</td></tr>
+</table>

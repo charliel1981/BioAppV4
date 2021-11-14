@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topics_Of_Interest</fullName>
+    <active>true</active>
+    <label>Topics Of Interest</label>
+    <picklistValues>
+        <picklist>Featured_Item_Type__c</picklist>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Profile__c</picklist>
+        <values>
+            <fullName>Biocomposites - SALES MANAGER CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Administrator</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subtype__c</picklist>
+        <values>
+            <fullName>External Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stimulan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>genex</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Topic of Interest %2F Notices</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

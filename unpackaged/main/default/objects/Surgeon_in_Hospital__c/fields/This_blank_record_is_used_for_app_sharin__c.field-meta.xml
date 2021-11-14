@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>This_blank_record_is_used_for_app_sharin__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( Surgeon__c ) , TRUE, false)</formula>
+    <inlineHelpText>This indicates if this record is used for the hub app sharing. 
+When the surgeon is blank it allows the hub app users to see the hospital records</inlineHelpText>
+    <label>This record is used for hub app sharing</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

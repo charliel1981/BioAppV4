@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Hip/Knee Rep Excess Ratio Rank (99 best) --></label>
+        <name>Hip_Knee_Replacement_Excess_Ratio_Rank__c</name>
+    </CustomFieldTranslation>

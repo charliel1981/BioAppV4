@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type of Procedure --></label>
+        <name>Type_of_Procedure__c</name>
+        <picklistValues>
+            <masterLabel>Foot &amp; ankle</masterLabel>
+            <translation><!-- Foot &amp; ankle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spine</masterLabel>
+            <translation><!-- Spine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total joint reconstruction</masterLabel>
+            <translation><!-- Total joint reconstruction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trauma</masterLabel>
+            <translation><!-- Trauma --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RSM_PickList</fullName>
+    <active>true</active>
+    <description>Validation rule with formula that returns Role members that starts with &#39;RM&#39;.</description>
+    <errorConditionFormula>$User.UserRoleId = &quot;RM*&quot;</errorConditionFormula>
+    <errorMessage>Error</errorMessage>
+</ValidationRule>

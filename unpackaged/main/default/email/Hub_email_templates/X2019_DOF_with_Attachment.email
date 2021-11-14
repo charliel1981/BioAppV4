@@ -1,0 +1,8 @@
+<messaging:emailTemplate subject="Biocomposites Order Form {!relatedTo.From_Field_for_Email__c}" recipientType="User" relatedToType="DOF__c">
+    <messaging:htmlEmailBody >
+        <c:NewDOFTemplate recordId="{!relatedTo.Id}" />
+    </messaging:htmlEmailBody>
+    <messaging:attachment renderAs="PDF" filename="{!relatedTo.DOF_Attachment_Filename__c}.pdf">
+        <c:NewDOFTemplatePDF recordId="{!relatedTo.Id}" />
+    </messaging:attachment>
+    </messaging:emailTemplate>

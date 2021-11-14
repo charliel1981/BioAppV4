@@ -1,0 +1,52 @@
+<ion-view title="Testing Resources">
+	<ion-content>
+  	<ion-list>
+    	<div class="list list-inset">
+    		<a class="item item-icon-left" href="#/app/settings/mti">
+        	<i class="icon ion-soup-can-outline"></i>
+        	Mobile Table Inspector
+    		</a>
+    		<a class="item item-icon-left" ng-click="resumeEvent()">
+        	<i class="icon ion-erlenmeyer-flask"></i>
+        	Test Resume Event
+    		</a>
+        <a class="item item-icon-left"  ng-click="testHeartbeat()">
+          <i class="icon ion-heart"></i>
+          Test Heartbeat
+        </a>
+        <a class="item item-icon-left" ng-click="localNotification(100100)">
+          <i class="icon ion-android-notifications-none"></i>
+          Schedule 100100 localNotification
+        </a>
+        <a class="item item-icon-left" ng-click="localNotificationTrigger(100100)">
+          <i class="icon ion-android-notifications"></i>
+          Test 100100 localNotificationTrigger
+        </a>
+    	</div>
+  	</ion-list>
+    <div class="card test-results">
+      <h3>{{testTitle}}</h3>
+      <div class="item item-text-wrap">
+        <p><b>Result</b></p>
+        {{testResults.result}}
+        <p><b>Event</b></p>
+        {{testResults.event}}
+        <p><b>Error</b></p>
+        {{testResults.error}}
+      </div>
+    </div>
+    <form name="notificationForm">
+      <div class="row">
+        <div class="col">
+          <div class="input-label">
+            Local Notifications
+          </div>
+        </div>
+        <div class="col text-left">
+          <button class="button button-dark" ng-click="toggleNotificationState()">{{notificationButtonText}}</button>
+        </div>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

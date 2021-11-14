@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_ERP__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Existing customer account in EPICOR / Fishbowl. The account may be active or purely historic.</inlineHelpText>
+    <label>Account record in EPICOR / Fishbowl</label>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

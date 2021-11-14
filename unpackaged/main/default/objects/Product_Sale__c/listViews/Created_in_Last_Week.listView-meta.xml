@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_in_Last_Week</fullName>
+    <columns>Data_Type__c</columns>
+    <columns>Transaction_Date__c</columns>
+    <columns>Hospital__c</columns>
+    <columns>Customer_PO__c</columns>
+    <columns>Product_Code__c</columns>
+    <columns>Product_Name__c</columns>
+    <columns>Product__c</columns>
+    <columns>Invoice_Item_Link__c</columns>
+    <columns>Invoice_Date__c</columns>
+    <columns>Invoiced_Quantity__c</columns>
+    <columns>Invoiced_Value__c</columns>
+    <columns>Invoice_No__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:7</value>
+    </filters>
+    <label>Created in Last Week</label>
+</ListView>

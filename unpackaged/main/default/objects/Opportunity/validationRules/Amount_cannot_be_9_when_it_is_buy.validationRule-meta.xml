@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_cannot_be_9_when_it_is_buy</fullName>
+    <active>true</active>
+    <errorConditionFormula>(if(isblank( Allogran_Value__c ), 0, Allogran_Value__c) +
+if(isblank(  Stimulan_Value__c ), 0,  Stimulan_Value__c) +
+if(isblank( Sports_Medicine_Value__c ), 0, Sports_Medicine_Value__c) +
+if(isblank(  Genex_Value__c ), 0,  Genex_Value__c) =0)
+
+
+&amp;&amp; ispickval( StageName , &quot;Buy&quot;)</errorConditionFormula>
+    <errorMessage>Please fill in the values of the products bought when the stage is changed to Buy.</errorMessage>
+</ValidationRule>

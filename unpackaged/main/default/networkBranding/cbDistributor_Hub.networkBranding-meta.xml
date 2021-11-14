@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NetworkBranding xmlns="http://soap.sforce.com/2006/04/metadata">
+    <loginFooterText>Biocomposites.com</loginFooterText>
+    <loginLogo>Communities_Shared_Document_Folder/servlet_jpg.jpg</loginLogo>
+    <loginLogoName>servlet.jpg</loginLogoName>
+    <network>Distributor Hub</network>
+    <pageFooter>SharedDocuments/Community_Footer.html</pageFooter>
+    <pageHeader>SharedDocuments/Community_Header.html</pageHeader>
+    <primaryColor>#DDDDDD</primaryColor>
+    <primaryComplementColor>#222222</primaryComplementColor>
+    <quaternaryColor>#FFFFFF</quaternaryColor>
+    <quaternaryComplementColor>#222222</quaternaryComplementColor>
+    <secondaryColor>#FFFFFF</secondaryColor>
+    <tertiaryColor>#FFFFFF</tertiaryColor>
+    <tertiaryComplementColor>#222222</tertiaryComplementColor>
+    <zeronaryColor>#FFFFFF</zeronaryColor>
+    <zeronaryComplementColor>#222222</zeronaryComplementColor>
+</NetworkBranding>

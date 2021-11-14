@@ -1,0 +1,46 @@
+<apex:page >
+
+<h1>Medicare Readmission Reduction Penalty Score Help</h1>
+<BR />
+<BR />The Medicare Readmission Reduction Program provides financial incentives to hospitals to reduce costly and unnecessary hospital readmissions.
+<BR />
+<BR />The Excess Readmission Ratio is calculated by measuring the ratio of predicted to expected readmissions:
+<BR />•   Predicted - the number of readmissions predicted based on the hospital performance with its observed case mix.
+<BR />•   Expected - the number of readmissions expected based on average hospital performance with a given hospital’s case mix.
+<BR />
+<BR />A ratio greater than 1 indicates excess readmissions.
+<BR />
+<BR />For Medicare, a hospital readmission happens when a patient is admitted to a hospital within 30 days, and includes readmissions to any hospital, not just where the patient was originally hospitalized. It doesn’t include certain planned readmissions.
+<BR />
+<BR />The overall gain / penalty is the percentage of reimbursement that CMS will withhold in that fiscal year. For 2017 the maximum is 3%.
+<BR />
+<BR />It is based on six measures:
+<BR />•   Acute myocardial infarction
+<BR />•   Heart failure, 
+<BR />•   Pneumonia
+<BR />•   Chronic obstructive pulmonary disease
+<BR />•   Hip/knee arthroplasty
+<BR />•   Coronary artery bypass  
+<BR />
+<BR />Hip and Knee arthroplasty have only been included in the Readmission Reduction Penalty Score since 2015.
+<BR />
+<BR />The score for each fiscal year is based on the following data ranges:
+<BR />
+<BR />2015     1 July 2010 – 30 June 2013
+<BR />2016     1 July 2011 – 30 June 2014
+<BR />2017     1 July 2012 – 30 June 2015
+<BR />2018     1 July 2013 – 30 June 2016
+<BR />
+<BR />In a few cases there is a penalty adjustment shown but no revenue adjustment.  This is because the hospital is part of a group and the revenue adjustment is being processed through the lead hospital.
+<BR />
+<BR /><BR /><b>Veterans Health Administration Hospitals</b>
+<BR />There is limited data available for VA hospitals.  Apporximately 50% of veterans enrolled in the VA Healthcare System are eligible for Medicare.
+<BR />
+<BR /><b>Ambulatory Surgery Center</b>
+<BR />We do not currently subsribe to the Definitive Healthcare ASC database.
+<BR />
+<BR /><b>Kaiser Permanente</b>
+<BR />This hospital system provides the legal minimum data to CMS and therefore you will see some gaps.
+<BR />
+<BR />
+</apex:page>

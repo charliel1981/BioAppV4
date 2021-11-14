@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technique__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Technique (trans-tibial or antero-medial portal approach)
+if applicable</inlineHelpText>
+    <label>Technique</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

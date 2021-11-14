@@ -1,0 +1,21 @@
+<table>
+<tr><td style="height:10px;"><div style="padding-top:4px;padding-bottom:3px;">Dear  {!Contact.FirstName},</br></br></div></td></tr>
+
+<tr><td><div style="color:#31B404;padding-top:4px;padding-bottom:0px;"><H1 style="margin:10px 0px"><span style="font-family:Arial;font-size:18px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:31B404;">
+News for you...</span></H1></br></div></td></tr>
+
+<tr><td ><div style="padding-bottom:10px;">Researchers have identified a patient in New York infected with a strain of <i> E. coli </i> containing the mcr-1 gene, which makes the bacteria highly resistant to even last-resort antibiotic treatments, <i> Reuters reports. </i> This is the second U.S. patient with the untreatable superbug infection. CDC Director Tom Frieden, MD, warned that the end of the antibiotic era was not far off.
+<br /><br />
+This article can be found under the Topics of Interest section of the Distributor Hub. Please login <a href=http://hub.biocomposites.com>here</a> to read the full article.</div></td></tr>
+
+<tr><td colspan="3" ><div style="padding-bottom:10px;"></div></td>
+<tr><td>{!User.FirstName} {!User.LastName}. <br />
+{!User.Title} <br />
+{!User.CompanyName} <br />
+{!User.Street} <br />
+{!User.City}, {!User.StateCode} {!User.PostalCode} <br />
+Cell: {!User.MobilePhone} <br />
+Office: {!User.Phone} <br />
+Fax: {!User.Fax}<br />
+</td></tr>
+</table>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>June 2016 Surgeon Testimonial Video on Website</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2016 06 Surgeon Testimonial Video</name>
+    <style>none</style>
+    <subject>What do surgeons have to say about STIMULAN?</subject>
+    <textOnly>Dear  {!Contact.FirstName},
+
+Find out by watching our new testimonial video!
+
+Seven surgeons were interviewed at the 2016 AAOS meeting to provide feedback on their experience with STIMULAN. This group of surgeons also shared their thoughts on drainage, the importance of closure, and the economic benefit that  STIMULAN provides. Their feedback has been condensed into an impactful 3 minute video.
+
+You can locate this new testimonial video on the STIMULAN page of the Biocomposites website. Click here to view this video and listen to what your surgeons have to say.
+
+
+Kind regards,
+{!User.FirstName} {!User.LastName} M.S.
+{!User.Title}
+{!User.CompanyName}
+{!User.Street}
+{!User.City}, {!User.StateCode} {!User.PostalCode}
+Office: {!User.Phone}
+Fax: {!User.Fax}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

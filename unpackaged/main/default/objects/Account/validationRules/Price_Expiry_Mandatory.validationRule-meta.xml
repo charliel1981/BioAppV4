@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Expiry_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (  RecordType.Id = &#39;Hospitals&#39;,
+TEXT(Contract_Price__c) = &quot;Yes&quot;,
+TEXT (Contract_Expiry__c) = &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Contract_Expiry__c</errorDisplayField>
+    <errorMessage>Expiry Date is required when Contract Price is selected.</errorMessage>
+</ValidationRule>

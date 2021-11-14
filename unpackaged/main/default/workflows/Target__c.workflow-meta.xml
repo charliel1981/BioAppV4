@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Target_External_ID</fullName>
+        <field>External_ID__c</field>
+        <formula>Name</formula>
+        <name>Target External ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Target_Month</fullName>
+        <description>Update Target Month Field</description>
+        <field>Target_Month__c</field>
+        <formula>TEXT(Month__c) &amp; &#39; &#39; &amp; TEXT(Year__c)</formula>
+        <name>Target Month</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Target_Name</fullName>
+        <field>Name</field>
+        <formula>TEXT(Country__c) &amp; &#39; &#39; &amp; TEXT(Region__c) &amp; &#39; &#39; &amp; TEXT(Month__c) &amp; &#39; &#39; &amp; TEXT(Year__c)</formula>
+        <name>Target Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Target Fields</fullName>
+        <actions>
+            <name>Target_External_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Target_Month</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Target_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Target__c.Target__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

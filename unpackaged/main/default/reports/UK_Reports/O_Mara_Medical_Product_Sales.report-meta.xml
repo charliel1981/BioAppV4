@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Product_Sale__c.Transaction_Date__c</field>
+    </columns>
+    <columns>
+        <field>Product_Sale__c.Product_Code__c</field>
+    </columns>
+    <columns>
+        <field>Product_Sale__c.Product_Name__c</field>
+    </columns>
+    <columns>
+        <field>Product_Sale__c.Order_Quantity__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Product_Sale__c.Invoiced_Value__c</field>
+    </columns>
+    <columns>
+        <field>Product_Sale__c.Hospital__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <criteriaItems>
+            <column>Product_Sale__c.Hospital__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>O&#39;Mara Medical Supplies Ltd</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Product_Sale__c.Customer_PO__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>O&#39;Mara Medical Product Sales</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Product_Sale__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Product_Sale__c.Invoice_Date__c</dateColumn>
+        <endDate>2013-03-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2013-01-01</startDate>
+    </timeFrameFilter>
+</Report>

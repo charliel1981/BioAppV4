@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used to lookup from a Profile Menu Item to a Menu or Sub Menu for the app menu permissions. --></help>
+        <label><!-- Menu Item --></label>
+        <name>Menu_Item__c</name>
+        <relationshipLabel><!-- Profile Menu Items --></relationshipLabel>
+    </CustomFieldTranslation>

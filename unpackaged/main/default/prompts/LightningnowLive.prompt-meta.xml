@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Lightning is now Live!</masterLabel>
+    <promptVersions>
+        <body>You Salesforce experience has now been set to Lightning as default. Questions? Contact salesforceadmin@biocomposites.com</body>
+        <customApplication>Biocomposites_Lightning</customApplication>
+        <delayDays>1</delayDays>
+        <description>Informing users that Lightning is live and Classic is no longer available.</description>
+        <dismissButtonLabel>I Understand</dismissButtonLabel>
+        <displayPosition>TopLeft</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <endDate>2020-01-31</endDate>
+        <isPublished>true</isPublished>
+        <masterLabel>Lightning is now Live!</masterLabel>
+        <publishedDate>2020-01-06</publishedDate>
+        <shouldDisplayActionButton>false</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2020-01-06</startDate>
+        <targetPageKey1>home</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Lightning is now Live!</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

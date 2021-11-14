@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This is the amount paid to the hospital after negotiated discounts have been applied.  The charge submitted by the hospital to the payer is much higher. --></help>
+        <label><!-- Est Total Pmts (USD) --></label>
+        <name>Est_Total_Pmts__c</name>
+    </CustomFieldTranslation>

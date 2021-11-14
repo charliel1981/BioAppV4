@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Contract 2 Products --></label>
+        <name>Contract_2_Products__c</name>
+        <picklistValues>
+            <masterLabel>STIMULAN</masterLabel>
+            <translation><!-- STIMULAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>geneX</masterLabel>
+            <translation><!-- geneX --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

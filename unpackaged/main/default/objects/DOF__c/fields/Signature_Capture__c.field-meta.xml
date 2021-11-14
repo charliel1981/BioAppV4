@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Signature_Capture__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to store the encoded signature as recorded on the mobile app.</inlineHelpText>
+    <label>Signature Capture</label>
+    <length>131072</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

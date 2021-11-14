@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Products_Check</fullName>
+    <active>true</active>
+    <description>To ensure that Contract 1 Products &amp; Contract 2 Products contain different values.</description>
+    <errorConditionFormula>AND(TEXT (Contract_1_Products__c) &lt;&gt; NULL,
+TEXT(Contract_1_Products__c) = TEXT(Contract_2_Products__c))</errorConditionFormula>
+    <errorDisplayField>Contract_2_Products__c</errorDisplayField>
+    <errorMessage>Contract 1 Products and Contract 2 Products must be different</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Force Lighning</masterLabel>
+    <promptVersions>
+        <actionButtonLabel>Tell me more</actionButtonLabel>
+        <actionButtonLink>https://biocomposites--c.na131.visual.force.com/apex/ForceLightningMessage</actionButtonLink>
+        <body>A new way to use Salesforce is comming 6th January 2020</body>
+        <customApplication>Biocomposites_Lightning</customApplication>
+        <delayDays>1</delayDays>
+        <description>Details on forcing the Lightning view</description>
+        <dismissButtonLabel>I understand</dismissButtonLabel>
+        <displayPosition>BottomLeft</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <endDate>2020-01-06</endDate>
+        <isPublished>false</isPublished>
+        <masterLabel>Force Lighning</masterLabel>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <startDate>2019-12-18</startDate>
+        <targetPageKey1>home</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <timesToDisplay>3</timesToDisplay>
+        <title>Lightning is coming!</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

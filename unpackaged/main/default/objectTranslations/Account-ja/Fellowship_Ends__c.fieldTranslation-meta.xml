@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The date that this Surgeon&apos;s Fellowship ends at this Hospital. --></help>
+        <label><!-- Fellowship Ends --></label>
+        <name>Fellowship_Ends__c</name>
+    </CustomFieldTranslation>

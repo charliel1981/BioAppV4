@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Use this as featured item --></label>
+        <name>Use_this_as_featured_item__c</name>
+        <relationshipLabel><!-- Community Items --></relationshipLabel>
+    </CustomFieldTranslation>

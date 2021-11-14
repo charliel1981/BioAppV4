@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Note any comments about the procedure --></help>
+        <label><!-- Procedure Comments --></label>
+        <name>Procedure_Comments__c</name>
+    </CustomFieldTranslation>

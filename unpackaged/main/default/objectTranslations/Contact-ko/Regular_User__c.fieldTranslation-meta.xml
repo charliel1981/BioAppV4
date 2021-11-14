@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- For UK incentive scheme purposes. Defined as 6 Stimulan cases per quarter. --></help>
+        <label><!-- Regular User --></label>
+        <name>Regular_User__c</name>
+    </CustomFieldTranslation>

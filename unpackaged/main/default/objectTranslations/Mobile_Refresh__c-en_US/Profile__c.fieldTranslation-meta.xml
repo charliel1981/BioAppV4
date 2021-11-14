@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Profile --></label>
+        <name>Profile__c</name>
+        <picklistValues>
+            <masterLabel>Biocomposites - MANAGEMENT</masterLabel>
+            <translation><!-- Biocomposites - MANAGEMENT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biocomposites - MARKET DEVELOPMENT MANAGER UK</masterLabel>
+            <translation><!-- Biocomposites - MARKET DEVELOPMENT MANAGER UK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biocomposites - REGIONAL MANAGER CANADA</masterLabel>
+            <translation><!-- Biocomposites - REGIONAL MANAGER CANADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biocomposites - REGIONAL MANAGER USA</masterLabel>
+            <translation><!-- Biocomposites - REGIONAL MANAGER USA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biocomposites - SALES MANAGER INDIA</masterLabel>
+            <translation><!-- Biocomposites - SALES MANAGER INDIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR CANADA</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR CANADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR EU (English)</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR EU (English) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR INDIA</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR INDIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR SOUTH AMERICA</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR SOUTH AMERICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA - Mid Atlantic</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA - Mid Atlantic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA - Mid West</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA - Mid West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA - North East</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA - North East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA - North West</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA - North West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA - South Central</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA - South Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA - South East</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA - South East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA - South West</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA - South West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community - DISTRIBUTOR USA - West Central</masterLabel>
+            <translation><!-- Community - DISTRIBUTOR USA - West Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Administrator</masterLabel>
+            <translation><!-- System Administrator --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

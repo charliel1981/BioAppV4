@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distributor_Address__c</fullName>
+    <description>Distributor__r.Customer_Address_Street__c &amp;BR()&amp;
+Distributor__r.Customer_Address_City__c &amp;BR()&amp;
+TEXT(Distributor__r.Customer_Address_County__c) &amp;BR()&amp;
+Distributor__r.Customer_Address_Postcode__c  &amp;BR()&amp;
+TEXT(Distributor__r.Customer_Address_Country__c)</description>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( Owner:User.ContactId ) , NULL, 
+ Distributor__r.BillingStreet &amp;BR()&amp;
+ Distributor__r.BillingCity &amp;BR()&amp;
+ Distributor__r.BillingState &amp;BR()&amp;
+ Distributor__r.BillingPostalCode &amp;BR()&amp;
+ Distributor__r.BillingCountry 
+
+
+)</formula>
+    <inlineHelpText>This is automaticilly populated when the distributor lookup is populated</inlineHelpText>
+    <label>Distributor Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

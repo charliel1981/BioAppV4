@@ -1,0 +1,9 @@
+<div class="modal bio-image-modal bio-transparent-modal" ng-click="vm.closeImageModal()">
+  <ion-slides slider="vm.modalSlider" id="{{vm.modalSlidesId}}">
+    <ion-slide-page ng-repeat="slide in vm.slides" class="bio-content-item-slide-page-modal">
+      <img ng-show="slide.image" ng-src="data:image/jpg;base64,{{::slide.image}}" class="bio-fullscreen-image {{vm.imageCSSClassModal}}" />
+      <div ng-show="slide.image && slide.caption" class="bio-fullscreen-slide-caption-text {{vm.imageCaptionCSSClassModal}}">{{::slide.caption}}</div>
+      <div ng-show="!slide.image && slide.text" ng-bind-html="slide.text | trusted" class="bio-fullscreen-text bio-image-or-copy-text"></div>
+    </ion-slide-page>
+  </ion-slides>
+</div>

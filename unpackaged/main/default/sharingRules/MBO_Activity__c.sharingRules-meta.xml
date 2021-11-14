@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>AVP_East_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AVP East USA</label>
+        <sharedTo>
+            <role>AVP_East_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>AVP_East_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>AVP_West_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>AVP West USA</label>
+        <sharedTo>
+            <role>AVP_West_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>AVP_West_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_Florida_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS Florida USA</label>
+        <sharedTo>
+            <role>FMS_Florida_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Lead_FMS_Florida_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_Mid_Atlantic_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS Mid Atlantic USA</label>
+        <sharedTo>
+            <role>Lead_FMS_Mid_Atlantic_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Lead_FMS_Mid_Atlantic_USA</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_Mid_West_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS Mid West USA</label>
+        <sharedTo>
+            <role>Lead_FMS_Mid_West_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Lead_FMS_Mid_West_USA</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_North_Atlantic_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS North Atlantic USA</label>
+        <sharedTo>
+            <role>Lead_FMS_North_Atlantic_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Lead_FMS_North_Atlantic_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_North_East_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS North East USA</label>
+        <sharedTo>
+            <role>lead_FMS_North_East_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>lead_FMS_North_East_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_North_West_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS North West USA</label>
+        <sharedTo>
+            <role>Lead_FMS_North_West_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Lead_FMS_North_West_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_South_Central_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS South Central USA</label>
+        <sharedTo>
+            <role>FMS_South_Central_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Lead_FMS_South_Central_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_South_East_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS South East USA</label>
+        <sharedTo>
+            <role>Lead_FMS_South_East_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Lead_FMS_South_East_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_South_West_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS South West USA</label>
+        <sharedTo>
+            <role>Lead_FMS_South_West_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Lead_FMS_South_West_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Lead_FMS_West_Central_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Lead FMS West Central USA</label>
+        <sharedTo>
+            <role>Lead_FMS_West_Central_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Lead_FMS_West_Central_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Management_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Management Sharing</label>
+        <sharedTo>
+            <role>Management</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Management</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_East_Canada</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM East Canada</label>
+        <sharedTo>
+            <role>RM_East_Canada</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_East_Canada</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_Florida_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM Florida USA</label>
+        <sharedTo>
+            <role>RM_Florida_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_Florida_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_Mid_Atlantic_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM Mid Atlantic USA</label>
+        <sharedTo>
+            <role>RM_Mid_Atlantic_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_Mid_Atlantic_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_Mid_West_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM Mid West USA</label>
+        <sharedTo>
+            <role>RM_Mid_West_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_Mid_West_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_North_Atlantic_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM North Atlantic USA</label>
+        <sharedTo>
+            <role>RM_North_Atlantic_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>RM_North_Atlantic_USA</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_North_East_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM North East USA</label>
+        <sharedTo>
+            <role>RM_North_East_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_North_East_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_North_West_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM North West USA</label>
+        <sharedTo>
+            <role>RM_North_West_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_North_West_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_South_Central_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM South Central USA</label>
+        <sharedTo>
+            <role>RM_South_Central_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_South_Central_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_South_East_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM South East USA</label>
+        <sharedTo>
+            <role>RM_South_East_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_South_East_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_South_West_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM South West USA</label>
+        <sharedTo>
+            <role>RM_South_West_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_South_West_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_West_Canada</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM West Canada</label>
+        <sharedTo>
+            <role>RM_West_Canada</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>RM_West_Canada</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RM_West_Central_USA</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RM West Central USA</label>
+        <sharedTo>
+            <role>RM_West_Central_USA</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>RM_West_Central_USA</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

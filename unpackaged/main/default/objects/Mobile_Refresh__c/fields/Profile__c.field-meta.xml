@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profile__c</fullName>
+    <externalId>false</externalId>
+    <label>Profile</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Biocomposites - MANAGEMENT</fullName>
+                <default>false</default>
+                <label>Biocomposites - MANAGEMENT</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - MARKET DEVELOPMENT MANAGER UK</fullName>
+                <default>false</default>
+                <label>Biocomposites - MARKET DEVELOPMENT MANAGER UK</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - REGIONAL MANAGER CANADA</fullName>
+                <default>false</default>
+                <label>Biocomposites - REGIONAL MANAGER CANADA</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - REGIONAL MANAGER USA</fullName>
+                <default>false</default>
+                <label>Biocomposites - REGIONAL MANAGER USA</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - SALES MANAGER INDIA</fullName>
+                <default>false</default>
+                <label>Biocomposites - SALES MANAGER INDIA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR CANADA</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR CANADA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR EU (English)</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR EU (English)</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR INDIA</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR INDIA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR SOUTH AMERICA</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR SOUTH AMERICA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA - Mid Atlantic</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA - Mid Atlantic</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA - Mid West</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA - Mid West</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA - North East</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA - North East</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA - North West</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA - North West</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA - South Central</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA - South Central</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA - South East</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA - South East</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA - South West</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA - South West</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA - West Central</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA - West Central</label>
+            </value>
+            <value>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+                <label>System Administrator</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

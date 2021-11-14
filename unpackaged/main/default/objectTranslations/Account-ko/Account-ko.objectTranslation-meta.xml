@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Account (Sales) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout SDoc</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Distributor</layout>
+        <sections>
+            <label><!-- Alternate Address Information --></label>
+            <section>Alternate Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Distributor Section --></label>
+            <section>Distributor Section</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Region Information --></label>
+            <section>Sales Region Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Distributor US</layout>
+        <sections>
+            <label><!-- Distributor Section --></label>
+            <section>Distributor Section</section>
+        </sections>
+        <sections>
+            <label><!-- ID&apos;s --></label>
+            <section>ID&#39;s</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Region --></label>
+            <section>Sales Region</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Group</layout>
+        <sections>
+            <label><!-- Account Hierarchy --></label>
+            <section>Account Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Group Information --></label>
+            <section>Group Information</section>
+        </sections>
+        <sections>
+            <label><!-- IDs --></label>
+            <section>IDs</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospital Layout US</layout>
+        <sections>
+            <label><!-- Account Hierarchy --></label>
+            <section>Account Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Alternative Address Information --></label>
+            <section>Alternative Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Definitive Healthcare --></label>
+            <section>Definitive Healthcare</section>
+        </sections>
+        <sections>
+            <label><!-- Hospital Information --></label>
+            <section>Hospital Information</section>
+        </sections>
+        <sections>
+            <label><!-- IDs --></label>
+            <section>IDs</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Region Information --></label>
+            <section>Sales Region Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospital Layout US (DHC)</layout>
+        <sections>
+            <label><!-- Definitive Healthcare --></label>
+            <section>Definitive Healthcare</section>
+        </sections>
+        <sections>
+            <label><!-- Hospital Information --></label>
+            <section>Hospital Information</section>
+        </sections>
+        <sections>
+            <label><!-- IDs --></label>
+            <section>IDs</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Region --></label>
+            <section>Sales Region</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hospitals Layout</layout>
+        <sections>
+            <label><!-- Account Hierarchy --></label>
+            <section>Account Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Alternative Address Information --></label>
+            <section>Alternative Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Hospital Information --></label>
+            <section>Hospital Information</section>
+        </sections>
+        <sections>
+            <label><!-- IDs --></label>
+            <section>IDs</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Region Information --></label>
+            <section>Sales Region Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Surgeon Layout</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label><!-- Icon --></label>
+            <section>Icon</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Region --></label>
+            <section>Sales Region</section>
+        </sections>
+        <sections>
+            <label><!-- Surgeon Information --></label>
+            <section>Surgeon Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Surgeon Layout US</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label><!-- Fellowship Tracker --></label>
+            <section>Fellowship Tracker</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Region --></label>
+            <section>Sales Region</section>
+        </sections>
+        <sections>
+            <label><!-- Surgeon Information --></label>
+            <section>Surgeon Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Trust</layout>
+        <sections>
+            <label><!-- Account Hierarchy --></label>
+            <section>Account Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Trust Information --></label>
+            <section>Trust Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Link To Hospital --></label>
+        <name>Link_Surgeon_To_Hospital</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Link To Distributor --></label>
+        <name>Link_To_Distributor</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Link To Hospital_old --></label>
+        <name>Link_To_Hospital</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Key Account Plan --></label>
+        <name>New_Key_Acct_Plan</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Quick MBO Activity --></label>
+        <name>Quick_MBO_UK</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Quick MBO Activity US --></label>
+        <name>Quick_MBO_US</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Distributor covering a specific product / territory --></description>
+        <label><!-- Distributors --></label>
+        <name>Distributors</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Hospitals – customer and prospect --></description>
+        <label><!-- Hospital --></label>
+        <name>Hospital</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Account used for allocating Lead Forensics web site visits that are not relevant to sales accounts. --></description>
+        <label><!-- Lead Forensics --></label>
+        <name>Lead_Forensics</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Group entity for a number of hospitals --></description>
+        <label><!-- Trust / Groups --></label>
+        <name>Trust_Groups</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Invalid combination of data for Status and Historic since --></errorMessage>
+        <name>Account_Status_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing country can not be blank --></errorMessage>
+        <name>Billing_country_can_not_be_blank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Billing country can not be blank --></errorMessage>
+        <name>Billing_country_can_not_be_blank_trust</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Expiry Date is required when Biocomposites Consultant is selected. --></errorMessage>
+        <name>Biocomposites_Consultant_Expiry</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Territory / Country / Region combination. --></errorMessage>
+        <name>Check_Corporate_Sales_Region</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contract 1 Products and Contract 2 Products must be different --></errorMessage>
+        <name>Contract_Products_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Credit Status Comments are required when Credit Status is Overdue or Stop. --></errorMessage>
+        <name>Credit_status_comment_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Account Code is needed if record is to be transferred to Epicor --></errorMessage>
+        <name>Epicor_Account_Code_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Job Role selected --></errorMessage>
+        <name>Invalid_Job_Role</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Expiry Date is required when Contract Price is selected. --></errorMessage>
+        <name>Price_Expiry_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Error --></errorMessage>
+        <name>RSM_PickList</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You need to fill in this field if you have something entered into the &apos;Post Fellowship target Hospital&apos; filed. --></errorMessage>
+        <name>Receiving_RSM_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change the following fields: Account Name, Account Currency --></errorMessage>
+        <name>Regional_Manager_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- STIMULAN user needs to be selected before you can select STIMULAN beads --></errorMessage>
+        <name>STIMULAN_User_Beads</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- STIMULAN user needs to be selected before you can select STIMULAN bullets --></errorMessage>
+        <name>STIMULAN_User_Bullets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- STIMULAN user needs to be selected before you can select STIMULAN paste --></errorMessage>
+        <name>STIMULAN_User_Paste</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid combination of Specialty / Other Specialty --></errorMessage>
+        <name>Surgeon_Other_Specialty</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Product_Sales_for_this_Distributor --></label>
+        <name>Product_Sales_for_this_Distributor</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Product_Sales_for_this_hospital --></label>
+        <name>Product_Sales_for_this_hospital</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Products_bought_by_this_Surgeon --></label>
+        <name>Products_bought_by_this_Surgeon</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Quick_MBO_Activity --></label>
+        <name>Quick_MBO_Activity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sales_for_this_Group --></label>
+        <name>Sales_for_this_Group</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Search_for_NPI_Number --></label>
+        <name>Search_for_NPI_Number</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+</CustomObjectTranslation>

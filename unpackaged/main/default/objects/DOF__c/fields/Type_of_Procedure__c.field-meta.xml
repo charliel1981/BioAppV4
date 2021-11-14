@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Procedure__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Procedure</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Total joint reconstruction</fullName>
+                <default>false</default>
+                <label>Total joint reconstruction</label>
+            </value>
+            <value>
+                <fullName>Trauma</fullName>
+                <default>false</default>
+                <label>Trauma</label>
+            </value>
+            <value>
+                <fullName>Foot &amp; ankle</fullName>
+                <default>false</default>
+                <label>Foot &amp; ankle</label>
+            </value>
+            <value>
+                <fullName>Spine</fullName>
+                <default>false</default>
+                <label>Spine</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

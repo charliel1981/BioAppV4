@@ -1,0 +1,105 @@
+<messaging:emailTemplate subject="Unsolicited request for {!relatedTo.Requestors_Name__c}" recipientType="User" relatedToType="Mobile_Dynamic__c">
+<messaging:htmlEmailBody >
+<html>
+    <body>
+        <Style type="text/css">
+           body {
+  font-family: 'Arial', sans-serif;
+}
+
+td {
+  font-size: 14px;
+  border: 1px solid #000;
+  text-align: left;
+  line-height: 40px;
+}
+
+tr {
+  border: 1px solid #000;
+  border-width: 1;
+}
+
+table {
+  border: 1px solid #000;
+  border-width: 1;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+}
+
+.rowOne {
+  width:1%;
+    height: 60px;
+    padding-right: 10px;
+    white-space:nowrap;
+}
+        </Style>
+        
+        <p>To Biocomposites Compliance Department</p>
+        <p>I have received a request for the following information:</p>        
+        <table>
+            <tr>
+                <td class="rowOne">Requestor’s name</td>
+                <td>{!relatedTo.Requestors_Name__c}</td>
+            </tr>
+            <tr>
+                <td class="rowOne">Requestor’s institution</td> 
+                <td>{!relatedTo.Hospital_Institution__c}</td>
+            </tr>         
+            <tr>
+                <td class="rowOne">Requestor’s email</td>
+                <td>{!relatedTo.Email__c}</td>
+            </tr>            
+            <tr>
+                <td class="rowOne">Product</td> 
+                <td>{!relatedTo.Product__c}</td>
+            </tr>            
+            <tr>
+                <td class="rowOne">Requested information</td>
+                <td>{!relatedTo.Requested_Information__c}</td> 
+            </tr> 
+            <tr>
+                <td class="rowOne">Request type</td>
+                <td>{!relatedTo.Request_Type__c}</td> 
+            </tr>
+            <tr>
+                <td class="rowOne">Target response date</td>
+                <td>
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                       <apex:param value="{!relatedTo.Request_Target_Response_Date__c}" />
+                   </apex:outputText>
+                </td> 
+            </tr> 
+            <tr>
+                <td class="rowOne">Date entered</td>
+                <td>
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                       <apex:param value="{!relatedTo.Date_Entered__c}" />
+                   </apex:outputText>
+                </td> 
+            </tr> 
+            <tr>
+                <td class="rowOne">Sync date</td>
+                <td>
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                       <apex:param value="{!relatedTo.CreatedDate}" />
+                   </apex:outputText>
+                </td> 
+            </tr>           
+        </table>
+        <br></br>
+        Yours sincerely,<br></br>
+          <br></br>
+          <br></br>  
+          <apex:outputField value="{!relatedTo.Owner.Name}"/><br></br>
+          <apex:outputField value="{!relatedTo.job_title_for_email__c}"/><br></br>
+          <apex:outputField value="{!relatedTo.Phone_Number_For_Email__c}"/><br></br>
+          <apex:outputField value="{!relatedTo.Email_formule_for_email__c}"/><br></br>
+          <br></br>
+          <apex:outputField value="{!relatedTo.Distributor__c}"/><br></br>
+          <apex:outputField value="{!relatedTo.Distributor_address__c}"/><br></br>
+    </body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

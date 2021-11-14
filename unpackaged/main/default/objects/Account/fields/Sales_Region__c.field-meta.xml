@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Region__c</fullName>
+    <externalId>false</externalId>
+    <label>Sales Region Acct Custom</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Country__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>East</fullName>
+                <default>false</default>
+                <label>East</label>
+            </value>
+            <value>
+                <fullName>Florida</fullName>
+                <default>false</default>
+                <label>Florida</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>Keele</fullName>
+                <default>false</default>
+                <label>Keele</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>Mid Atlantic</fullName>
+                <default>false</default>
+                <label>Mid Atlantic</label>
+            </value>
+            <value>
+                <fullName>Mid West</fullName>
+                <default>false</default>
+                <label>Mid West</label>
+            </value>
+            <value>
+                <fullName>North</fullName>
+                <default>false</default>
+                <label>North</label>
+            </value>
+            <value>
+                <fullName>North Atlantic</fullName>
+                <default>false</default>
+                <label>North Atlantic</label>
+            </value>
+            <value>
+                <fullName>North Central</fullName>
+                <default>false</default>
+                <label>North Central</label>
+            </value>
+            <value>
+                <fullName>North East</fullName>
+                <default>false</default>
+                <label>North East</label>
+            </value>
+            <value>
+                <fullName>North West</fullName>
+                <default>false</default>
+                <label>North West</label>
+            </value>
+            <value>
+                <fullName>Scotland</fullName>
+                <default>false</default>
+                <label>Scotland</label>
+            </value>
+            <value>
+                <fullName>Shanghai</fullName>
+                <default>false</default>
+                <label>Shanghai</label>
+            </value>
+            <value>
+                <fullName>South</fullName>
+                <default>false</default>
+                <label>South</label>
+            </value>
+            <value>
+                <fullName>South Central</fullName>
+                <default>false</default>
+                <label>South Central</label>
+            </value>
+            <value>
+                <fullName>South East</fullName>
+                <default>false</default>
+                <label>South East</label>
+            </value>
+            <value>
+                <fullName>South West</fullName>
+                <default>false</default>
+                <label>South West</label>
+            </value>
+            <value>
+                <fullName>West</fullName>
+                <default>false</default>
+                <label>West</label>
+            </value>
+            <value>
+                <fullName>West Central</fullName>
+                <default>false</default>
+                <label>West Central</label>
+            </value>
+            <value>
+                <fullName>Wilmington</fullName>
+                <default>false</default>
+                <label>Wilmington</label>
+            </value>
+            <value>
+                <fullName>North West AM</fullName>
+                <default>false</default>
+                <label>North West AM</label>
+            </value>
+            <value>
+                <fullName>London - AM</fullName>
+                <default>false</default>
+                <label>London - AM</label>
+            </value>
+            <value>
+                <fullName>Midlands</fullName>
+                <default>false</default>
+                <label>Midlands</label>
+            </value>
+            <value>
+                <fullName>Pacific Coast</fullName>
+                <default>false</default>
+                <label>Pacific Coast</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>China</controllingFieldValue>
+            <valueName>Shanghai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Keele</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>London</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>North East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>North West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Scotland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>South East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>South West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>North West AM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>London - AM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UK</controllingFieldValue>
+            <valueName>Midlands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>Florida</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>Mid Atlantic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>Mid West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>North Atlantic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>North Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>South Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>West Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>Wilmington</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>North</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>South</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

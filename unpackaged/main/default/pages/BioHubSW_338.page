@@ -1,0 +1,238 @@
+<apex:page contentType="application/javascript"  controller="mobilecaddy1.StartPageCacheCtrl001_mc">
+<!-- mobilecaddy-page-templates_0.0.2 manually created -->
+        const filesToCache = [
+        "/favicon.ico",
+        "BioHub_338",
+"{!URLFOR($Resource.BioHub_338, 'www/css/app.css')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamabook-webfont.EOT')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamabook-webfont.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamabook-webfont.TTF')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamabook-webfont.WOFF')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamabook-webfont.WOFF2')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamalight-webfont.EOT')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamalight-webfont.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamalight-webfont.TTF')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamalight-webfont.WOFF')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/flamalight-webfont.WOFF2')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/ionicons.EOT')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/ionicons.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/ionicons.TTF')}",
+"{!URLFOR($Resource.BioHub_338, 'www/fonts/ionicons.WOFF')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/Biocomposites-header-logo.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/biocomposites-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/contact-us-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/distributor-hub-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/e-learning-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/elearn-home-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/genex-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/green-tick.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/home-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/home.jpg')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/lead-capture-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/logo.png')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/new-account-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/order-form-home-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/order-form-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/outbox-alert.GIF')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/outbox-home-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/outbox-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/settings-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/stimulan-home-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/stimulan-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/sync-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/topics-of-interest-home-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/topics-of-interest-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/tutorial1.jpg')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/tutorial2.jpg')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/tutorial3.jpg')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/tutorial4.jpg')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/tutorial5.jpg')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/tutorial6.jpg')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/tutorial7.jpg')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/unsolicited-request-home-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/images/unsolicited-request-icon.SVG')}",
+"{!URLFOR($Resource.BioHub_338, 'www/lib/js/ionic.bundle.min.js')}",
+"{!URLFOR($Resource.BioHub_338, 'www/lib/js/ng-cordova.min.js')}",
+"{!URLFOR($Resource.BioHub_338, 'www/lib/js/signature_pad.min.js')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/accountDetail.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/contentItem.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/home.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/imageModal.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/imageModalSlides.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/leadCapture.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/leadDetail.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/leadHistory.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/menu.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/myAccounts.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/newAccount.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/newAccountDetail.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/newAccountHistory.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/orderDetail.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/orderForm.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/orderHistory.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/outbox.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/request.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/requestDetail.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/requestHistory.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/settings.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/settingsDeploy.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/settingsDevMTI.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/settingsDevMTIDetail.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/settingsDevRawView.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/settingsDevTools.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/settingsDiagnostics.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/settingsTesting.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/templates/tutorial.html')}",
+"{!URLFOR($Resource.BioHub_338, 'www/js/app.js')}",
+"{!URLFOR($Resource.BioHub_338, 'www/js/controllers.js')}",
+"{!URLFOR($Resource.BioHub_338, 'www/js/services.js')}",
+        "{!URLFOR($Resource.MC_Resource_v2_2_3, 'jquery.min.js')}",
+        "{!URLFOR($Resource.MC_Resource_v2_2_3, 'mobilecaddy-utils.min.js')}",
+        "{!URLFOR($Resource.MC_Resource_v2_2_3, 'promise-1.0.0.min.js')}",
+        "{!URLFOR($Resource.MC_Resource_v2_2_3, 'underscore-min.js')}",
+        "{!vfremotepath}",
+        "/static/111213/js/perf/stub.js"
+      ];
+
+    const staticCacheName = 'mobilecaddy-cache-v1';
+
+      // Listen for install event, set callback
+    self.addEventListener('install', function(event) {
+        const chromeVersionRegex = /.Chrome\/(\S*)/gm;
+        let chromeVersion = navigator.appVersion.match(chromeVersionRegex);        
+        console.log("ChromeVersion", chromeVersion);
+        if (chromeVersion) {           
+            chromeVersion = chromeVersion[0].split("/")[1].split(".")[0];
+            console.log("ChromeVersion", chromeVersion);
+            if (69 > Number(chromeVersion)) {                
+                console.log("Unregistering myself (serviceWorker)");
+                self.registration.unregister().then(r => {
+                    console.log("unregistration success");
+                }).catch(e => {
+                    console.error("Could not unregister");
+                });
+                return;
+            }
+        }
+        
+        console.log('Attempting to install service worker and cache static assets');
+        self.skipWaiting();
+        let myCache;
+        let myCacheKeys = ["INITIALISING"];
+        event.waitUntil(
+            caches.keys().then((keyList) => {
+                return Promise.all(keyList.map((key) => {
+                    return caches.delete(key);
+                }));
+            }).then( () => {
+                console.log("cache cleared");
+                return caches.open(staticCacheName);
+            }).then(cache => {
+                console.log("cache open");
+                myCache = cache;
+                return myCache.addAll(filesToCache);
+            }).then(r => {
+                console.log("cache files added");
+                return myCache.keys();
+            }).then(cacheKeys => {
+                let myCacheKeys = cacheKeys.map(k => {
+                    return k.url;
+                });
+                myCacheKeys.unshift("INITIALISING");
+                myCacheKeys.push("CACHE-COMPLETE");
+                const broadcast = new BroadcastChannel('sw-channel');
+                broadcast.postMessage({ payload: myCacheKeys });
+            }).catch(e => {
+                console.error("CACHE-FAILRE", e);
+                myCacheKeys.push("CACHE-FAILURE");
+                const broadcast = new BroadcastChannel('sw-channel');
+                broadcast.postMessage({ payload: myCacheKeys });
+            })
+        );
+
+    });
+
+    self.addEventListener('activate', function(event) {
+        console.log('activate');
+        // event.waitUntil(
+        //     caches.keys().then((keyList) => {
+        //         return Promise.all(keyList.map((key) => {
+        //             if (filesToCache.indexOf(key) === -1) {
+        //                 return caches.delete(key);
+        //             }
+        //         }));
+        //     })
+        // );
+    });
+
+
+    self.addEventListener('fetch', event => {
+        console.log('Fetch event for ', event.request.url);
+        if (event.request.url.includes("localhost") || event.request.url.includes("apexremote")) {
+            // Do Nothing
+        } else {
+        event.respondWith(
+          caches.match(event.request, {ignoreSearch: true})
+          .then(response => {
+            if (response) {
+              console.log('Found ', event.request.url, ' in cache');
+              return response;
+            }
+            console.log('Network request for ', event.request.url);
+            //return new Request(urlToPrefetch, { mode: 'no-cors' });
+            return fetch(event.request).then(function(response) {
+                // Check if we received a valid response
+                if(!response || response.status !== 200 || response.type !== 'basic') {
+                  return response;
+                } else {
+                    console.log("response", response);
+                }
+
+
+                return response;
+          }).catch(error => {
+            console.error("err:", error);
+            // TODO 6 - Respond with custom offline page
+            return unableToResolve();
+
+          })
+
+            // TODO 4 - Add fetched files to the cache
+
+          }).catch(error => {
+
+            // TODO 6 - Respond with custom offline page
+
+          })
+        );
+        }
+
+        function unableToResolve () {
+            /* There's a couple of things we can do here.
+                - Test the Accept header and then return one of the `offlineFundamentals`
+                e.g: `return caches.match('/some/cached/image.png')`
+                - You should also consider the origin. It's easier to decide what
+                "unavailable" means for requests against your origins than for requests
+                against a third party, such as an ad provider
+                - Generate a Response programmaticaly, as shown below, and return that
+            */
+
+            console.log('WORKER: fetch request failed in both cache and network.');
+
+            /* Here we're creating a response programmatically. The first parameter is the
+                response body, and the second one defines the options for the response.
+            */
+            return new Response('<h1>Service Unavailable</h1>', {
+                status: 503,
+                statusText: 'Service Unavailable',
+                headers: new Headers({
+                'Content-Type': 'text/html'
+                })
+            });
+        }
+
+
+
+      });
+
+</apex:page>

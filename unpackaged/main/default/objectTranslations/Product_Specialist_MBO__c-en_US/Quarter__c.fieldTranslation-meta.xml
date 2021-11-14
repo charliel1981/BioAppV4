@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select which Quarter of the year this MBO relates too. --></help>
+        <label><!-- Quarter --></label>
+        <name>Quarter__c</name>
+        <picklistValues>
+            <masterLabel>Q1 2021</masterLabel>
+            <translation><!-- Q1 2021 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q2 2021</masterLabel>
+            <translation><!-- Q2 2021 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q3 2021</masterLabel>
+            <translation><!-- Q3 2021 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q4 2021</masterLabel>
+            <translation><!-- Q4 2021 --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

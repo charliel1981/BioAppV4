@@ -1,0 +1,313 @@
+<apex:component controller="DOFTemplateController" access="global" >
+
+    <!-- ATTRIBUTES -->
+    <apex:attribute name="dof" type="DOF__c" description="Instance of a dof record." />
+    <!-- ATTRIBUTES -->
+    
+    <!-- COMPONENT BODY -->
+    <head>
+        <style type="text/css" media="print">
+            @page{
+                margin : 3cm 1cm 4.5cm 1.5cm;
+                @top-center {
+                    content: element(header);
+                }
+
+                @bottom-left {
+                    content: element(footer,last);
+                }
+            }
+
+            div.header {
+                position: running(header);
+            }
+            div.footer {
+                position: running(footer);
+            }
+        </style>
+    </head>
+
+    <!-- HEADER -->
+    <div class="header" align="right" >
+        <img src="{!$Resource.Biocomposites_Logo}" height="37" width="240" />
+    </div>
+    <!-- HEADER -->
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <hr />
+        <table style="width:100%;" >
+            <tr>
+                <td style="width:30%; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-decoration: none !important;">
+                    <apex:outputField value="{!DOF.Biocomposites_Company_Name__c}" /> 
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; padding-left: 20px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-decoration: none !important;">
+                    Contact us:
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; padding-left: 30px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.01em; text-decoration: none !important;">
+                    Submit purchase orders:
+                </td>
+            </tr>
+            <tr>
+                <td style="width:30%; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    <apex:outputField value="{!DOF.Biocomposites_Company_Name_For_Email_Foo__c}" />
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; padding-left: 20px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    <apex:outputField value="{!DOF.DOF_Contact_Us_For_Email__c}" />
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; padding-left: 30px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 400; text-align:left; line-height: 20px; text-decoration: none !important;">
+                    <apex:outputField value="{!DOF.DOF_Submith_Purchase_Order_Add_For_Email__c}" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- FOOTER -->
+
+    <!-- BODY -->
+    <div class="content" >
+        <!-- DOF DETAIL -->
+        <table style="width:100%;" >
+            <tr>
+                <td colspan="5" style="text-align:left; font-family: 'Montserrat', Arial, sans-serif; font-size:20px; line-height: 25px; text-decoration: none; color: #000000; font-weight:800; text-transform: uppercase; letter-spacing: 0.05em; padding-left:10px;">
+                    delivery order form 
+                </td>
+            </tr>
+            <!-- FIRST ROW -->
+            <tr>
+                <td style="width:30%; padding-top: 40px; white-space:nowrap; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important; padding-left:10px;">
+                    HOSPITAL NAME 
+                </td>
+                <td style="width:5%; padding-top: 40px; " />
+                <td style="width:30%; padding-top: 40px;  white-space:nowrap; padding-left: 20px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    Hospital Account Number
+                </td>
+                <td style="width:5%; padding-top: 40px; " />
+                <td style="width:30%; padding-top: 40px; white-space:nowrap;  padding-left: 30px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    Date
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important; padding-left:10px;">
+                    {!DOF.Hospital_for_DOF_email__c} 
+                </td>
+                <td style="width:5%;" />
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; padding-left: 20px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    {!DOF.Hospital__r.Customer_Code__c}
+                </td>
+                <td style="width:5%;" />
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; padding-left: 30px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                        <apex:param value="{!DOF.Date_Entered__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+            <!-- FIRST ROW -->
+            <!-- SECOND ROW -->
+            <tr>
+                <td style="width:30%; padding-top: 15px; white-space:nowrap; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important; padding-left:10px;">
+                    SURGEON NAME
+                </td>
+                <td style="width:5%; padding-top: 15px; " />
+                <td style="width:30%; padding-top: 15px;  white-space:nowrap; padding-left: 20px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    TYPE OF PROCEDURE
+                </td>
+                <td style="width:5%; padding-top: 15px; " />
+                <td style="width:30%; padding-top: 15px; white-space:nowrap;  padding-left: 30px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    PROCEDURE DATE
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important; padding-left:10px;">
+                    {!DOF.Surgeon_For_Email__c} 
+                </td>
+                <td style="width:5%;" /> 
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; padding-left: 20px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    {!DOF.Type_of_Procedure__c} 
+                </td>
+                <td style="width:5%;" />
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; padding-left: 30px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                        <apex:param value="{!DOF.Procedure_Date__c}" />
+                    </apex:outputText>
+                </td> 
+            </tr>
+            <!-- SECOND ROW -->
+            <!-- THIRD ROW -->
+            <tr>
+                <td style="width:30%; padding-top: 15px; white-space:nowrap; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important; padding-left:10px;">
+                    PURCHASE ORDER NUMBER 
+                </td>
+                <td style="width:5%; padding-top: 15px; " />
+                <td style="width:30%; padding-top: 15px;  white-space:nowrap; padding-left: 20px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    STOCK INSTRUCTIONS
+                </td>
+                <td style="width:5%; padding-top: 15px; " />
+                <td style="width:30%; padding-top: 15px; white-space:nowrap;  padding-left: 30px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    DOF NUMBER
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important; padding-left:10px;">
+                    {!DOF.PO_Number__c}
+                </td>
+                <td style="width:5%;" /> 
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); padding-left: 20px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    {!DOF.Stock_Instructions__c}&nbsp;{!DOF.Replace_Stock_Details__c}
+                </td>
+                <td style="width:5%;" />
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; padding-left: 30px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    {!DOF.Name}
+                </td> 
+            </tr>
+            <!-- THIRD ROW -->
+            <!-- FOURTH ROW -->
+            <tr>
+                <td style="width:30%; padding-top: 15px; white-space:nowrap; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important; padding-left:10px;">
+                    HOSPITAL NOTIFICATION 
+                </td>
+                <td style="width:5%; padding-top: 15px; " />
+                <td style="width:30%; padding-top: 15px;  white-space:nowrap; padding-left: 20px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    COMMENTS
+                </td>
+                <td style="width:5%; padding-top: 15px; " />
+                <td style="width:30%; padding-top: 15px; white-space:nowrap;  padding-left: 30px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important; padding-left:10px;">
+                    {!DOF.Hospital_Notifiaction__c}
+                </td>
+                <td style="width:5%;" /> 
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); padding-left: 20px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    {!DOF.Procedure_Comments__c} 
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; color: rgb(0, 0, 0); white-space:nowrap; padding-left: 30px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    
+                </td> 
+            </tr>
+            <!-- FOURTH ROW -->
+            <!-- FIFTH ROW -->
+            <tr>
+                <td style="width:30%; padding-top: 15px; white-space:nowrap; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important; padding-left:10px;">
+                    HOSPITAL REPRESENTATIVE NAME
+                </td>
+                <td style="width:5%; padding-top: 15px; " />
+                <td colspan="3" style="width:65%; padding-top: 15px;  white-space:nowrap; padding-left: 20px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    HOSPITAL REPRESENTATIVE SIGNATURE
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important; padding-left:10px;">
+                    <apex:outputPanel layout="none" rendered="{!NOT(ISBLANK(DOF.Hospital_Rep__c))}" >
+                        {!DOF.Hospital_Rep__c}
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!ISBLANK(DOF.Hospital_Rep__c)}" >
+                        <br />
+                    </apex:outputPanel>
+                </td>
+                <td style="width:5%;" /> 
+                <td valign="top" style="width:30%; color: rgb(0, 0, 0); padding-left: 30px; font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    <apex:outputPanel rendered="{! NOT(ISBLANK(DOF.Signature_Capture_Document_Id__c))}" >
+                        <apex:image value="{!SalesforceBaseUrl}/servlet/servlet.FileDownload?file={!DOF.Signature_Capture_Document_Id__c}" height="80px" width="80px" />
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!ISBLANK(DOF.Signature_Capture_Document_Id__c)}" >
+                        <br />
+                    </apex:outputPanel>
+                </td>
+            </tr>
+            <!-- FIFTH ROW -->
+
+        </table>
+        <!-- DOF DETAIL -->
+
+        <!-- DOF ITEMS --> 
+        <table style="width:100%; padding-top:10px;" >
+            <tr>
+                <td colspan="5" style="text-align: center; background-color:#545454; font-family: Montserrat, Arial, sans-serif; font-size: 10px; line-height: 22.099999999999998px; text-decoration: none; color: rgb(255, 255, 255); font-weight: 600; text-transform: uppercase; letter-spacing: 0.01em; padding-top:4px; padding-bottom:4px;">
+                    PRODUCTS 
+                </td>
+            </tr>
+            <tr>
+                <td style="width:30%; text-align: left; padding-top: 10px; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em; padding-left:10px; padding-bottom:10px; ">
+                    PRODUCT 
+                </td>
+                <td style="width:18%; text-align: center; padding-top: 10px; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em; padding-bottom:10px;">
+                    ORDER CODE 
+                </td>
+                <td style="width:18%; text-align: center; padding-top: 10px; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em; padding-bottom:10px;">
+                    LOT NUMBER 
+                </td>
+                <td style="width:18%; text-align: center; padding-top: 10px; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em; padding-bottom:10px;">
+                    EXPIRY DATE  
+                </td>
+                <td style="width:16%; text-align: center; padding-top: 10px; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em; padding-bottom:10px;">
+                    PRICE 
+                </td>
+            </tr>
+            <apex:repeat var="item" value="{!DOF.DOF_Items__r}" >
+                <tr>
+                    <td style="width:30%; text-align: left; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 400; letter-spacing: 0.025em; padding-left:10px; padding-bottom:5px; ">
+                        {!item.Product_Name__c}
+                    </td>
+                    <td style="width:18%; text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 400; letter-spacing: 0.025em; padding-bottom:5px; ">
+                        {!item.Order_Code__c}
+                    </td>
+                    <td style="width:18%; text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 400; letter-spacing: 0.025em; padding-bottom:5px; ">
+                        {!item.Lot_Number__c}
+                    </td>
+                    <td style="width:18%; text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 400; letter-spacing: 0.025em; padding-bottom:5px; ">
+                        <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                            <apex:param value="{!item.Expiry_Date__c}" />
+                        </apex:outputText>
+                    </td>
+                    <td style="width:16%; text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 400; letter-spacing: 0.025em; padding-bottom:5px; ">
+                        {!item.price_for_order_form__c}
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+        <!-- DOF ITEMS -->
+        <table style="width:100%; padding-bottom:20px; ">
+            <tr>
+                <td style="text-align: left; font-family: 'Arial', sans-serif; font-size: 14px; line-height: 21px; text-decoration: none; color: rgb(68, 68, 68); font-weight: 400;">
+                    <br/>  <br/>    This is an order confirmation not an invoice.&nbsp;An invoice will be issued shortly and pricing will be confirmed to reflect any pricing agreement that is in place.
+                </td>
+            </tr>
+        </table>
+        <table style="width:100%; padding-bottom:10px; " >
+            <tr>
+                <td style="width:30%; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important; ">
+                    <apex:outputField value="{!DOF.DOF_Rep_Title__c}"/>
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 0.01em; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td style="width:30%; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    <apex:outputField value="{!DOF.DOF_Rep_Block__c}"/>
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; padding-left: 20px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 400; line-height: 20px; text-align: left; text-decoration: none !important;">
+                    <apex:outputField value="{!DOF.Distributor_Address__c}" />
+                </td>
+                <td style="width:5%;" />
+                <td style="width:30%; padding-left: 30px; color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 10px; font-weight: 400; text-align:left; line-height: 20px; text-decoration: none !important;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- BODY -->
+    <!-- COMPONENT BODY -->
+</apex:component>

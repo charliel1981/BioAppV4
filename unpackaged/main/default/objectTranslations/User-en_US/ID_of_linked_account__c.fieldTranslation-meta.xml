@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used for brainshark and distributor --></help>
+        <label><!-- ID of linked account --></label>
+        <name>ID_of_linked_account__c</name>
+    </CustomFieldTranslation>

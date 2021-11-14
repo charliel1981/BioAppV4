@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Show qualifications as they should appear on correspondence --></help>
+        <label><!-- Qualifications --></label>
+        <name>Qualifications__c</name>
+    </CustomFieldTranslation>

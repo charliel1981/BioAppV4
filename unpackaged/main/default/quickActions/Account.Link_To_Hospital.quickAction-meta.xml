@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Hospital__c</field>
+        <formula>NULL</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Surgeon__c</field>
+        <formula>Account.PersonContactId</formula>
+    </fieldOverrides>
+    <label>Link To Hospital_old</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Hospital__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Surgeon__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <successMessage>Surgeon Linked To Hospital</successMessage>
+    <targetObject>Surgeon_in_Hospital__c</targetObject>
+    <targetParentField>Hospital__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

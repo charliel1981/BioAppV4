@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MC_PLU_DOF__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Used by the Mobile App to relate the child DOF Item to the parent DOF</inlineHelpText>
+    <label>MC_PLU_DOF</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,5 @@
+A Connection Session has been created with an at risk status check. 
+
+The CS belongs to the User {!mobilecaddy1__Connection_Session__c.CreatedBy} and was created on {!mobilecaddy1__Connection_Session__c.CreatedDate}. 
+
+The link to this record is: {!mobilecaddy1__Connection_Session__c.Link}

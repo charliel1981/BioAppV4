@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Exhibition</fullName>
+        <default>false</default>
+        <label>Exhibition</label>
+    </customValue>
+    <customValue>
+        <fullName>Table Top</fullName>
+        <default>false</default>
+        <label>Table Top</label>
+    </customValue>
+    <customValue>
+        <fullName>Admin Meeting</fullName>
+        <default>false</default>
+        <label>Admin Meeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand Rounds</fullName>
+        <default>false</default>
+        <label>Grand Rounds</label>
+    </customValue>
+    <customValue>
+        <fullName>Journal</fullName>
+        <default>false</default>
+        <label>Journal</label>
+    </customValue>
+    <customValue>
+        <fullName>Presentation</fullName>
+        <default>false</default>
+        <label>Presentation</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgeon Meeting</fullName>
+        <default>false</default>
+        <label>Surgeon Meeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Distributor Group</fullName>
+        <default>false</default>
+        <label>Distributor Group</label>
+    </customValue>
+    <customValue>
+        <fullName>In-Service</fullName>
+        <default>false</default>
+        <label>In-Service</label>
+    </customValue>
+    <customValue>
+        <fullName>One to one</fullName>
+        <default>false</default>
+        <label>One to one</label>
+    </customValue>
+    <masterLabel>MBO Activity SubType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

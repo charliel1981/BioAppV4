@@ -1,0 +1,3 @@
+<apex:page standardController="Mobile_Dynamic__c">
+  <apex:image height="500px" value="data:image/png;base64,{!Mobile_Dynamic__c.Lead_Photo_Base64__c}" />
+</apex:page>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Antibiotic_1__c</fullName>
+    <externalId>false</externalId>
+    <label>Antibiotic 1</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Event_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Liquid - Amikacin</fullName>
+                <default>false</default>
+                <label>Liquid - Amikacin</label>
+            </value>
+            <value>
+                <fullName>Liquid - Gentamicin</fullName>
+                <default>false</default>
+                <label>Liquid - Gentamicin</label>
+            </value>
+            <value>
+                <fullName>Liquid - Tobramycin</fullName>
+                <default>false</default>
+                <label>Liquid - Tobramycin</label>
+            </value>
+            <value>
+                <fullName>Powder - Amphotericin</fullName>
+                <default>false</default>
+                <label>Powder - Amphotericin</label>
+            </value>
+            <value>
+                <fullName>Powder - Caspofungin</fullName>
+                <default>false</default>
+                <label>Powder - Caspofungin</label>
+            </value>
+            <value>
+                <fullName>Powder - Ceftazidime</fullName>
+                <default>false</default>
+                <label>Powder - Ceftazidime</label>
+            </value>
+            <value>
+                <fullName>Powder - Ceftriaxone</fullName>
+                <default>false</default>
+                <label>Powder - Ceftriaxone</label>
+            </value>
+            <value>
+                <fullName>Powder - Daptomycin</fullName>
+                <default>false</default>
+                <label>Powder - Daptomycin</label>
+            </value>
+            <value>
+                <fullName>Powder - Flucloxacillin</fullName>
+                <default>false</default>
+                <label>Powder - Flucloxacillin</label>
+            </value>
+            <value>
+                <fullName>Powder - Fluconazole</fullName>
+                <default>false</default>
+                <label>Powder - Fluconazole</label>
+            </value>
+            <value>
+                <fullName>Powder - Linezolid</fullName>
+                <default>false</default>
+                <label>Powder - Linezolid</label>
+            </value>
+            <value>
+                <fullName>Powder - Meropenem</fullName>
+                <default>false</default>
+                <label>Powder - Meropenem</label>
+            </value>
+            <value>
+                <fullName>Powder - Piperacillin</fullName>
+                <default>false</default>
+                <label>Powder - Piperacillin</label>
+            </value>
+            <value>
+                <fullName>Powder - Rifampacin</fullName>
+                <default>false</default>
+                <label>Powder - Rifampacin</label>
+            </value>
+            <value>
+                <fullName>Powder - Teicoplanin</fullName>
+                <default>false</default>
+                <label>Powder - Teicoplanin</label>
+            </value>
+            <value>
+                <fullName>Powder - Tigecycline</fullName>
+                <default>false</default>
+                <label>Powder - Tigecycline</label>
+            </value>
+            <value>
+                <fullName>Powder - Tobramycin</fullName>
+                <default>false</default>
+                <label>Powder - Tobramycin</label>
+            </value>
+            <value>
+                <fullName>Powder - Vancomycin</fullName>
+                <default>false</default>
+                <label>Powder - Vancomycin</label>
+            </value>
+            <value>
+                <fullName>Powder - Voriconazole</fullName>
+                <default>false</default>
+                <label>Powder - Voriconazole</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Liquid - Amikacin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Liquid - Gentamicin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Liquid - Tobramycin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Amphotericin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Caspofungin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Ceftazidime</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Ceftriaxone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Daptomycin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Flucloxacillin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Linezolid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Meropenem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Piperacillin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Rifampacin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Teicoplanin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Tobramycin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Vancomycin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Powder - Voriconazole</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

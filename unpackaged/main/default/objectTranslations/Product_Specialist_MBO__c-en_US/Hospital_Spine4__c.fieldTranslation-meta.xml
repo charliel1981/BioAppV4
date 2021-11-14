@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- HOSPITAL 4 --></label>
+        <name>Hospital_Spine4__c</name>
+        <relationshipLabel><!-- MBO Objectives (HOSPITAL 4) --></relationshipLabel>
+    </CustomFieldTranslation>

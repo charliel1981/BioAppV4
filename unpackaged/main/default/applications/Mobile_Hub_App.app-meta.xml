@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Mobile Hub App</label>
+    <tabs>Distributors</tabs>
+    <tabs>Hospitals</tabs>
+    <tabs>Surgeons</tabs>
+    <tabs>Mobile_Refresh__c</tabs>
+    <tabs>Content_Item__c</tabs>
+    <tabs>DOF__c</tabs>
+    <tabs>Mobile_Dynamic__c</tabs>
+    <tabs>Key_Account_Plan__c</tabs>
+</CustomApplication>

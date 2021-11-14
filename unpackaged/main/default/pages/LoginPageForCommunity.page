@@ -1,0 +1,264 @@
+<apex:page controller="LoginPageForCommunityCon" showHeader="false" docType="html-5.0" id="main_page" applyBodyTag="false">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Distributor Hub | Biocomposites</title>
+  <link REL="SHORTCUT ICON" HREF="{!URLFOR($Resource.community_favicon)}" />
+  <apex:stylesheet value="{!URLFOR($Resource.community_login_style)}" />
+  <style>
+    .bioSentnowWrapp {
+      background:url({!$Resource.BiologinImgs}/bioSentnowBg.png) no-repeat;
+    }
+    .enterNamebioCon {
+      background:url({!$Resource.BiologinImgs}/bioTroubleTextbox.png) no-repeat;
+    }
+    .logingBgwideTrble {
+      background:url({!$Resource.BiologinImgs}/bioTroubleBg.png) no-repeat;
+    }
+    .logingBgwide {
+      background:url({!$Resource.BiologinImgs}/loginBg.png) no-repeat;
+    }
+    .green-btn {
+      background:url({!$Resource.BiologinImgs}/btn_bg.png) repeat-x !important;
+    }
+    .inputtxt-bg {
+      background:url({!$Resource.BiologinImgs}/text_bg.png) no-repeat;
+    }
+    .loginBg {
+      background:url({!$Resource.BiologinImgs}/login_bg.png) no-repeat;
+    }
+    body {
+      background:url({!$Resource.BiologinImgs}/page_bg.png) repeat-x #afafaf;
+    }
+  </style>
+
+  <body onload="check()">
+    <div id="loading-msg">Loading...</div>
+    <div id="loading" style="display: none">
+      <apex:form id="main_form" forceSSL="true">
+        <apex:outputPanel styleClass="login-wrapp" layout="block" id="main_output">
+          <apex:pagemessages id="pgm" />
+          <apex:outputPanel layout="block" id="pannel1" style="display:block;">
+            <div class="bioheader">
+              <apex:image value="{!$Resource.BiologinImgs}/bio_logo4.png" />
+            </div>
+            <div class="logInbanner">
+              <apex:image value="{!$Resource.BiologinImgs}/bioLoginBanner.png" />
+            </div>
+            <div class="logingBgwide">
+              <div class="logingBgwideTextWrapp">
+                <div class="LeftTextbox">
+                  <table cellspacing="0">
+                    <tr>
+                      <td style="vertical-align:top; height:62px;">
+                        <apex:input type="email" value="{!username}" styleclass="enterNamebio" id="unameId" onkeypress="return noenter(event,'{!$Component.cmndLinkId}');" html-placeholder="Username" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align:top; height:60px;">
+                        <apex:inputSecret value="{!password}" id="theSecretInput" styleclass="enterNamebio" onkeypress="return noenter(event,'{!$Component.cmndLinkId}');" html-placeholder="Password" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span style="float:left;"><input style="margin: 0px 3px;" type="checkbox"/></span> Remember my User Name</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="RightTextbox">
+                  <table cellspacing="0">
+                    <tr>
+                      <td style="vertical-align:top; height:62px;color:#04984f;">
+                        <h1 style="font-weight:normal; font-size:34px;">Please Log in</h1></td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align:top; height:60px;">
+                        <apex:commandLink action="{!login}" onComplete="Test();" reRender="pgm,pannel21" id="cmndLinkId">
+                          <apex:image value="{!$Resource.BiologinImgs}/loginBtnimg.png" /></apex:commandLink>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="color:#04984f;">
+                        <apex:commandLink style="color:#019e51;cursor: pointer;" onClick="goToConfirmPage('{!$Component.pannel1}','{!$Component.pannel2}','{!$Component.pannel3}','{!$Component.pannel21}');" reRender="pgm">Forgot password?</apex:commandLink>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </apex:outputPanel>
+
+          <apex:outputPanel layout="block" id="pannel21" style="display:none;">
+            <div class="bioheader">
+              <apex:image value="{!$Resource.BiologinImgs}/bio_logo4.png" /> </div>
+            <div class="logInbanner">
+              <apex:image value="{!$Resource.BiologinImgs}/bioLoginBanner.png" />
+            </div>
+            <div class="logingBgwide">
+              <div class="logingBgwideTextWrapp">
+                <div class="LeftTextbox">
+                  <table cellspacing="0">
+                    <tr>
+                      <td style="vertical-align:top; height:62px;">
+                        <apex:inputText value="{!username1}" styleclass="enterNamebio" id="uname" onkeypress="return noenter(event,'{!$Component.cmndLinkId2}');" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align:top; height:60px;">
+                        <apex:inputSecret value="{!password1}" styleclass="enterNamebio" id="pwd" onkeypress="return noenter(event,'{!$Component.cmndLinkId2}');" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span style="float:left;"><input style="margin: 0px 3px;" type="checkbox"/></span> Remember my User Name</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="RightTextbox">
+                  <table cellspacing="0">
+                    <tr>
+                      <td style="vertical-align:top; height:62px;color:#04984f;">
+                        <h1 style="font-size:26px; color:#D42424">LOGIN ERROR</h1>
+                        <br/>
+                        <h5 style="font-size:12px;font-weight:bold;color:#222;">Make sure the username &amp; password are correct </h5>
+                        <div style="float:right;margin-right: -62px;margin-top: -30px;">
+                          <apex:image value="{!$Resource.BiologinImgs}/alertimg.png" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align:top; height:60px;">
+                        <apex:commandLink id="cmndLinkId2" action="{!loginError}" reRender="pgm,pannel21" onComplete="Test();">
+                          <apex:image value="{!$Resource.BiologinImgs}/loginBtnimg.png" /></apex:commandLink>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="color:#04984f;">
+                        <apex:commandLink style="color:#019e51;cursor: pointer;" onClick="goToConfirmPage('{!$Component.pannel1}','{!$Component.pannel2}','{!$Component.pannel3}','{!$Component.pannel21}');" reRender="pgm">Forgot password?</apex:commandLink>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </apex:outputPanel>
+
+          <apex:outputPanel layout="block" id="pannel2" style="display:none;">
+            <div class="bioheader">
+              <apex:image value="{!$Resource.BiologinImgs}/bio_logo4.png" /> </div>
+            <div class="logInbanner">
+              <apex:image value="{!$Resource.BiologinImgs}/bioLoginBanner.png" />
+            </div>
+            <div class="logingBgwideTrble">
+              <div class="logingBgwideTextWrapp">
+                <div class="troublewrapp">
+                  <h1 style="font-size:24px;">Having trouble logging in?</h1>
+                  <ul>
+                    <li>Verify you're entering the correct user name in the form of an email address (username@biocomposites.com).</li>
+                    <li>Passwords are case sensitive, so ensure you don't have caps lock enabled.</li>
+                    <li>Your account may be temporarily disabled from too many failed login attempts.</li>
+                    <li style="list-style:none;padding-top:20px;">If you still can't log in, enter your user name to reset your password.</li>
+                  </ul>
+                </div>
+                <div class="LeftTextbox" style="margin:0px 0px 0px 17px;">
+                  <table cellspacing="0">
+                    <tr>
+                      <td style="vertical-align:top; height:62px;">
+                        <apex:inputText value="{!usernameToSendEmail}" styleclass="enterNamebioCon" id="unameId1" />
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="RightTextboxCon">
+                  <table cellspacing="0">
+                    <tr>
+                      <td style="color:#04984f;">
+                        <apex:commandLink action="{!sendEmailToUser}" oncomplete="goToEmailSendConfirmPage('{!$Component.pannel1}','{!$Component.pannel2}','{!$Component.pannel3}','{!$Component.unameId1}'); return false;" reRender="pgm,pannel3">
+                          <apex:image value="{!$Resource.BiologinImgs}/bioContinue.png" /></apex:commandLink>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </apex:outputPanel>
+
+          <apex:outputPanel layout="block" id="pannel3" style="display:none;">
+            <div class="bioheader">
+              <apex:image value="{!$Resource.BiologinImgs}/bio_logo4.png" /> </div>
+            <div class="logInbanner">
+              <apex:image value="{!$Resource.BiologinImgs}/bioLoginBanner.png" />
+            </div>
+            <div class="bioSentnowWrapp">
+              <div class="logingBgwideTextWrapp">
+                <div class="SentnowText">
+                  <h1 style="font-size:24px;"><span style="float:left;padding-right: 10px;margin-left: -40px;"><apex:image value="{!$Resource.BiologinImgs}/fly.png"/></span><span style="font-size:30px;">Sent</span> Now, check your email</h1>
+                  <ul>
+                    <li>Check the email account associated with your user name for instructions on resetting you password.</li>
+                    <li>Remember to look in your spam folder, where automated messages sometimes filter.</li>
+                    <li>If you still can't log in, please contact your administrator.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </apex:outputPanel>
+
+        </apex:outputPanel>
+      </apex:form>
+    </div>
+
+    <script>
+      function goToConfirmPage(id1, id2, id3, id4) {
+        document.getElementById(id1).style.display = 'none';
+        document.getElementById(id2).style.display = 'block';
+        document.getElementById(id3).style.display = 'none';
+        document.getElementById(id4).style.display = 'none';
+      }
+
+      function goToEmailSendConfirmPage(id1, id2, id3, id4) {
+        if (document.getElementById(id4).value != null && document.getElementById(id4).value != '') {
+          document.getElementById(id1).style.display = 'none';
+          document.getElementById(id2).style.display = 'none';
+          document.getElementById(id3).style.display = 'block';
+        }
+      }
+
+      function Test() {
+        
+        if (document.getElementById('main_page:main_form:pgm:j_id3:j_id4:0:j_id5') != null) {
+        console.log(document.getElementById('main_page:main_form:pgm:j_id3:j_id4:0:j_id5'));
+        document.getElementById('loading-msg').style.display = 'none';
+          document.getElementById('loading').style.display = 'block';
+          //document.getElementById('j_id0:j_id2:pgm:j_id4:j_id5:0:j_id6').style.display = 'none';
+        document.getElementById('j_id0:j_id2:pannel21').style.display = 'block';
+        document.getElementById('j_id0:j_id2:pannel1').style.display = 'none';
+        
+          }
+      }
+
+      function noenter(ev, lnkId) {
+        if (window.event && window.event.keyCode == 13 || ev.which == 13) {
+          if (document.getElementById(lnkId) != null) {
+            var ele = document.getElementById(lnkId);
+            ele.click();
+          }
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function check() {
+        if (window.location.href.indexOf('username=') !== -1 && window.location.href.indexOf('password=') !== -1) {
+          var url = window.location.href.split('CommunitiesLogin?')[1];
+          var username = url.split('username=')[1].split('&')[0];
+          var password = url.split('password=')[1];
+          document.getElementById('main_page:main_form:unameId').value = username;
+          document.getElementById('main_page:main_form:theSecretInput').value = password;
+          document.getElementById('main_page:main_form:cmndLinkId').click();
+        } else {
+          document.getElementById('loading-msg').style.display = 'none';
+          document.getElementById('loading').style.display = 'block';
+        }
+      }
+    </script>
+  </body>
+</apex:page>

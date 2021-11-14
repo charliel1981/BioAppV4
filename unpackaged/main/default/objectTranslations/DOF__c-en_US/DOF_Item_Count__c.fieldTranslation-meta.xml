@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- A count of the items added to the DOF on the mobile app to ensure the order is not released unless it matches order line item counts. --></help>
+        <label><!-- DOF Item Count --></label>
+        <name>DOF_Item_Count__c</name>
+    </CustomFieldTranslation>

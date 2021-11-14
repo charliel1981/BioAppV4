@@ -1,0 +1,94 @@
+<div class="modal bio-modal" ng-click="vm.closeModal()">
+  <ion-header-bar>
+    <h1 class="title nav-bar-title">Account history</h1>
+    <button class="button button-icon ion-android-close"></button>
+  </ion-header-bar>
+  <ion-content>
+    <div>
+      <h4 class="bio-sub-heading">{{::vm.modal.account.Hospital_Name__c}}</h4>
+    </div>
+    <div class="card bio-card">
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Address:</ion-label>
+        <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.modal.account.Address__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Billing address:</ion-label>
+        <div ng-show="vm.modal.account.Alternate_Billing_Address__c" class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.modal.account.Alternate_Billing_Address_Details__c}}</div>
+        <div ng-show="!vm.modal.account.Alternate_Billing_Address__c" class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">Same as above</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Products:</ion-label>
+        <div>
+          <div ng-show="vm.modal.account.STIMULAN_Rapid_Cure_5cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 5cc</div>
+            <div ng-show="vm.modal.account.STIMULAN_Rapid_Cure_5cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.modal.account.STIMULAN_Rapid_Cure_5cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="vm.modal.account.STIMULAN_Rapid_Cure_10cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 10cc</div>
+            <div ng-show="vm.modal.account.STIMULAN_Rapid_Cure_10cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.modal.account.STIMULAN_Rapid_Cure_10cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="vm.modal.account.STIMULAN_Rapid_Cure_20cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 20cc</div>
+            <div ng-show="vm.modal.account.STIMULAN_Rapid_Cure_20cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.modal.account.STIMULAN_Rapid_Cure_20cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="vm.modal.account.STIMULAN_Kit_5cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Kit 5cc</div>
+            <div ng-show="vm.modal.account.STIMULAN_Kit_5cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.modal.account.STIMULAN_Kit_5cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="vm.modal.account.STIMULAN_Kit_10cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Kit 10cc</div>
+            <div ng-show="vm.modal.account.STIMULAN_Kit_10cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.modal.account.STIMULAN_Kit_10cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="vm.modal.account.STIMULAN_Bullet__c" class="bio-flex bio-new-account-product-confirm">
+            <div ng-show="vm.modal.account.STIMULAN_Bullet_Price__c" class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-md">STIMULAN Bullet Mat and...</div>
+            <div ng-show="!vm.modal.account.STIMULAN_Bullet_Price__c" class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-md">STIMULAN Bullet Mat and Introducer</div>
+            <div ng-show="vm.modal.account.STIMULAN_Bullet_Price__c" class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-sd">STIMULAN Bullet Mat and...</div>
+            <div ng-show="!vm.modal.account.STIMULAN_Bullet_Price__c" class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-sd">STIMULAN Bullet Mat and Introducer</div>
+            <div ng-show="vm.modal.account.STIMULAN_Bullet_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.modal.account.STIMULAN_Bullet_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="vm.modal.account.Other_Product__c" class="bio-flex bio-new-account-product-confirm">
+            <!-- <ion-label>Other:</ion-label> -->
+            <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.modal.account.Other_Product_Details__c}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Hospital contact:</ion-label>
+        <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.modal.account.Hospital_Contact_Info__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Comments:</ion-label>
+        <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.modal.account.Additional_Comments__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Date entered:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.account.Date_Entered__c | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Sync date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.account.CreatedDate | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="bio-row-spacer-sd">
+      </div>
+    </div>
+  </ion-content>
+</div>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Updates when a change is made to the &apos;Hopsital&apos; name or &apos;email on record&apos; fields. --></help>
+        <label><!-- Last update from Acct/Hospital --></label>
+        <name>Address_Update__c</name>
+    </CustomFieldTranslation>

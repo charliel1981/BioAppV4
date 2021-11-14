@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_status_comment_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>( ispickval( Credit_Status__c , &quot;Overdue&quot;) ||  ispickval( Credit_Status__c , &quot;Stop&quot;) ) &amp;&amp; isblank( Credit_Status_Comment__c )</errorConditionFormula>
+    <errorDisplayField>Credit_Status__c</errorDisplayField>
+    <errorMessage>Credit Status Comments are required when Credit Status is Overdue or Stop.</errorMessage>
+</ValidationRule>

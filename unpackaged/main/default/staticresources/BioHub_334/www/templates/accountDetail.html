@@ -1,0 +1,23 @@
+<div class="modal bio-modal" ng-click="vm.closeModal()">
+  <ion-header-bar>
+    <h1 class="title nav-bar-title">Account details</h1>
+    <button class="button button-icon ion-android-close"></button>
+  </ion-header-bar>
+  <ion-content>
+    <div>
+      <h4 class="bio-sub-heading">{{::vm.modal.account.Hospital_Name__c}}</h4>
+    </div>
+    <div class="card bio-card">
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Address:</ion-label>
+        <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.modal.account.Hospital_Street__c}} <br/> {{::vm.modal.account.Hospital_City1__c}} <br/> {{::vm.modal.account.Hospital_State1__c}} <br/> {{::vm.modal.account.Hospital_Zip_Postcode__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">email address:</ion-label>
+        <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.modal.account.Hospital_Email__c}}</div>
+      </div>
+      <div class="bio-row-spacer-sd">
+      </div>
+    </div>
+  </ion-content>
+</div>

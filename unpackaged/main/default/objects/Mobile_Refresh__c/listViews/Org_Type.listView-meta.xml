@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Org_Type</fullName>
+    <columns>NAME</columns>
+    <columns>Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Mobile_Refresh__c.Org_Type</value>
+    </filters>
+    <label>Org Type</label>
+</ListView>

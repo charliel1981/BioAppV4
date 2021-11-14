@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtype__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stimulan</fullName>
+                <default>false</default>
+                <label>Stimulan</label>
+            </value>
+            <value>
+                <fullName>genex</fullName>
+                <default>false</default>
+                <label>genex</label>
+            </value>
+            <value>
+                <fullName>Internal Documents</fullName>
+                <default>false</default>
+                <label>Internal Documents</label>
+            </value>
+            <value>
+                <fullName>External Documents</fullName>
+                <default>false</default>
+                <label>External Documents</label>
+            </value>
+            <value>
+                <fullName>Subtype 5</fullName>
+                <default>false</default>
+                <label>Subtype 5</label>
+            </value>
+            <value>
+                <fullName>Subtype 6</fullName>
+                <default>false</default>
+                <label>Subtype 6</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Marketing collateral</controllingFieldValue>
+            <valueName>Stimulan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing collateral</controllingFieldValue>
+            <valueName>genex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales tools</controllingFieldValue>
+            <controllingFieldValue>Account management</controllingFieldValue>
+            <valueName>Internal Documents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales tools</controllingFieldValue>
+            <controllingFieldValue>Account management</controllingFieldValue>
+            <valueName>External Documents</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

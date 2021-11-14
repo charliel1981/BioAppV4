@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>MBO_Activity__c.Surgeon__c</field>
+    </columns>
+    <columns>
+        <field>MBO_Activity__c.Contact__c</field>
+    </columns>
+    <columns>
+        <field>MBO_Activity__c.Type__c</field>
+    </columns>
+    <columns>
+        <field>MBO_Activity__c.Details__c</field>
+    </columns>
+    <columns>
+        <field>MBO_Activity__c.MBO_Objective_s__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Quarter</dateGranularity>
+        <field>MBO_Activity__c.Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MBO Activity Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$MBO_Activity__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>MBO_Activity__c.MBO_Objective_s__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>MBO_Activity__c.Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,65 @@
+<apex:page showHeader="false" standardStylesheets="false" contentType="text/cache-manifest" controller="mobilecaddy1.StartPageCacheCtrl001_mc">CACHE MANIFEST
+
+NETWORK:
+*
+ 
+CACHE:
+
+#SECTION 1A MOBILECADDY CACHED PAGES
+
+
+#SECTION 1B MOBILECADDY CACHED JS
+
+{!vfremotepath}
+/static/111213/js/perf/stub.js
+{!URLFOR($Resource.MC_Resource_0011, 'jquery.min.js')}
+{!URLFOR($Resource.cordovaSF3v1)}
+{!URLFOR($Resource.MC_Resource_0011, 'mobilecaddy-utils.min.js')}
+{!URLFOR($Resource.MC_Resource_0011, 'promise-1.0.0.min.js')}
+{!URLFOR($Resource.MC_Resource_0011, 'underscore-min.js')}
+
+
+#SECTION 1C MOBILECADDY CACHED CSS
+
+
+#SECTION 1D MOBILECADDY CACHED IMAGES
+{!URLFOR($Resource.SeedApp001_002, 'www/img/logo.png')}
+
+
+#SECTION 2A MOBILE APPLICATION CACHED PAGES
+
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/projectDetail.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/projectIndex.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/projectTimeExpList.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/projectTimeExpNew.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/settingsDevMTIDetail.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/settingsDevMTI.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/settingsDevTools.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/settings.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/settingsTesting.html')}
+{!URLFOR($Resource.SeedApp001_002, 'www/templates/tabsMain.html')}
+
+
+#SECTION 2B MOBILE APPLICATION CACHED JS
+
+{!URLFOR($Resource.SeedApp001_002, 'www/lib/js/ionic.bundle.min.js')}
+{!URLFOR($Resource.SeedApp001_002, 'www/js/app.js')}
+{!URLFOR($Resource.SeedApp001_002, 'www/js/services.js')}
+{!URLFOR($Resource.SeedApp001_002, 'www/js/controllers.js')}
+{!URLFOR($Resource.SeedApp001_002, 'www/lib/js/ng-cordova.min.js')}
+
+
+#SECTION 2C MOBILE APPLICATION CACHED CSS
+
+{!URLFOR($Resource.SeedApp001_002, 'www/css/app.css')}
+
+
+#SECTION 2D MOBILE APPLICATION CACHED IMAGES
+
+{!URLFOR($Resource.SeedApp001_002, 'www/fonts/ionicons.eot')}
+{!URLFOR($Resource.SeedApp001_002, 'www/fonts/ionicons.svg')}
+{!URLFOR($Resource.SeedApp001_002, 'www/fonts/ionicons.ttf')}
+{!URLFOR($Resource.SeedApp001_002, 'www/fonts/ionicons.woff')}
+
+
+</apex:page>

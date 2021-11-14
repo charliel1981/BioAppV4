@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>May Bank Holiday</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Reminder Bank Holiday Closure</name>
+    <style>none</style>
+    <subject>Reminder: May Bank Holiday Closure</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

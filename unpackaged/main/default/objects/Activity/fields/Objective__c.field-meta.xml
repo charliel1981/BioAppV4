@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objective__c</fullName>
+    <externalId>false</externalId>
+    <label>Objective</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New User</fullName>
+                <default>false</default>
+                <label>Acquire new user</label>
+            </value>
+            <value>
+                <fullName>Grow Existing User</fullName>
+                <default>false</default>
+                <label>Grow existing user</label>
+            </value>
+            <value>
+                <fullName>Peer to Peer Referral</fullName>
+                <default>false</default>
+                <label>Peer to peer referral</label>
+            </value>
+            <value>
+                <fullName>Advocacy / Promotion</fullName>
+                <default>false</default>
+                <label>Drive advocacy / promotion</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

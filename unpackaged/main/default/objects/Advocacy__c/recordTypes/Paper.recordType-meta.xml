@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paper</fullName>
+    <active>true</active>
+    <description>White paper or published paper of an infection case using Stimulan</description>
+    <label>Paper</label>
+</RecordType>

@@ -1,0 +1,3 @@
+<apex:page standardController="Content_Item__c" sidebar="false" showHeader="false">
+  <apex:image height="200px" value="data:image/jpg;base64,{!Content_Item__c.Image1__c}" />
+</apex:page>

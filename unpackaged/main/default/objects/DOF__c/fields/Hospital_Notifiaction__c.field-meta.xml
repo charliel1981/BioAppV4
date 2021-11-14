@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hospital_Notifiaction__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Send_Confirmation__c , 
+&quot;Do not send&quot;, &quot;Do not send&quot;, 
+&quot;Send to address on file&quot;, &quot;Send to address on file: &quot;&amp; Hospital__r.Email_Address_For_Order_Form__c ,
+&quot;Send to alternative address&quot;, &quot;Send to alternative address: &quot; &amp;  Alternative_Email__c ,
+null)</formula>
+    <label>Hospital Notifiaction</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

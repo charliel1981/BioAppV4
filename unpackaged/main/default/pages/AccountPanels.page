@@ -1,0 +1,78 @@
+<apex:page standardController="Key_Account_Plan__c" docType="html-5.0" extensions="AccountPanelsClass" tabStyle="Key_Account_Plan__c" standardStylesheets="true"  lightningStylesheets="true">
+  
+  <!-- Sales Panel -->
+  <!--
+  <apex:pageBlock title="Key Account Performance">
+    <apex:repeat value="{!sale}" var="s">
+    <table class="list" border="0" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr class="headerRow">
+          <th class="headerRow">&nbsp;</th>
+          <th class="headerRow">Q1</th>
+          <th class="headerRow">Q2</th>
+          <th class="headerRow">Q3</th>
+          <th class="headerRow">Q4</th>
+          <th class="headerRow">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="dataRow">
+          <td class="dataCell">Current Year Target</td>
+          <td class="dataCell">{!s.Q1_Sales_Target__c}</td>
+          <td class="dataCell">{!s.Q2_Sales_Target__c}</td>
+          <td class="dataCell">{!s.Q3_Sales_Target__c}</td>
+          <td class="dataCell">{!s.Q4_Sales_Target__c}</td>
+          <td class="dataCell">{!s.Total__c}</td>
+        </tr>
+        <tr class="dataRow">
+          <td class="dataCell">Current Year Sales</td>
+          <td class="dataCell">{!s.Q1_Sales_Actual__c}</td>
+          <td class="dataCell">{!s.Q2_Sales_Actual__c}</td>
+          <td class="dataCell">{!s.Q3_Sales_Actual__c}</td>
+          <td class="dataCell">{!s.Q4_Sales_Actual__c}</td>
+          <td class="dataCell">{!s.Total_Actual__c}</td>
+        </tr>
+        <tr class="dataRow">
+          <td class="dataCell">Previous Year Sales</td>
+          <td class="dataCell">{!s.X2017_Q1_Actual_Sales__c}</td>
+          <td class="dataCell">{!s.X2017_Q2_Actual_Sales__c}</td>
+          <td class="dataCell">{!s.X2017_Q3_Actual_Sales__c}</td>
+          <td class="dataCell">{!s.X2017_Q4_Actual_Sales__c}</td>
+          <td class="dataCell">{!s.Total_2017_Sales__c}</td>
+        </tr>
+      </tbody>
+    </table>
+    </apex:repeat>
+  </apex:pageBlock>
+  -->
+    
+  <!-- Surgeons Panel -->
+  <apex:pageBlock title="Surgeons">
+    <apex:pageBlockTable value="{!surgeons}" var="item">
+      <apex:column headerValue="Name">
+        <apex:outputLink target="_blank" value="/{!item.Id}">{!item.Name}</apex:outputLink>
+      </apex:column>
+      <apex:column value="{!item.STIMULAN_User__c}"/>
+      <apex:column headerValue="STIMULAN Procedure">
+        <apex:outputField value="{!item.Formats_Details__c}"/>
+      </apex:column>
+      <apex:column headerValue="STIMULAN Format">
+        <apex:outputField value="{!item.STIMULAN_Details__c}"/>
+      </apex:column>
+      <apex:column value="{!item.CreatedDate}"/>
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+    
+  <!-- MBO Activity Panel -->
+  <apex:pageBlock title="MBO Activity (Last 13 Weeks)">
+    <apex:pageBlockTable value="{!activity}" var="item">
+      <apex:column value="{!item.Date__c}"/>
+      <apex:column headerValue="Name">
+        <apex:outputLink target="_blank" value="/{!item.Id}">{!item.Name}</apex:outputLink>
+      </apex:column>
+      <apex:column value="{!item.Type__c}"/>
+      <apex:column value="{!item.Details__c}"/>
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+  
+</apex:page>

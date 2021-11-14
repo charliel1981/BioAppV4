@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Advocacy</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Advocacies</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Case Study Layout</layout>
+        <sections>
+            <label><!-- Case Study Information --></label>
+            <section>Case Study Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Paper Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Paper Information --></label>
+            <section>Paper Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Podium Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Podium Information --></label>
+            <section>Podium Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Poster Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Poster Information --></label>
+            <section>Poster Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Case study / series on Stimulan that can be used for marketing purposes --></description>
+        <label><!-- Case study --></label>
+        <name>Case_study</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- White paper or published paper of an infection case using Stimulan --></description>
+        <label><!-- Paper --></label>
+        <name>Paper</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Presentation with a significant positive reference to Stimulan --></description>
+        <label><!-- Podium --></label>
+        <name>Podium</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Poster with significant positive reference to Stimulan --></description>
+        <label><!-- Poster --></label>
+        <name>Poster</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- New_Advocacy --></label>
+        <name>New_Advocacy</name>
+    </webLinks>
+</CustomObjectTranslation>

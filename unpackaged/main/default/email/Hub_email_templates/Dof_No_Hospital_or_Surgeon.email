@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div>link: {!DOF__c.Link}</div><div><br></div><div>Dof Number: {!DOF__c.Name}<br></div><div><br></div><div>A new DOF has been created and there is either no surgeon or hospital linked. Please investigate.</div><div><br></div><div>Below is the data that has been entered</div><div><br></div><div><b>Automatically populated data</b><br></div><div>Hospital: {!DOF__c.Hospital__c}<br></div><div>Surgeon: {!DOF__c.Surgeon__c}<br></div><div><br></div><div><b>Manually entered data</b></div><div>Hospital: {!DOF__c.Hospital_Name__c}<br></div><div>Surgeon: {!DOF__c.Surgeon_First_Name__c} {!DOF__c.Surgeon_Last_Name__c}<br></div>]]></td>
+</tr>
+</table>

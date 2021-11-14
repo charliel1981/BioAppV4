@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Type_Check</fullName>
+    <active>false</active>
+    <description>Checks if Distributor / Surgeon / Hospital field has been filled in. If it has then contact cannot be and vice versa.</description>
+    <errorConditionFormula>AND(Contact__c &lt;&gt; &#39;&#39;,Surgeon__c &lt;&gt; &#39;&#39;)</errorConditionFormula>
+    <errorMessage>Both &quot;Distributor / Hospital / Surgeon&quot; and &quot;Contact&quot; fields cannot have values. You must only fill in one or the other.</errorMessage>
+</ValidationRule>

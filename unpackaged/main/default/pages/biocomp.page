@@ -1,0 +1,357 @@
+<apex:page controller="CommunityController" readOnly="true" sidebar="false" standardstylesheets="false" showHeader="false">
+
+  <script type="text/javascript" src="{!URLFOR($Resource.community_2,'js/promise-polyfill.js')}"></script>
+  <apex:includeScript value="{!URLFOR($Resource.community_2,'js/vue.min.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.community_2,'js/data.js')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.community_2,'css/style.css')}" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biocomposites Distributor Hub</title>
+  <script type="text/javascript">
+    if ('{!$Profile.Name}' == 'Distributor Hub Profile') {
+      window.location.href = '/apex/CommunitiesLogin'
+    }
+  </script>
+
+  <!-- App -->
+  <div id="vm" class="HOME">
+
+    <!-- Header -->
+    <div id="bc-header">
+      <div v-on-click="navigation = !navigation" v-bind-class="{ 'shift' : width < 1360 && navigation == true }">
+        <img src="{!URLFOR($Resource.community_2,'images/menu-grey.png')}" />
+      </div>
+      <a href="/apex/CommunityHomePage">
+        <img src="{!URLFOR($Resource.community_2,'images/home_alt.png')}" />
+      </a>
+      <a v-if="navigation == true && width < 1360" href="/apex/CommunityHomePage">
+        <img class="alt" src="{!URLFOR($Resource.community_2,'images/home.png')}" />
+      </a>
+      <img class="header" v-bind-src="image" />
+    </div>
+    
+    <!-- Tab Bar -->
+    <div id="bc-newnav">
+      <ul>
+        <a href="/apex/CommunityMarketingPage">
+          <li>Marketing collateral</li>
+        </a>
+        <a href="/apex/CommunitySalesPage">
+          <li>Sales tools</li>
+        </a>
+        <a href="/apex/CommunityELearningPage">
+          <li>e-learning</li>
+        </a>
+        <a href="/apex/CommunityVideoLibPage">
+          <li>Video library</li>
+        </a>
+        <a href="/apex/CommunityAccountMngPage">
+          <li>Account management</li>
+        </a>
+      </ul>
+    </div>
+
+    <!-- Splash -->
+    <div id="bc-splash">
+      <p>Welcome {!$User.FirstName}</p>
+      <h1>Distributor Hub</h1>
+      <h2>Your home for the knowledge &amp; tools you need to succeed</h2>
+      <div v-if="width > 800" style="background-image: url({!URLFOR($Resource.community_2, 'images/banner.png')})"></div>
+      <div v-if="width <= 800" style="background-image: url({!URLFOR($Resource.community_2, 'images/banner-small-new.jpg')})"></div>
+    </div>
+
+    <!-- Tabs -->
+    <div id="bc-navigation" v-bind-style="{ 'height' : height + 'px', 'left' : shift }" v-bind-class="{ 'show' : navigation == true }">
+      <div>
+        <div v-if="navigation == true && width < 1360" v-on-click="navigation = !navigation" v-bind-class="{ 'shift' : width < 1360 && navigation == true }">
+          <img src="{!URLFOR($Resource.community_2,'images/menu-white.png')}" />
+        </div>
+      </div>
+      <ul>
+        <a href="/apex/CommunityHomePage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/home.png')}" />Home</li>
+        </a>
+        <a href="/apex/CommunityTOIPage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/topics.png')}" />Topics of interest</li>
+        </a>
+        <a href="/apex/CommunityMarketingPage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/marketing-white.png')}" />Marketing collateral</li>
+        </a>
+        <a href="/apex/CommunitySalesPage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/marketing-white.png')}" />Sales tools</li>
+        </a>
+        <a href="/apex/CommunityELearningPage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/learning-white.png')}" />e-learning</li>
+        </a>
+        <a href="/apex/CommunityVideoLibPage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/video-white.png')}" />Video library</li>
+        </a>
+        <a href="/apex/CommunityAccountMngPage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/account-white.png')}" />Account management</li>
+        </a>
+        <a v-show="see_pub == true" href="/apex/CommunityResearchLibPage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/library.png')}" />Publication library</li>
+        </a>
+        <a v-show="see_internal == true" href="/apex/CommunityInternalPage">
+          <li><img src="{!URLFOR($Resource.community_2,'images/internal.png')}" />Internal documentation</li>
+        </a>
+        <a v-if="profile.indexOf('COMMUNITY') != -1 && sforce == false" href="/secur/logout.jsp">
+          <li><img src="{!URLFOR($Resource.community_2,'images/logout.png')}" />Log out</li>
+        </a>
+        <a v-if="profile.indexOf('COMMUNITY') == -1 && sforce == false" href="/servlet/networks/switch?networkid=00DD0000000Cl9q">
+          <li><img src="{!URLFOR($Resource.community_2,'images/logout.png')}" />Back to CRM</li>
+        </a>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <table>
+      <tr>
+        <!-- Left Content -->
+        <td class="bc-left" width="50%" colspan="1">
+
+          <!-- Topics of Interest -->
+          <a href="/apex/CommunityTOIPage" style="text-decoration: none"><h3>Topics of interest</h3></a>
+          <div id="toi">
+            <div id="fake">
+              <div class="bc-section">
+                <h4 v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></h4>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+              </div>
+              <div class="bc-section">
+                <h4 v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></h4>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+              </div>
+              <div class="bc-section">
+                <h4 v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></h4>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+              </div>
+              <div v-if="width > 800" class="bc-section">
+                <h4 v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></h4>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : width <= 800 ? (width - 40) + 'px' : section_width + 'px' }"></p>
+              </div>
+              <div v-if="width > 800" class="bc-section">
+                <h4 v-bind-style="{ 'width' : section_width + 'px' }"></h4>
+                <p v-bind-style="{ 'width' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : section_width + 'px' }"></p>
+                <p v-bind-style="{ 'width' : section_width + 'px' }"></p>
+              </div>
+            </div>
+          </div>
+          <a href="/apex/CommunityTOIPage">
+            <button>See more</button>
+          </a>
+
+          <!-- Block Links -->
+          <div v-show="see_pub == true" class="bc-block img bc-color-green">
+            <img src="{!URLFOR($Resource.community_2,'images/library.png')}" />
+            <a href="/apex/CommunityResearchLibPage">
+              <table>
+                <tr>
+                  <td>Biocomposites' publication library</td>
+                </tr>
+              </table>
+            </a>
+            <p></p>
+          </div>
+          <div v-show="see_internal == true" class="bc-block img bc-color-grey">
+            <img src="{!URLFOR($Resource.community_2,'images/internal.png')}" />
+            <a href="/apex/CommunityInternalPage">
+              <table>
+                <tr>
+                  <td>Biocomposites' internal documentation</td>
+                </tr>
+              </table>
+            </a>
+            <p></p>
+          </div>
+
+        </td>
+        <!-- Right Content -->
+        <td class="bc-right alt" width="50%" colspan="1">
+
+          <!-- Featured Items -->
+          <a v-if="database.featured.length !== 0" v-bind-href="database.featured[0].LINK" target="_blank">
+          <div class="bc-card">
+            <span v-bind-style="{ 'background-image' : 'url(' + database.featured[0].urlForImage + ')'}"></span>
+            <div>
+              <h5>{{ stripper(database.featured[0].title) }}</h5>
+              <p>{{ database.featured[0].description }}</p>
+            </div>
+          </div>
+          </a>
+          <a v-if="database.learning[0] != 0" v-bind-href="stripper(database.learning[0].brainsharkURL)" target="_blank">
+            <div class="bc-card">
+              <span v-bind-style="{ 'background-image' : 'url(' + database.learning[0].urlForImage + ')'}"></span>
+              <div>
+                <h5>{{ database.learning[0].title }}</h5>
+                <p>{{ database.learning[0].textForBrainsharkTitle }}</p>
+              </div>
+            </div>
+          </a>
+          <div v-if="database.videos[0] != 0" class="bc-card" v-on-click="video = true, check(), create_video(database.videos[0].videoURL)">
+            <span v-bind-style="{ 'background-image' : 'url(' + database.videos[0].videoThumbnailURL + ')'}"></span>
+            <div>
+              <h5>{{ database.videos[0].title }}</h5>
+              <p>{{ database.videos[0].altTag }}</p>
+            </div>
+          </div>
+          
+          <!-- Contact us -->
+          <div class="bc-card" style="cursor: default">
+            <span style="background-image: url({!$Resource.contactUsInnerImage})"></span>
+            <div>
+              <h5>Contact us</h5>
+              <p>We welcome any opportunity to help - from marketing support to technical assistance.</p>
+              <a v-if="width > 500" style="cursor: pointer" href="mailto:marketing@biocomposites.com">marketing@biocomposites.com</a>
+              <a v-if="width <= 500" style="cursor: pointer" href="mailto:marketing@biocomposites.com">marketing@ biocomposites.com</a>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+
+    <!-- Video Viewer -->
+    <div id="bc-video" v-show="video == true">
+      <div id="overlay" v-on-click="video = false, remove_video()"></div>
+      <span v-bind-style="{ right: position, display: shown }" v-on-click="video = false, remove_video()" id="close-button">Close</span>
+      <div id="video-holder"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bc-footer">
+      <ul>
+        <a href="/apex/CommunityHomePage">
+          <li><img src="" />Home</li>
+        </a>
+        <a href="/apex/CommunityTOIPage">
+          <li><img src="" />Topics of interest</li>
+        </a>
+        <a href="/apex/CommunityMarketingPage">
+          <li><img src="" />Marketing collateral</li>
+        </a>
+        <a href="/apex/CommunitySalesPage">
+          <li><img src="" />Sales tools</li>
+        </a>
+        <a href="/apex/CommunityELearningPage">
+          <li><img src="" />e-learning</li>
+        </a>
+        <a href="/apex/CommunityVideoLibPage">
+          <li><img src="" />Video library</li>
+        </a>
+        <a href="/apex/CommunityAccountMngPage">
+          <li><img src="" />Account management</li>
+        </a>
+        <a v-show="see_pub == true" href="/apex/CommunityResearchLibPage">
+          <li><img src="" />Publication library</li>
+        </a>
+        <a v-show="see_internal == true" href="/apex/CommunityInternalPage">
+          <li><img src="" />Internal documentation</li>
+        </a>
+        <a v-if="profile.indexOf('COMMUNITY') != -1 && sforce == false" href="/secur/logout.jsp">
+          <li><img src="" />Log out</li>
+        </a>
+        <a v-if="profile.indexOf('COMMUNITY') == -1 && sforce == false" href="/servlet/networks/switch?networkid=00DD0000000Cl9q">
+          <li><img src="" />Back to CRM</li>
+        </a>
+      </ul>
+      <p>© 2016 Biocomposites. All rights reserved</p>
+    </div>
+
+  </div>
+
+  <!-- Interfacer -->
+  <script type="text/javascript">
+    var vi = {
+      // handles apex function running
+      runApex: function(action, value1, value2) {
+        return new Promise(function(success) {
+          if (value1 && value2) {
+            Visualforce.remoting.Manager.invokeAction(action, value1, value2, function(res, event) {
+              if (event.status) {
+                success(res);
+              } else {
+                console.error(event);
+              }
+            });
+          } else if (value1 && !value2) {
+            Visualforce.remoting.Manager.invokeAction(action, value1, function(res, event) {
+              if (event.status) {
+                success(res);
+              } else {
+                console.error(event);
+              }
+            });
+          } else if (!value1 && !value2) {
+            Visualforce.remoting.Manager.invokeAction(action, function(res, event) {
+              if (event.status) {
+                success(res);
+              } else {
+                console.error(event);
+              }
+            });
+          }
+        })
+      },
+      getData: function() {
+        return new Promise(function(success) {
+          // get topics
+          vi.runApex('{!$RemoteAction.CommunityController.getCommunityItemRecords}', 'Topic of Interest / Notices', '5').then(function(topics) {
+            console.log(topics);
+            // get first video
+            vi.runApex('{!$RemoteAction.CommunityController.getCommunityItemRecords}', 'Video box', 1).then(function(videos) {
+              // get first e learning
+              vi.runApex('{!$RemoteAction.CommunityController.getCommunityItemRecords}', 'Brainshark training', 1).then(function(learning) {
+                // get featured
+                vi.runApex('{!$RemoteAction.CommunityController.getCommunityItemRecords}', 'Featured Item', '1').then(function(featured) {
+                  // get banner
+                  vi.runApex('{!$RemoteAction.CommunityController.getLogoURLForUser}').then(function(url) {
+                    // decode banner uri
+                    var decode = url.replace(/amp;/g, '').replace(/"/g, '');
+                    // get color codes
+                    vi.runApex('{!$RemoteAction.CommunityController.getColorCodes}').then(function(colors) {
+                      // check if we can see interna;
+                      var test1 = 'Internal only';
+                      vi.runApex('{!$RemoteAction.CommunityController.checkCommunityItemExists}', test1).then(function(test1res) {
+                        var test2 = 'Publication Library';
+                        vi.runApex('{!$RemoteAction.CommunityController.checkCommunityItemExists}', test2).then(function(test2res) {
+                        var results = {
+                          page: 'home',
+                          topics: topics,
+                          image: decode,
+                          colors: colors,
+                          internal: test1res,
+                          pub: test2res,
+                          featured: featured,
+                          videos: videos,
+                          learning: learning,
+                          profile: "{!$Profile.Name}",
+                          name: "{!$User.FirstName}"
+                        }
+                        success(results);
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+    }
+  </script>
+
+  <!-- JS Controller -->
+  <script type="text/javascript" src="{!URLFOR($Resource.community_2,'js/controller.js')}"></script>
+
+</apex:page>

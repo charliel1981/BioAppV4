@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Community Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Community Items</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Brainshark</layout>
+        <sections>
+            <label><!-- Content --></label>
+            <section>Content</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Temp, ignore --></label>
+            <section>Temp, ignore</section>
+        </sections>
+        <sections>
+            <label><!-- Video Sidepanel --></label>
+            <section>Video Sidepanel</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Community Item Layout</layout>
+        <sections>
+            <label><!-- Content --></label>
+            <section>Content</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Continuing Education</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Featured Item</layout>
+        <sections>
+            <label><!-- Brainshark --></label>
+            <section>Brainshark</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Document Details --></label>
+            <section>Document Details</section>
+        </sections>
+        <sections>
+            <label><!-- Video Details --></label>
+            <section>Video Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Left Panel</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Collateral --></label>
+            <section>Marketing Collateral</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Logo / Header</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Marketing Resources</layout>
+        <sections>
+            <label><!-- Content --></label>
+            <section>Content</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mobile App Permissions</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Publication Library</layout>
+        <sections>
+            <label><!-- Content --></label>
+            <section>Content</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Surgeon</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Topics Of Interests</layout>
+        <sections>
+            <label><!-- Content --></label>
+            <section>Content</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Video library</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Video Details --></label>
+            <section>Video Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Brainshark Training --></label>
+        <name>Brainshark_Training</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Continuing Education --></label>
+        <name>Continuing_Education</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Featured Item --></label>
+        <name>Featured_Item</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Header Image --></label>
+        <name>Header_Image</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Left Panel --></label>
+        <name>Left_Panel</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Logo --></label>
+        <name>Logo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Marketing Resources --></label>
+        <name>Marketing_Resources</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Mobile App Permission --></label>
+        <name>Mobile_App_Permission</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Publication Library --></label>
+        <name>Publication_Library</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Surgeon --></label>
+        <name>Surgeon</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Topics Of Interest --></label>
+        <name>Topics_Of_Interest</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Video Library --></label>
+        <name>Video_Library</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Send_Hub_Notification --></label>
+        <name>Send_Hub_Notification</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lot_Numbers</fullName>
+    <active>true</active>
+    <label>Lot Numbers</label>
+    <picklistValues>
+        <picklist>Available_in_Version__c</picklist>
+        <values>
+            <fullName>V001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>V002</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Profile__c</picklist>
+        <values>
+            <fullName>Biocomposites - MANAGEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biocomposites - MARKET DEVELOPMENT MANAGER UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biocomposites - REGIONAL MANAGER CANADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biocomposites - REGIONAL MANAGER USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biocomposites - SALES MANAGER INDIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR CANADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR EU %28English%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR INDIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR SOUTH AMERICA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - Mid Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - Mid West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - North East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - North West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - South Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - South East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - South West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community - DISTRIBUTOR USA - West Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Administrator</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

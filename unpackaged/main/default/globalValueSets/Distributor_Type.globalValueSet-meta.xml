@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Foot &amp; Ankle</fullName>
+        <default>false</default>
+        <label>Foot &amp; Ankle</label>
+    </customValue>
+    <customValue>
+        <fullName>Orthopaedic</fullName>
+        <default>false</default>
+        <label>Orthopaedic</label>
+    </customValue>
+    <customValue>
+        <fullName>Spine</fullName>
+        <default>false</default>
+        <label>Spine</label>
+    </customValue>
+    <customValue>
+        <fullName>Trauma</fullName>
+        <default>false</default>
+        <label>Trauma</label>
+    </customValue>
+    <customValue>
+        <fullName>Unspecified</fullName>
+        <default>false</default>
+        <label>Unspecified</label>
+    </customValue>
+    <masterLabel>Distributor Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X7_Publication_Library</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <columns>DO_NOT_SHOW__c</columns>
+    <columns>Sort_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Community_Items__c.Publication_Library</value>
+    </filters>
+    <label>07. Publication Library</label>
+</ListView>

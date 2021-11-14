@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Surgeon_For_Email__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( Surgeon__c ) ,  Surgeon_First_Name__c &amp;&quot; &quot;&amp; Surgeon_Last_Name__c , Surgeon__r.FirstName &amp;&quot; &quot;&amp;Surgeon__r.LastName)</formula>
+    <inlineHelpText>This field appears in the order form emails. 
+If the surgeon field is linked it will show the name of the surgeon.
+If this field is blank it will show the surgeon first and last name entered on this record</inlineHelpText>
+    <label>Surgeon (For Email)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

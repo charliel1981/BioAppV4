@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orgwide_Email_addresess__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>if none = emails are sent from running user
+If a value is selected then the &quot;from&quot; address is that which is selected in this list</inlineHelpText>
+    <label>Orgwide Email addresses</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>americas@biocomposites.com</fullName>
+                <default>false</default>
+                <label>americas@biocomposites.com</label>
+            </value>
+            <value>
+                <fullName>global@biocomposites.com</fullName>
+                <default>false</default>
+                <label>global@biocomposites.com</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

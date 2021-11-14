@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (max-width : 768px) {
+    .custPopup{
+       margin-left: -34% !important;
+    }
+	.container{
+	   width:97.6%;
+	   margin:20px auto;
+	   padding-left:27px;
+	}
+	.imageAllign
+       {
+	  cursor: pointer;
+	  width: 111% !important;
+	  margin-bottom: -9px;
+	  margin-left: -19px;
+	  height: 203px;
+	}
+	.logo{
+		width:98%;
+		margin:auto;
+		padding-top: 13px;
+	}
+	.elearningText{
+          margin-top:-1px;
+         }
+	
+	.menu-align li a{
+		padding: 5px 0px 7px 0px;
+		/*width:140px;*/
+		width:143px !important;
+		outline: none;
+	}
+	.menu-align{  
+		width:100%;    
+		margin-left:8px;
+		margin:auto;
+	}
+	.bannerWithLogo{
+		width:100%;
+		background-size:cover !important;
+		height: 410px;
+	}
+	.rightcolomun{
+		float: left;
+		width: 64%;
+		margin-left:30px;
+	}
+	.marketingBlock li a{
+		width: 86% !important;
+	}
+	.leftcolomun ul{
+		float:left;
+		width:95%
+	}
+	.pNaR{
+		padding-right:0px !important;
+	}
+	.leftcolomunNew{
+		width:100% !important;
+	}
+	.rightNewcls
+	{
+	 width:68% !important;
+	}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+    .custPopup{
+       margin-left: -42% !important;
+    }
+   .container{
+	   width:100%;
+	   margin:20px auto;
+	   padding-left:0px !important;
+	}
+	.imageAllign
+       {
+	  cursor: pointer;
+	  width: 111% !important;
+	  margin-bottom: -9px;
+	  margin-left: -19px;
+	  height: 203px;
+	}
+	.rightNewcls
+	{
+	 width:68% !important;
+	}
+	.wrapper
+	{
+	  width:100%;
+	}
+	.logo{
+		width:98%;
+		margin:auto;
+   		padding-top: 15px;
+	}
+	.logo img{
+    width: 185px;
+	padding-top: 13px;
+	}
+	.menu-align li a{
+		padding: 5px 0px 7px 0px;
+		/*width:189px;*/
+		width:182px;
+		outline: none;
+	}
+	.menu-align-user li a{
+		padding: 5px 0px 7px 0px;
+		/*width:193px;*/
+		width:186px;
+		outline: none;
+	}
+        
+        .elearningText{
+          margin-top:-1px;
+         }
+
+	.menu{
+		width:100%;
+		text-align:center;
+	}
+	.menu-align{  
+		width:100%;    
+		margin-left:8px;
+		margin:auto;
+		text-align:center;
+	}
+	.menu-align-user{  
+		width:100%;    
+		margin-left:8px;
+		margin:auto;
+		text-align:center;
+	}
+	.menu-align li:last-child a{
+		padding-right:3px
+	}
+	.menu-align-user li:last-child a{
+		padding-right:3px
+	}
+	.bannerWithLogo{
+		width:100%;
+		background-size:cover !important;
+		height: 375px;
+	}
+	.rightcolomun{
+		float: left;
+		width: 64%;
+		margin-left:30px;
+	}
+	.marketingBlock li a{
+		width: 90% !important;
+	}
+	.leftcolomun ul{
+		float:left;
+		width:98%
+	}
+	.pNaR{
+		padding-right:0px !important;
+	}
+	.leftcolomunNew{
+		width:100% !important;
+	}
+	.cross{
+	    margin-right: -2px !important;
+	}
+	.resourceCss{
+	   width:65% !important;
+	}
+	.leftcolomun li{
+		width:92%;
+	}
+}
+@media only screen and (min-width : 769px) and (max-width : 1023px) {
+	.menu-align li a{
+	    width: 176px;
+	}
+}

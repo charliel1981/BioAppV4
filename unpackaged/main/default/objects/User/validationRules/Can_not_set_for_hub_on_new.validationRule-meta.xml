@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_not_set_for_hub_on_new</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+Enable_for_hub_app__c = TRUE)</errorConditionFormula>
+    <errorDisplayField>Enable_for_hub_app__c</errorDisplayField>
+    <errorMessage>You can not have this box ticked when you create a new user</errorMessage>
+</ValidationRule>

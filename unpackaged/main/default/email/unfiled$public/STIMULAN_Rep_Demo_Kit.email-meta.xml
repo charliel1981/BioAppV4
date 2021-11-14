@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>STIMULAN Rep Demo Kit is now available - April 2015</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>STIMULAN Rep Demo Kit</name>
+    <style>none</style>
+    <subject>STIMULAN Rep Demo Kit is now available</subject>
+    <textOnly>Dear {!Contact.Name},  
+
+I am pleased to announce that the STIMULAN Rep Demo Kit is now available!  
+
+What is the STIMULAN Rep Demo Kit?  
+The STIMULAN Rep Demo Kit provides convenience to your sales calls. It is designed to fit easily in your bag, and allows you to show and explain the basics of STIMULAN without the need to mix product.
+
+Contents: 
+• Small storage case 
+• STIMULAN powder 
+• 3.0mm beads 
+• 6.0mm beads
+
+How can I get a STIMULAN Rep Demo Kit?
+• Log into the Biocomposites Distributor Hub (www.biocomposites.com/hub) 
+• View 100% of the Compliance e-learning module 
+• Score 90% or above on the Compliance quiz
+
+A STIMULAN Rep Demo Kit will be sent to you after the required criteria is completed.  
+
+If you need assistance accessing your account, please contact Dana Lemesh, Director of Marketing, at dcl@biocomposites.com.  
+
+This is a useful and convenient tool to help sell the benefits of STIMULAN, so please take the time to log into the Distributor Hub and complete the criteria to receive your own STIMULAN Rep Demo Kit.  
+
+Kind Regards,
+Dana C. Lemesh
+Director of Marketing, Americas
+Biocomposites Inc.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Contact Type --></label>
+        <name>Contact_Type__c</name>
+        <picklistValues>
+            <masterLabel>Microbiologists</masterLabel>
+            <translation><!-- Microbiologists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registrar</masterLabel>
+            <translation><!-- Registrar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon</masterLabel>
+            <translation><!-- Surgeon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theatre manager</masterLabel>
+            <translation><!-- Theatre manager --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

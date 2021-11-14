@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_User_Company</fullName>
+        <field>CompanyName</field>
+        <formula>Contact.Account.Name</formula>
+        <name>Update User Company</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Username</fullName>
+        <field>Username</field>
+        <formula>Email</formula>
+        <name>Update Username</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>enable_for_hub</fullName>
+        <field>Enable_for_hub_app__c</field>
+        <literalValue>1</literalValue>
+        <name>enable for hub</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>user_contact_id</fullName>
+        <field>Contact_ID_For_batch__c</field>
+        <formula>CASESAFEID(Contact.Id)</formula>
+        <name>user - contact id</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Create hub permissions</fullName>
+        <actions>
+            <name>enable_for_hub</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>equals</operation>
+            <value>Biocomposites COMMUNITY USER</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Enable_for_hub_app__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update User Company</fullName>
+        <actions>
+            <name>Update_User_Company</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.ContactId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>User - populate contact ID</fullName>
+        <actions>
+            <name>user_contact_id</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.ContactId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Username Change</fullName>
+        <actions>
+            <name>Update_Username</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>NOT( ISBLANK( ContactId ) )</description>
+        <formula>AND(
+NOT( ISNEW() ) ,
+Email  &lt;&gt;  Username
+ )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

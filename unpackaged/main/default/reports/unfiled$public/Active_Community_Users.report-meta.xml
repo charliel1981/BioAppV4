@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>mobilecaddy1__Application_User_Devices__c.mobilecaddy1__SF_User_Name__c</field>
+    </columns>
+    <columns>
+        <field>FK_$mobilecaddy1__Mobile_User__c.User_Email__c</field>
+    </columns>
+    <columns>
+        <field>mobilecaddy1__Application_User_Devices__c.mobilecaddy1__SF_User_Profile_Name__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <criteriaItems>
+            <column>FK_$mobilecaddy1__Mobile_User__c.mobilecaddy1__SF_User_Profile_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Biocomposites COMMUNITY USER</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$mobilecaddy1__Mobile_User__c.mobilecaddy1__SF_Active_User__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Active Community Users</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$mobilecaddy1__Application_User_Devices__c@mobilecaddy1__Application_User_Devices__c.mobilecaddy1__Mobile_User__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>FK_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>mobilecaddy1__Application_User_Devices__c.mobilecaddy1__Last_Cleanup__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

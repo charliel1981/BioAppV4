@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Indication__c</fullName>
+    <externalId>false</externalId>
+    <label>Indication</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Event_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ankle</fullName>
+                <default>false</default>
+                <label>Ankle</label>
+            </value>
+            <value>
+                <fullName>Elbow</fullName>
+                <default>false</default>
+                <label>Elbow</label>
+            </value>
+            <value>
+                <fullName>Foot</fullName>
+                <default>false</default>
+                <label>Foot</label>
+            </value>
+            <value>
+                <fullName>Hip</fullName>
+                <default>false</default>
+                <label>Hip</label>
+            </value>
+            <value>
+                <fullName>Knee</fullName>
+                <default>false</default>
+                <label>Knee</label>
+            </value>
+            <value>
+                <fullName>Shoulder</fullName>
+                <default>false</default>
+                <label>Shoulder</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Ankle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Elbow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Foot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Hip</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Knee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Shoulder</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

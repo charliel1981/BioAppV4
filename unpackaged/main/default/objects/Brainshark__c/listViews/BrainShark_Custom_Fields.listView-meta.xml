@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BrainShark_Custom_Fields</fullName>
+    <columns>User__c</columns>
+    <columns>NAME</columns>
+    <columns>GBCustom1__c</columns>
+    <columns>GBCustom2__c</columns>
+    <columns>GBEMail__c</columns>
+    <columns>ViewingTime__c</columns>
+    <columns>ViewTotalSlidesViewed__c</columns>
+    <columns>ViewTotalPctofDuration__c</columns>
+    <columns>ViewTotalPoints__c</columns>
+    <columns>ViewTotalScore__c</columns>
+    <columns>Sort_Title__c</columns>
+    <columns>DateTime__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>GBEMail__c</field>
+        <operation>equals</operation>
+        <value>michaelanhawkins1@gmail.com</value>
+    </filters>
+    <label>BrainShark Custom Fields</label>
+    <sharedTo>
+        <role>Biocomposites_Admin</role>
+    </sharedTo>
+</ListView>

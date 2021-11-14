@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>true</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>Hub_email_templates/CommunityUsersResettPasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailSenderAddress>web_marketing@biocomposites.com</emailSenderAddress>
+    <emailSenderName>Biocomposites</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>false</enableDirectMessages>
+    <enableExperienceBundleBasedSnaOverrideEnabled>false</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>false</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>false</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>false</enableTopicAssignmentRules>
+    <enableTopicSuggestions>true</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>Hub_email_templates/CommunityUsersForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <permissionSet>MobileCaddy_User_Generic_With_API</permissionSet>
+        <permissionSet>BioHubPers</permissionSet>
+        <profile>Admin</profile>
+        <profile>Customer Community Login User</profile>
+        <profile>SolutionManager</profile>
+        <profile>Standard</profile>
+        <profile>MarketingProfile</profile>
+        <profile>ContractManager</profile>
+        <profile>Read Only</profile>
+        <profile>Biocomposites Standard User</profile>
+        <profile>Biocomposites COMMUNITY USER</profile>
+        <profile>Biocomposites Manager Corporate</profile>
+        <profile>UK MDM</profile>
+        <profile>Biocomposites Manager International</profile>
+        <profile>Market Development %E2%80%93 UK</profile>
+        <profile>UK Marketing</profile>
+        <profile>Regional Managers %E2%80%93 USA</profile>
+        <profile>US Marketing</profile>
+        <profile>Management</profile>
+        <profile>Biocomposites Corporate %28US Views%29</profile>
+        <profile>System Administrator %28US Views%29</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Standard</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>VisualForce</homePageOverrideSetting>
+        <loginPageOverrideSetting>VisualForce</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Standard</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Distributor_Hub_C</picassoSite>
+    <selfRegProfile>Customer Community Login User</selfRegProfile>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Distributor_Hub</site>
+    <status>Live</status>
+    <tabs>
+        <customTab>Distributor_Hub_2017</customTab>
+        <defaultTab>01r0B000000kHTB</defaultTab>
+    </tabs>
+    <welcomeTemplate>Hub_email_templates/NewCommunityUsersWelcomeEmailTemplate</welcomeTemplate>
+</Network>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Mobile_Dynamic_Hub_App_Lead_Capture</fullName>
+        <description>Mobile Dynamic - Hub App - Lead Capture</description>
+        <protected>false</protected>
+        <recipients>
+            <field>App_User_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Lead_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hub-app@biocomposites.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Hub_email_templates/Hub_App_Lead_capture1</template>
+    </alerts>
+    <alerts>
+        <fullName>Mobile_Dynamic_Send_New_Account_Email</fullName>
+        <description>Mobile Dynamic - Send New Account Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>App_User_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Email_for_Regional_New_Account__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Email_for_distributor__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hub-app@biocomposites.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Hub_email_templates/Hub_App_New_Account</template>
+    </alerts>
+    <alerts>
+        <fullName>Mobile_Dynamic_Unsolicited_Request</fullName>
+        <description>Mobile Dynamic - Unsolicited Request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>App_User_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Territory_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hub-app@biocomposites.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Hub_email_templates/Unsolicited_Request</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Lead_International_Email</fullName>
+        <field>Lead_Email_Address__c</field>
+        <formula>&quot;leads@biocomposites.com&quot;</formula>
+        <name>Lead - International Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_International</fullName>
+        <field>Territory_Email__c</field>
+        <formula>&quot;Informationrequest@biocomposites.com&quot;</formula>
+        <name>M/D - International</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_Lead_Americas</fullName>
+        <field>Lead_Email_Address__c</field>
+        <formula>&quot;leadsamericas@biocomposites.com&quot;</formula>
+        <name>M/D - Lead - Americas</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_Lead_Set_To_Send_Emial</fullName>
+        <field>Send_Email__c</field>
+        <literalValue>1</literalValue>
+        <name>M/D - Lead - Set To Send Emial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_New_Account_Dist_Emial</fullName>
+        <field>Email_for_distributor__c</field>
+        <formula>Owner:User.Contact.Account.Email_Address_For_Order_Form__c</formula>
+        <name>M/D - New Account - Dist Emial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_New_Account_Email_Region_USord</fullName>
+        <field>Email_for_Regional_New_Account__c</field>
+        <formula>&quot;usorders@biocomposites.com&quot;</formula>
+        <name>M/D - New Account - Email Region - USord</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_New_Account_Email_Region_order</fullName>
+        <field>Email_for_Regional_New_Account__c</field>
+        <formula>&quot;orders@biocomposites.com&quot;</formula>
+        <name>M/D - New Account - Email Region - order</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_Set_Send_Email_True</fullName>
+        <field>Send_Email__c</field>
+        <literalValue>1</literalValue>
+        <name>M/D - Set Send Email = True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_USA_South_America</fullName>
+        <field>Territory_Email__c</field>
+        <formula>&quot;complianceus@biocomposites.com&quot;</formula>
+        <name>M/D - USA / South America</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_app_useremail_address</fullName>
+        <field>App_User_Email_Address__c</field>
+        <formula>Owner:User.Email</formula>
+        <name>M/D - app useremail address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>M_D_u_sol_Set_To_Send_Emial</fullName>
+        <field>Send_Email__c</field>
+        <literalValue>1</literalValue>
+        <name>M/D - u.sol - Set To Send Emial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>M%2FD - International</fullName>
+        <actions>
+            <name>Lead_International_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>M_D_International</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>IF( ISBLANK( Owner:User.ContactId ) , 
+OR(CONTAINS( Owner:User.Territories__c , &quot;International&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Corporate&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;UK&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;China&quot;))
+, 
+OR(TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;International&quot;,
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;Corporate&quot;,
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;UK&quot;,
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;China&quot;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - Lead - Set To Send Emial</fullName>
+        <actions>
+            <name>M_D_Lead_Set_To_Send_Emial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.App_User_Email_Address__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.Lead_Email_Address__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Mobile Lead</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - Lead Send EMail</fullName>
+        <actions>
+            <name>Mobile_Dynamic_Hub_App_Lead_Capture</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Mobile Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.Send_Email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - New Account</fullName>
+        <actions>
+            <name>Mobile_Dynamic_Send_New_Account_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>New Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.Send_Email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - New Account - Email Region - USorders%40</fullName>
+        <actions>
+            <name>M_D_New_Account_Dist_Emial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>M_D_New_Account_Email_Region_USord</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>IF( 
+ISBLANK( Owner:User.ContactId ) , 
+OR(CONTAINS( Owner:User.Territories__c , &quot;USA&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Americas&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Canada &amp; South America&quot;))
+, 
+OR(TEXT( CreatedBy.Contact.Account.Territory__c ) = &quot;USA&quot;,
+AND(TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;Corporate&quot;, 
+TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;USA&quot;),
+TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;Canada &amp; South America&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - New Account - Email Region - orders%40</fullName>
+        <actions>
+            <name>M_D_New_Account_Dist_Emial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>M_D_New_Account_Email_Region_order</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR( 
+OR(CONTAINS( Owner:User.Territories__c , &quot;International&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Corporate&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;UK&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;China&quot;))
+, 
+OR(TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;International&quot;,
+AND(TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;Corporate&quot;, TEXT(CreatedBy.Contact.Country__c) &lt;&gt; &quot;USA&quot;),
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;UK&quot;,
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;China&quot;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - New Account - Send email</fullName>
+        <actions>
+            <name>M_D_Set_Send_Email_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.Ready_To_Send_Email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - U%2E%2ES - Set To Send Emial</fullName>
+        <actions>
+            <name>M_D_u_sol_Set_To_Send_Emial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Unsolicited Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.App_User_Email_Address__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.Territory_Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - USA %2F South America</fullName>
+        <actions>
+            <name>M_D_Lead_Americas</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>M_D_USA_South_America</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>IF(
+ISBLANK( Owner:User.ContactId ) ,
+OR(CONTAINS( Owner:User.Territories__c , &quot;Americas&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;USA&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Canada &amp; South America&quot;))
+,
+OR(Rep_Terriroty__c = &quot;USA&quot;,
+Rep_Terriroty__c = &quot;Canada &amp; South America&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - Unsolicited Send EMail</fullName>
+        <actions>
+            <name>Mobile_Dynamic_Unsolicited_Request</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>App_Email_Sent</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Unsolicited Request</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.Send_Email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>M%2FD - Update Lead App User Email</fullName>
+        <actions>
+            <name>M_D_app_useremail_address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Mobile_Dynamic__c.OwnerId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>App_Email_Sent</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>App Email Sent</subject>
+    </tasks>
+</Workflow>

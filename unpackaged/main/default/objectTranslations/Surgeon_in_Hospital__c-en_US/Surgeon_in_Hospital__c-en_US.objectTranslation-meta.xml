@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Surgeon in Hospital</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Surgeons in Hospital</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Surgeon in Hospital Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Related Information --></label>
+            <section>Related Information</section>
+        </sections>
+        <sections>
+            <label><!-- Schedule --></label>
+            <section>Schedule</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Distributor --></label>
+        <name>Distributor</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Hospital --></label>
+        <name>Hospital</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Surgeon in Hospital --></label>
+        <name>Surgeon_in_Hospital</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- To Be Reviewed --></label>
+        <name>To_Be_Reviewed</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Link_this_surgeon_to_a_hospital --></label>
+        <name>Link_this_surgeon_to_a_hospital</name>
+    </webLinks>
+</CustomObjectTranslation>

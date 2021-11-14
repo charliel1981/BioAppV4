@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommendation__c</fullName>
+    <externalId>false</externalId>
+    <label>Recommendation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>User Experience - Proceed with Part B</fullName>
+                <default>false</default>
+                <label>User Experience - Proceed with Part B</label>
+            </value>
+            <value>
+                <fullName>Adverse Incident/ Quality Problem/ Complaint - Proceed with Part C</fullName>
+                <default>false</default>
+                <label>Adverse Incident/ Quality Problem/ Complaint - Proceed with Part C</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

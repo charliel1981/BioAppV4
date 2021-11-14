@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOF_Attachment_Filename__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;Biocomposites Order Form &quot;&amp; From_Field_for_Email__c &amp;&quot;. Ref-&quot;&amp; RIGHT(Name, 6)</formula>
+    <label>DOF Attachment Filename</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

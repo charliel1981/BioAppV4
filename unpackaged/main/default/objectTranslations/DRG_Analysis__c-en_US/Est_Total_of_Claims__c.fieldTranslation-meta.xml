@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Total of private payor (estimated), Medicare and Medicaid claims --></help>
+        <label><!-- Est Total # Claims --></label>
+        <name>Est_Total_of_Claims__c</name>
+    </CustomFieldTranslation>

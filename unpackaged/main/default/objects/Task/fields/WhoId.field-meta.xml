@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WhoId</fullName>
+    <inlineHelpText>Add surgeon/contact name to link task/event to both hospital and surgeon/contact record.</inlineHelpText>
+    <type>Lookup</type>
+</CustomField>

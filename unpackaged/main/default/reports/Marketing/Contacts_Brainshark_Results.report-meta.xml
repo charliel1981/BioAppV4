@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Sales_Region__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Account</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$Account_type__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Brainshark__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Brainshark__r$Sort_Title__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Brainshark__r$PercentScore__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Brainshark__r$ViewTotalPoints__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Brainshark__r$ViewTotalScore__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <description>Shows all contacts, regardless of whether they have completed a brainshark quiz, and their brainshark scores</description>
+    <format>Tabular</format>
+    <name>Contacts Brainshark Results</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactsBrainshark__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

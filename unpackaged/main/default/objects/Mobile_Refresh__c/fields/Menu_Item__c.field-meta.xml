@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Menu_Item__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used to lookup from a Profile Menu Item to a Menu or Sub Menu for the app menu permissions.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to lookup from a Profile Menu Item to a Menu or Sub Menu for the app menu permissions.</inlineHelpText>
+    <label>Menu Item</label>
+    <referenceTo>Mobile_Refresh__c</referenceTo>
+    <relationshipLabel>Profile Menu Items</relationshipLabel>
+    <relationshipName>Profile_Menu_Items</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

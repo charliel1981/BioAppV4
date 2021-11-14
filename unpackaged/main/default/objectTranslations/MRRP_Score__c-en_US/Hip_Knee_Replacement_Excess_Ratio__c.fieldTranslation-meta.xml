@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This is the ratio of predicted readmissions (hospital performance) to expected readmissions (average all hospitals’ performance).  A ratio greater than 1 indicates excess readmissions. --></help>
+        <label><!-- Hip/Knee Replacement Excess Ratio --></label>
+        <name>Hip_Knee_Replacement_Excess_Ratio__c</name>
+    </CustomFieldTranslation>

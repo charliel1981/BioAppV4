@@ -1,0 +1,27 @@
+<ion-view title="Select Product">
+  <ion-content>
+    <div class="item item-input search-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" ng-model="search.query" />
+      <button ng-if="search.query.length"
+        class="button button-icon ion-android-close search-clear-button"
+        ng-click="clearSearch()">
+      </button>
+    </div>
+    <ion-scroll zooming="false" direction="y" id="product-list">
+      <ion-item class="item mti-item"
+        item-height: "80px"
+        item-width: "100%"
+        collection-repeat="product in products | filter:search.query" type="item-text-wrap"
+        ng-click="setSelectedProductAndReturn(product)"
+        >
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <h4>£{{product.price}}</h4>
+        <p>Barcode: {{product.barcodeId}}</p>
+      </ion-item>
+    </ion-scroll>
+  </ion-content>
+  <button id="products-sync-button" class="ng-hide sync-button button button-small button-positive" ng-click="doRefreshAndSync()">
+  </button>
+</ion-view>

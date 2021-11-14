@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Readmission_Rate_Rank_99_best__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Readmission rate percentile ranking is based on Medicare data only</inlineHelpText>
+    <label>Readmission Rate Rank (99 best)</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

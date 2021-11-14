@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>create_attachment</name>
+        <label>create attachment</label>
+        <locationX>418</locationX>
+        <locationY>631</locationY>
+        <actionName>FlowAction_CreateContentVersion</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>data</name>
+            <value>
+                <elementReference>$Record.Signature_Capture__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>fileExtension</name>
+            <value>
+                <stringValue>png</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <stringValue>attachment.png</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>parentId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <formulas>
+        <name>subfrm</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!$Record.Signature_Capture__c}, &quot;data:image/png;base64,&quot;, &quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>dof - base64 convert {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>dof - base64 convert</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>create_attachment</targetReference>
+        </connector>
+        <object>DOF__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

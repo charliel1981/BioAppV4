@@ -1,0 +1,938 @@
+<ion-view cache-view="false" hide-back-button="true">
+  <ion-nav-title>
+    Order form
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button ng-show="vm.showCancel" class="ng-hide button button-icon icon ion-android-close" ng-click="vm.cancelOrder()"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <div ng-switch="vm.step">
+      <!-- default -->
+      <div ng-switch-default>
+        <div class="row row-no-padding responsive-sm">
+          <div class="col col-50">
+            <ion-list>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-click="vm.scanBarcode()">
+                New case - scan
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-click="vm.displayNewManualInput('manual')">
+                New case - manual input
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-href="#/app/orderhistory">
+                History
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+            </ion-list>
+          </div>
+        </div>
+      </div> <!-- / default -->
+
+      <!-- manual -->
+      <div ng-switch-when="manual">
+        <div>
+          <h4 class="bio-sub-heading">Manual input</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Lot number:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input ng-model="vm.manualInput.lotNumber.part1" placeholder="" class="bio-lot-number-width1" ng-change="vm.lotNumberPart1Change()" maxlength="2"/>
+                <div class="bio-lot-number-separator" ng-show="vm.isLegacyLotNumber && vm.manualInput.lotNumber.part1.length == 2">/</div>
+
+                <input type="number"class="bio-lot-number-new" width="9em" ng-hide="vm.isLegacyLotNumber || vm.manualInput.lotNumber.part1.length < 2 || ! vm.manualInput.lotNumber.part1 || !vm.manualInputValid" ng-model="vm.manualInput.lotNumber.newPart2" ng-change="vm.lotNumberPart2NewChange()" />
+
+                <input type="number" ng-model="vm.manualInput.lotNumber.part2" placeholder="" class="bio-lot-number-legacy bio-lot-number-width1"  ng-show="vm.isLegacyLotNumber && vm.manualInput.lotNumber.part1.length == 2"/>
+                <div class="bio-lot-number-legacy bio-lot-number-separator" ng-show="vm.isLegacyLotNumber && vm.manualInput.lotNumber.part1.length == 2">-</div>
+                <input type="text" ng-model="vm.manualInput.lotNumber.part3" placeholder="" class="bio-lot-number-legacy bio-lot-number-width2" maxlength="6" ng-show="vm.isLegacyLotNumber && vm.manualInput.lotNumber.part1.length == 2"/>
+                <div class="bio-lot-number-legacy bio-lot-number-separator"ng-show="vm.isLegacyLotNumber && vm.manualInput.lotNumber.part1.length == 2">/</div>
+                <input type="text" ng-model="vm.manualInput.lotNumber.part4" placeholder="" class="bio-lot-number-legacy bio-lot-number-width2" maxlength="6" ng-show="vm.isLegacyLotNumber && vm.manualInput.lotNumber.part1.length == 2"/>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding">
+            <div class="item-input-inset">
+              <div class="bio-label bio-valid-{{vm.manualInputValid}}">{{ vm.manualInputMessage }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button ng-show="vm.isFirstTimeThru && vm.showManualInputBackButton" class="button button-positive bio-button-prev" ng-click="vm.gotoStep('default')">Back</button>
+            <button ng-show="!vm.isFirstTimeThru" class="button button-positive bio-button-prev" ng-click="vm.gotoStep('scanagain')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.manualInputLotNumberMatch('manualinputgood')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / manual -->
+
+      <!-- manualinputgood -->
+      <div ng-switch-when="manualinputgood">
+        <div>
+          <h4 class="bio-sub-heading">Manual input</h4>
+        </div>
+        <div class="card bio-card">
+          <div ng-show="vm.manualInput.name" class="item-input-inset">
+            <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.manualInput.name}}</div>
+          </div>
+          <div class="row responsive-sm row-no-padding">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Lot number:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.manualInput.lotNumberCombined}}</div>
+              </div>
+            </div>
+          </div>
+          <div ng-show="vm.manualInput.expiryDate" class="row responsive-sm row-no-padding">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Expiry Date:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.manualInput.expiryDate | dateYYYYMMDD}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="item item-input-inset bio-card-item">
+            <ion-checkbox ng-model="vm.manualInput.isCharge" class="bio-order-form-checkbox checkbox-dark" ng-change="vm.chargeCheckboxChange('manual','isNoCharge')">Price</ion-checkbox>
+            <div class="bio-currency-sign">{{::vm.currencySymbol}}</div>
+            <input type="number" style="width:100px;" ng-model="vm.manualInput.price" step="0.01" min="0" />
+          </div>
+          <div class="item item-input-inset item-text-wrap bio-card-item">
+            <ion-checkbox ng-model="vm.manualInput.isNoCharge" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.chargeCheckboxChange('manual','isCharge')">No charge <span class="bio-card-italics">(add reason in comments section)</span></ion-checkbox>
+          </div>
+        </div>
+        <div class="row bio-row-margin-bottom">
+          <div class="col bio-add-product-button-positioning text-right">
+            <button class="button button-dark bio-button-add-product" ng-click="vm.manualInputPriceValidation('scanagain')">Add another product</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col bio-add-product-button-positioning text-right">
+            <button ng-show="vm.isFirstTimeThru" class="button button-positive bio-button-next" ng-click="vm.manualInputPriceValidation('selecthospital')">Next</button>
+            <button ng-show="!vm.isFirstTimeThru" class="button button-positive bio-button-next" ng-click="vm.manualInputPriceValidation('confirmation')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / manualinputgood -->
+
+      <!-- scangood -->
+      <div ng-switch-when="scangood">
+        <div>
+          <h4 class="bio-sub-heading">Product scanned</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="item-input-inset">
+            <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.product.name}}</div>
+          </div>
+          <div class="row responsive-sm row-no-padding">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Lot number:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.product.lotNumber}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Expiry date:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.product.expiryDate | dateYYYYMMDD}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-no-padding-bottom-sm">
+            <ion-checkbox ng-model="vm.product.isCharge" class="bio-order-form-checkbox checkbox-dark" ng-change="vm.chargeCheckboxChange('scan','isNoCharge')">Price</ion-checkbox>
+            <div class="bio-currency-sign">{{::vm.currencySymbol}}</div>
+            <input type="number" style="width:100px;" ng-model="vm.product.price" step="0.01" min="0" />
+          </div>
+          <div class="item item-input-inset bio-card-item item-text-wrap bio-no-padding-top-sm bio-no-padding-bottom-sm">
+            <ion-checkbox ng-model="vm.product.isNoCharge" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.chargeCheckboxChange('scan','isCharge')">No charge <span class="bio-card-italics">(add reason in comments section)</span></ion-checkbox>
+          </div>
+        </div>
+        <div class="row bio-row-margin-bottom">
+          <div class="col bio-add-product-button-positioning text-right">
+            <button class="button button-dark bio-button-add-product" ng-click="vm.scannedProductDetailsValidation('scanagain')">Add another product</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col bio-add-product-button-positioning text-right">
+            <button ng-show="vm.isFirstTimeThru" class="button button-positive bio-button-next" ng-click="vm.scannedProductDetailsValidation('selecthospital')">Next</button>
+            <button ng-show="!vm.isFirstTimeThru" class="button button-positive bio-button-next" ng-click="vm.scannedProductDetailsValidation('confirmation')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / scangood -->
+
+      <!-- scanbad -->
+      <div ng-switch-when="scanbad">
+        <div class="text-center">
+          <h4 class="bio-sub-heading">Sorry</h4>
+        </div>
+        <div class="text-center">
+          <p class="bio-text bio-text-padding-top">The barcode number does not match our product list.</p>
+          <br />
+          <p class="bio-text">Please click 'Next' to enter manually.</p>
+          <br />
+        </div>
+        <div class="row">
+          <div class="col col-offset-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.displayNewManualInput('manual')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / scanbad -->
+
+      <!-- scanagain -->
+      <div ng-switch-when="scanagain">
+        <div class="row row-no-padding responsive-sm">
+          <div class="col col-50">
+            <ion-list>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-click="vm.scanBarcode()">
+                Scan
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-click="vm.displayNewManualInput('manual')">
+                Manual input
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+            </ion-list>
+          </div>
+        </div>
+        <div class="row bio-scanagain-row-padding">
+          <div class="col col-offset-50 text-left">
+            <button ng-show="vm.isFirstTimeThru" class="button button-positive bio-button-next" ng-click="vm.gotoStep('selecthospital')">Skip</button>
+            <button ng-show="!vm.isFirstTimeThru" class="button button-positive bio-button-next" ng-click="vm.gotoStep('confirmation')">Skip</button>
+          </div>
+        </div>
+      </div> <!-- / scanagain -->
+
+      <!-- selecthospital -->
+      <div ng-switch-when="selecthospital">
+        <div>
+          <h4 class="bio-sub-heading">Select your hospital</h4>
+        </div>
+        <div class="button-bar bio-tab-button-bar">
+          <button class="button bio-tab-button {{vm.hospitalTab!='hospitalrecent' ? 'button-dark bio-tab-button-deselected' : 'bio-tab-button-selected'}}" ng-click="vm.displayHospitalTab('hospitalrecent')">Recent</button>
+          <button class="button bio-tab-button {{vm.hospitalTab!='hospitalall' ? 'button-dark bio-tab-button-deselected' : 'bio-tab-button-selected'}}" ng-click="vm.displayHospitalTab('hospitalall')">All</button>
+          <button class="button bio-tab-button {{vm.hospitalTab!='hospitalnew' ? 'button-dark bio-tab-button-deselected' : 'bio-tab-button-selected'}}" ng-click="vm.displayHospitalTab('hospitalnew')">Add new</button>
+        </div>
+        <div ng-switch="vm.hospitalTab">
+          <div ng-switch-when="hospitalrecent">
+            <div class="card bio-card-tabbed">
+              <div class="bio-card-tabbed-heading">Your recent hospitals</div>
+              <ion-list>
+                <ion-item ng-repeat="hospital in vm.recentHospitals track by $index" ng-click="vm.displayHospitalDetails(hospital,'hospitaldetail')">
+                  {{hospital.name}}
+                </ion-item>
+              </ion-list>
+            </div>
+          </div>
+          <div ng-switch-when="hospitalall">
+            <div class="card bio-card-tabbed">
+              <div class="bio-label">All hospitals covered by your distributorship</div>
+              <div class="item item-input-inset bio-card-item bio-tab-input-no-side-padding">
+                <input type="text" ng-model="vm.hospitalSearch" class="bio-card-input-width" placeholder="Type here to search"/>
+                <i class="icon ion-ios-search placeholder-icon bio-tab-search-icon"></i>
+                <button ng-show="vm.hospitalSearch"
+                  class="button button-icon ion-android-close bio-tab-search-clear"
+                  ng-click="vm.clearHospitalSearch()">
+                </button>
+              </div>
+              <ion-list>
+                <ion-item ng-repeat="hospital in vm.hospitals | filter:{name: vm.hospitalSearch} track by $index" ng-click="vm.displayHospitalDetails(hospital,'hospitaldetail')">
+                  {{hospital.name}}
+                </ion-item>
+              </ion-list>
+            </div>
+          </div>
+          <div ng-switch-when="hospitalnew">
+            <div class="card bio-card-tabbed">
+              <div class="bio-label">Add a new hospital to your hospital list</div>
+              <div class="item item-input-inset bio-card-item bio-tab-input-no-side-padding">
+                <input type="text" ng-model="vm.newHospital.name" placeholder="Hospital name..." maxlength="100" class="bio-card-input-width" />
+              </div>
+              <div class="item item-input-inset bio-card-item bio-tab-input-no-side-padding">
+                <textarea ng-model="vm.newHospital.address" rows="5" placeholder="Hospital address..." maxlength="255" class="bio-card-input-width"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" ng-show="vm.hospitalTab=='hospitalnew'">
+          <div class="col col-offset-50 text-left">
+            <button class="button button-positive bio-button-add" ng-click="vm.newHospitalValidation('hospitaldetail')">Add</button>
+          </div>
+        </div>
+      </div> <!-- / selecthospital -->
+
+      <!-- hospitaldetail -->
+      <div ng-switch-when="hospitaldetail">
+        <div>
+          <h4 class="bio-sub-heading">{{::vm.selectedHospital.name}}</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">PO number:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.selectedHospital.poNumber" placeholder="XXXXXX" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Stock instructions:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item bio-no-padding-bottom-sm">
+                <ion-checkbox ng-model="vm.selectedHospital.replaceStockNo" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.stockCheckboxChange('replaceStockYes')">Don't replace stock</ion-checkbox>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label"></div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item bio-no-padding-top-sm">
+                <ion-checkbox ng-model="vm.selectedHospital.replaceStockYes" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.stockCheckboxChange('replaceStockNo')">Replace stock to:</ion-checkbox>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label"></div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <textarea ng-model="vm.selectedHospital.replaceStockComments" rows="5" placeholder="Replace stock to..." maxlength="255" class="bio-card-input-full-width"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button ng-show="vm.isFirstTimeThru" class="button button-positive bio-button-prev" ng-click="vm.hospitalDetailsValidation('selecthospital')">Back</button>
+            <button ng-show="!vm.isFirstTimeThru" class="button button-positive bio-button-prev" ng-click="vm.hospitalDetailsValidation('confirmhospital')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button ng-show="vm.isFirstTimeThru" class="button button-positive bio-button-next" ng-click="vm.hospitalDetailsValidation('selectsurgeon')">Next</button>
+            <button ng-show="!vm.isFirstTimeThru" class="button button-positive bio-button-next" ng-click="vm.hospitalDetailsValidation('confirmsurgeon')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / hospitaldetail -->
+
+      <!-- selectsurgeon -->
+      <div ng-switch-when="selectsurgeon">
+        <div>
+          <h4 class="bio-sub-heading">Select your surgeon</h4>
+        </div>
+        <div class="button-bar bio-tab-button-bar">
+          <button class="button bio-tab-button {{vm.surgeonTab!='surgeonrecent' ? 'button-dark bio-tab-button-deselected' : 'bio-tab-button-selected'}}" ng-click="vm.displaySurgeonTab('surgeonrecent')">Recent</button>
+          <button class="button bio-tab-button {{vm.surgeonTab!='surgeonall' ? 'button-dark bio-tab-button-deselected' : 'bio-tab-button-selected'}}" ng-click="vm.displaySurgeonTab('surgeonall')">All</button>
+          <button class="button bio-tab-button {{vm.surgeonTab!='surgeonnew' ? 'button-dark bio-tab-button-deselected' : 'bio-tab-button-selected'}}" ng-click="vm.displaySurgeonTab('surgeonnew')">Add new</button>
+        </div>
+        <div ng-switch="vm.surgeonTab">
+          <div ng-switch-when="surgeonrecent">
+            <div class="card bio-card-tabbed">
+              <div class="bio-card-tabbed-heading">Recent surgeons at your selected hospital</div>
+              <ion-list>
+                <ion-item ng-repeat="surgeon in vm.recentSurgeons track by $index" ng-click="vm.displaySurgeonDetails(surgeon,'surgeondetail')">
+                  {{surgeon.name}}
+                </ion-item>
+              </ion-list>
+            </div>
+          </div>
+          <div ng-switch-when="surgeonall">
+            <div class="card bio-card-tabbed">
+              <div class="bio-label">All surgeons at your selected hospital</div>
+              <div class="item item-input-inset bio-card-item bio-tab-input-no-side-padding">
+                <input type="text" ng-model="vm.surgeonSearch" class="bio-card-input-width" placeholder="Type here to search"/>
+                <i class="icon ion-ios-search placeholder-icon bio-tab-search-icon"></i>
+                <button ng-show="vm.surgeonSearch"
+                  class="button button-icon ion-android-close bio-tab-search-clear"
+                  ng-click="vm.clearSurgeonSearch()">
+                </button>
+              </div>
+              <ion-list>
+                <ion-item ng-repeat="surgeon in vm.surgeons | filter:vm.surgeonSearch track by $index" ng-click="vm.displaySurgeonDetails(surgeon,'surgeondetail')">
+                  {{surgeon.name}}
+                </ion-item>
+              </ion-list>
+            </div>
+          </div>
+          <div ng-switch-when="surgeonnew">
+            <div class="card bio-card-tabbed">
+              <div class="bio-label">Add a new surgeon to your surgeon list</div>
+              <div class="item item-input-inset bio-card-item bio-tab-input-no-side-padding">
+                <input type="text" ng-model="vm.newSurgeon.firstName" placeholder="First name..." maxlength="100" class="bio-card-input-width" />
+              </div>
+              <div class="item item-input-inset bio-card-item bio-tab-input-no-side-padding">
+                <input type="text" ng-model="vm.newSurgeon.lastName" placeholder="Last name..." maxlength="100" class="bio-card-input-width" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" ng-show="vm.surgeonTab=='surgeonnew'">
+          <div class="col col-offset-50 text-left">
+            <button class="button button-positive bio-button-add" ng-click="vm.newSurgeonValidation('surgeondetail')">Add</button>
+          </div>
+        </div>
+      </div> <!-- / selectsurgeon -->
+
+      <!-- surgeondetail -->
+      <div ng-switch-when="surgeondetail">
+        <div>
+          <h4 class="bio-sub-heading">{{::vm.selectedSurgeon.name}}</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Procedure date:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <ion-input class="item item-input bio-no-padding">
+                  <input type='date' ng-model="vm.procedureDate"
+                  ng-model-options="{ timezone: 'UTC' }" />
+                </ion-input>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Type of procedure:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <ion-input class="item item-input item-select bio-item-select-procedure-type">
+                  <select ng-model="vm.procedureType" name="procedureType" id="procedureType" class="bio-input-select">
+                    <option value="">Please select</option>
+                    <option value="Total joint reconstruction">Total joint reconstruction</option>
+                    <option value="Trauma">Trauma</option>
+                    <option value="Foot & ankle">Foot & ankle</option>
+                    <option value="Spine">Spine</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </ion-input>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Comments:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <textarea ng-model="vm.procedureComments" rows="5" placeholder="Comments..." maxlength="255" class="bio-card-input-full-width"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button ng-show="vm.isFirstTimeThru" class="button button-positive bio-button-prev" ng-click="vm.gotoStep('selectsurgeon')">Back</button>
+            <button ng-show="!vm.isFirstTimeThru" class="button button-positive bio-button-prev" ng-click="vm.gotoStep('confirmsurgeon')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.surgeonDetailsValidation('hospitalrep')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / surgeondetail -->
+
+      <!-- hospitalrep -->
+      <div ng-switch-when="hospitalrep">
+        <div>
+          <h4 class="bio-sub-heading">Hospital representative</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">First name:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.hospitalRep.firstName" placeholder="First name..." maxlength="100" class="bio-card-input-width" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Last name:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.hospitalRep.lastName" placeholder="Last name..." maxlength="100" class="bio-card-input-width" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('surgeondetail')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.hospitalRepValidation('notification')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / hospitalrep -->
+
+      <!-- notification -->
+      <div ng-switch-when="notification">
+        <div>
+          <h4 class="bio-sub-heading">Notification</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="item-input-inset">
+            <div class="bio-label">When you submit this order an e-mail confirmation will be sent to Biocomposites and your e-mail account.</div>
+          </div>
+          <div class="item-input-inset bio-no-padding-bottom">
+            <div class="bio-label">Please confirm if an e-mail should be sent to the hospital:</div>
+          </div>
+          <div class="item item-input-inset item-text-wrap bio-card-item bio-no-padding-bottom">
+            <ion-checkbox ng-model="vm.notification.isEmail" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.notificationEmailCheckboxChange('isEmail')">Address on file: <span class="bio-card-italics">(If blank, no e-mail details held on file)</span></ion-checkbox>
+          </div>
+          <div class="item-input-inset bio-no-padding-top bio-no-padding-bottom">
+            <div class="bio-label bio-order-form-notification-email-padding">{{::vm.notification.email}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-no-padding-bottom bio-display-block-sm">
+            <ion-checkbox ng-model="vm.notification.isAlternativeEmail" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.notificationEmailCheckboxChange('isAlternativeEmail')">Alternative e-mail address:</ion-checkbox>
+            <input type="email" ng-model="vm.notification.alternativeEmail" placeholder="Alternative e-mail..." class="bio-order-form-notification-email-padding bio-order-form-notification-email-width" />
+          </div>
+          <div class="item item-input-inset bio-card-item">
+            <ion-checkbox ng-model="vm.notification.dontSend" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.notificationEmailCheckboxChange('dontSend')">Don't send</ion-checkbox>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('hospitalrep')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.notificationValidation('confirmation')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / notification -->
+
+      <!-- confirmation -->
+      <div ng-switch-when="confirmation">
+        <div>
+          <h4 class="bio-sub-heading">Order confirmation</h4>
+        </div>
+
+        <div class="row row-no-padding responsive-md">
+          <div class="col bio-no-margin">
+            <!-- hospital and surgeon -->
+            <div class="card bio-card">
+              <div class="item-input-inset bio-no-padding-top bio-no-padding-bottom">
+                <div class="bio-label bio-label-padded bio-label-font-sm bio-card-bold">{{::vm.selectedHospital.name}}</div>
+              </div>
+              <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                <ion-label>PO number:</ion-label>
+                <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.selectedHospital.poNumber}}</div>
+              </div>
+              <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                <ion-label>Stock instruction:</ion-label>
+                <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.selectedHospital.stockInstruction}}</div>
+              </div>
+              <div ng-show="vm.selectedHospital.replaceStockComments" class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                <ion-label class="bio-no-padding-top"></ion-label>
+                <div class="bio-label bio-confirmation-wrap bio-no-padding-top bio-label-font-sm bio-card-bold">{{::vm.selectedHospital.replaceStockComments}}</div>
+              </div>
+              <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                <ion-label>Surgeon name:</ion-label>
+                <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.selectedSurgeon.name}}</div>
+              </div>
+              <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                <ion-label>Type of procedure:</ion-label>
+                <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.procedureType}}</div>
+              </div>
+              <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                <ion-label class="bio-flex-align-top">Comments:</ion-label>
+                <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::vm.procedureComments}}</div>
+              </div>
+              <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                <ion-label>Date of procedure:</ion-label>
+                <div class="bio-flex bio-flex-grow-1">
+                  <div class="bio-label bio-label-font-sm bio-card-bold" bio-card-bold>{{::vm.procedureDate | dateDDMMMYYYY}}</div>
+                  <button class="button button-small bio-card-item bio-flex-align-right bio-no-padding-right" ng-click="vm.editProduct('confirmhospital')">Edit</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- first product -->
+            <div class="card bio-card" ng-show="vm.selectedProducts[0]">
+              <div ng-show="vm.selectedProducts[0].name">
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Product:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[0].name}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Lot number:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[0].lotNumber}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Price:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="!vm.selectedProducts[0].isNoCharge">{{vm.currencySymbol}}{{vm.selectedProducts[0].price | number:2}}</div>
+                  <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="vm.selectedProducts[0].isNoCharge">No Charge</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Expiry date:</ion-label>
+                  <div class="bio-flex bio-flex-grow-1">
+                    <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[0].expiryDate | dateYYYYMMDD}}</div>
+                    <button class="button button-icon ion-ios-close bio-remove-product-icon bio-flex-align-right" ng-click="vm.removeProduct(0)"></button>
+                  </div>
+                </div>
+              </div>
+              <div ng-show="!vm.selectedProducts[0].name">
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Lot number:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[0].lotNumber}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Price:</ion-label>
+                  <div class="bio-flex bio-flex-grow-1">
+                    <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="!vm.selectedProducts[0].isNoCharge">{{vm.currencySymbol}}{{vm.selectedProducts[0].price | number:2}}</div>
+                    <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="vm.selectedProducts[0].isNoCharge">No Charge</div>
+                    <button class="button button-icon ion-ios-close bio-remove-product-icon bio-flex-align-right" ng-click="vm.removeProduct(0)"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- second product -->
+            <div class="card bio-card" ng-show="vm.selectedProducts[1]">
+              <div ng-show="vm.selectedProducts[1].name">
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Product:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[1].name}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Lot number:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[1].lotNumber}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Price:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="!vm.selectedProducts[1].isNoCharge">{{vm.currencySymbol}}{{vm.selectedProducts[1].price | number:2}}</div>
+                  <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="vm.selectedProducts[1].isNoCharge">No Charge</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Expiry date:</ion-label>
+                  <div class="bio-flex bio-flex-grow-1">
+                    <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[1].expiryDate | dateYYYYMMDD}}</div>
+                    <button class="button button-icon ion-ios-close bio-remove-product-icon bio-flex-align-right" ng-click="vm.removeProduct(1)"></button>
+                  </div>
+                </div>
+              </div>
+              <div ng-show="!vm.selectedProducts[1].name">
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Lot number:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[1].lotNumber}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Price:</ion-label>
+                  <div class="bio-flex bio-flex-grow-1">
+                    <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="!vm.selectedProducts[1].isNoCharge">{{vm.currencySymbol}}{{vm.selectedProducts[1].price | number:2}}</div>
+                    <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="vm.selectedProducts[1].isNoCharge">No Charge</div>
+                    <button class="button button-icon ion-ios-close bio-remove-product-icon bio-flex-align-right" ng-click="vm.removeProduct(1)"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- forth product onwards -->
+            <div class="card bio-card" ng-repeat="product in vm.selectedProducts.slice(3) track by $index">
+              <div ng-show="product.name">
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Product:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{product.name}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Lot number:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{product.lotNumber}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Price:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="!product.isNoCharge">{{vm.currencySymbol}}{{product.price | number:2}}</div>
+                  <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="product.isNoCharge">No Charge</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Expiry date:</ion-label>
+                  <div class="bio-flex bio-flex-grow-1">
+                    <div class="bio-label bio-label-font-sm bio-card-bold">{{product.expiryDate | dateYYYYMMDD}}</div>
+                    <button class="button button-icon ion-ios-close bio-remove-product-icon bio-flex-align-right" ng-click="vm.removeProduct($index+3)"></button>
+                  </div>
+                </div>
+              </div>
+              <div ng-show="!product.name">
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Lot number:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{product.lotNumber}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Price:</ion-label>
+                  <div class="bio-flex bio-flex-grow-1">
+                    <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="!product.isNoCharge">{{vm.currencySymbol}}{{product.price | number:2}}</div>
+                    <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="product.isNoCharge">No Charge</div>
+                    <button class="button button-icon ion-ios-close bio-remove-product-icon bio-flex-align-right" ng-click="vm.removeProduct($index+3)"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!-- add another product - for less than 3 products -->
+            <div ng-show="vm.selectedProducts.length<3">
+              <div class="row row-no-padding">
+                <div class="col bio-button-align bio-add-product bio-no-margin">
+                  <button class="button button-dark bio-button-add-product" ng-click="vm.gotoStep('scanagain')">Add another product</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col bio-no-margin">
+            <!-- third product -->
+            <div class="card bio-card bio-product-no-top-margin" ng-show="vm.selectedProducts[2]">
+              <div ng-show="vm.selectedProducts[2].name">
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Product:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[2].name}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Lot number:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[2].lotNumber}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Price:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="!vm.selectedProducts[2].isNoCharge">{{vm.currencySymbol}}{{vm.selectedProducts[2].price | number:2}}</div>
+                  <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="vm.selectedProducts[2].isNoCharge">No Charge</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Expiry date:</ion-label>
+                  <div class="bio-flex bio-flex-grow-1">
+                    <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[2].expiryDate | dateYYYYMMDD}}</div>
+                    <button class="button button-icon ion-ios-close bio-remove-product-icon bio-flex-align-right" ng-click="vm.removeProduct(2)"></button>
+                  </div>
+                </div>
+              </div>
+              <div ng-show="!vm.selectedProducts[2].name">
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Lot number:</ion-label>
+                  <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.selectedProducts[2].lotNumber}}</div>
+                </div>
+                <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+                  <ion-label>Price:</ion-label>
+                  <div class="bio-flex bio-flex-grow-1">
+                    <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="!vm.selectedProducts[2].isNoCharge">{{vm.currencySymbol}}{{vm.selectedProducts[2].price | number:2}}</div>
+                    <div class="bio-label bio-label-font-sm bio-card-bold" ng-if="vm.selectedProducts[2].isNoCharge">No Charge</div>
+                    <button class="button button-icon ion-ios-close bio-remove-product-icon bio-flex-align-right" ng-click="vm.removeProduct(2)"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- add another product - for 3 or more products -->
+            <div class="bio-button-align bio-add-product" ng-show="vm.selectedProducts.length>=3">
+              <button class="button button-dark bio-button-add-product" ng-click="vm.gotoStep('scanagain')">Add another product</button>
+            </div>
+
+            <!-- signature and other hospital details -->
+            <div class="card bio-card">
+              <div class="item-input-inset bio-no-padding-top bio-no-padding-bottom">
+                <div class="bio-label bio-label-padded">I acknowledge receipt of the above product(s) and that an email confirmation will be sent to:</div>
+              </div>
+              <div class="item-input-inset bio-no-padding-top bio-no-padding-bottom">
+                <div class="bio-label"><span class="bio-card-bold">{{::vm.confirmationEmail}}</span></div>
+              </div>
+              <div class="item-input-inset bio-no-padding-top bio-no-padding-bottom">
+                <div class="bio-label bio-label-padded">Hospital representative:</div>
+              </div>
+              <div class="item-input-inset bio-no-padding-top">
+                <div class="bio-flex bio-flex-grow-1">
+                  <div class="bio-label bio-card-bold">{{::vm.hospitalRep.firstName}} {{::vm.hospitalRep.lastName}}</div>
+                  <button class="button button-small bio-card-item bio-flex-align-right bio-no-padding-right" ng-click="vm.gotoStep('edit-hosp-rep')">Edit</button>
+                </div>
+              </div>
+              <div data-tap-disabled="true">
+                <canvas id="signatureCanvas" class="bio-signature-canvas"></canvas>
+              </div>
+              <div class="item-input-inset bio-no-padding-top bio-no-padding-bottom">
+                <div class="bio-label bio-signature-info">Please sign above</div>
+                <button class="button button-small button-clear bio-flex-align-right" ng-click="vm.clearCanvas()">Clear</button>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- / row -->
+
+        <div class="row">
+          <div class="col text-right">
+            <button class="button button-positive bio-button-submit" ng-click="vm.submitOrder()">Submit</button>
+          </div>
+        </div>
+
+      </div> <!-- / confirmation -->
+
+      <!-- confirmhospital -->
+      <div ng-switch-when="confirmhospital">
+        <div>
+          <h4 class="bio-sub-heading">{{::vm.selectedHospital.name}}</h4>
+        </div>
+        <div class="row bio-row-margin-top bio-row-margin-bottom">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('confirmation')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-edit" ng-click="vm.gotoStep('selecthospital')">Edit</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <button class="button button-positive bio-button-confirm" ng-click="vm.gotoStep('hospitaldetail')">Confirm</button>
+          </div>
+        </div>
+      </div> <!-- / confirmhospital -->
+
+      <!-- confirmsurgeon -->
+      <div ng-switch-when="confirmsurgeon">
+        <div>
+          <h4 class="bio-sub-heading">{{::vm.selectedSurgeon.name}}</h4>
+        </div>
+        <div class="row bio-row-margin-top bio-row-margin-bottom">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('confirmation')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-edit" ng-click="vm.gotoStep('selectsurgeon')">Edit</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <button class="button button-positive bio-button-confirm" ng-click="vm.gotoStep('surgeondetail')">Confirm</button>
+          </div>
+        </div>
+      </div> <!-- / confirmsurgeon -->
+
+      <!-- edit-hosp-rep -->
+      <div ng-switch-when="edit-hosp-rep">
+        <div>
+          <h4 class="bio-sub-heading">Hospital representative</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">First name:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.hospitalRep.firstName" placeholder="First name..." maxlength="100" class="bio-card-input-width" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Last name:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.hospitalRep.lastName" placeholder="Last name..." maxlength="100" class="bio-card-input-width" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.hospitalRepValidation('confirmation')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.hospitalRepValidation('edit-notification')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / edit-hosp-rep -->
+
+      <!-- edit-notification -->
+      <div ng-switch-when="edit-notification">
+        <div>
+          <h4 class="bio-sub-heading">Notification</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="item-input-inset">
+            <div class="bio-label">When you submit this order an e-mail confirmation will be sent to Biocomposites and your e-mail account.</div>
+          </div>
+          <div class="item-input-inset bio-no-padding-bottom">
+            <div class="bio-label">Please confirm if an e-mail should be sent to the hospital:</div>
+          </div>
+          <div class="item item-input-inset item-text-wrap bio-card-item bio-no-padding-bottom">
+            <ion-checkbox ng-model="vm.notification.isEmail" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.notificationEmailCheckboxChange('isEmail')">Address on file: <span class="bio-card-italics">(If blank, no e-mail details held on file)</span></ion-checkbox>
+          </div>
+          <div class="item-input-inset bio-no-padding-top bio-no-padding-bottom">
+            <div class="bio-label bio-order-form-notification-email-padding">{{::vm.notification.email}}</div>
+          </div>
+          <div class="item item-input-inset bio-card-item bio-no-padding-bottom bio-display-block-sm">
+            <ion-checkbox ng-model="vm.notification.isAlternativeEmail" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.notificationEmailCheckboxChange('isAlternativeEmail')">Alternative e-mail address:</ion-checkbox>
+            <input type="email" ng-model="vm.notification.alternativeEmail" placeholder="Alternative e-mail..." class="bio-order-form-notification-email-padding bio-order-form-notification-email-width" />
+          </div>
+          <div class="item item-input-inset bio-card-item">
+            <ion-checkbox ng-model="vm.notification.dontSend" class="bio-order-form-checkbox-wide checkbox-dark" ng-change="vm.notificationEmailCheckboxChange('dontSend')">Don't send</ion-checkbox>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.notificationValidation('edit-hosp-rep')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.notificationValidation('confirmation')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / edit-notification -->
+
+    </div>
+
+  </ion-content>
+</ion-view

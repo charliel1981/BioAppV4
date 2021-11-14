@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Community_Item_Permission_Link__c$Name</field>
+    </columns>
+    <columns>
+        <field>Community_Item_Permission_Link__c$Community_Item__c.Title__c</field>
+    </columns>
+    <columns>
+        <field>Community_Item_Permission_Link__c$Profile__c</field>
+    </columns>
+    <columns>
+        <field>Community_Item_Permission_Link__c$Community_Item__c.RecordType</field>
+    </columns>
+    <columns>
+        <field>Community_Item_Permission_Link__c$Community_Item__c.Type__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <description>Hub Permission Profiles Overview</description>
+    <format>Tabular</format>
+    <name>HubPermissionProfiles</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Community_Item_Permission_Links__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Community_Item_Permission_Link__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

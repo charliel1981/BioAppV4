@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>UpdateHospitalDistributor</fullName>
+        <field>Hospital_Distributor__c</field>
+        <formula>Distributor__r.Name</formula>
+        <name>UpdateHospitalDistributor</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Hospital__c</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>SetHospitalDistributor</fullName>
+        <actions>
+            <name>UpdateHospitalDistributor</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Hospital_in_a_Distributor__c.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

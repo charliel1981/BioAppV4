@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Hub_Notification</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send Hub Notification</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+sforce.connection.sessionId = &quot;{!$Api.Session_ID}&quot;; 
+var Wservice = sforce.apex.execute(&quot;EmailToComunityTypeCon&quot;, &quot;SendNotification&quot;,{strID:&#39;{!Community_Items__c.Id}&#39;}); 
+if(Wservice == &#39;Fail&#39;){ 
+alert(&#39;Access denied. Please contact administrator.&#39;); 
+}else if(Wservice == &#39;NOTYPE&#39;){ 
+alert(&#39;Email template not configured for this type of Community Item.&#39;); 
+}else if(Wservice == &#39;TypeNO&#39;){ 
+
+alert(&#39;Community Item Type is not defined.&#39;); 
+
+}else if(Wservice == &#39;Sucess&#39;){ 
+function showSimpleDialog(){ 
+var sd = new SimpleDialog(&quot;Test&quot;+Dialogs.getNextId(), false); 
+sd.setTitle(&quot;Campaigns List&quot;); 
+sd.createDialog(); 
+window.parent.sd = sd; 
+sd.setWidth(800); 
+sd.setContentInnerHTML(&quot;&lt;iframe src=&quot;+&#39;apex/UserCommunityViewValpage?id={!Community_Items__c.Id}&#39;+&quot; style=&#39;border:0;width:775px;height:515px&#39;; id=&#39;framid&#39;&gt;&lt;/iframe&gt;&lt;p align=&#39;center&#39;&gt;&lt;br /&gt;&lt;/p&gt;&quot;); 
+
+if ($(sd.dialog).find(&#39;#InlineEditDialogX&#39;).size() == 0) { 
+var close = $(&quot;&lt;a id=&#39;InlineEditDialogX&#39; title=&#39;Close&#39; tabindex=&#39;0&#39; href=&#39;javascript:void(0)&#39; class=&#39;dialogClose&#39;&gt;Close&lt;/a&gt;&quot;); 
+close.mouseover(function() { 
+this.className = &#39;dialogCloseOn&#39;; 
+}).mouseout(function() { 
+this.className = &#39;dialogClose&#39;; 
+}).click(function() { 
+
+// finally our on click handler which closes the dialog 
+sd.hide(); 
+}); 
+// insert the new generated close button before the h2 tag so it&#39;ll show up on the top right corner 
+close.insertBefore($(sd.dialog).find(&#39;.topLeft h2&#39;)); 
+} sd.show(); 
+
+} showSimpleDialog(); 
+
+}</url>
+</WebLink>

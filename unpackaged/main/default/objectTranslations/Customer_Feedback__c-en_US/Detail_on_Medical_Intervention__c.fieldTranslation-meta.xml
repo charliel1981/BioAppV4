@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Was any medical intervention required?
+If so, what was the result of the intervention? --></help>
+        <label><!-- Detail on Medical Intervention --></label>
+        <name>Detail_on_Medical_Intervention__c</name>
+    </CustomFieldTranslation>

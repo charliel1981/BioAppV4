@@ -1,0 +1,100 @@
+<messaging:emailTemplate subject="Lead for {!relatedTo.Lead_name__c}" recipientType="User" relatedToType="Mobile_Dynamic__c">
+<messaging:htmlEmailBody >
+<html>
+    <body>
+        <Style type="text/css">
+            body {
+  font-family: 'Arial', sans-serif;
+}
+
+td {
+  font-size: 14px;
+  border: 1px solid #000;
+  text-align: left;
+  line-height: 40px;
+}
+
+tr {
+  border: 1px solid #000;
+  border-width: 1;
+}
+
+table {
+  border: 1px solid #000;
+  border-width: 1;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+}
+
+.rowOne {
+  width:1%;
+    height: 60px;
+    padding-right: 10px;
+    white-space:nowrap;
+}
+        </Style>
+        
+        <p>To Biocomposites Marketing Department</p>
+        <p>Can you please add this lead to CRM</p>        
+        <table>
+            <tr>
+                <td class="rowOne">Event name</td>
+                <td>{!relatedTo.Event_Name__c}</td>
+            </tr>
+            <tr>
+                <td class="rowOne">Name / Title / Institution</td> 
+                <td><apex:outputField value="{!relatedTo.Name_Title_Inst_for_email__c}"/></td>
+            </tr>            
+            <tr>
+                <td class="rowOne">Contact Information</td>
+                <td><apex:outputField value="{!relatedTo.Contact_Information_for_email__c}"/></td> 
+            </tr> 
+            <tr>
+                <td class="rowOne">Product</td>
+                <td>{!relatedTo.Product__c}</td> 
+            </tr> 
+            <tr>
+                <td class="rowOne">Notes</td>
+                <td>{!relatedTo.Notes__c}</td> 
+            </tr> 
+             <tr>
+                <td class="rowOne">Date entered</td>
+                <td>
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                       <apex:param value="{!relatedTo.Date_Entered__c}" />
+                   </apex:outputText>
+                </td> 
+            </tr>   
+             <tr>
+                <td class="rowOne">Sync date</td>
+                <td>
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                       <apex:param value="{!relatedTo.CreatedDate}" />
+                   </apex:outputText>
+                </td> 
+            </tr>             
+        </table>
+        <br></br>
+        Yours sincerely,<br></br>
+        <br></br>
+        <br></br>
+          <apex:outputField value="{!relatedTo.Owner.Name}"/><br></br>
+          <apex:outputField value="{!relatedTo.job_title_for_email__c}"/><br></br>
+          <apex:outputField value="{!relatedTo.Owner.Phone}"/><br></br>
+          <apex:outputField value="{!relatedTo.Owner.Email}"/><br></br>
+          <br></br>
+          <apex:outputField value="{!relatedTo.Distributor__c}"/><br></br>
+          <apex:outputField value="{!relatedTo.Distributor_address__c}"/><br></br> <br></br>
+        <!--  <apex:outputLink value="Attachment" id="theLink">
+     <apex:image url="{!relatedTo.M_D_Attachment__c}">
+      </apex:image>
+</apex:outputLink>  -->
+          
+<br></br> <br></br><br></br> <br></br><br></br> <br></br>
+
+    </body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

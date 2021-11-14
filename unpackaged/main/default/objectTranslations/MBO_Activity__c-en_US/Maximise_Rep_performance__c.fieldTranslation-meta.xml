@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Training, case attendance, ride-along, 1st 90 days --></help>
+        <label><!-- 3. Maximize Rep Performance --></label>
+        <name>Maximise_Rep_performance__c</name>
+    </CustomFieldTranslation>

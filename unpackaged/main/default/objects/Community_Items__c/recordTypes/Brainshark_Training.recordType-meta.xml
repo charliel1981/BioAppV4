@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brainshark_Training</fullName>
+    <active>true</active>
+    <label>Brainshark Training</label>
+    <picklistValues>
+        <picklist>Featured_Item_Type__c</picklist>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Profile__c</picklist>
+        <values>
+            <fullName>Biocomposites - SALES MANAGER CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Administrator</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subtype__c</picklist>
+        <values>
+            <fullName>External Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stimulan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>genex</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Account management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brainshark Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact us</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing collateral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales tools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Topic of Interest %2F Notices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tutorial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,74 @@
+<ion-view hide-back-button="true">
+  <ion-nav-title>
+    <img ng-src="{{vm.titleImage}}" class="bio-header-logo" />
+  </ion-nav-title>
+  <ion-content>
+    <div class="{{vm.slideInHomePage ? 'bio-slide-in' : ''}}">
+      <img ng-src="{{vm.homeImage}}" class="bio-home-image" />
+      <p class="bio-home-top-text">{{vm.userFirstName}}</p>
+      <p class="bio-home-hub-text">Distributor Hub</p>
+      <p class="bio-home-mid-text">Your home for the knowledge & tools you need to succeed</p>
+    </div>
+
+    <div class="bio-home-button-container bio-home-button-top-row {{vm.slideInHomePage ? 'bio-slide-in' : ''}}">
+      <div class="bio-home-2-rows">
+        <div class="bio-home-button-wrapper">
+          <a ng-click="vm.gotoPage('/app/orderform','home-order-form')" class="button bio-home-button">
+            <img ng-src="{{vm.orderFormSVG}}" class="bio-home-button-icon" />
+            <div class="bio-home-button-text">Order form</div>
+          </a>
+        </div>
+        <div class="bio-home-button-wrapper">
+          <a ng-click="vm.gotoPage('/app/request','home-request')" class="button bio-home-button">
+            <img ng-src="{{vm.unsolicitedSVG}}" class="bio-home-button-icon" />
+            <div class="bio-home-button-text">Unsolicited request</div>
+          </a>
+        </div>
+        <div class="bio-home-hide-on-smaller-device bio-home-button-wrapper">
+          <a ng-click="vm.showStimulanSideMenu()" class="button bio-home-button">
+            <img ng-src="{{vm.stimulanSVG}}" class="bio-home-button-icon" />
+            <div class="bio-home-button-text">STIMULAN</div>
+          </a>
+        </div>
+      </div>
+      <!-- for smaller devices with 3 rows we hide the 'STIMULAN' and 'Topics of interest' -->
+      <!-- from the 2 rows display and show this div instead -->
+      <div class="bio-home-3-rows">
+        <div class="bio-home-button-wrapper">
+          <a ng-click="vm.showStimulanSideMenu()" class="button bio-home-button">
+            <img ng-src="{{vm.stimulanSVG}}" class="bio-home-button-icon" />
+            <div class="bio-home-button-text">STIMULAN</div>
+          </a>
+        </div>
+        <div class="bio-home-button-wrapper">
+          <a ng-click="vm.gotoPage('/app/contentitem/toi/Topics%20of%20interest','home-toi')" class="button bio-home-button">
+            <img ng-src="{{vm.topicSVG}}" class="bio-home-button-icon" />
+            <div class="bio-home-button-text">Topics of interest</div>
+          </a>
+        </div>
+      </div>
+      <div class="bio-home-2-rows">
+        <div class="bio-home-hide-on-smaller-device bio-home-button-wrapper">
+          <a ng-click="vm.gotoPage('/app/contentitem/toi/Topics%20of%20interest','home-toi')" class="button bio-home-button">
+            <img ng-src="{{vm.topicSVG}}" class="bio-home-button-icon" />
+            <div class="bio-home-button-text">Topics of interest</div>
+          </a>
+        </div>
+        <div class="bio-home-button-wrapper">
+          <a ng-click="vm.gotoPage('/app/contentitem/e-learn/e-learning','home-elearn')" class="button bio-home-button">
+            <img ng-src="{{vm.elearnSVG}}" class="bio-home-button-outbox-icon" />
+            <div class="bio-home-button-text">e-learning</div>
+          </a>
+        </div>
+        <div class="bio-home-button-wrapper">
+          <a ng-click="vm.gotoPage('/app/outbox','home-outbox')" class="button bio-home-button">
+            <img ng-src="{{vm.outboxSVG}}" class="bio-home-button-outbox-icon" />
+            <img ng-show="vm.showOutboxAlert" ng-src="{{vm.outboxAlertGIF}}" class="bio-home-button-alert" />
+            <div class="bio-home-button-text">Outbox</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

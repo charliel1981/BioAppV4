@@ -1,0 +1,10 @@
+General Feedback Information
+Please see below the General Feedback created in the system. 
+
+Date: {!Customer_Feedback__c.Date__c}
+Hospital: {!Customer_Feedback__c.Hospital_Facility__c}
+Person Reporting the Incident / Feedback: {!Customer_Feedback__c.Contact_Name__c}	  
+Surgeon: {!Customer_Feedback__c.Surgeon__c}	  
+Distributor: {!Customer_Feedback__c.Distributor__c}	 
+Device Name:	{!Customer_Feedback__c.Device_Name__c}  
+Feedback: {!Customer_Feedback__c.Feedback__c}

@@ -1,0 +1,107 @@
+<ion-view cache-view="false"  title="{{project.Name}}">
+  <ion-content padding="true">
+    <form ng-submit="submitForm()">
+    <div class="card">
+        <div class="item item-divider">
+            <h4>{{ project.Name }}</h4>
+
+        </div>
+        <div class="item item-text-wrap">
+            <textarea ng-model="project.formDescription"></textarea>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!-- <div class="col">
+                <div class="item item-divider">
+                <h4>Location</h4>
+                </div>
+                <div class="item item-text-wrap">
+                <p>{{ project.location }}</p>
+                </div>
+        </div> -->
+
+        <div class="col">
+                <div class="item item-divider">
+                <h4>Contact</h4>
+                </div>
+                <div class="item item-text-wrap">
+                <p>{{project.phone}}</p>
+                </div>
+        </div>
+
+        <div class="col">
+                <div class="item item-divider">
+                <h4>Website</h4>
+                </div>
+                <div class="item item-text-wrap">
+                <p>{{project.URL}}</p>
+                </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <a href="tel:{{project.phone}}"
+                ng-disabled="!project.phone"
+                class="button button-block button-positive icon-left ion-ios-telephone">
+            Call
+            </a>
+        </div>
+
+        <div class="col">
+            <a
+            href="#/tab/project/{{project.Id}}/website"
+                ng-disabled="!project.URL"
+                class="button button-block button-positive icon-left ion-ios-world-outline">
+            Visit Website
+            </a>
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="col">
+            <button
+                ngClick="Submit"
+                ng-disabled="project.mobilecaddy1__Description__c == project.formDescription"
+                class="button button-block button-positive icon-left ion-checkmark">
+            Save
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <a class="button button-block button-positive" id="new-exp" href="#tab/project/surgeon/new/{{project.Id}}">
+            New Surgeon
+            </a>
+        </div>
+        <div class="col">
+            <a class="button button-block button-positive" id="new-time"  href="#tab/project/order/new/{{project.Id}}">
+            New Order
+            </a>
+        </div>
+    </div>
+    </form>
+
+    <div class="list card view-expenses">
+
+            <a href="#tab/project/surgeon/{{project.Id}}" class="item item-icon-left" id="view-exp-recs">
+            <i class="icon ion-card"></i>
+            View Surgeons
+          </a>
+
+          <a href="#tab/project/order/{{project.Id}}" class="item item-icon-left" id="view-time-recs">
+            <i class="icon ion-clock"></i>
+            View Orders
+          </a>
+
+          
+
+    </div>
+
+  </ion-content>
+</ion-view>

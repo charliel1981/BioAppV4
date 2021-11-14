@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Selected by the app to show if the price is entered or no charge --></help>
+        <label><!-- Price Entered --></label>
+        <name>Price_Entered__c</name>
+        <picklistValues>
+            <masterLabel>No Charge</masterLabel>
+            <translation><!-- No Charge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price Entered</masterLabel>
+            <translation><!-- Price Entered --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

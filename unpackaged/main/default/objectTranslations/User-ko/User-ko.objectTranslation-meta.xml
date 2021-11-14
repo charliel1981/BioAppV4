@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>User Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- You can not have this box ticked when you create a new user --></errorMessage>
+        <name>Can_not_set_for_hub_on_new</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The country field can not be left blank --></errorMessage>
+        <name>Country_field_needs_to_be_populated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to select this profile --></errorMessage>
+        <name>Customer_Community_Login_User_can_not_be</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This is the email address that order forms originated from the Hub app will be sent to. --></help>
+        <label><!-- Order Form Email Address --></label>
+        <name>Order_Form_Email_Address__c</name>
+    </CustomFieldTranslation>

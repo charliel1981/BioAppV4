@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_UK</fullName>
+    <fields>Antibiotic_1__c</fields>
+    <fields>Antibiotic_1_mg__c</fields>
+    <fields>Antibiotic_2__c</fields>
+    <fields>Antibiotic_2_mg__c</fields>
+    <fields>Other_Antibiotic_1__c</fields>
+    <fields>Other_Antibiotic_2__c</fields>
+    <fields>Set_Time_Mins__c</fields>
+    <fields>STIMULAN__c</fields>
+    <fields>STIMULAN_Amount_cc__c</fields>
+    <fields>Event_Type__c</fields>
+    <label>Event - UK</label>
+</CompactLayout>

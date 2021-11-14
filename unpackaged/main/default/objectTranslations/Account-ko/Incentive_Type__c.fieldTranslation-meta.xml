@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Incentive Type --></label>
+        <name>Incentive_Type__c</name>
+        <picklistValues>
+            <masterLabel>Patch Account</masterLabel>
+            <translation><!-- Patch Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top 5 Account</masterLabel>
+            <translation><!-- Top 5 Account --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Specialty --></label>
+        <name>Specialty__c</name>
+        <picklistValues>
+            <masterLabel>Foot &amp; Ankle</masterLabel>
+            <translation><!-- Foot &amp; Ankle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Surgery</masterLabel>
+            <translation><!-- General Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Microbiologist</masterLabel>
+            <translation><!-- Microbiologist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neurosurgery</masterLabel>
+            <translation><!-- Neurosurgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oral &amp; Maxillofacial Surgery</masterLabel>
+            <translation><!-- Oral &amp; Maxillofacial Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paediatric Surgery</masterLabel>
+            <translation><!-- Paediatric Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plastic Surgery</masterLabel>
+            <translation><!-- Plastic Surgery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spine</masterLabel>
+            <translation><!-- Spine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total Joint Recon</masterLabel>
+            <translation><!-- Total Joint Recon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trauma</masterLabel>
+            <translation><!-- Trauma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trauma &amp; Orthopaedic Surgery</masterLabel>
+            <translation><!-- Trauma &amp; Orthopaedic Surgery --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

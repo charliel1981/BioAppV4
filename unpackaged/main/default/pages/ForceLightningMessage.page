@@ -1,0 +1,24 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <BR></BR>
+  <BR></BR>
+  <CENTER><h1>Salesforce 'Lightning' view</h1></CENTER>
+  <BR></BR>
+  <CENTER>As of 6th January 2020, the old 'Classic' Salesforce view will be replaced with the new 'Lightning' View.</CENTER>
+  <BR></BR>
+  <CENTER>If you have not started using Lightning yet, you can do so now by clicking the 'Switch to Lightning Experience' link at the
+  <BR></BR>top right side of any Salesforce page.</CENTER>
+  <BR></BR>
+  <CENTER>Take a look around. The layout is different but it is more flowing and you will become comfortable with it in no time.</CENTER>
+  <BR></BR>
+  <CENTER>If however you do have any questions or concerns, please contact the Biocomposites Salesforce  
+  <BR></BR>administration team at <a href="mailto:salesforceadmin@biocomposites.com">salesforceadmin@biocomposites.com</a> and we shall get back to you.</CENTER>
+  <BR></BR>
+  
+  <CENTER>Click <a href="javascript:sfdcPage.handleSwitchToLightningClick(%27LightningExperiencePreferred%27,true,%27/ltng/switcher?destination=lex-campaign%27);
+  ">HERE</a> to start using Lightning now!</CENTER>
+  <BR></BR>
+  <BR></BR>
+  <CENTER>Biocomposites IT</CENTER>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

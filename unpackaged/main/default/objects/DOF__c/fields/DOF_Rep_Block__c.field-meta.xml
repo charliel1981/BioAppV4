@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOF_Rep_Block__c</fullName>
+    <description>IF( Bio_Email_To_Send_To__c = &quot;usorders@biocomposites.com&quot;,
+Owner:User.FirstName&amp;&quot; &quot;&amp;Owner:User.LastName
+&amp;BR()&amp;
+job_title_for_email__c 
+&amp;BR()&amp;
+Distributor_Name__c 
+&amp;BR()&amp;
+Email_for_address_block__c 
+&amp;BR()&amp;
+Owner:User.Phone,
+NULL
+)</description>
+    <externalId>false</externalId>
+    <formula>Owner:User.FirstName&amp;&quot; &quot;&amp;Owner:User.LastName
+&amp;BR()&amp;
+job_title_for_email__c 
+&amp;BR()&amp;
+Distributor_Name__c 
+&amp;BR()&amp;
+Email_for_address_block__c 
+&amp;BR()&amp;
+Owner:User.Phone</formula>
+    <label>DOF Rep Block</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

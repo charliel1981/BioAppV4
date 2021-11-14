@@ -1,0 +1,109 @@
+<apex:page showHeader="false" standardStylesheets="false" contentType="text/cache-manifest" controller="mobilecaddy1.StartPageCacheCtrl001_mc">CACHE MANIFEST
+
+NETWORK:
+*
+
+CACHE:
+
+#SECTION 1A MOBILECADDY CACHED PAGES
+
+#The page below is a dummy page to cause the cache to fail and check the behaviour and logging uncomment to test
+#/pagetofailcache
+
+
+#SECTION 1B MOBILECADDY CACHED JS
+
+{!vfremotepath}
+/static/111213/js/perf/stub.js
+{!URLFOR($Resource.cordovaSF3v1)}
+{!URLFOR($Resource.MC_Resource_011, 'jquery.min.js')}
+{!URLFOR($Resource.MC_Resource_011, 'mobilecaddy-utils.min.js')}
+{!URLFOR($Resource.MC_Resource_011, 'promise-1.0.0.min.js')}
+{!URLFOR($Resource.MC_Resource_011, 'underscore-min.js')}
+
+
+#SECTION 1C MOBILECADDY CACHED CSS
+
+
+#SECTION 1D MOBILECADDY CACHED IMAGES
+
+
+#SECTION 2A MOBILE APPLICATION CACHED PAGES / JS / ASSETS
+
+{!URLFOR($Resource.BioHub_002, 'www/css/app.css')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamabook-webfont.eot')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamabook-webfont.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamabook-webfont.ttf')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamabook-webfont.woff')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamabook-webfont.woff2')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamalight-webfont.eot')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamalight-webfont.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamalight-webfont.ttf')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamalight-webfont.woff')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/flamalight-webfont.woff2')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/ionicons.eot')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/ionicons.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/ionicons.ttf')}
+{!URLFOR($Resource.BioHub_002, 'www/fonts/ionicons.woff')}
+{!URLFOR($Resource.BioHub_002, 'www/images/Biocomposites-header-logo.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/biocomposites-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/e-learning-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/green-tick.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/home-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/home.jpg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/lead-capture-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/logo.png')}
+{!URLFOR($Resource.BioHub_002, 'www/images/order-form-home-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/order-form-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/outbox-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/settings-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/stimulan-home-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/stimulan-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/sync-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/topics-of-interest-home-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/topics-of-interest-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/tutorial1.jpg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/tutorial2.jpg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/tutorial3.jpg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/tutorial4.jpg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/tutorial5.jpg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/tutorial6.jpg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/tutorial7.jpg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/unsolicited-request-home-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/images/unsolicited-request-icon.svg')}
+{!URLFOR($Resource.BioHub_002, 'www/js/app.js')}
+{!URLFOR($Resource.BioHub_002, 'www/js/controllers.js')}
+{!URLFOR($Resource.BioHub_002, 'www/js/services.js')}
+{!URLFOR($Resource.BioHub_002, 'www/lib/js/ionic.bundle.min.js')}
+{!URLFOR($Resource.BioHub_002, 'www/lib/js/ng-cordova.min.js')}
+{!URLFOR($Resource.BioHub_002, 'www/lib/js/signature_pad.min.js')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/contentItem.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/home.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/imageModal.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/imageModalSlides.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/leadCapture.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/leadDetail.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/leadHistory.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/menu.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/orderDetail.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/orderForm.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/orderHistory.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/outbox.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/request.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/requestDetail.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/requestHistory.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/settings.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/settingsDeploy.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/settingsDevMTI.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/settingsDevMTIDetail.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/settingsDevTools.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/settingsTesting.html')}
+{!URLFOR($Resource.BioHub_002, 'www/templates/tutorial.html')}
+
+
+
+#sessionid to force reload cache everytime the app is online:{!GETSESSIONID()}
+
+#This is done as a work around to a limitation of JS Remoting that causes remoting actions to fail on subsequent app login.
+
+</apex:page>

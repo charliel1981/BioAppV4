@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Podium</fullName>
+    <active>true</active>
+    <description>Presentation with a significant positive reference to Stimulan</description>
+    <label>Podium</label>
+</RecordType>

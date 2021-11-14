@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Readmission rate percentile ranking is based on Medicare data only --></help>
+        <label><!-- Readmission Rate Rank (99 best) --></label>
+        <name>Readmission_Rate_Rank_99_best__c</name>
+    </CustomFieldTranslation>

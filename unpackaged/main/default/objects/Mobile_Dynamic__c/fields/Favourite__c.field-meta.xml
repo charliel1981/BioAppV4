@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Favourite__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>A lookup to allow the user (owner of the record) to create a relationship used as a favourite to an App Info / Hospital in Surgeon</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A lookup to allow the user (owner of the record) to create a relationship used as a favourite to an App Info / Hospital in Surgeon</inlineHelpText>
+    <label>Favourite</label>
+    <referenceTo>Surgeon_in_Hospital__c</referenceTo>
+    <relationshipLabel>Favourited</relationshipLabel>
+    <relationshipName>Mobile_Dynamic</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

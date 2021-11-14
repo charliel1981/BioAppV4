@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Only &apos;Regional Manager&apos; names will return here.
+NOTE: This field becomes mandatory if ANY text is entered into the &apos;Post Fellowship Target Hospital&apos;. --></help>
+        <label><!-- Receiving RSM --></label>
+        <name>Receiving_RSM__c</name>
+        <relationshipLabel><!-- Accounts (Receiving RSM) --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,300 @@
+<ion-view cache-view="false" hide-back-button="true">
+  <ion-nav-title>
+    Lead capture  {{vm.newLeadTitle}}
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button ng-show="vm.showCancel" class="ng-hide button button-icon icon ion-android-close" ng-click="vm.cancelLeadCapture()"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <div ng-switch="vm.step">
+
+      <!-- default -->
+      <div ng-switch-default>
+        <div class="row row-no-padding responsive-sm">
+          <div class="col col-50">
+            <ion-list>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-click="vm.gotoStep('eventinfo')">
+                New lead
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+              <a class="item item-icon-right bio-list-item-add-gold-line bio-list-item"
+                 ng-href="#/app/leadhistory">
+                History
+                <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+              </a>
+            </ion-list>
+          </div>
+        </div>
+      </div> <!-- / default -->
+
+      <!-- eventinfo -->
+      <div ng-switch-when="eventinfo">
+        <div>
+          <h4 class="bio-sub-heading">Event information</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Event name:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.eventName" placeholder="Event name..." class="bio-card-input-width" maxlength="100" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button ng-show="vm.showBackButton" class="button button-positive bio-button-prev" ng-click="vm.gotoStep('default')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.inputValidation('leadinfo')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / eventinfo -->
+
+      <!-- leadinfo -->
+      <div ng-switch-when="leadinfo">
+        <div>
+          <h4 class="bio-sub-heading">Lead information</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Title/designation:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.title" placeholder="Title/designation..." class="bio-card-input-width" maxlength="40" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">First name:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.firstName" placeholder="First name..." class="bio-card-input-width" maxlength="40" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Last name:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.lastName" placeholder="Last name..." class="bio-card-input-width" maxlength="80" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('eventinfo')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.inputValidation('leadinfo2')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / leadinfo -->
+
+      <!-- leadinfo2 -->
+      <div ng-switch-when="leadinfo2">
+        <div>
+          <h4 class="bio-sub-heading">Lead information</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Job title:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.jobTitle" placeholder="Job title..." class="bio-card-input-width" maxlength="100" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Hospital/institution:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.hospital" placeholder="Hospital/institution..." class="bio-card-input-width" maxlength="100" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('leadinfo')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.inputValidation('contactinfo')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / leadinfo2 -->
+
+      <!-- contactinfo -->
+      <div ng-switch-when="contactinfo">
+        <div>
+          <h4 class="bio-sub-heading">Contact information</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label bio-label-font-sm">e-mail:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="email" ng-model="vm.lead.email" placeholder="e-mail..." class="bio-card-input-width" maxlength="255" />
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label bio-label-font-sm">Telephone number:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="tel" ng-model="vm.lead.telephone" placeholder="Telephone number..." class="bio-card-input-width" maxlength="40" />
+              </div>
+            </div>
+          </div>
+          <div class="item-input-inset bio-display-none-md">
+            <div class="bio-text bio-label-font-sm">Address:</div>
+          </div>
+          <div class="row row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-text">Country:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.country" placeholder="Country..." class="bio-card-input-width" maxlength="80" />
+              </div>
+            </div>
+          </div>
+          <div class="row row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Address:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <textarea ng-model="vm.lead.address" rows="5" placeholder="Address..." class="bio-card-input-width" maxlength="255"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-text">State:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.state" placeholder="State..." class="bio-card-input-width" maxlength="100" />
+              </div>
+            </div>
+          </div>
+          <div class="row row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Zip code:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <input type="text" ng-model="vm.lead.zip" placeholder="Zip code..." class="bio-card-input-width" maxlength="80" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('leadinfo2')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-next" ng-click="vm.inputValidation('topic')">Next</button>
+          </div>
+        </div>
+      </div> <!-- / contactinfo -->
+
+      <!-- topic -->
+      <div ng-switch-when="topic">
+        <div>
+          <h4 class="bio-sub-heading">Topic of discussion</h4>
+        </div>
+        <div class="card bio-card">
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-text">Product:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <ion-input class="item item-input item-select bio-item-select-lead-product">
+                  <select ng-model="vm.lead.product" class="bio-input-select">
+                    <option value="Select product">Select product</option>
+                    <option value="STIMULAN">STIMULAN</option>
+                    <option value="geneX">geneX</option>
+                    <option value="Allogran-R">Allogran-R</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </ion-input>
+              </div>
+            </div>
+          </div>
+          <div class="row responsive-sm row-no-padding bio-row-padding-bottom bio-row-padding-top">
+            <div class="col col-25 bio-no-margin">
+              <div class="item-input-inset">
+                <div class="bio-label">Notes:</div>
+              </div>
+            </div>
+            <div class="col col-75 bio-no-margin">
+              <div class="item item-input-inset bio-card-item">
+                <textarea ng-model="vm.lead.notes" rows="5" placeholder="Your notes..." class="bio-card-input-full-width" maxlength="255"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50 text-right">
+            <button class="button button-positive bio-button-prev" ng-click="vm.gotoStep('contactinfo')">Back</button>
+          </div>
+          <div class="col col-50 text-left">
+            <button class="button button-positive bio-button-submit" ng-click="vm.inputValidation('submit')">Submit</button>
+          </div>
+        </div>
+      </div> <!-- / topic -->
+
+    </div>
+
+  </ion-content>
+</ion-view

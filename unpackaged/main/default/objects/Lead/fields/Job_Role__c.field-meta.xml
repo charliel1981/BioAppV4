@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Job Role</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Account_type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administration</fullName>
+                <default>false</default>
+                <label>Administration</label>
+            </value>
+            <value>
+                <fullName>Procurement / Purchasing Officer</fullName>
+                <default>false</default>
+                <label>Procurement / Purchasing Officer</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+                <label>Dentist</label>
+            </value>
+            <value>
+                <fullName>Microbiologist</fullName>
+                <default>false</default>
+                <label>Microbiologist</label>
+            </value>
+            <value>
+                <fullName>Pharmacist</fullName>
+                <default>false</default>
+                <label>Pharmacist</label>
+            </value>
+            <value>
+                <fullName>Theatre / OR Manager</fullName>
+                <default>false</default>
+                <label>Theatre / OR Manager</label>
+            </value>
+            <value>
+                <fullName>Theatre / OR Nurse</fullName>
+                <default>false</default>
+                <label>Theatre / OR Nurse</label>
+            </value>
+            <value>
+                <fullName>Theatre / OR Support</fullName>
+                <default>false</default>
+                <label>Theatre / OR Support</label>
+            </value>
+            <value>
+                <fullName>Finance Officer</fullName>
+                <default>false</default>
+                <label>Finance Officer</label>
+            </value>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Professor</fullName>
+                <default>false</default>
+                <label>Professor</label>
+            </value>
+            <value>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+                <label>Registrar</label>
+            </value>
+            <value>
+                <fullName>Inventory Officer</fullName>
+                <default>false</default>
+                <label>Inventory Officer</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+                <label>Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Sales Representative</fullName>
+                <default>false</default>
+                <label>Sales Representative</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Procurement / Purchasing Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Dentist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Microbiologist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Pharmacist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Theatre / OR Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Theatre / OR Nurse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Theatre / OR Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hospital</controllingFieldValue>
+            <valueName>Finance Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgeon</controllingFieldValue>
+            <valueName>Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgeon</controllingFieldValue>
+            <valueName>Professor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surgeon</controllingFieldValue>
+            <valueName>Registrar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <valueName>Inventory Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <valueName>Owner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <valueName>Sales Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <valueName>Sales Representative</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

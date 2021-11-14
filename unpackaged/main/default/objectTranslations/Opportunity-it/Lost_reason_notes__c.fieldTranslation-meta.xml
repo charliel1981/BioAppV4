@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Lost reason notes --></label>
+        <name>Lost_reason_notes__c</name>
+    </CustomFieldTranslation>

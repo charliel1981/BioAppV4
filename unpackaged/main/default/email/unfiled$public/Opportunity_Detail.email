@@ -1,0 +1,6 @@
+Opportunity Name: {!Opportunity.Name}
+Hospital Name: {!Opportunity.Account}
+Surgeon Name: {!Opportunity.Surgeon__c}
+Speciality: {!Opportunity.00NU0000003fuUZ}
+Printable View Link: https://biocomposites.my.salesforce.com/{!Opportunity.Id}/p?retURL=/{!Opportunity.Id}
+Opportunity Link: https://biocomposites.my.salesforce.com/{!Opportunity.Id}

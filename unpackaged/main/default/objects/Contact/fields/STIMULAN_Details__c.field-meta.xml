@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>STIMULAN_Details__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  STIMULAN_Paste__c  = TRUE, &quot;STIMULAN Paste, &quot;,Null) +
+IF( STIMULAN_Beads__c  = TRUE, &quot;STIMULAN Beads, &quot;, Null)+
+IF( STIMULAN_Bullets__c  = TRUE, &quot;STIMULAN Bullets&quot;,Null)</formula>
+    <label>STIMULAN Details</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

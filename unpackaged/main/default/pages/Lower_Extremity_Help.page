@@ -1,0 +1,51 @@
+<apex:page >
+
+<h1>Lower Extremity Analysis Help</h1>
+<BR />
+<BR />This data has been extracted from the Definitive Healthcare database. 
+<BR />
+<BR />It is Medicare’s policy not to provide a claim count for procedures that have 10 or fewer patients.  For these procedures, the value of the claim total is provided, but not the number of patients who involved.
+<BR />
+<BR /><b>DRG codes</b>
+<BR />470: Major joint replacement or reattachment of lower extremity W/O MCC (without major complication and/or comorbidity)
+<BR />469: Major joint replacement or reattachment of lower extremity W MCC (with major complication and/or comorbidity)
+<BR />468: Revision of hip or knee replacement W/O CC/MCC (without complication and/or comorbidity/ major complication and/or comorbidity)
+<BR />467: Revision of hip or knee replacement W CC (with complication and/or comorbidity)
+<BR />466: Revision of hip or knee replacement W MCC (with major complication and/or comorbidity)
+<BR />
+<BR /><b>Est total # claims</b>
+<BR />This includes private payer (estimated), Medicare and Medicaid claims
+<BR />
+<BR /><b>Est total payments</b>
+<BR />This is the amount paid to the hospital after negotiated discounts have been applied. The charge submitted by the hospital to the payer is much higher.
+<BR />
+<BR /><b>Readmission rate</b>
+<BR />This is based on Medicare data only and produced by CMS.
+<BR /> 
+<BR />The calculation is based on qualifying claims (there are a number of exclusions including: patients with an incomplete Medicare history, discharge takes place at the end of the period and any readmission would be in the next period etc).  
+<BR />
+<BR />A zero means there were no admissions (numerator=0).  A blank field means there are no qualifying claims (denominator=0).
+<BR />
+<BR /><b>Readmission rate rank</b>
+<BR />This is based on Medicare data only.  Ranking is based on percentiles; a rank of 99 is best.
+<BR />
+<BR /><b>Average LOS</b>
+<BR />This is the average length of stay and is based on Medicare data only.
+<BR />
+<BR /><b>Veterans Health Administration Hospitals</b>
+<BR />There is limited data available for VA hospitals.  Apporximately 50% of veterans enrolled in the VA Healthcare System are eligible for Medicare.
+<BR />
+<BR /><b>Ambulatory Surgery Center</b>
+<BR />We do not currently subsribe to the Definitive Healthcare ASC database.
+<BR />
+<BR /><b>Kaiser Permanente</b>
+<BR />This hospital system provides the legal minimum data to CMS and therefore you will see some gaps.
+<BR />
+
+
+
+
+
+
+
+</apex:page>

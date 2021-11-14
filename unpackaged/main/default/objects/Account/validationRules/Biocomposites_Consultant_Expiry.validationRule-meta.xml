@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Biocomposites_Consultant_Expiry</fullName>
+    <active>true</active>
+    <description>Makes the Consultant Expiry field mandatory if the Biocomposites Consultant Checkbox is selected.</description>
+    <errorConditionFormula>AND ( Biocomposites_Consultant__c = TRUE,
+ TEXT ( Consultant_Expiry__c ) = &quot;&quot; )</errorConditionFormula>
+    <errorDisplayField>Consultant_Expiry__c</errorDisplayField>
+    <errorMessage>Expiry Date is required when Biocomposites Consultant is selected.</errorMessage>
+</ValidationRule>

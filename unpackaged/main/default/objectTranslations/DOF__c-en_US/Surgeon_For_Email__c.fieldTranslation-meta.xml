@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This field appears in the order form emails. 
+If the surgeon field is linked it will show the name of the surgeon.
+If this field is blank it will show the surgeon first and last name entered on this record --></help>
+        <label><!-- Surgeon (For Email) --></label>
+        <name>Surgeon_For_Email__c</name>
+    </CustomFieldTranslation>

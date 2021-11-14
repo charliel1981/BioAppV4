@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Objective__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st Case</fullName>
+                <default>false</default>
+                <label>1st Case</label>
+            </value>
+            <value>
+                <fullName>2nd Case</fullName>
+                <default>false</default>
+                <label>2nd Case</label>
+            </value>
+            <value>
+                <fullName>3rd Case</fullName>
+                <default>false</default>
+                <label>3rd Case</label>
+            </value>
+            <value>
+                <fullName>4th Case</fullName>
+                <default>false</default>
+                <label>4th Case</label>
+            </value>
+            <value>
+                <fullName>5th Case</fullName>
+                <default>false</default>
+                <label>5th Case</label>
+            </value>
+            <value>
+                <fullName>6th Case</fullName>
+                <default>false</default>
+                <label>6th Case</label>
+            </value>
+            <value>
+                <fullName>Surgeon Referral</fullName>
+                <default>false</default>
+                <label>Surgeon Referral</label>
+            </value>
+            <value>
+                <fullName>Case Study</fullName>
+                <default>false</default>
+                <label>Case Study</label>
+            </value>
+            <value>
+                <fullName>Poster</fullName>
+                <default>false</default>
+                <label>Poster</label>
+            </value>
+            <value>
+                <fullName>Paper</fullName>
+                <default>false</default>
+                <label>Paper</label>
+            </value>
+            <value>
+                <fullName>Podium Significant</fullName>
+                <default>false</default>
+                <label>Podium Significant</label>
+            </value>
+            <value>
+                <fullName>Podium Dedicated</fullName>
+                <default>false</default>
+                <label>Podium Dedicated</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>New User</controllingFieldValue>
+            <controllingFieldValue>Grow Existing User</controllingFieldValue>
+            <valueName>1st Case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New User</controllingFieldValue>
+            <controllingFieldValue>Grow Existing User</controllingFieldValue>
+            <valueName>2nd Case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New User</controllingFieldValue>
+            <controllingFieldValue>Grow Existing User</controllingFieldValue>
+            <valueName>3rd Case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Existing User</controllingFieldValue>
+            <valueName>4th Case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Existing User</controllingFieldValue>
+            <valueName>5th Case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Grow Existing User</controllingFieldValue>
+            <valueName>6th Case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Peer to Peer Referral</controllingFieldValue>
+            <valueName>Surgeon Referral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy / Promotion</controllingFieldValue>
+            <valueName>Case Study</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy / Promotion</controllingFieldValue>
+            <valueName>Poster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy / Promotion</controllingFieldValue>
+            <valueName>Paper</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy / Promotion</controllingFieldValue>
+            <valueName>Podium Significant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advocacy / Promotion</controllingFieldValue>
+            <valueName>Podium Dedicated</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

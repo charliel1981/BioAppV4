@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Support_Required_Fields</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(
+AND(Text(Event_Type__c) = &#39;Case Support&#39;, Text(Antibiotic_1__c) = &#39;&#39;),
+AND(Text(Event_Type__c) = &#39;Case Support&#39;, Antibiotic_1_mg__c &lt; 0.01),
+AND(Text(Event_Type__c) = &#39;Case Support&#39;, Text(Technique__c) = &#39;&#39;),
+AND(Text(Event_Type__c) = &#39;Case Support&#39;, Text(Indication__c) = &#39;&#39;)
+)</errorConditionFormula>
+    <errorMessage>Please complete all Case Support Fields</errorMessage>
+</ValidationRule>

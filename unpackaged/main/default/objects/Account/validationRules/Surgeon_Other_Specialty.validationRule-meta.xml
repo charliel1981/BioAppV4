@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Surgeon_Other_Specialty</fullName>
+    <active>true</active>
+    <description>If &#39;Other&#39; is selected as Surgeon specialty, then &#39;other specialty&#39; must be completed.</description>
+    <errorConditionFormula>OR (
+AND(TEXT(Specialty__pc ) = &#39;Other&#39;,
+Other_Specialty__pc = &#39;&#39;),
+AND(TEXT( Specialty__pc ) &lt;&gt; &#39;Other&#39;,
+Len(Other_Specialty__pc) &gt; 0))</errorConditionFormula>
+    <errorDisplayField>Other_Specialty__pc</errorDisplayField>
+    <errorMessage>Invalid combination of Specialty / Other Specialty</errorMessage>
+</ValidationRule>

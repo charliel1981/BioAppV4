@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Consignment Stock</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Consignment Stock</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Asset Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <webLinks>
+        <label><!-- New_Consignment_Stock --></label>
+        <name>New_Consignment_Stock</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Agreement_Expiry_Date_is_approaching</name>
+        <subject><!-- Agreement Expiry Date is approaching --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Agreement_Expiry_Date_is_approaching2</name>
+        <subject><!-- Agreement Expiry Date is approaching --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Last Chance to Order 2014</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Last Chance to Order 2014</name>
+    <style>none</style>
+    <subject>Last Chance to Order for 2014</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

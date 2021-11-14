@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>July 2016 Sales Rep Testimonial Video on Hub</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2016 07 Sales Rep Testimonial Video</name>
+    <style>none</style>
+    <subject>What do your peers have to say about selling STIMULAN?</subject>
+    <textOnly>Dear  {!Contact.FirstName},
+
+Watch the new &quot;Why should I sell STIMULAN?&quot; testimonial video to find out more.
+
+Biocomposites interviewed two sales representatives at the 2016 AAOS meeting for feedback on their experience selling STIMULAN. These reps shared valuable insight, detailing how STIMULAN helps create opportunities to approach competitive surgeons and gain entry into new hospitals.
+
+This video is now located on the Distributor Hub. Please login here to discover the first-hand advantages of selling STIMULAN.
+
+
+Kind regards,
+{!User.FirstName} {!User.LastName} M.S.
+{!User.Title}
+{!User.CompanyName}
+{!User.Street}
+{!User.City}, {!User.StateCode} {!User.PostalCode}
+Office: {!User.Phone}
+Fax: {!User.Fax}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

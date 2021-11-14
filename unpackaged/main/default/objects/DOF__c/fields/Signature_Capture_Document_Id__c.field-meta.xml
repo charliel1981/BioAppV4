@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Signature_Capture_Document_Id__c</fullName>
+    <description>Id of the document record that holds the signature which is then used to display the signature in visualforce email template</description>
+    <externalId>false</externalId>
+    <label>Signature Capture Document Id</label>
+    <length>18</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carrier__c</fullName>
+    <externalId>false</externalId>
+    <label>Carrier</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DHL</fullName>
+                <default>false</default>
+                <label>DHL</label>
+            </value>
+            <value>
+                <fullName>FedEX Cust Account</fullName>
+                <default>false</default>
+                <label>FedEX Cust Account</label>
+            </value>
+            <value>
+                <fullName>FedEx FOC</fullName>
+                <default>false</default>
+                <label>FedEx FOC</label>
+            </value>
+            <value>
+                <fullName>FedEx Recharge</fullName>
+                <default>false</default>
+                <label>FedEx Recharge</label>
+            </value>
+            <value>
+                <fullName>Hellmann Logistics</fullName>
+                <default>false</default>
+                <label>Hellmann Logistics</label>
+            </value>
+            <value>
+                <fullName>NNR Global Logistics</fullName>
+                <default>false</default>
+                <label>NNR Global Logistics</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>SDV Logistics</fullName>
+                <default>false</default>
+                <label>SDV Logistics</label>
+            </value>
+            <value>
+                <fullName>Skynet</fullName>
+                <default>false</default>
+                <label>Skynet</label>
+            </value>
+            <value>
+                <fullName>TNT</fullName>
+                <default>false</default>
+                <label>TNT</label>
+            </value>
+            <value>
+                <fullName>UPS</fullName>
+                <default>false</default>
+                <label>UPS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

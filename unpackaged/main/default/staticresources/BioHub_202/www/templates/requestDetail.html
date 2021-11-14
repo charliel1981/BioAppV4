@@ -1,0 +1,49 @@
+<div class="modal bio-modal" ng-click="vm.closeModal()">
+  <ion-header-bar>
+    <h1 class="title nav-bar-title">Request history</h1>
+    <button class="button button-icon ion-android-close"></button>
+  </ion-header-bar>
+  <ion-content>
+    <div>
+      <h4 class="bio-sub-heading">{{::vm.modal.request.Date_Entered__c | dateDDMMMYYYY}}</h4>
+    </div>
+    <div class="card bio-card">
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Requestor's name:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.request.Requestors_Name__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Requestor's institution:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.request.Hospital_Institution__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Requestor's e-mail:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.request.Email__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Product:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.request.Product__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Requested information:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold bio-no-padding-right bio-item-modal-wrap">{{::vm.modal.request.Requested_Information__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Request type:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.request.Request_Type__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Target response date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.request.Request_Target_Response_Date__c | dateDDMMMYYYY}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Date entered:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.request.Date_Entered__c | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Sync date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::vm.modal.request.CreatedDate | dateDDMMMYYYYHHMM}}</div>
+      </div>
+    </div>
+  </ion-content>
+</div>

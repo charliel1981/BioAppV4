@@ -1,0 +1,19 @@
+<ion-view cache-view="false" hide-back-button="true">
+  <ion-header-bar class="bar-light" align-title="center">
+    <button class="button button-clear no-animation ng-hide" ng-click="vm.leftButtonClick()" ng-show="vm.showButtons">
+      {{vm.leftButtonText}}
+    </button>
+    <h1 class="title nav-bar-title">Welcome</h1>
+    <button class="button button-clear no-animation ng-hide" ng-click="vm.rightButtonClick()" ng-show="vm.showButtons">
+      {{vm.rightButtonText}}
+    </button>
+  </ion-header-bar>
+  <ion-content class="bio-content-item-slider tutorial-content-bg">
+    <ion-slides slider="vm.slider" class="bio-tutorial-slides">
+      <ion-slide-page ng-repeat="slide in vm.slides track by $index" class="bio-content-item-slide-page">
+        <div class="bio-tutorial-header-text" ng-bind-html="slide.heading | trusted"></div>
+        <img ng-src="{{::slide.image}}" class="bio-tutorial-slide-img" ng-click="vm.startAppFromImageTap($index)" />
+      </ion-slide-page>
+    </ion-slides>
+  </ion-content>
+</ion-view>

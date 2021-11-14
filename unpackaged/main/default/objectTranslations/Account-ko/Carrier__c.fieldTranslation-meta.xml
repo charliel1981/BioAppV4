@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Carrier --></label>
+        <name>Carrier__c</name>
+        <picklistValues>
+            <masterLabel>DHL</masterLabel>
+            <translation><!-- DHL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FedEX Cust Account</masterLabel>
+            <translation><!-- FedEX Cust Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FedEx FOC</masterLabel>
+            <translation><!-- FedEx FOC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FedEx Recharge</masterLabel>
+            <translation><!-- FedEx Recharge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hellmann Logistics</masterLabel>
+            <translation><!-- Hellmann Logistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NNR Global Logistics</masterLabel>
+            <translation><!-- NNR Global Logistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDV Logistics</masterLabel>
+            <translation><!-- SDV Logistics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skynet</masterLabel>
+            <translation><!-- Skynet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TNT</masterLabel>
+            <translation><!-- TNT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS</masterLabel>
+            <translation><!-- UPS --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

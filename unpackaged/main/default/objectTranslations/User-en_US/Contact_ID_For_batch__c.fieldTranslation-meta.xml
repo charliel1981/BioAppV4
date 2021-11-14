@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- this is used for the campaign batch process --></help>
+        <label><!-- Contact ID (For batch) --></label>
+        <name>Contact_ID_For_batch__c</name>
+    </CustomFieldTranslation>

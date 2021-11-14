@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Community_Item</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Create Community Item</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/flow/Create_Community_Item?varAppItemID={!Content_Item__c.Id}&amp;varCommItem={!Content_Item__c.Community_ItemId__c}&amp;retURL={!Content_Item__c.Id}</url>
+</WebLink>

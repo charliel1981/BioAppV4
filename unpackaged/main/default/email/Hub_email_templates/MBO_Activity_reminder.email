@@ -1,0 +1,13 @@
+MBO Creation Date: {!MBO_Activity__c.Date__c}
+
+Activity Type: {!MBO_Activity__c.Type__c}
+
+Hospital: {!MBO_Activity__c.Hospital_name__c}
+
+Contact: {!MBO_Activity__c.Contact__c}
+
+Objective: {!MBO_Activity__c.Objective__c}
+
+Details: {!MBO_Activity__c.Details__c}
+
+Reminder Date: {!MBO_Activity__c.Reminder__c}

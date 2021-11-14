@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Distributors</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Country__c</columns>
+    <columns>Territory__c</columns>
+    <columns>Distributor_Type__c</columns>
+    <columns>Account_Status__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Sales_Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Distributors</value>
+    </filters>
+    <label>All Distributors</label>
+</ListView>

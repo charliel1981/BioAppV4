@@ -1,0 +1,1462 @@
+<!--
+MobileCaddy Recovery Visualforce Page
+Copyright (c) 2016, MobileCaddy Ltd.
+Version 1.8.0 (20181024)
+All rights reserved.
+-->
+<apex:page applyHtmlTag="true" applyBodyTag="false" showHeader="false" docType="html-5.0" standardStylesheets="false" controller="mobilecaddy1.MobileCaddyStartPageController001_mc">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+        <title>MC Recovery</title>
+
+        <!-- Needed for Electron -->
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+        <!-- Required MobileCaddy Scripts -->
+        <script src="{!URLFOR($Resource.MC_Resource_v1_9_3, 'jquery.min.js')}" type="text/javascript"></script>
+        <script src="{!URLFOR($Resource.MC_Resource_v1_9_3, 'promise-1.0.0.min.js')}" type="text/javascript"></script>
+        <script src="{!URLFOR($Resource.MC_Resource_v1_9_3, 'underscore-min.js')}" type="text/javascript"></script>
+        <script src="https://localhost/cordova.js"></script>
+        <script src="{!URLFOR($Resource[cordovaLocalResource])}" type="text/javascript"></script>
+
+    <script src="{!URLFOR($Resource.jszip, 'jszip.min.js')}" type="text/javascript"></script>
+        <!-- MobileCaddy Utils > 0.2.0 for recovery -->
+        <!-- <script src="{!URLFOR($Resource.recovutils)}" type="text/javascript"></script> -->
+        <script src="{!URLFOR($Resource.MC_Resource_v1_9_3, 'mobilecaddy-utils.min.js')}" type="text/javascript"></script>
+
+        <script>
+        <!-- Needed for Electron -->
+        if (navigator.appVersion.includes("Electron")) {
+            var ipcRenderer = require('electron').ipcRenderer;
+        }
+        </script>
+
+
+        <script>
+            window.LOCAL_DEV = false;
+        </script>
+        <script>
+            window.USE_FORCETK = false;
+        </script>
+        <script type="text/javascript">
+            function myapp_callback(runUpInfo){
+                console.log("runUpInfo", runUpInfo);
+                if (navigator.appVersion.includes("Electron")) {
+                    onDeviceReady();
+                }
+            }
+
+            // Pass controller name into mobile caddy
+            mobileCaddy.START_PAGE_CONTROLLER = 'MobileCaddyStartPageController001_mc';
+
+            // Get the mobileCaddy startup module
+            var mobileCaddyStartup = mobileCaddy.require('mobileCaddy/startup');
+            // Startup the app.  Parameter is custom callback function
+            // or null if there is nothing custom to call on startup
+            mobileCaddyStartup.startup(function(runUpInfo) {
+                myapp_callback(runUpInfo);
+            });
+        </script>
+
+        <!-- Recovery Page Internal CSS -->
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 0;
+                margin: 0;
+                padding-bottom: 40px;
+            }
+
+            h1,
+            h2,
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            td {
+                vertical-align: top;
+            }
+
+            tr {
+                border-bottom: 1px solid #ccc;
+            }
+
+            .title-bar {
+                background-color: #3D81F2;
+                color: white;
+                width: 100%;
+                height: 50px;
+                padding-top: 10px;
+                padding-bottom: 45px;
+            }
+
+            .title {
+                padding-left: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            #container {
+                display: none;
+            }
+        
+            #password-container {
+                display: block;
+            }
+
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .buttons {
+                text-align: centre;
+            }
+
+            .button {
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: #3D81F2;
+                color: #FFFFFF;
+                padding: 20px;
+                border: 0px;
+                border-radius: 3px;
+                margin: 5px;
+            }
+
+            .half-button {
+              width: 45%;
+            }
+
+            .button-disabled {
+                background-color: #DEDEDE;
+            }
+
+            .danger {
+                background-color: #D51C28;
+            }
+
+            .button-enabled {
+                background-color: #3D81F2;
+            }
+
+            .content-container {
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-top: 10px;
+            }
+
+            .table-select {
+              width: 100%;
+              text-align: center;
+            }
+
+            textarea {
+                width: 100%;
+                height: 70vh;
+                margin-top: 10px;
+            }
+
+            #data-view-container {
+                display: none;
+            }
+
+            .support-pin {
+                text-align: center;
+                font-size: 30px;
+                letter-spacing: 7px;
+            }
+        
+            .recovery-pin-entry {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                text-align: center;
+                font-size: 30px;
+                letter-spacing: 7px;
+                width: 50%;
+            }
+        
+            .pin-label {
+                text-align: center;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="title-bar">
+            <h1 class="title">Recovery Mode</h1>
+        </div>
+
+        <!-- Hide MC Recovery behind password -->
+        <div id="password-container" class="container">
+            <p class="pin-label">
+            Support PIN:
+            </p>
+            <p id="support-pin" class="support-pin">
+            0123
+            </p>
+            <p class="pin-label">
+            Enter Recovery PIN:
+            </p>
+            <br />
+            <input class="recovery-pin-entry" id="pin-input" type="number" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></input><br />
+            <button onclick="authenticate()" class="button">Authenticate</button>
+        </div>
+
+        <div id="container" class="container">
+
+            <p>Your app is now in recovery mode. If you do not know what this is, please do not make any changes on this page</p>
+
+            <h2>Overview</h2>
+            <table>
+                <tr>
+                    <td><strong>User:</strong></td>
+                    <td><span id="overview-user"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>RTS:</strong></td>
+                    <td><span id="overview-rts"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>MLOGS:</strong></td>
+                    <td><span id="overview-mlogs"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Tables:</strong></td>
+                    <td><span id="overview-tables"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Dirty Tables:</strong></td>
+                    <td><span id="overview-dirty-tables"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Last Sync:</strong></td>
+                    <td><span id="overview-last-sync"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Recovery Version:</strong></td>
+                    <td>v1.8.0</td>
+                </tr>
+            </table>
+            <div class="buttons">
+                <button onclick="buildOverview()" class="button">Refresh Overview</button>
+            </div>
+
+            <h2>Utilities</h2>
+            <p>Recover all or some of the data in the application.</p>
+            <div class="buttons">
+                <button onclick="dumpAll()" class="button">Recover All Data</button>
+                <button onclick="doDumpTables()" class="button">Recover Tables Only</button>
+                <button onclick="doDumpSoups()" class="button">Recover Soups Only</button>
+                <button onclick="doDumpLocalStorage()" class="button">Recover Local Storage Only</button>
+                <button onclick="uploadAlltoSfFile()" class="button">Upload DB to Salesforce</button>
+            </div>
+
+            <h2>Sync</h2>
+            <p>Attempt to sync any data to the platform. We recommend you recover data above first.</p>
+            <div class="buttons">
+                <button onclick="standardSync()" class="button" id="btn-standard-sync">Standard Sync</button>
+                <button onclick="forceSync()" class="button" id="btn-force-sync">Force Sync</button>
+            </div>
+
+            <h2>Sync Single Table</h2>
+            <p>Attempt to sync a single to the platform. We recommend you recover data above first.</p>
+            <form>
+              <!-- Populated at runtime -->
+              <select id="single-table-select" class="table-select" name="tables">
+              </select>
+            </form>
+            <div class="buttons">
+                <button onclick="standardSyncSingle()" class="button half-button" id="btn-single-standard-sync">Standard</button>
+                <button onclick="forceSyncSingle()" style="float: right;" class="button half-button" id="btn-single-force-sync">Force</button>
+            </div>
+
+
+            <h2>Save to Mobile Log Table</h2>
+            <p>Saves IDs/ProxyIds to Mobile Log table.</p>
+            <form>
+              <!-- Populated at runtime -->
+              <select id="single-save2ml-table-select" class="table-select" name="tables">
+              </select>
+            </form>
+            <div class="buttons">
+                <button onclick="saveToMobileLog()" class="button half-button" id="save-to-mobile-log">Save to Mobile Log</button>
+            </div>
+
+
+            <h2>Org Migration</h2>
+            <div class="buttons">
+                <p>Migrates the user to the new Org in unlikely even of an org migration.</p>
+                <button onclick="migrate();" class="button" id="btn-migrate">Migrate</button>
+            </div>
+
+            <h2>View Data</h2>
+            <div class="buttons">
+                <p>Inspect the current contents of the data in the application.</p>
+                <button onclick="view(viewType.tables);" class="button">View Tables</button>
+                <button onclick="view(viewType.localStorage);" class="button">View Local Storage</button>
+                <button onclick="view(viewType.appSoup);" class="button">View App Soup</button>
+                <button onclick="view(viewType.cacheSoup);" class="button">View Cache Soup</button>
+            </div>
+
+            <h2>Heartbeat</h2>
+            <p>Check heartbeat to MobileCaddy.</p>
+            <div class="buttons">
+                <button onclick="heartbeat();" class="button">Heartbeat</button>
+            </div>
+
+            <h2>Refresh Token</h2>
+            <p>Refresh your access token.</p>
+            <div class="buttons">
+                <button id="btn-refresh" onclick="refreshToken();" class="button">Refresh Token</button>
+            </div>
+
+            <h2>Hard Reset</h2>
+            <p>Reset the app. WARNING: ALL DATA WILL BE ERASED.</p>
+            <div class="buttons">
+                <button id="btn-reset" onclick="hardReset();" class="button danger">Hard Reset</button>
+            </div>
+
+            <h2>Status</h2>
+            <textarea id="status-area"></textarea>
+            <input id="code-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></input>
+            <button onclick="runCode()" class="button">Run</button>
+        </div>
+
+        <div id="data-view-container">
+            <div class="content-container">
+                <button onclick="main();" class="button">Back</button>
+                <textarea id="data"></textarea>
+            </div>
+        </div>
+
+        <!-- Recovery Script -->
+        <script type="text/javascript">
+            var tablesData = {};
+            var appSoupData;
+            var cacheSoupData;
+            var localStorageData = [];
+
+            var supportPin = "";
+            var incorrectAttempts = 0;
+
+            var devUtils;
+            var smartStoreUtils;
+            var logger;
+            var syncRefresh;
+            var vsnUtils;
+            var electronDumpPath;
+            var appDataUtils;
+
+            var hardResetPressed = false;
+
+            // Constants for view type when viewing data
+            var viewType = {
+                tables: 'tables',
+                localStorage: 'local-storage',
+                appSoup: 'app-soup',
+                cacheSoup: 'cache-soup'
+            }
+
+            // Data for "console" type status area
+            var statusAreaData = "";
+
+            function onDeviceReady() {
+                console.log("ready");
+
+                devUtils = mobileCaddy.require('mobileCaddy/devUtils');
+                smartStoreUtils = mobileCaddy.require('mobileCaddy/smartStoreUtils');
+                logger = mobileCaddy.require('mobileCaddy/logger');
+                syncRefresh = mobileCaddy.require('mobileCaddy/syncRefresh');
+                smartstore = cordova.require("com.salesforce.plugin.smartstore");
+                vsnUtils = mobileCaddy.require('mobileCaddy/vsnUtils');
+                appDataUtils = mobileCaddy.require('mobileCaddy/appDataUtils');
+
+                if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+                    window.cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
+                }
+
+                buildOverview();
+                buildDataForViewer();
+                populateSingleTableRecoveryList();
+                populateSaveToMLList();
+            }
+
+            function populateSingleTableRecoveryList() {
+                var select = document.getElementById('single-table-select');
+
+                function success(tables) {
+                   tables.forEach(function (table) {
+                     var option = document.createElement('option');
+                     option.setAttribute('value', table);
+                     option.appendChild(document.createTextNode(table));
+                     select.appendChild(option);
+                   });
+                }
+
+                var error = function(error) {
+                    alert('Error populating tables list: ' + JSON.stringify(error));
+                    log('Error populating tables list: ' + JSON.stringify(error));
+                }
+
+                smartStoreUtils.listMobileTables(smartStoreUtils.ALPHA, success, error);
+            }
+
+            function standardSyncSingle() {
+                var select = document.getElementById('single-table-select');
+                var selectedTable = select.options[select.selectedIndex].value;
+
+                log('Beginning standard sync for single table: ' + selectedTable);
+
+                document.getElementById("btn-single-standard-sync").className += ' button-disabled';
+                document.getElementById("btn-single-standard-sync").innerHTML = 'Syncing...';
+
+                devUtils.syncMobileTable(selectedTable).then(function (res) {
+
+                  alert(selectedTable + ' standard sync successful.');
+                  log('Success Standard Syncing single table: ' + JSON.stringify(res));
+
+                  document.getElementById("btn-single-standard-sync").className = 'button half-button';
+                  document.getElementById("btn-single-standard-sync").innerHTML = 'Standard';
+                }).catch(function (err) {
+
+                  alert('Error Standard Syncing single table. See logs.')
+                  log('Error Standard Syncing single table: ' + JSON.stringify(err));
+
+                  document.getElementById("btn-single-standard-sync").className = 'button half-button';
+                  document.getElementById("btn-single-standard-sync").innerHTML = 'Standard';
+                });
+            }
+
+            function forceSyncSingle() {
+              var select = document.getElementById('single-table-select');
+              var selectedTable = select.options[select.selectedIndex].value;
+
+              log('Beginning force sync for single table: ' + selectedTable);
+
+              document.getElementById("btn-single-force-sync").className += ' button-disabled';
+              document.getElementById("btn-single-force-sync").innerHTML = 'Syncing...';
+
+              syncRefresh.m2pRecoveryUpdateMobileTable(selectedTable).then(function(res) {
+
+                alert(selectedTable + ' force sync successful.');
+                log('Success Force Syncing single table: ' + JSON.stringify(res));
+
+                document.getElementById("btn-single-force-sync").className = 'button half-button';
+                document.getElementById("btn-single-force-sync").innerHTML = 'Force';
+              }).catch(function (err) {
+
+                alert('Error Force Syncing single table. See logs.')
+                log('Error Force Syncing single table: ' + JSON.stringify(err));
+
+                document.getElementById("btn-single-force-sync").className = 'button half-button';
+                document.getElementById("btn-single-force-sync").innerHTML = 'Force';
+              });
+
+            }
+
+            function populateSaveToMLList() {
+                var select = document.getElementById('single-save2ml-table-select');
+
+                function success(tables) {
+                    var smartstore = window.cordova.require('com.salesforce.plugin.smartstore');
+                    tables.forEach(function (table) {
+                    if (table != 'Mobile_Log__mc') {
+                        var option = document.createElement('option');
+                        option.setAttribute('value', table);
+                        option.appendChild(document.createTextNode(table));
+                        select.appendChild(option);
+
+                        smartstore.soupExists(
+                            'SnapShot_' + table, 
+                            function(r){
+                                if (r) {
+                                    option = document.createElement('option');
+                                    option.setAttribute('value', 'SnapShot_' + table);
+                                    option.appendChild(document.createTextNode('SnapShot_' + table));
+                                    select.appendChild(option);
+                                }
+                            }, function(){
+                                // do nothing
+                            }
+                        );
+                    }
+                   });
+                }
+
+                var error = function(error) {
+                    alert('Error populating tables list: ' + JSON.stringify(error));
+                    log('Error populating tables list: ' + JSON.stringify(error));
+                }
+
+                smartStoreUtils.listMobileTables(smartStoreUtils.ALPHA, success, error);
+            }
+
+            function saveToMobileLog() {
+                var select = document.getElementById('single-save2ml-table-select');
+                var selectedTable = select.options[select.selectedIndex].value;
+
+                log('Beginning Save to Mobile Log for single table: ' + selectedTable);
+
+                smartStoreUtils.querySoupRecords(
+                    selectedTable, 
+                    function(r){
+                        log('Read table OK');
+                        var idsArr = r.map(function(rec){
+                            return {'Id': rec.Id, 'MC_Proxy_ID__c': rec.MC_Proxy_ID__c};
+                        })
+                        log('We have ' + idsArr.length + ' records ready to insert into Mobile_Log__mc');
+                        
+                        var data = JSON.stringify(
+                            {
+                                tableName: selectedTable,
+                                records: idsArr
+                            }
+                        );
+                        let mobileLog = {};
+                        mobileLog['Name'] = 'TMP-' + new Date().valueOf();
+                        mobileLog['mobilecaddy1__Error_Text__c'] = data;
+                        mobileLog['SystemModstamp'] = new Date().getTime();
+
+                        smartStoreUtils.insertRecords(
+                            'Mobile_Log__mc',
+                            [mobileLog],
+                            function(res) {                            
+                                alert(selectedTable + ' Save to Mobile Log successful.');
+                                log('Success saving to Mobile Log for single table');
+                            },
+                            function(err) {
+                                alert(selectedTable + ' Save to Mobile Log failed.');
+                                log('Failed saving to Mobile Log for single table:' +  + JSON.stringify(err));
+                            }
+                        );
+                    },
+                    function(err) {
+                        alert(selectedTable + ' Save to Mobile Log failed, could not read records.');
+                        log('Failed saving to Mobile Log for single table:' +  + JSON.stringify(err));
+                    }
+                );
+            }
+
+            function log(message) {
+                console.log(message);
+                var time = Date().toString()
+                statusAreaData = time + '\n' + message + '\n\n' + statusAreaData;
+                document.getElementById("status-area").innerHTML = statusAreaData;
+            }
+
+            function runCode() {
+                var code = document.getElementById("code-input").value;
+                var res = eval(code);
+                log(res);
+            }
+
+            function remoteUtilsRecovery() {
+                log("Second recovery launch requested");
+                try {
+                    window.location.href = "second_recovery.html";
+                } catch (error) {
+                    log('error on redirect');
+                }
+            }
+
+            function heartbeat() {
+              syncRefresh.heartBeat(function (res) {
+                log('Heartbeat success: ' + JSON.stringify(res));
+                alert('Heartbeat success, see logs.');
+              }, function (err) {
+                log('Heartbeat error: ' + JSON.stringify(err));
+                alert('Heartbeat error, see logs.');
+              });
+            }
+
+            function refreshToken() {
+              document.getElementById("btn-refresh").className += ' button-disabled';
+              document.getElementById("btn-refresh").innerHTML = 'Refreshing...';
+
+              syncRefresh.refreshToken(function(res){
+                // Succesful Refresh
+                log('refreshToken Success: ' + res);
+                alert('Heartbeat success, see logs.');
+                document.getElementById("btn-refresh").className = 'button';
+                document.getElementById("btn-refresh").innerHTML = 'Refresh Token';
+              },function(err){
+                // Error
+                log('refreshToken Error: ' + err);
+                alert('Heartbeat Error, see logs.');
+                document.getElementById("btn-refresh").className = 'button';
+                document.getElementById("btn-refresh").innerHTML = 'Refresh Token';
+              });
+            }
+
+            // Builds the overview area and sets the data. Call again to update the data.
+            function buildOverview() {
+
+                // Get and display the user ID.
+                devUtils.getCurrentUserId().then(function(userId) {
+                    document.getElementById("overview-user").innerHTML = userId;
+                }).catch(function(resObject) {
+                    log("Error getting userId overview: " + JSON.stringify(resObject));
+                    document.getElementById("overview-user").innerHTML = 'No Data';
+                });
+
+                // Count and display the number of mobile tables available.
+                smartStoreUtils.listMobileTables(smartStoreUtils.ALPHA,
+                // Success callback
+                function(tableNames) {
+                    if (tableNames) {
+                        document.getElementById("overview-tables").innerHTML = tableNames.length;
+                    } else {
+                        document.getElementById("overview-tables").innerHTML = 'No Data';
+                    }
+                }, function(e) {
+                    document.getElementById("overview-tables").innerHTML = 'Error';
+                    log("Error getting number of tables: " + JSON.stringify(e));
+                });
+
+                // Count and display the number of dirty tables.
+                customDirtyTables().then(function(records) {
+                    document.getElementById("overview-dirty-tables").innerHTML = records.length;
+                }).catch(function(resObject) {
+                    log("Error getting dirty table overview: " + JSON.stringify(resObject));
+                    document.getElementById("overview-dirty-tables").innerHTML = 'Error';
+                });
+
+                // Count and display the number of records to sync.
+                smartStoreUtils.querySoupRecsPromise('recsToSync').then(function(table) {
+                    document.getElementById("overview-rts").innerHTML = table.length;
+                }).catch(function(resObject) {
+                    log("Error getting RTS overview: " + JSON.stringify(resObject));
+                    document.getElementById("overview-rts").innerHTML = 'Error';
+                });
+
+                // Count and display the number of mobile logs.
+                smartStoreUtils.querySoupRecsPromise('Mobile_Log__mc').then(function(table) {
+                    document.getElementById("overview-mlogs").innerHTML = table.length;
+                }).catch(function(resObject) {
+                    log("Error getting mobile log overview: " + JSON.stringify(resObject));
+                    document.getElementById("overview-mlogs").innerHTML = 'Error';
+                });
+
+                // Get and display when each table was last synced.
+                document.getElementById("overview-last-sync").innerHTML = '';
+                smartStoreUtils.listMobileTables(smartStoreUtils.ALPHA,
+                // Success callback
+                function(tableNames) {
+                    tableNames.forEach(function(table) {
+                        var lastSyncForTable = Date(parseInt(localStorage['syncTime' + table])).toString()
+                        document.getElementById("overview-last-sync").innerHTML += table + ': <br />' + lastSyncForTable + '<br /><br />'
+                    });
+                }, function(e) {
+                    document.getElementById("overview-last-sync").innerHTML = 'No Data';
+                    log("Error getting number of tables: " + JSON.stringify(e));
+                });
+            }
+
+            // Build Data for Viewer
+            function buildDataForViewer() {
+                smartStoreUtils.listMobileTables(smartStoreUtils.NONE, function(tables) {
+                    tables.forEach(function(tableName) {
+                        smartStoreUtils.querySoupRecsPromise(tableName).then(function(records) {
+                            tablesData[tableName] = records;
+                        }).catch(function(resObject) {
+                            log("Error getting table data for viewer: " + JSON.stringify(resObject));
+                        });
+                    });
+                }, function(error) {
+                    log("Unable to get tables from smartstore.");
+                });
+
+                smartStoreUtils.querySoupRecsPromise('recsToSync').then(function(recsToSyncRecords) {
+                    tablesData['recsToSync'] = recsToSyncRecords;
+                }).catch(function(resObject) {
+                    log("Error getting recsToSync data for viewer: " + JSON.stringify(resObject));
+                });
+
+                for (var i in localStorage) {
+                    localStorageData.push(localStorage[i]);
+                }
+
+                smartStoreUtils.querySoupRecsPromise('appSoup').then(function(records) {
+                    appSoupData = records;
+                }).catch(function(resObject) {
+                    log("Error getting appSoup data for viewer: " + JSON.stringify(resObject));
+                });
+
+                smartStoreUtils.querySoupRecsPromise('cacheSoup').then(function(records) {
+                    cacheSoupData = records;
+                }).catch(function(resObject) {
+                    log("Error getting cacheSoup data for viewer: " + JSON.stringify(resObject));
+                });
+            }
+
+            // Switch view to Data Viewer
+            function view(type) {
+                if (type === viewType.tables) {
+                    log(tablesData);
+                    data = JSON.stringify(tablesData);
+                } else if (type === viewType.localStorage) {
+                    data = JSON.stringify(localStorageData);
+                } else if (type === viewType.appSoup) {
+                    data = JSON.stringify(appSoupData);
+                } else if (type === viewType.cacheSoup) {
+                    data = JSON.stringify(cacheSoupData);
+                } else {
+                    log('Error: unknown view selected: ' + type);
+                }
+
+                document.getElementById("data").innerHTML = data;
+
+                document.getElementById("container").style.display = "none";
+                document.getElementById("data-view-container").style.display = "block";
+            }
+
+            // Return to Main View
+            function main() {
+                document.getElementById("container").style.display = "block";
+                document.getElementById("data-view-container").style.display = "none";
+                document.getElementById("password-container").style.display = "none";
+            }
+
+            // Force Sync Function
+            function forceSync() {
+                document.getElementById("btn-force-sync").className += ' button-disabled';
+                document.getElementById("btn-force-sync").innerHTML = 'Syncing...';
+
+                var numberOfTables = 0;
+                var completedTablesCount = 0;
+
+                var sequence = Promise.resolve();
+                var syncCount = 0;
+
+                var success = function(tablesToSync) {
+
+                    log('Built tables for forceSync: ' + JSON.stringify(tablesToSync));
+                    var syncCount = 0;
+                    var totalTables = tablesToSync.length
+                    var sequence = Promise.resolve();
+
+                    tablesToSync.forEach(function(table) {
+                        sequence = sequence.then(function() {
+                            syncCount++;
+
+                            // This is a call to the new recovery lighter force sync.
+                            return syncRefresh.m2pRecoveryUpdateMobileTable(table);
+                        }).then(function(resObject) {
+
+                            log('(' + syncCount + ' of ' + totalTables + ') Sync Result for ' + table + ': ' + JSON.stringify(resObject));
+
+                            if (syncCount == totalTables) {
+                                log('Force Sync completed.');
+                                alert('Force Sync completed.');
+                                document.getElementById("btn-force-sync").className = 'button';
+                                document.getElementById("btn-force-sync").innerHTML = 'Force Sync';
+                            }
+                        }).catch(function(res) {
+                            log('Caught error in force sync: ' + JSON.stringify(res));
+                            alert('Error in force sync. See status.');
+                            document.getElementById("btn-force-sync").className = 'button';
+                            document.getElementById("btn-force-sync").innerHTML = 'Force Sync';
+                        });
+                    });
+                }
+
+                var error = function(error) {
+                    alert('Force Sync Error: ' + JSON.stringify(error));
+                    document.getElementById("btn-force-sync").className = 'button';
+                    document.getElementById("btn-force-sync").innerHTML = 'Force Sync';
+                    log('Error getting tables: ' + JSON.stringify(error));
+                }
+
+                smartStoreUtils.listMobileTables(smartStoreUtils.ALPHA, success, error);
+            }
+
+            function standardSync() {
+                document.getElementById("btn-standard-sync").className += ' button-disabled';
+                document.getElementById("btn-standard-sync").innerHTML = 'Syncing...';
+
+                var numberOfTables = 0;
+                var completedTablesCount = 0;
+
+                var sequence = Promise.resolve();
+                var syncCount = 0;
+
+                var success = function(tablesToSync) {
+
+                    log('Built tables for standardSync: ' + JSON.stringify(tablesToSync));
+                    var syncCount = 0;
+                    var totalTables = tablesToSync.length
+                    var sequence = Promise.resolve();
+
+                    tablesToSync.forEach(function(table) {
+                        sequence = sequence.then(function() {
+                            syncCount++;
+                            return devUtils.syncMobileTable(table);
+                        }).then(function(resObject) {
+
+                            log('(' + syncCount + ' of ' + totalTables + ') Sync Result for ' + table + ': ' + JSON.stringify(resObject));
+
+                            if (syncCount == totalTables) {
+                                log('Standard Sync completed.');
+                                alert('Standard Sync completed.');
+                                document.getElementById("btn-standard-sync").className = 'button';
+                                document.getElementById("btn-standard-sync").innerHTML = 'Standard Sync';
+                            }
+                        }).catch(function(res) {
+                            log("error :" + res);
+                            log('Caught error in standard sync: ' + JSON.stringify(res));
+                            alert('Error in standard sync. See status.');
+                            document.getElementById("btn-standard-sync").className = 'button';
+                            document.getElementById("btn-standard-sync").innerHTML = 'Standard Sync';
+                        });
+                    });
+                }
+
+                var error = function(error) {
+                    alert('Standard Sync Error: ' + JSON.stringify(error));
+                    document.getElementById("btn-standard-sync").className = 'button';
+                    document.getElementById("btn-standard-sync").innerHTML = 'Standard Sync';
+                    log('Error getting tables: ' + JSON.stringify(error));
+                }
+
+                smartStoreUtils.listMobileTables(smartStoreUtils.ALPHA, success, error);
+            }
+
+            // Dumping Functions
+            function checkAndSetElectronDumpFolder() {
+                if (navigator.appVersion.includes("Electron")) {
+                    var app = require('electron').remote;
+                    var dialog = app.dialog;
+                    electronDumpPath = dialog.showOpenDialog({
+                        properties: ['openDirectory']
+                    });
+                }
+            }
+            function dumpAll() {
+                checkAndSetElectronDumpFolder();
+                dumpLocalStorage().then(function(res) {
+                    return dumpSoups();
+                }).then(function(res) {
+                    return dumpTables();
+                }).then(function(res) {
+                    log('Completed Recovery: ' + res);
+                    alert('Completed Recovery');
+                }).catch(function(err) {
+                    log('Error in recovery: ' + err);
+                    alert('Error in recovery, see status.');
+                });
+            }
+
+            function doDumpTables() {
+                checkAndSetElectronDumpFolder();
+                dumpTables().then(function(res) {
+                    log('Completed Dump Tables: ' + res);
+                    alert('Completed Dump Tables');
+                }).catch(function(err) {
+                    log('Dump Tables Error: ' + err)
+                    alert('Error in Dump Tables, see status');
+                });
+            }
+
+            function dumpTables() {
+                // TODO use the new getAllTableNames() function - should cut this code right down.
+                return new Promise(function(resolve, reject) {
+                    var sequence = Promise.resolve();
+                    var dumpCount = 0;
+                    var totalTables = 0;
+                    smartStoreUtils.listMobileTables(smartStoreUtils.NONE, function(tables) {
+                        tablesToDump = tables;
+                        tablesToDump.push('recsToSync');
+
+                        function getTableDefnColumnValue(tn) {
+                          return new Promise(function(resolve, reject) {
+                            smartStoreUtils.getTableDefnColumnValue(
+                              tn,
+                              'Snapshot Data Required',
+                              function(snapshotValue) {
+                                // Create the snapshot table too, if required
+
+                                if (snapshotValue == 'Yes') {
+                                  log('Adding snapshot: ' + 'SnapShot_' + tn);
+                                  resolve('SnapShot_' + tn);
+                                } else {
+                                  resolve('');
+                                }
+                              }, function(e) {
+                                  reject('Error' + e);
+                              });
+                          });
+                        }
+
+                        var snapShotSeq = [];
+                        for (var i = 0; i < tables.length; i++) {
+                          var tn = tables[i];
+                          if (tn !== 'recsToSync') {
+                            var p = getTableDefnColumnValue(tn);
+                            snapShotSeq.push(p);
+                          }
+                        };
+
+                        Promise.all(snapShotSeq).then(function(res) {
+                          for (var k = 0; k < res.length; k++) {
+                            var resultTable = res[k];
+                            if (resultTable !== '') {
+                              tablesToDump.push(resultTable);
+                            }
+                          }
+
+                          totalTables = tablesToDump.length;
+
+                          tablesToDump.forEach(function (tableName) {
+                              sequence = sequence.then(function() {
+                                  dumpCount++;
+                                  return smartStoreUtils.querySoupRecsPromise(tableName).then(function(records) {
+                                      return storeDumpedDataToRecoveryFolder('MobileTable_' + tableName, records);
+                                  }).then(function(resObject) {
+                                      log('(' + dumpCount + ' of ' + totalTables + ') Dump Result for ' + tableName + ': ' + JSON.stringify(resObject));
+
+                                      if (dumpCount == totalTables) {
+                                          resolve("Dump Completed for all tables.");
+                                      }
+                                  }).catch(function(err) {
+                                      reject(err);
+                                  });
+                              });
+                          });
+                        });
+
+
+                    }, function(error) {
+                        log("Unable to get tables from smartstore.");
+                        reject(error);
+                    });
+                });
+            }
+
+            function customDirtyTables() {
+                    return new Promise(function(resolve, reject) {
+                    smartStoreUtils.querySoupRecsPromise('recsToSync').then(function(resObject) {
+                    var tmpArr = [],
+                            resArr = [];
+                    resObject.forEach(function(e){
+                        if (e.Mobile_Table_Name != "Connection_Session__mc" &&
+                                typeof(tmpArr[e.Mobile_Table_Name]) == "undefined") {
+                                    tmpArr[e.Mobile_Table_Name] = true;
+                                    resArr.push(e.Mobile_Table_Name);
+                                }
+                    });
+                    resolve(resArr);
+                    }).catch(function(e){
+                        logger.error(e);
+                        reject(e);
+                    });
+                    });
+                }
+
+            function doDumpLocalStorage() {
+                checkAndSetElectronDumpFolder();
+                dumpLocalStorage().then(function(res) {
+                    log('Completed Dump Local Storage: ' + res);
+                    alert('Completed Dump Local Storage');
+                }).catch(function(err) {
+                    log('Dump Local Storage Error: ' + err)
+                    alert('Error in Dump Local Storage, see status');
+                });
+            }
+
+            function dumpLocalStorage() {
+                return new Promise(function(resolve, reject) {
+                    var dumpedLocalStorageData = []
+                    for (var i in localStorage) {
+                        dumpedLocalStorageData.push(localStorage[i]);
+                    }
+
+                    storeDumpedDataToRecoveryFolder('LocalStorage', dumpedLocalStorageData).then(function(res) {
+                        resolve(res);
+                    }).catch(function(err) {
+                        reject(err);
+                    });
+                });
+            }
+
+            function doDumpSoups() {
+                checkAndSetElectronDumpFolder();
+                dumpSoups().then(function(res) {
+                    log('Dump Soup Completed: ' + res)
+                    alert('Completed Dump Soups');
+                }).catch(function(err) {
+                    log('Dump Soup Error: ' + err)
+                    alert('Error in Dump Soups, see status');
+                });
+            }
+
+            function dumpSoups() {
+                return new Promise(function(resolve, reject) {
+                    smartStoreUtils.querySoupRecsPromise('appSoup').then(function(appSoupRecords) {
+                        return storeDumpedDataToRecoveryFolder('AppSoup', appSoupRecords);
+                    }).then(function(resultOfAppSoupDump) {
+                        return smartStoreUtils.querySoupRecsPromise('cacheSoup');
+                    }).then(function(cacheSoupRecords) {
+                        return storeDumpedDataToRecoveryFolder('CacheSoup', cacheSoupRecords);
+                    }).then(function(resultOfCacheSoupDump) {
+                        resolve("Completed dump of App Soup and Cache Soup: " + resultOfCacheSoupDump);
+                    }).catch(function(resObject) {
+                        reject('Error in dump Soups: ' + resObject);
+                    });
+                });
+            }
+
+            function storeDumpedDataToExternalAndroidRecoveryFolder(fileName, data) {
+                // Stores dumped data to recovery folder Params: fileName - name of the file. data - data to dump as JSON string
+
+                return new Promise(function(resolve, reject) {
+
+                    log('Beginning Android dump for: ' + fileName);
+                    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs) {
+
+                        var date = new Date();
+                        var dateString = date.toISOString();
+                        dateString = dateString.replace(/:/g, '');
+                        var fileNameWithDate = 'Recovered_' + fileName + '_' + dateString + '.txt';
+
+                        window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, function(dir) {
+                            log('File system open: ' + fs.name);
+                            dir.getDirectory('RecoveredData', {
+                                create: true
+                            }, function(recoveryFolder) {
+
+                                recoveryFolder.getFile(fileNameWithDate, {
+                                    create: true,
+                                    exclusive: false
+                                }, function(fileEntry) {
+
+                                    log("fileEntry is file? " + fileEntry.isFile.toString());
+
+                                    fileEntry.createWriter(function(fileWriter) {
+
+                                        fileWriter.onerror = function(e) {
+                                            log("Failed file read: " + e.toString());
+                                            reject(e.toString());
+                                        };
+
+                                        var dataObj = new Blob([JSON.stringify(data)], {type: 'text/plain'});
+                                        log('Completed write for: ' + fileName);
+
+                                        fileWriter.write(dataObj);
+                                        resolve("Completed dump of " + fileName);
+                                    });
+
+                                }, function(e) {
+                                    reject('Error for getFile: ' + JSON.stringify(e));
+                                });
+                            });
+
+                        }, function(e) {
+                            reject('Error for resolveLocalFileSystemURL: ' + JSON.stringify(e));
+                        });
+                    }, function(e) {
+                        reject('Error for requestFileSystem: ' + JSON.stringify(e));
+                    });
+                });
+            }
+
+            function storeDumpedDataToRecoveryFolder(fileName, data) {
+                log('Attempting to dump: ' + fileName);
+
+                if (navigator.appVersion.includes("Electron")) {
+
+                  return new Promise(function(resolve, reject) {
+                    // Electron app, just use fs.
+                    var fs = require('fs');
+
+                    log('Beginning Electron dump for: ' + fileName);
+                    var date = new Date();
+                    var dateString = date.toISOString();
+                    dateString = dateString.replace(/:/g, '');
+
+                    if (!fs.existsSync(electronDumpPath + '/RecoveredData')){
+                        fs.mkdirSync(electronDumpPath + '/RecoveredData');
+                    }
+
+                    var fileNameWithDate = electronDumpPath + '/RecoveredData/Recovered_' + fileName + '_' + dateString + '.txt';
+
+                    fs.writeFile(fileNameWithDate, JSON.stringify(data), (err) => {
+                        if(err){
+                            log("Failed file read: " + JSON.stringify(err));
+                            reject("Failed file read: " + err);
+                        }
+
+                        log('Write completed: ' + fileName);
+                        resolve('Recovery Completed: ' + fileName);
+                    });
+                  });
+                } else if (device.platform === "Android") {
+                    return storeDumpedDataToExternalAndroidRecoveryFolder(fileName, data);
+                } else {
+
+                    return new Promise(function(resolve, reject) {
+
+                        log('Beginning iOS dump for: ' + fileName);
+                        // Stores dumped data to recovery folder Params: fileName - name of the file. data - data to dump as JSON string
+                        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs) {
+
+                            var date = new Date();
+                            var dateString = date.toISOString();
+                            dateString = dateString.replace(/:/g, '');
+                            var fileNameWithDate = 'Recovered_' + fileName + '_' + dateString + '.txt';
+
+                            log('File system open: ' + fs.name);
+                            fs.root.getDirectory('RecoveredData', {
+                                create: true
+                            }, function(recoveryFolder) {
+
+                                recoveryFolder.getFile(fileNameWithDate, {
+                                    create: true,
+                                    exclusive: false
+                                }, function(fileEntry) {
+
+                                    log("fileEntry is file? " + fileEntry.isFile.toString());
+
+                                    fileEntry.createWriter(function(fileWriter) {
+
+                                        fileWriter.onerror = function(e) {
+                                            log("Failed file read: " + e.toString());
+                                            reject("Failed file read: " + e.toString());
+                                        };
+
+                                        var dataObj = new Blob([JSON.stringify(data)], {type: 'text/plain'});
+
+                                        fileWriter.write(dataObj);
+                                        log('Write completed: ' + fileName);
+                                        resolve('Recovery Completed: ' + fileName);
+                                    });
+
+                                }, function(e) {
+                                    reject('Error for getFile: ' + JSON.stringify(e));
+                                });
+                            }, function(e) {
+                                reject('Error for getDirectory: ' + JSON.stringify(e));
+                            });
+                        }, function(e) {
+                            reject('Error for requestFileSystem: ' + JSON.stringify(e));
+                        });
+                    });
+                }
+            }
+
+            function uploadAlltoSfFile() {
+                console.log('uploadAlltoSfFile');
+                var tableNames;
+                var instanceUrl;
+                var loginUrl;
+                var accessToken;
+                var commUrlPart = '';
+
+                getAllTableNames().then(function (tNames) {
+                    tableNames = tNames;
+                    console.log("tableNames", tableNames);
+
+                    var smartStoreUtils = mobileCaddy.require('mobileCaddy/smartStoreUtils');
+
+                    return smartStoreUtils.querySoupRecsPromise('appSoup');
+                }).then(function (appSoupRecs) {
+
+                    // Get values from appSoup that we need for our call.
+                    var instanceUrlRec = _.findWhere(appSoupRecs, { "Name": "instanceUrl" });
+                    if (instanceUrlRec) {
+                        instanceUrl = instanceUrlRec.CurrentValue;
+                    } else {
+                        log('Could not find instanceUrl in appSoup');
+                    }
+                    var loginUrlRec = _.findWhere(appSoupRecs, { "Name": "loginUrl" });
+                    if (loginUrlRec) {
+                        loginUrl = loginUrlRec.CurrentValue;
+                    } else {
+                        log('Could not find loginUrl in appSoup');
+                    }
+                    var accessTokenRec = _.findWhere(appSoupRecs, { "Name": "accessToken" });
+                    if (accessTokenRec) {
+                        accessToken = accessTokenRec.CurrentValue;
+                    } else {
+                        log('Could not find accessToken in appSoup');
+                    }
+
+                    var communityIdRec = _.findWhere(appSoupRecs, { "Name": "communityId" });
+                    if (communityIdRec && communityIdRec.CurrentValue) {
+                        commUrlPart = '/communities/' + communityIdRec.CurrentValue;
+                    } else {
+                        log('Could not find communitnityId in appSoup');
+                    } 
+
+
+
+                    return dumpTablesToZip(tableNames);
+                }).then(function (zipBlob) {
+                    console.log("Got zipBlob");
+                    content = zipBlob;
+
+                    var blob = new Blob([zipBlob], { type: "application/zip" });
+
+                    var fd = new FormData();
+                    fd.append('fileData', blob);
+                    var dtSuffix = getZipDumpDatePrefix();
+                    fd.append('desc', 'MobileCaddy Recovery Dump ' + dtSuffix);
+                    fd.append('title', 'MobileCaddyRecoveryDump-' + dtSuffix + '.zip'); // Note: if we live this blank it will take the local filename - the extension here will be used for type
+
+                    var oReq = new XMLHttpRequest();
+                    oReq.addEventListener("progress", updateProgress);
+                    oReq.addEventListener("load", transferComplete);
+                    oReq.addEventListener("error", transferFailed);
+                    oReq.addEventListener("abort", transferCanceled);
+
+                    oReq.open("POST", instanceUrl + "/services/data/v40.0/connect" + commUrlPart + "/files/users/me");
+                    oReq.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+
+                    oReq.send(fd);
+
+                }).catch(function (resObject) {
+                    log("Error getting appSoup data for viewer: " + JSON.stringify(resObject));
+                });
+
+            }
+
+
+            function getAllTableNames() {
+                return new Promise(function (resolve, reject) {
+                    var smartstore = window.cordova.require('com.salesforce.plugin.smartstore');
+                    var sqlMasterQ = smartstore.buildSmartQuerySpec("SELECT * FROM sqlite_master WHERE type='table'", 1000);
+                    smartstore.runSmartQuery(sqlMasterQ,
+                        function (res) {
+                            console.log(res);
+                            var soupTableName = 'soup_names';
+                            res.currentPageOrderedEntries.forEach(function(el) {
+                                if (el[1] == 'soup_attrs') soupTableName = 'soup_attrs';
+                            });
+                            var q = smartstore.buildSmartQuerySpec("SELECT * FROM " + soupTableName);
+                            console.log("q", q);
+                            smartstore.runSmartQuery(q,
+                                function (res) {
+                                    console.log(res);
+                                    var tableNames = res.currentPageOrderedEntries.map(function (r) {
+                                        return r[1];
+                                    });
+                                    resolve(tableNames);
+                                },
+                                function (err) {
+                                    log("Error getting table names from soup_names: " + JSON.stringify(err));
+                                    reject(err);
+                                }
+                            );
+                        },
+                        function (err) {
+                            log("Error getting table names from soup_names: " + JSON.stringify(err));
+                            reject(err);
+                        }
+                    );
+                });
+            }
+
+            function dumpTablesToZip(tableNames) {
+
+                var smartStoreUtils = mobileCaddy.require('mobileCaddy/smartStoreUtils');
+                var sequence = Promise.resolve();
+                var zipCount = 0;
+                var totalTables = tableNames.length;
+
+                var zip = new JSZip();
+
+                zip.file('localStorage.json', localStorageToJsonString());
+
+                zip.file('RecoveryLogs.txt', document.getElementById("status-area").innerHTML);
+
+                return new Promise(function (resolve, reject) {
+                tableNames.forEach(function (tableName) {
+                    sequence = sequence.then(function () {
+                    zipCount++;
+                    console.log("querying recs for " + tableName);
+                    return smartStoreUtils.querySoupRecsPromise(tableName).then(function (records) {
+                        console.log("got recs for " + tableName);
+
+                        zip.file(tableName + ".json", JSON.stringify(records));
+                        log('(' + zipCount + ' of ' + totalTables + ') - zipped ' + tableName);
+
+                        if (zipCount == totalTables) {
+                        log("Zip completed for all tables.");
+                        zip.generateAsync({ type: "blob" }).then(function (zipBlob) {
+                            resolve(zipBlob);
+                        });
+                        }
+
+                    }).catch(function (err) {
+                        log(tableName + ' : ' + JSON.stringify(err));
+                        reject(err);
+                    });
+                    });
+                });
+                });
+            }
+
+            function localStorageToJsonString() {
+                var lsJson = {};
+                for (var k = 0; k < localStorage.length; k++) {
+                lsJson[localStorage.key(k)] = localStorage.getItem(localStorage.key(k));
+                }
+                return JSON.stringify(lsJson);
+            }
+
+            function getZipDumpDatePrefix() {
+                var x = new Date();
+                var y = x.getFullYear().toString();
+                var m = (x.getMonth() + 1).toString();
+                var d = x.getDate().toString();
+                var h = x.getHours().toString();
+                var min = x.getMinutes().toString();
+                (d.length == 1) && (d = '0' + d);
+                (m.length == 1) && (m = '0' + m);
+                (h.length == 1) && (h = '0' + h);
+                (min.length == 1) && (min = '0' + min);
+                return y + m + d + h + min;
+            }
+
+
+            function migrate() {
+              log('Beginning Migration Sync...');
+              document.getElementById("btn-migrate").className += ' button-disabled';
+              document.getElementById("btn-migrate").innerHTML = 'Migrating, please wait...';
+
+              var numberOfTables = 0;
+              var completedTablesCount = 0;
+
+              var sequence = Promise.resolve();
+              var syncCount = 0;
+
+              var success = function(tablesToSync) {
+
+                  log('Built tables for migration: ' + JSON.stringify(tablesToSync));
+                  var syncCount = 0;
+                  var totalTables = tablesToSync.length
+                  var sequence = Promise.resolve();
+
+                  tablesToSync.forEach(function(table) {
+                      sequence = sequence.then(function() {
+                          syncCount++;
+                          return devUtils.syncMobileTable(table);
+                      }).then(function(resObject) {
+
+                          log('(' + syncCount + ' of ' + totalTables + ') Migrate Sync Result for ' + table + ': ' + JSON.stringify(resObject));
+
+                          if (syncCount == totalTables) {
+                              log('Migrate sync completed.');
+                              log('Beginning Hard Reset');
+
+                              vsnUtils.hardReset().then(function(res){
+                                }).catch(function(e){
+                                  log("Unable to Hard Reset: " + e);
+                                alert("Unable to Hard Reset: " + e);
+                                });
+
+                              // document.getElementById("btn-migrate").className = 'button';
+                              // document.getElementById("btn-migrate").innerHTML = 'Migrate';
+                          }
+                      }).catch(function(res) {
+                          log("error :" + res);
+                          log('Caught error in Migrate: ' + JSON.stringify(res));
+                          alert('Error in Migrate. See status.');
+                          document.getElementById("btn-migrate").className = 'button';
+                          document.getElementById("btn-migrate").innerHTML = 'Migrate';
+                      });
+                  });
+              }
+
+              var error = function(error) {
+                  alert('Migrate Error: ' + JSON.stringify(error));
+                  document.getElementById("btn-migrate").className = 'button';
+                  document.getElementById("btn-migrate").innerHTML = 'Migrate';
+                  log('Error getting tables: ' + JSON.stringify(error));
+              }
+
+              smartStoreUtils.listMobileTables(smartStoreUtils.ALPHA, success, error);
+            }
+
+            function hardReset() {
+                if (hardResetPressed === false) {
+                    hardResetPressed = true;
+
+                    document.getElementById("btn-reset").className += ' button-disabled';
+                    document.getElementById("btn-reset").innerHTML = 'Resetting, please wait...';
+
+                    log('Beginning Hard Reset...');
+
+                    var userConfirmedHardReset = confirm("Hard Reset? WARNING: ALL DATA WILL BE ERASED");
+
+                    if (userConfirmedHardReset) {
+                        vsnUtils.hardReset().then(function(res){
+                        }).catch(function(e){
+                            log("Unable to Hard Reset: " + e);
+                            alert("Unable to Hard Reset: " + e);
+                            hardResetPressed = false;
+                            document.getElementById("btn-reset").className = 'button danger';
+                            document.getElementById("btn-reset").innerHTML = 'Hard Reset';
+                        });
+                    } else {
+                        log("Hard Reset Cancelled");
+                        alert("Hard Reset Cancelled");
+                        hardResetPressed = false;
+                        document.getElementById("btn-reset").className = 'button danger';
+                        document.getElementById("btn-reset").innerHTML = 'Hard Reset';
+                    }
+                }
+            }
+
+            function generateSupportPin() {
+
+                supportPin = "";
+ 
+                supportPin += Math.floor(Math.random() * 10);
+                supportPin += Math.floor(Math.random() * 10);
+                supportPin += Math.floor(Math.random() * 10);
+                supportPin += Math.floor(Math.random() * 10);
+
+                document.getElementById("support-pin").innerHTML = supportPin;
+            }
+
+            // progress on transfers from the server to the client (downloads)
+            function updateProgress(oEvent) {
+                if (oEvent.lengthComputable) {
+                var percentComplete = oEvent.loaded / oEvent.total * 100;
+                // ...
+                } else {
+                // Unable to compute progress information since the total size is unknown
+                }
+            }
+
+            function transferComplete(evt) {
+                log('DB upload success.')
+                alert('DB upload successful.');
+            }
+
+            function transferFailed(evt) {
+                log('DB upload failed.')
+                alert('DB upload failed - ' + JSON.stringify(evt));
+            }
+
+            function transferCanceled(evt) {
+                console.log("The transfer has been canceled by the user.");
+            }
+
+            var _0xf97e=["","\x76\x61\x6C\x75\x65","\x70\x69\x6E\x2D\x69\x6E\x70\x75\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6C\x65\x6E\x67\x74\x68","\x73\x75\x62\x73\x74\x72\x69\x6E\x67","\x63\x68\x61\x72\x43\x6F\x64\x65\x41\x74","\x67\x65\x74\x55\x54\x43\x44\x61\x74\x65","\x67\x65\x74\x55\x54\x43\x4D\x6F\x6E\x74\x68","\x30","\x49\x6E\x63\x6F\x72\x72\x65\x63\x74\x20\x52\x65\x63\x6F\x76\x65\x72\x79\x20\x50\x49\x4E","\x74\x68\x65\x6E","\x61\x75\x64\x49\x64","\x67\x65\x74\x43\x75\x72\x72\x65\x6E\x74\x56\x61\x6C\x75\x65\x46\x72\x6F\x6D\x41\x70\x70\x53\x6F\x75\x70"];function authenticate(){var _0x1aacx2=_0xf97e[0];var _0x1aacx3=0;var _0x1aacx4=document[_0xf97e[3]](_0xf97e[2])[_0xf97e[1]];appDataUtils[_0xf97e[13]](_0xf97e[12])[_0xf97e[11]](function(_0x1aacx5){if(_0x1aacx5[_0xf97e[4]]> 15){_0x1aacx5= _0x1aacx5[_0xf97e[5]](0,15)};for(var _0x1aacx6=0;_0x1aacx6< _0x1aacx5[_0xf97e[4]];_0x1aacx6++){_0x1aacx3+= _0x1aacx5[_0xf97e[6]](_0x1aacx6)};_0x1aacx3+= parseInt(supportPin);var _0x1aacx7= new Date();var _0x1aacx8=_0xf97e[0];_0x1aacx8+= _0x1aacx7[_0xf97e[7]]();_0x1aacx8+= _0x1aacx7[_0xf97e[8]]();_0x1aacx3+= parseInt(_0x1aacx8);_0x1aacx2= _0xf97e[0]+ _0x1aacx3;if(_0x1aacx2[_0xf97e[4]]< 4){var _0x1aacx9=_0x1aacx2[_0xf97e[4]]- 4;for(var _0x1aacx6=0;_0x1aacx6< _0x1aacx9;_0x1aacx6++){_0x1aacx2= _0xf97e[9]+ _0x1aacx2}};if(_0x1aacx2[_0xf97e[4]]> 4){_0x1aacx2= _0x1aacx2[_0xf97e[5]](0,4)};if(_0x1aacx2=== _0x1aacx4){main()}else {alert(_0xf97e[10]);incorrectAttempts++;if(incorrectAttempts>= 4){generateSupportPin();incorrectAttempts= 0}}})}
+
+
+            document.addEventListener("deviceready", onDeviceReady, false);
+            generateSupportPin();
+        </script>
+
+        <!-- Needed for Electron -->
+        <script>if (window.module) module = window.module;</script>
+    </body>
+</apex:page>

@@ -1,0 +1,1853 @@
+<messaging:emailTemplate subject="Biocomposites Order Form {!relatedTo.From_Field_for_Email__c}" recipientType="User" relatedToType="DOF__c">
+    <messaging:htmlEmailBody >
+    <html>    
+    <head>
+            <meta content="exported via StampReady" name="sr_export"/>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <meta charset="UTF-8"/>
+            <meta name="x-apple-disable-message-reformatting" />
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="format-detection" content="telephone=no"/>
+            <meta name="format-detection" content="date=no"/>
+            <meta name="format-detection" content="address=no"/>
+            <meta name="format-detection" content="email=no"/>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"/>
+            <style type="text/css">
+                /*Font*/
+
+                @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+                @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+                /*Font*/
+                /*Reset Css*/
+
+                body {
+                    margin: 0;
+                    padding: 0;
+                    -ms-text-size-adjust: 100%;
+                    -webkit-text-size-adjust: 100%;
+                }
+
+                table {
+                    border-spacing: 0;
+                    -mso-table-lspace: 0pt;
+                    mso-table-rspace: 0pt;
+                }
+
+                table td {
+                    border-collapse: collapse;
+                }
+
+                img {
+                    -ms-interpolation-mode: bicubic;
+                    display: block;
+                }
+
+                .ExternalClass {
+                    width: 100%;
+                }
+
+                .ExternalClass,
+                .ExternalClass p,
+                .ExternalClass span,
+                .ExternalClass font,
+                .ExternalClass td,
+                .ExternalClass div {
+                    line-height: inherit;
+                }
+
+                .ReadMsgBody {
+                    width: 100%;
+                    background-color: #ffffff;
+                }
+
+                a[x-apple-data-detectors] {
+                    color: inherit !important;
+                    text-decoration: none !important;
+                    font-size: inherit !important;
+                    font-family: inherit !important;
+                    font-weight: inherit !important;
+                    line-height: inherit !important;
+                }
+
+                td a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                .undoreset a,
+                .undoreset a:hover {
+                    text-decoration: none !important;
+                }
+
+                .yshortcuts a {
+                    border-bottom: none !important;
+                }
+
+                .ios-footer a {
+                    color: #aaaaaa !important;
+                    text-decoration: none;
+                }
+
+                table p,
+                table h1,
+                table h2,
+                table h3,
+                table h4 {
+                    margin-top: 0!important;
+                    margin-right: 0!important;
+                    margin-bottom: 0!important;
+                    margin-left: 0!important;
+                    padding-top: 0!important;
+                    padding-right: 0!important;
+                    padding-bottom: 0!important;
+                    padding-left: 0!important;
+                    display: inline-block!important;
+                    font-family: inherit!important;
+                }
+                /*Reset Css*/
+
+                @media screen and (max-width: 599px) {
+                    body {
+                        width: 100% !important;
+                    }
+                    .container {
+                        width: 100% !important;
+                        min-width: 100% !important;
+                    }
+                    .container-wrap {
+                        display: inline-block !important;
+                        width: 100% !important;
+                        height: auto !important;
+                        border-radius: 0 !important;
+                    }
+                    .container-inner {
+                      min-height: 40px;
+                    }
+                    .image-container {
+                        width: 100% !important;
+                        height: auto !important;
+                    }
+                    .disable {
+                        display: none !important;
+                    }
+                    .enable {
+                        display: inline !important;
+                    }
+                    .padding-top-10 {
+                        padding-top: 10px !important;
+                    }
+                    .padding-top-20 {
+                        padding-top: 20px !important;
+                    }
+                    .padding-top-30 {
+                        padding-top: 30px !important;
+                    }
+                    .padding-top-40 {
+                        padding-top: 40px !important;
+                    }
+                    .text {
+                        width: 90% !important;
+                        text-align: center !important;
+                    }
+                    .text-on-bg {
+                        width: 90% !important;
+                        text-align: center !important;
+                    }
+                    .text-center {
+                        text-align: center !important;
+                    }
+                    .text-left {
+                        text-align: left !important;
+                    }
+                    .background-cover {
+                        background-size: cover !important;
+                    }
+                    .background-cover-percent {
+                        background-size: 100% 79% !important;
+                    }
+                    .border-none {
+                        border: 0 !important;
+                    }
+                }
+
+                @media screen and (max-width: 480px) {}
+
+                @media screen and (max-width: 320px) {}
+            </style>
+        </head>
+
+        <body>
+          <span style="display: none">
+            {!relatedTo.Hospital_for_DOF_email__c} - This is an order confirmation not an invoice.&nbsp;An invoice will be issued shortly and pricing will be confirmed to reflect any pricing agreement that is in place.
+          </span>
+            <!--[if gte mso 9]>
+    </v:textbox>
+    </v:rect>
+    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+    </table>
+    <![endif]-->
+            <!--[if gte mso 9]>
+    </v:textbox>
+    </v:rect>
+    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+    </table>
+    <![endif]-->
+            <!--[if gte mso 9]>
+    </v:textbox>
+    </v:rect>
+    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+    </table>
+    <![endif]-->
+            <!--[if gte mso 9]>
+    </v:textbox>
+    </v:rect>
+    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+    </table>
+    <![endif]-->
+            <!--[if gte mso 9]>
+    </v:textbox>
+    </v:rect>
+    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+    </table>
+    <![endif]-->
+            <!--[if gte mso 9]>
+    </v:textbox>
+    </v:rect>
+    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+    </table>
+    <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; max-width:800px;" data-module="navigation-margin" data-thumb="http://www.stampready.net/dashboard/editor/user_uploads/zip_uploads/2017/08/12/FuKvH17t3MjYRGzXr0o2PgdL/Carol/thumbnails/navigation-margin.jpg">
+                <!--[if (gte mso 9)|(IE)]>
+        <table width="800" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">
+          <tr>
+            <td>
+              <![endif]-->
+                <tr>
+                    <td align="center" style="width:100%; height:100%; background-color:#ffffff;" bgcollor="#ffffff" data-bgcolor="navigation-margin-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <!-- margin -->
+                            <tr>
+                                <td align="center" height="20" width="1" style="font-size: 1px; line-height: 20px; height:20px;">
+                                    &nbsp; </td>
+                            </tr>
+                            <!-- margin -->
+                        </table>
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+              </tr>
+            </table>
+            <![endif]-->
+            </table>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; max-width:800px;" data-module="navigation-margin">
+                <!--[if (gte mso 9)|(IE)]>
+              <table width="800" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">
+                <tr>
+                  <td>
+                    <![endif]-->
+                <tr>
+                    <td align="center" style="width:100%; height:100%; background-color:#ffffff;" data-bgcolor="navigation-margin-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <!-- margin -->
+                            <tr>
+                                <td align="center" height="10" width="1" style="font-size: 1px; line-height: 10px; height:10px;">
+                                    &nbsp; </td>
+                            </tr>
+                            <!-- margin -->
+                        </table>
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>
+                      </table>
+                      <![endif]-->
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+                    </table>
+                    <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; max-width:800px;" data-module="navigation-4">
+                <!--[if (gte mso 9)|(IE)]>
+                        <table width="800" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">
+                          <tr>
+                            <td>
+                              <![endif]-->
+                <tr>
+                    <td align="center" style="width:100%; height:100%; background-color:#ffffff;" data-bgcolor="nav-4-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <!-- margin -->
+                            <tr>
+                                <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                    &nbsp; </td>
+                            </tr>
+                            <!-- margin -->
+                            <tr>
+                                <td align="center">
+                                    <table width="600" align="center" class="text container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                        <tr>
+                                            <!-- section -->
+                                            <th width="140" align="left" class="text container-wrap" valign="top" style="vertical-align: top;">
+                                                <table width="140" align="left" class="container" border="0" cellpadding="0" cellspacing="0" style="width:140px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="6" width="1" style="font-size: 1px; line-height: 6px; height:6px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="left">
+                                                            <table width="60" align="left" class="container" border="0" cellpadding="0" cellspacing="0" style="width:60px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                                <!-- icon -->
+                                                                <tr>
+                                                                    <td align="left">
+                                                                        <a href="http://">
+                                                                            <img src="https://biocomposites--c.na48.content.force.com/servlet/servlet.ImageServer?id=0150B000005PXpE&oid=00DU0000000Levb&lastMod=1514973678000" height="37" width="240" alt="#" style="display:block; vertical-align:top;"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- icon -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="18" width="1" style="font-size: 1px; line-height: 18px; height:18px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                </table>
+                                            </th>
+                                            <!-- section -->
+                                            <!-- section -->
+                                            <th width="320" align="right" class="container-wrap" valign="top" style="vertical-align: top;">
+                                                <table width="320" align="right" class="container" border="0" cellpadding="0" cellspacing="0" style="width:320px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="1" width="1" style="font-size: 1px; line-height: 1px; height:1px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="right">
+                                                            <table width="auto" align="right" class="container" border="0" cellpadding="0" cellspacing="0" style="width:autopx; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <table width="auto" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                                            <tr>
+                                                                                <!-- margin -->
+                                                                                <th align="center" height="1" width="4" style="font-size: 1px; line-height: 1px; width:4px;">
+                                                                                </th>
+                                                                                <!-- margin -->
+                                                                                <!-- margin -->
+                                                                                <th align="center" height="1" width="4" style="font-size: 1px; line-height: 1px; width:4px;">
+                                                                                </th>
+                                                                                <!-- margin -->
+                                                                                <!-- margin -->
+                                                                                <th align="center" height="1" width="4" style="font-size: 1px; line-height: 1px; width:4px;">
+                                                                                </th>
+                                                                                <!-- margin -->
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="18" width="1" style="font-size: 1px; line-height: 18px; height:18px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                </table>
+                                            </th>
+                                            <!-- section -->
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>
+                                        </table>
+                                        <![endif]-->
+            </table>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; max-width:800px;" data-module="title-variant-8">
+                <!--[if (gte mso 9)|(IE)]>
+                                          <table width="800" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">
+                                            <tr>
+                                              <td>
+                                                <![endif]-->
+                <tr>
+                    <td align="center" style="width:100%; height:100%; background-color:#ffffff;" data-bgcolor="var-8-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <!-- margin -->
+                            <tr>
+                                <td align="left" height="15" width="1" style="font-size: 1px; line-height: 15px; height:15px;">
+                                    &nbsp; </td>
+                            </tr>
+                            <!-- margin -->
+                            <tr>
+                                <td align="left">
+                                    <table width="300" align="center" class="container" cellpadding="0" cellspacing="0" style="width:300px;  mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                        <tr>
+                                            <td align="left">
+                                                <table width="300" align="center" class="text" border="0" cellpadding="0" cellspacing="0" style="width:300px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; padding-left: 20px;">
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="4" width="1" style="font-size: 1px; line-height: 4px; height:4px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <!-- title -->
+                                                    <tr>
+                                                        <td style="text-align:left; font-family: 'Montserrat', Arial, sans-serif; font-size:20px; line-height: 25px; text-decoration: none; color: #000000; font-weight:600; text-transform: uppercase; letter-spacing: 0.05em" data-size="var-8-title-size" data-min="9" data-max="40" data-color="var-8-title-color">
+                                                            
+                                                                delivery order form 
+                                                        </td>
+                                                    </tr>
+                                                    <!-- title -->
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- margin -->
+                            <tr>
+                                <td align="center" height="15" width="1" style="font-size: 1px; line-height: 15px; height:15px;">
+                                    &nbsp; </td>
+                            </tr>
+                            <!-- margin -->
+                        </table>
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>
+                                                        </table>
+                                                        <![endif]-->
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+                                                      </table>
+                                                      <![endif]-->
+            <table class="contacts-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" data-module="contacts-2" style="border: 0px; border-collapse: collapse; margin: 0px auto; max-width: 670px; position: relative; opacity: 1; z-index: 0; top: 0px; left: 0px;">
+                <!--[if (gte mso 9)|(IE)]>
+                                                          <table width="670" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">
+                                                            <tr>
+                                                              <td>
+                                                                <![endif]-->
+                <tr>
+                    <td align="center" class="contacts-2-bg" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" data-bgcolor="contacts-2-bg">
+                        <!-- //////////////////// Container //////////////////// -->
+                        <table class="text container-wrap" align="center" width="600" border="0" cellpadding="0" cellspacing="0" style="width: 600px; max-width: 600px; vertical-align: top;">
+                            <tr>
+                                <td align="center">
+                                    <!--[if (gte mso 9)|(IE)]>
+                                                                            <table border="0" width="600" cellpadding="0" cellspacing="0" style="width: 600px">
+                                                                              <tr>
+                                                                                <td width="280" style="width: 280px;" valign="top">
+                                                                                  <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                <multiline>
+                                                    HOSPITAL NAME </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                <multiline>
+                                                    {!relatedTo.Hospital_for_DOF_email__c} </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>
+                                                                                                </td>
+                                                                                                <td width="40" style="width: 40px;" valign="top">
+                                                                                                  <![endif]-->
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <table width="40" align="left" cellpadding="0" cellspacing="0" border="0" style="width: 40px; max-width: 40px;">
+                                        <tr>
+                                            <td align="center" width="40" height="1" valign="top" style="font-size:1px; line-height:1px; height: 1px; width: 40px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>
+                                                                                                    </td>
+                                                                                                    <td width="280" style="width: 280px;" valign="top">
+                                                                                                      <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td class="disable" align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                purchase order number</td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                {!relatedTo.PO_Number__c} </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>
+                                                                                                                </td>
+                                                                                                              </tr>
+                                                                                                            </table>
+                                                                                                            <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- //////////////////// Container //////////////////// -->
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>
+                                                                                                  </table>
+                                                                                                  <![endif]-->
+            </table>
+            <table class="contacts-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" data-module="contacts-2" style="border: 0px; border-collapse: collapse; margin: 0px auto; max-width: 670px; position: relative; opacity: 1; z-index: 0; top: 0px; left: 0px;">
+                <!--[if (gte mso 9)|(IE)]>
+                                                                                                    <table width="670" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">
+                                                                                                      <tr>
+                                                                                                        <td>
+                                                                                                          <![endif]-->
+                <tr>
+                    <td align="center" class="contacts-2-bg" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" data-bgcolor="contacts-2-bg">
+                        <!-- //////////////////// Container //////////////////// -->
+                        <table class="text container-wrap" align="center" width="600" border="0" cellpadding="0" cellspacing="0" style="width: 600px; max-width: 600px; vertical-align: top;">
+                            <tr>
+                                <td align="center">
+                                    <!--[if (gte mso 9)|(IE)]>
+                                        <table border="0" width="600" cellpadding="0" cellspacing="0" style="width: 600px">
+                                        <tr>
+                                        <td width="280" style="width: 280px;" valign="top">
+                                        <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                <multiline>
+                                                    SURGEON NAME </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                <multiline>
+                                                    {!relatedTo.Surgeon_For_Email__c}</multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>
+                                     </td>
+                                    <td width="40" style="width: 40px;" valign="top">
+                                                                <![endif]-->
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <table width="40" align="left" cellpadding="0" cellspacing="0" border="0" style="width: 40px; max-width: 40px;">
+                                        <tr>
+                                            <td align="center" width="40" height="1" valign="top" style="font-size:1px; line-height:1px; height: 1px; width: 40px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                  
+                                    </td>                                    
+                                    <td width="280" style="width: 280px;" valign="top">                                                                                                                                            <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td class="disable" align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                TYPE OF PROCEDURE </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                {!relatedTo.Type_of_Procedure__c} </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                </td>                                                                                                                      </tr>                                                                                                         </table>                                                                                                     <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- //////////////////// Container //////////////////// -->
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>
+                                                                                                                                            </table>
+                                                                                                                                            <![endif]-->
+            </table>
+            <table class="contacts-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" data-module="contacts-2" style="border: 0px; border-collapse: collapse; margin: 0px auto; max-width: 670px; position: relative; opacity: 1; z-index: 0; top: 0px; left: 0px;">
+                <!--[if (gte mso 9)|(IE)]>
+            <table width="670" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">
+                <tr>
+                                                                                                                                                  <td>
+                                                                                                                                                    <![endif]-->
+                <tr>
+                    <td align="center" class="contacts-2-bg" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" data-bgcolor="contacts-2-bg">
+                        <!-- //////////////////// Container //////////////////// -->
+                        <table class="text container-wrap" align="center" width="600" border="0" cellpadding="0" cellspacing="0" style="width: 600px; max-width: 600px; vertical-align: top;">
+                            <tr>
+                                <td align="center">
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                       <table border="0" width="600" cellpadding="0" cellspacing="0" style="width: 600px">                                                  <tr>                                                                                                                           <td width="280" style="width: 280px;" valign="top">                                                                                    <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                <multiline>
+                                                    PROCEDURE DATE </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                <multiline>
+                                                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                           <apex:param value="{!relatedTo.Procedure_Date__c}" />
+                        </apex:outputText> 
+                                                     </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                     </td>                                                                                                                            <td width="40" style="width: 40px;" valign="top">                                                                                     <![endif]-->
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <table width="40" align="left" cellpadding="0" cellspacing="0" border="0" style="width: 40px; max-width: 40px;">
+                                        <tr>
+                                            <td align="center" width="40" height="1" valign="top" style="font-size:1px; line-height:1px; height: 1px; width: 40px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                    </td>                                                                                                                        <td width="280" style="width: 280px;" valign="top">                                                                                          <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td class="disable" align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                DATE ENTERED </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                           <apex:param value="{!relatedTo.Date_Entered__c}" />
+                        </apex:outputText> </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                     </td>                                                                                                                         </tr>                                                                                                                         </table>                                                                                                                        <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- //////////////////// Container //////////////////// -->
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                          </table>                                                                                                                                                                                 <![endif]-->
+            </table>
+            <table class="contacts-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" data-module="contacts-2" style="border: 0px; border-collapse: collapse; margin: 0px auto; max-width: 670px; position: relative; opacity: 1; z-index: 0; top: 0px; left: 0px;">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                    <table width="670" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">                                                                                                                                                                                      <tr>                                                                                                                                                                                        <td>                                                                                                                                                                                          <![endif]-->
+                <tr>
+                    <td align="center" class="contacts-2-bg" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" data-bgcolor="contacts-2-bg">
+                        <!-- //////////////////// Container //////////////////// -->
+                        <table class="text container-wrap" align="center" width="600" border="0" cellpadding="0" cellspacing="0" style="width: 600px; max-width: 600px; vertical-align: top;">
+                            <tr>
+                                <td align="center">
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                          <table border="0" width="600" cellpadding="0" cellspacing="0" style="width: 600px">                                                                                                                                                                                                       <tr>                                                                                                                                                 <td width="280" style="width: 280px;" valign="top">                                                                                                                                                                                                            <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                <multiline>
+                                                    HOSPITAL REPRESENTATIVE </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                {!relatedTo.Hospital_Rep__c} </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                       </td>                                                                                                                                           <td width="40" style="width: 40px;" valign="top">                                                                                                                                                                                                                            <![endif]-->
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <table width="40" align="left" cellpadding="0" cellspacing="0" border="0" style="width: 40px; max-width: 40px;">
+                                        <tr>
+                                            <td align="center" width="40" height="1" valign="top" style="font-size:1px; line-height:1px; height: 1px; width: 40px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                      </td>                                                                                                                                                                                                                              <td width="280" style="width: 280px;" valign="top">                                                                                                                                                                                                                                <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td class="disable" align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                HOSPITAL NOTIFICATION </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                {!relatedTo.Send_Confirmation__c} </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                          </td>                                                                                                                            </tr>                                                                                                                                                                                                                                  </table>                                                                                                                                                                                                                                      <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- //////////////////// Container //////////////////// -->
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                    </table>                                                                                                                                                                                                                            <![endif]-->
+            </table>
+            <table class="contacts-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" data-module="contacts-2" style="border: 0px; border-collapse: collapse; margin: 0px auto; max-width: 670px; position: relative; opacity: 1; z-index: 0; top: 0px; left: 0px;">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                          <table width="670" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">                                                                                                                                                 <tr>                                                                                                                                                                                                                                  <td>                                                                                                                                                                                                                                    <![endif]-->
+                <tr>
+                    <td align="center" class="contacts-2-bg" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" data-bgcolor="contacts-2-bg">
+                        <!-- //////////////////// Container //////////////////// -->
+                        <table class="text container-wrap" align="center" width="600" border="0" cellpadding="0" cellspacing="0" style="width: 600px; max-width: 600px; vertical-align: top;">
+                            <tr>
+                                <td align="center">
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                <table border="0" width="600" cellpadding="0" cellspacing="0" style="width: 600px">                                                                                                                                                                                                                                                  <tr>                                                                                                                                                                                                     <td width="280" style="width: 280px;" valign="top">                                                                                                                                                                                                                                                      <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                <multiline>
+                                                    COMMENTS </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                <multiline>
+                                                    {!relatedTo.Procedure_Comments__c} </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                     </td>                                                                                                                                                                                                                                                                    <td width="40" style="width: 40px;" valign="top">                                                                                                                                                                                                                                                                      <![endif]-->
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <table width="40" align="left" cellpadding="0" cellspacing="0" border="0" style="width: 40px; max-width: 40px;">
+                                        <tr>
+                                            <td align="center" width="40" height="1" valign="top" style="font-size:1px; line-height:1px; height: 1px; width: 40px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                        </td>                                                                                                                                                                                                                                                                        <td width="280" style="width: 280px;" valign="top">                                                                                                                                                                                                                <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td class="disable" align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                STOCK INSTRUCTIONS </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                {!relatedTo.Stock_Instructions__c}&nbsp; {!relatedTo.Replace_Stock_Details__c} </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                 </td>                                                                                                                                                                                                                                                       </tr>                                                                                                                                                                                                                                                      </table>                                                                                                                                                                                                                                                  <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- //////////////////// Container //////////////////// -->
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                  </table>                                                                                                                                                                                                                                                                      <![endif]-->
+            </table>
+            <table class="contacts-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" data-module="contacts-2" style="border: 0px; border-collapse: collapse; margin: 0px auto; max-width: 670px; position: relative; opacity: 1; z-index: 0; top: 0px; left: 0px;">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                        <table width="670" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">                                                                                                                                                                                                                                                                          <tr>                                                                                                                                                                                                                                                                            <td>                                                                                                                                                                                                                                                                              <![endif]-->
+                <tr>
+                    <td align="center" class="contacts-2-bg" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" data-bgcolor="contacts-2-bg">
+                        <!-- //////////////////// Container //////////////////// -->
+                        <table class="text container-wrap" align="center" width="600" border="0" cellpadding="0" cellspacing="0" style="width: 600px; max-width: 600px; vertical-align: top;">
+                            <tr>
+                                <td align="center">
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                          <table border="0" width="600" cellpadding="0" cellspacing="0" style="width: 600px">                                                                                                                                                                                                                                                                                            <tr>                                                                                                                                                                                                                                                                                              <td width="280" style="width: 280px;" valign="top">                                                                                                                                                                                                                                                                                                <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                <multiline>
+                                                    SYNC DATE </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                <multiline>
+                                                   <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                           <apex:param value="{!relatedTo.CreatedDate}" />
+                       </apex:outputText></multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                              </td>                                                                                                                                                                                                                                                                                                              <td width="40" style="width: 40px;" valign="top">                                                                                                                                                                                                                                                                                                                <![endif]-->
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <table width="40" align="left" cellpadding="0" cellspacing="0" border="0" style="width: 40px; max-width: 40px;">
+                                        <tr>
+                                            <td align="center" width="40" height="1" valign="top" style="font-size:1px; line-height:1px; height: 1px; width: 40px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Spaser //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                  </td>                                                                                                                                                                                                                                                                                                                  <td width="280" style="width: 280px;" valign="top">                                                                                                                                                                                                                                                                                                                    <![endif]-->
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <table class="container-inner" align="left" width="280" border="0" cellpadding="0" cellspacing="0" style="width: 280px; max-width: 280px; vertical-align: top;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td class="disable" align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- title -->
+                                        <tr>
+                                            <td class="contacts-2-title  text-uppercase" align="left" width="100%" data-size="contacts-2-title-size" data-min="9" data-max="40" data-color="contacts-2-title-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; line-height: 5px; text-align: left; text-transform: uppercase; text-decoration: none !important;">
+                                                DOF NUMBER </td>
+                                        </tr>
+                                        <!-- title -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td class="contacts-2-text" align="left" data-size="contacts-2-text-size" data-min="9" data-max="40" data-color="contacts-2-text-color" style="color: rgb(0, 0, 0); font-family: 'Nunito Sans', 'Arial', sans-serif; font-size: 14px; font-weight: 400; line-height: 23.8px; text-align: left; text-decoration: none !important;">
+                                                {!relatedTo.Name} </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                    </table>
+                                    <!-- //////////////////// Column //////////////////// -->
+                                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                              </td>                                                                                                                                                                                                                                                                                                                            </tr>                                                                                                                                                                                                                                                                                                                          </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- //////////////////// Container //////////////////// -->
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                <![endif]-->
+            </table>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 0px auto; border-collapse: collapse; border: 0px; max-width: 800px; position: relative; opacity: 1; z-index: 0; top: 0px; left: 0px;" data-module="price-5">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                  <table width="800" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">                                                                                                                                                                                                                                                                                                                    <tr>                                                                                                                                                                                                                                                                                                                      <td>                                                                                                                                                                                                                                                                                                                        <![endif]-->
+                <tr>
+                    <td align="center" style="width:100%; height:100%; background-color:#ffffff;" data-bgcolor="price-5-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <!-- margin -->
+                            <tr>
+                                <td align="center" height="1" width="1" style="font-size: 1px; line-height: 1px; height:1px;">
+                                    &nbsp; </td>
+                            </tr>
+                            <!-- margin -->
+                            <tr>
+                                <td align="center">
+                                    <table width="600" align="center" class="text" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                        <tr>
+                                            <!-- section -->
+                                            <th width="600" align="center" class="container-wrap" valign="top" style="vertical-align: top;">
+                                                <table width="600" align="left" class="container" border="0" cellpadding="0" cellspacing="0" style="width:295px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0; background-color: #f8f8f8;" data-bgcolor="price-5-gray-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; background-color:#545454 " data-bgcolor="price-5-dark-gray">
+                                                                <!-- margin -->
+                                                                <tr>
+                                                                    <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                                        &nbsp; </td>
+                                                                </tr>
+                                                                <!-- margin -->
+                                                                <!-- plan -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, Arial, sans-serif; font-size: 13px; line-height: 22.099999999999998px; text-decoration: none; color: rgb(255, 255, 255); font-weight: 400; text-transform: uppercase; letter-spacing: 0.01em;" data-size="price-5-plan-size" data-min="9" data-max="40" data-color="price-5-plan-color">
+                                                                        <multiline>
+                                                                            PRODUCTS </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- plan -->
+                                                                <!-- margin -->
+                                                                <tr>
+                                                                    <td align="center" height="2" width="1" style="font-size: 1px; line-height: 2px; height:2px;">
+                                                                        &nbsp; </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td align="center" height="2" width="1" style="font-size: 1px; line-height: 2px; height:2px;">
+                                                                        &nbsp; </td>
+                                                                </tr>
+                                                                <!-- margin -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="600" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- margin -->
+                                                                <!-- margin -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                </table>
+                                            </th>
+                                            <!-- section -->
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                  </table>                                                                                                                                                                                                                                                                                                                                  <![endif]-->
+            </table>
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                </table>                                                                                                                                                                                                                                                                                                                                <![endif]-->
+            <!--[if gte mso 9]>                                                                                                                                                                                                                                                                                                                                </v:textbox>                                                                                                                                                                                                                                                                                                                              </v:rect>                                                                                                                                                                                                                                                                                                                              <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                              </table>                                                                                                                                                                                                                                                                                                                              <![endif]-->
+            <!--[if gte mso 9]>                                                                                                                                                                                                                                                                                                                              </v:textbox>                                                                                                                                                                                                                                                                                                                            </v:rect>                                                                                                                                                                                                                                                                                                                            <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                            </table>                                                                                                                                                                                                                                                                                                                            <![endif]-->
+            <!--[if gte mso 9]>                                                                                                                                                                                                                                                                                                                            </v:textbox>                                                                                                                                                                                                                                                                                                                          </v:rect>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                          </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                          </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                          </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                          </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                          </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                          </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                         </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                          </table>                                                                                                                                                                                                                                                                                                                          <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 0px auto; border-collapse: collapse; border: 0px; max-width: 800px; position: relative; opacity: 1; z-index: 0; top: 0px; left: 0px;" data-module="price-2">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                            </table>                                                                                                                                                                                                                                                                                                                            <table width="800" align="center">                                                                                                                                                                                                                                                                                           <![endif]-->
+                <tr>
+                    <td align="center" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" data-bgcolor="price-2-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <tr>
+                                <td height="1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <table width="600" align="center" class="text" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                        <tr>
+                                            <!-- sec -->
+                                            <th width="140" align="left" class="container-wrap" valign="top" style="vertical-align: top;">
+                                                <table width="170" align="left" class="container" border="0" cellpadding="0" cellspacing="0" style="width: 135px; border-collapse: collapse; border: 0px; background-color: rgb(248, 248, 248);" data-bgcolor="price-2-white-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="140" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                                <!-- number -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em;" data-size="price-2-number-size" data-min="9" data-max="40" data-color="price-2-number-color">
+                                                                        <multiline>
+                                                                            PRODUCT </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- number -->
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- mrgn -->
+                                                    <tr>
+                                                        <td height="10">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- mrgn -->
+                                                </table>
+                                            </th>
+                                            <!-- sec -->
+                                            <!-- sec -->
+                                            <th width="140" align="center" class="container-wrap padding-top-20" valign="top" style="vertical-align: top;">
+                                                <table width="140" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width: 140px; border-collapse: collapse; border: 0px; background-color: rgb(248, 248, 248);" data-bgcolor="price-2-white-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="140" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                                <!-- number -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em;" data-size="price-2-number-size" data-min="9" data-max="40" data-color="price-2-number-color">
+                                                                        <multiline>
+                                                                            LOT NUMBER </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- number -->
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- mrgn -->
+                                                    <tr>
+                                                        <td height="10">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- mrgn -->
+                                                </table>
+                                            </th>
+                                            <!-- sec -->
+                                            <!-- sec -->
+                                            <th width="140" align="center" class="container-wrap padding-top-20" valign="top" style="vertical-align: top;">
+                                                <table width="140" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width: 135px; border-collapse: collapse; border: 0px; background-color: rgb(248, 248, 248);" data-bgcolor="price-2-white-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="140" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                                <!-- number -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em;" data-size="price-2-number-size" data-min="9" data-max="40" data-color="price-2-number-color">
+                                                                        <multiline>
+                                                                            EXPIRY DATE </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- mrgn -->
+                                                    <tr>
+                                                        <td height="10">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- mrgn -->
+                                                </table>
+                                            </th>
+                                            <!-- sec -->
+                                            <!-- sec -->
+                                            <th width="140" align="right" class="container-wrap padding-top-20" valign="top" style="vertical-align: top;">
+                                                <table width="140" align="right" class="container" border="0" cellpadding="0" cellspacing="0" style="width: 135px; border-collapse: collapse; border: 0px; background-color: rgb(248, 248, 248);" data-bgcolor="price-2-white-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="140" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                                <!-- number -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em;" data-size="price-2-number-size" data-min="9" data-max="40" data-color="price-2-number-color">
+                                                                        <multiline>
+                                                                            PRICE </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- mrgn -->
+                                                    <tr>
+                                                        <td height="10">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- mrgn -->
+                                                </table>
+                                            </th>
+                                            <!-- sec -->
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <apex:repeat id="loopId" var="item" value="{!relatedTo.DOF_Items__r}">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; max-width:800px;" data-module="price-2">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                      </table>                                                                                                                                                                                                                                                                                         <table width="800" align="center">                                                                                                                                                                                                                                                                                                                      <![endif]-->
+                <tr>
+                    <td align="center" style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);" data-bgcolor="price-2-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <tr>
+                                <td height="1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <table width="600" align="center" class="text" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                        <tr>
+                                            <!-- sec -->
+                                            <th width="140" align="left" class="container-wrap" valign="top" style="vertical-align: top;">
+                                                <table width="140" align="left" class="container" border="0" cellpadding="0" cellspacing="0" style="width: 135px; border-collapse: collapse; border: 0px; background-color: rgb(248, 248, 248);" data-bgcolor="price-2-white-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="140" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                                <!-- number -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 400; letter-spacing: 0.025em;" data-size="price-2-number-size" data-min="9" data-max="40" data-color="price-2-number-color">
+                                                                        <multiline>
+                                                                            <span style="font-weight: normal;">{!item.Product_Name__c}</span>
+                                                                        </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- number -->
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- mrgn -->
+                                                    <tr>
+                                                        <td height="10">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- mrgn -->
+                                                </table>
+                                            </th>
+                                            <!-- sec -->
+                                            <!-- sec -->
+                                            <th width="140" align="center" class="container-wrap padding-top-20" valign="top" style="vertical-align: top;">
+                                                <table width="140" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width: 140px; border-collapse: collapse; border: 0px; background-color: rgb(248, 248, 248);" data-bgcolor="price-2-white-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="140" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                                <!-- number -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em;" data-size="price-2-number-size" data-min="9" data-max="40" data-color="price-2-number-color">
+                                                                        <multiline>
+                                                                            <span style="font-weight: normal;">{!item.Lot_Number__c}</span>
+                                                                        </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- number -->
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- mrgn -->
+                                                    <tr>
+                                                        <td height="10">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- mrgn -->
+                                                </table>
+                                            </th>
+                                            <!-- sec -->
+                                            <!-- sec -->
+                                            <th width="140" align="center" class="container-wrap padding-top-20" valign="top" style="vertical-align: top;">
+                                                <table width="140" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width: 135px; border-collapse: collapse; border: 0px; background-color: rgb(248, 248, 248);" data-bgcolor="price-2-white-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="140" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                                <!-- number -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; letter-spacing: 0.025em;" data-size="price-2-number-size" data-min="9" data-max="40" data-color="price-2-number-color">
+                                                                        <multiline>
+                                                                            <span style="font-weight: normal;">
+                                                                                <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                                                                                       <apex:param value="{!item.Expiry_Date__c}" />
+                                                                                 </apex:outputText>                                                   
+                                                                            </span>
+                                                                        </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- mrgn -->
+                                                    <tr>
+                                                        <td height="10">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- mrgn -->
+                                                </table>
+                                            </th>
+                                            <!-- sec -->
+                                            <!-- sec -->
+                                            <th width="140" align="right" class="container-wrap padding-top-20" valign="top" style="vertical-align: top;">
+                                                <table width="140" align="right" class="container" border="0" cellpadding="0" cellspacing="0" style="width: 135px; border-collapse: collapse; border: 0px; background-color: rgb(248, 248, 248);" data-bgcolor="price-2-white-bg">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <table width="140" align="center" class="text" cellpadding="0" cellspacing="0" style=" mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0;">
+                                                                <!-- mrgn -->
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                                <!-- number -->
+                                                                <tr>
+                                                                    <td style="text-align: center; font-family: Montserrat, 'Arial', sans-serif; font-size: 11px; line-height: 18.7px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em;" data-size="price-2-number-size" data-min="9" data-max="40" data-color="price-2-number-color">
+                                                                        <multiline>
+                                                                            <span style="font-weight: normal;">{!item.price_for_order_form__c}</span>
+                                                                        </multiline>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="0">
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- mrgn -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table width="100%" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:100%; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- mrgn -->
+                                                    <tr>
+                                                        <td height="10">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- mrgn -->
+                                                </table>
+                                            </th>
+                                            <!-- sec -->
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            </apex:repeat>
+
+        <!------rupa
+            rupa-->
+
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; max-width:800px;" data-module="navigation-margin" data-thumb="http://www.stampready.net/dashboard/editor/user_uploads/zip_uploads/2017/08/12/FuKvH17t3MjYRGzXr0o2PgdL/Carol/thumbnails/navigation-margin.jpg">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                              <table width="800" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">                                                                                                                                                                                                                                                                                                                                                                                 <tr>                                                                                                                                                                                                                                                                                                         <td>                                                                                                                                                                                                                                                                                                                                                                                      <![endif]-->
+                <tr>
+                    <td align="center" style="width:100%; height:100%; background-color:#ffffff;" bgcollor="#ffffff" data-bgcolor="navigation-margin-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <!-- margin -->
+                            <tr>
+                                <td align="center" height="20" width="1" style="font-size: 1px; line-height: 20px; height:20px;">
+                                    &nbsp; </td>
+                            </tr>
+                            <!-- margin -->
+                        </table>
+                    </td>
+                </tr>
+                    <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                           </td>                                                                                                                                                                                                                                                                                                                                                                                          </tr>                                                                                                                                                                                                                                                                                                                                                                                        </table>                                                                                                                                                                                                                                                                                                                                                                                        <![endif]-->
+            </table>
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                                                                      </table>                                                                                                                                                                                                                                                                                                                                                                                      <![endif]-->
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                                                                      </table>                                                                                                                                                                                                                                                                                                                                                                                      <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; max-width:800px;" data-module="title-variant-6">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                       <table width="800" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">                                                                                                                                                                                                                                                                                                                                                                                            <tr>                                                                                                                                                                                                                                                                                                                                                                  <td>                                                                                                                                                                                                                                                                                                                                                                                                <![endif]-->
+                <tr>
+                    <td align="center" style="width:100%; height:100%; background-color:#ffffff;" data-bgcolor="var-6-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <tr>
+                                <td align="center">
+                                    <table width="600" align="center" class="text" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                        <!-- text -->
+                                        <tr>
+                                            <td style="text-align: left; font-family: 'Arial', sans-serif; font-size: 14px; line-height: 21px; text-decoration: none; color: rgb(68, 68, 68); font-weight: 400;" data-size="var-6-text-size" data-min="9" data-max="40" data-color="var-6-text-color">
+                                                <multiline>
+                                                    This is an order confirmation not an invoice.&nbsp;An invoice will be issued shortly and pricing will be confirmed to reflect any pricing agreement that is in place. </multiline>
+                                            </td>
+                                        </tr>
+                                        <!-- text -->
+                                        <!-- margin -->
+                                        <tr>
+                                            <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                &nbsp; </td>
+                                        </tr>
+                                        <!-- margin -->
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                                                   </table>                                                                                                                                                                                                                                                                                                                                                                                                      <![endif]-->
+            </table>
+            <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                                  </table>                                                                                                                                                                                                                                                                                                                                                                                                    <![endif]-->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; max-width:800px;" data-module="footer">
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                                                                                        <table width="800" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px; text-decoration:none !important; ">                                                                                                                                                                                                                                                                                                                                                                                                          <tr>                                                                                                                                                                                                                                                                                                                                                                                                            <td>                                                                                                                                                                                                                                                                                                                                                                                                              <![endif]-->
+                <tr>
+                    <td align="center" style="width:100%; height:100%; background-color:#ffffff;" data-bgcolor="footer-bg">
+                        <table width="600" align="center" class="container" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                            <!-- margin -->
+                            <tr>
+                                <td align="center" height="18" width="1" style="font-size: 1px; line-height: 18px; height:18px;">
+                                    &nbsp; </td>
+                            </tr>
+                            <!-- margin -->
+                            <tr>
+                                <td align="center">
+                                    <table width="600" align="center" class="text" border="0" cellpadding="0" cellspacing="0" style="width:600px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                        <tr>
+                                            <!-- section -->
+                                            <th width="280" align="left" class="container-wrap" valign="top" style="vertical-align: top;">
+                                                <table width="280" align="left" class="container" border="0" cellpadding="0" cellspacing="0" style="width:280px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- title -->
+                                                    <tr>
+                                                        <td style="vertical-align: top; text-align: left; font-family: Montserrat, 'Arial', sans-serif; font-size: 12px; line-height: 20.4px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em;" data-size="footer-1-title-size" data-min="9" data-max="40" data-color="footer-1-title-color">
+                                                            <multiline>
+                                                                Distributor Representative </multiline>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- title -->
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <!-- text -->
+                                                    <tr>
+                                                        <td style="vertical-align:top; text-align:left; font-family: 'Arial', sans-serif; font-size:13px; line-height: 20px; text-decoration: none; color: #444444; font-weight: 400;" data-size="footer-1-text-size" data-min="9" data-max="40" data-color="footer-1-text-color">
+                                                            <multiline>
+                                                                <apex:outputField value="{!relatedTo.Owner.Name}"/>
+                                                                <br/> <apex:outputField value="{!relatedTo.job_title_for_email__c}"/>
+                                                                <br/> <apex:outputField value="{!relatedTo.Distributor_Name__c}"/>
+                                                                <br/> <apex:outputField value="{!relatedTo.Email_for_address_block__c}"/>
+                                                                <br/> <apex:outputField value="{!relatedTo.Owner_Phone__c}"/> </multiline>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- text -->
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="22" width="1" style="font-size: 1px; line-height: 22px; height:22px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="12" width="1" style="font-size: 1px; line-height: 12px; height:12px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <!-- unsub -->
+                                                    <tr>
+                                                        <td style="vertical-align:top; text-align:left; font-family: 'Arial', sans-serif; font-size:13px; line-height: 13px; text-decoration: none; color: #444444; font-weight: 400;">
+                                                        </td>
+                                                    </tr>
+                                                    <!-- unsub -->
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="44" width="1" style="font-size: 1px; line-height: 44px; height:44px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                </table>
+                                            </th>
+                                            <!-- section -->
+                                            <!-- section -->
+                                            <th width="280" align="right" class="container-wrap padding-top-20" valign="top" style="vertical-align: top;">
+                                                <table width="280" align="right" class="container" border="0" cellpadding="0" cellspacing="0" style="width:280px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border: 0px;">
+                                                    <!-- title -->
+                                                    <tr>
+                                                        <td style="vertical-align: top; text-align: left; font-family: Montserrat, 'Arial', sans-serif; font-size: 12px; line-height: 20.4px; text-decoration: none; color: rgb(0, 0, 0); font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em;" data-size="footer-1-title-size" data-min="9" data-max="40" data-color="footer-1-title-color">
+                                                            <multiline>
+                                                                <apex:outputField value="{!relatedTo.Biocomposites_Company_Name_For_Email_Foo__c}" /> </multiline>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- title -->
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="5" width="1" style="font-size: 1px; line-height: 5px; height:5px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <!-- text-2 -->
+                                                    <tr>
+                                                        <td style="vertical-align:top; text-align:left; font-family: 'Arial', sans-serif; font-size:13px; line-height: 20px; text-decoration: none; color: #444444; font-weight: 400;" data-size="footer-1-text-2-size" data-min="9" data-max="40" data-color="footer-1-text-2-color">
+                                                            <multiline>
+                                                                <apex:outputField value="{!relatedTo.Biocomposites_Address_For_Email_Footer__c}" /> </multiline>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- text-2 -->
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="27" width="1" style="font-size: 1px; line-height: 27px; height:27px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                    <!-- margin -->
+                                                    <tr>
+                                                        <td align="center" height="38" width="1" style="font-size: 1px; line-height: 38px; height:38px;">
+                                                            &nbsp; </td>
+                                                    </tr>
+                                                    <!-- margin -->
+                                                </table>
+                                            </th>
+                                            <!-- section -->
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!--[if (gte mso 9)|(IE)]>                                                                                                                                                                                                                                                                                                                                                                                                                                      </table>                                                                                                                                                                                                                                                                                                                                                                                                                                      <![endif]-->
+            </table>
+        </body>
+
+
+
+    </html>
+    </messaging:htmlEmailBody>
+    </messaging:emailTemplate>

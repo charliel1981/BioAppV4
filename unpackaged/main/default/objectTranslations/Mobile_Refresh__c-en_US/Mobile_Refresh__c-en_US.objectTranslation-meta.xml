@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Mobile Refresh</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Mobile Refresh</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Lot Numbers</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Menu Item</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Org Type</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Product</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Profile Menu Item</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Record Type Reference</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Restriction SOQL</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Restriction SOQL --></label>
+            <section>Restriction SOQL</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sub Menu Item</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Lot Numbers --></label>
+        <name>Lot_Numbers</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to create Menu Items --></description>
+        <label><!-- Menu Item --></label>
+        <name>Menu_Item</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Org Type --></label>
+        <name>Org_Type</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to create Products --></description>
+        <label><!-- Product --></label>
+        <name>Product</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to create Profile Menu Items --></description>
+        <label><!-- Profile Menu Item --></label>
+        <name>Profile_Menu_Item</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Record Type Reference --></label>
+        <name>Record_Type_Reference</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Restriction SOQL --></label>
+        <name>Restriction_SOQL</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to create Sub Menu Items --></description>
+        <label><!-- Sub Menu Item --></label>
+        <name>Sub_Menu_Item</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

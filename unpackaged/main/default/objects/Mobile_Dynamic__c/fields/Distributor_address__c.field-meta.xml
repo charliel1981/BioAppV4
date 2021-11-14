@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distributor_address__c</fullName>
+    <description>IF( ISBLANK(Owner:User.Contact.Account.Customer_Address_Street__c), NULL, Owner:User.Contact.Account.Customer_Address_Street__c&amp;&quot;, &quot;) 
+&amp;
+IF( ISBLANK(Owner:User.Contact.Account.Customer_Address_City__c), NULL, Owner:User.Contact.Account.Customer_Address_City__c &amp;&quot;, &quot;) 
+&amp;
+IF( TEXT(Owner:User.Contact.Account.Customer_Address_County__c)=&quot;&quot;, NULL, TEXT(Owner:User.Contact.Account.Customer_Address_County__c) &amp;&quot;, &quot;) 
+&amp;
+IF( ISBLANK(Owner:User.Contact.Account.Customer_Address_Street__c), NULL, Owner:User.Contact.Account.Customer_Address_Postcode__c &amp;&quot;, &quot;) 
+&amp;
+IF( TEXT(Owner:User.Contact.Account.Customer_Address_Country__c)=&quot;&quot;, NULL, TEXT(Owner:User.Contact.Account.Customer_Address_Country__c))</description>
+    <externalId>false</externalId>
+    <formula>Owner:User.Street &amp;BR()&amp;
+ Owner:User.City &amp;BR()&amp;
+ Owner:User.State &amp;BR()&amp;
+ Owner:User.PostalCode &amp;BR()&amp;
+ Owner:User.Country</formula>
+    <label>Distributor address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

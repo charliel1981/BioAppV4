@@ -1,0 +1,23 @@
+<table>
+<tr><td style="height:10px;"><div style="padding-top:4px;padding-bottom:3px;">Dear  {!Contact.FirstName},</br></br></div></td></tr>
+
+<tr><td><br><span style="font-family:Arial;font-size:18px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:#31B404;">
+Find out by watching our new testimonial video!<br><br></div></span></td></tr>
+
+
+<tr><td >Seven surgeons were interviewed at the 2016 AAOS meeting to provide feedback on their experience with STIMULAN. This group of surgeons also shared their thoughts on drainage, the importance of closure, and the economic benefit that  STIMULAN provides. Their feedback has been condensed into an impactful 3 minute video. <br><br>
+
+You can locate this new testimonial video on the STIMULAN page of the Biocomposites website. Click <a href=http://www.biocomposites.com/our-products/stimulan/>here<a/a> to view this video and listen to what these surgeons have to say.
+
+<br><br><br>Kind regards,</br></div></td></tr>
+
+<tr><td colspan="3" ><div style="padding-bottom:10px;"></div></td>
+<tr><td>{!User.FirstName} {!User.LastName} M.S.<br />
+{!User.Title} <br />
+{!User.CompanyName} <br />
+{!User.Street} <br />
+{!User.City}, {!User.StateCode} {!User.PostalCode} <br />
+Office: {!User.Phone} <br />
+Fax: {!User.Fax}<br />
+</td></tr>
+</table>

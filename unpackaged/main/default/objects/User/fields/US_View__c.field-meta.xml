@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_View__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(Profile.Name, &quot;US&quot;), true, false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>US View</label>
+    <type>Checkbox</type>
+</CustomField>

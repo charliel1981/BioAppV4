@@ -1,0 +1,26 @@
+ <ion-view title="Projects">
+  <ion-content>
+    <div class="item item-input search-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" ng-model="search.query" />
+      <button ng-if="search.query.length"
+        class="button button-icon ion-android-close search-clear-button"
+        ng-click="clearSearch()">
+      </button>
+    </div>
+    <ion-refresher on-refresh="doRefreshFromPulldown()"
+                   pulling-text="Pull to refresh">
+    </ion-refresher>
+    <ion-scroll zooming="false" direction="y" id="project-list">
+      <ion-item class="item mti-item"
+        collection-repeat="project in projects | filter:search.query" type="item-text-wrap"
+        href="#/tab/project/{{project.Id}}"
+        >
+        <h3>{{project.Name}}</h3>
+        <p>{{project.mobilecaddy1__Description__c}}&nbsp;</p>
+      </ion-item>
+    </ion-scroll>
+  </ion-content>
+  <button id="projects-sync-button" class="ng-hide sync-button button button-small button-positive" ng-click="doRefreshAndSync()">
+  </button>
+</ion-view>

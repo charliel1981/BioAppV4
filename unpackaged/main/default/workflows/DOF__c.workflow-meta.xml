@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>DOF_Order_Form</fullName>
+        <description>DOF Order Form</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Bio_Email_To_Send_To__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Created_By_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Dist_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Hospital_Email_Address__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hub-app@biocomposites.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Hub_email_templates/X2019_DOF_with_Attachment</template>
+    </alerts>
+    <alerts>
+        <fullName>Dof_No_Hospital_or_Surgeon</fullName>
+        <ccEmails>datamanagement@biocomposites.com</ccEmails>
+        <description>Dof - No Hospital or Surgeon US</description>
+        <protected>false</protected>
+        <senderAddress>hub@biocomposites.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Hub_email_templates/Dof_No_Hospital_or_Surgeon</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>DOF_Distributor_Email</fullName>
+        <field>Dist_Email__c</field>
+        <formula>Distributor__r.Email_Address_For_Order_Form__c</formula>
+        <name>DOF - Distributor Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DOF_Email</fullName>
+        <field>Created_By_Email__c</field>
+        <formula>CreatedBy.Email</formula>
+        <name>DOF - Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DOF_Hospital_Email_None</fullName>
+        <field>Hospital_Email_Address__c</field>
+        <name>DOF - Hospital Email = None</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DOF_Hospital_Email_Send_to_address_o</fullName>
+        <field>Hospital_Email_Address__c</field>
+        <formula>Hospital__r.Email_Address_For_Order_Form__c</formula>
+        <name>DOF - Hospital Email = Send to address o</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DOF_Hospital_Email_Send_to_alternat1</fullName>
+        <field>Hospital_Email_Address__c</field>
+        <formula>Alternative_Email__c</formula>
+        <name>DOF - Hospital Email = Send to alternat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DOF_INTL_Orders_Email</fullName>
+        <field>Bio_Email_To_Send_To__c</field>
+        <formula>&quot;orders@biocomposites.com&quot;</formula>
+        <name>DOF - INTL Orders Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DOF_US_Orders_Email</fullName>
+        <field>Bio_Email_To_Send_To__c</field>
+        <formula>&quot;usorders@biocomposites.com&quot;</formula>
+        <name>DOF - US Orders Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DOF_set_email_to_true</fullName>
+        <field>Send_Email__c</field>
+        <literalValue>1</literalValue>
+        <name>DOF - set email to true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Send_Email_to_true</fullName>
+        <field>Send_Email__c</field>
+        <literalValue>1</literalValue>
+        <name>Send Email to true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>dof_alt_email</fullName>
+        <field>Hospital_Email_Address__c</field>
+        <formula>Alternative_Email__c</formula>
+        <name>dof alt email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>send_comopleted</fullName>
+        <field>Send_Process_Has_Completed__c</field>
+        <literalValue>1</literalValue>
+        <name>send comopleted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>DOF - Distributor Email</fullName>
+        <actions>
+            <name>DOF_Distributor_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT( ISBLANK( Distributor__c ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - Hospital Email %3D None</fullName>
+        <actions>
+            <name>DOF_Hospital_Email_None</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>DOF__c.Send_Confirmation__c</field>
+            <operation>equals</operation>
+            <value>Do not send</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - Hospital Email %3D Send to address on file</fullName>
+        <actions>
+            <name>DOF_Hospital_Email_Send_to_address_o</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>DOF__c.Send_Confirmation__c</field>
+            <operation>equals</operation>
+            <value>Send to address on file</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - Hospital Email %3D Send to alternative address</fullName>
+        <actions>
+            <name>DOF_Hospital_Email_Send_to_alternat1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>DOF__c.Send_Confirmation__c</field>
+            <operation>equals</operation>
+            <value>Send to alternative address</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - Is alt email populated</fullName>
+        <actions>
+            <name>dof_alt_email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>DOF__c.Alternative_Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - Populate Emails - USorders%40b</fullName>
+        <actions>
+            <name>DOF_US_Orders_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>this populates the orders email address field for US orders</description>
+        <formula>IF( 
+ISBLANK( Owner:User.ContactId ) , 
+OR(CONTAINS( Owner:User.Territories__c , &quot;USA&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Americas&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Canada &amp; South America&quot;))
+, 
+OR(TEXT( CreatedBy.Contact.Account.Territory__c ) = &quot;USA&quot;,
+AND(TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;Corporate&quot;, 
+TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;USA&quot;),
+TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;Canada &amp; South America&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - Populate Emails - orders%40b</fullName>
+        <actions>
+            <name>DOF_INTL_Orders_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>this populates the orders email address field for UK orders</description>
+        <formula>OR( 
+OR(CONTAINS( Owner:User.Territories__c , &quot;International&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Corporate&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;UK&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;China&quot;))
+, 
+OR(TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;International&quot;,
+AND(TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;Corporate&quot;, TEXT(CreatedBy.Contact.Country__c) &lt;&gt; &quot;USA&quot;),
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;UK&quot;,
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;China&quot;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - Send Email</fullName>
+        <actions>
+            <name>Mobile_App_Email_Sent</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>DOF__c.Send_Email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - Set Send Email To True</fullName>
+        <actions>
+            <name>DOF_set_email_to_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+DOF_Item_Count__c =   declarative_rollup_count__c , 
+NOT( ISBLANK( Hospital_Email_Address__c ) ) ,
+NOT( ISBLANK( Bio_Email_To_Send_To__c ) ),
+NOT( ISBLANK( Created_By_Email__c ) ))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>DOF - User Email</fullName>
+        <actions>
+            <name>DOF_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>DOF__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>populates the app user email</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Dof - UK No Hospital or Surgeon</fullName>
+        <actions>
+            <name>Dof_No_Hospital_or_Surgeon_UK</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+OR(
+ISBLANK( Surgeon__c ),
+ISBLANK( Hospital__c )),
+OR(
+OR(CONTAINS( Owner:User.Territories__c , &quot;International&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Corporate&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;UK&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;China&quot;))
+,
+OR(TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;International&quot;,
+AND(TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;Corporate&quot;, TEXT(CreatedBy.Contact.Country__c) &lt;&gt; &quot;USA&quot;),
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;UK&quot;,
+TEXT(CreatedBy.Contact.Account.Territory__c ) = &quot;China&quot;)
+))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Dof - US No Hospital or Surgeon</fullName>
+        <actions>
+            <name>Dof_No_Hospital_or_Surgeon</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+OR(
+ISBLANK( Surgeon__c ),
+ISBLANK( Hospital__c )),
+IF(
+ISBLANK( Owner:User.ContactId ) ,
+OR(CONTAINS( Owner:User.Territories__c , &quot;USA&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Americas&quot;),
+CONTAINS( Owner:User.Territories__c , &quot;Canada &amp; South America&quot;))
+,
+OR(TEXT( CreatedBy.Contact.Account.Territory__c ) = &quot;USA&quot;,
+AND(TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;Corporate&quot;,
+TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;USA&quot;),
+TEXT(CreatedBy.Contact.Account.Territory__c) = &quot;Canada &amp; South America&quot;)))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>test 1 dof</fullName>
+        <actions>
+            <name>Send_Email_to_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>send_comopleted</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>DOF__c.Type_Of_User__c</field>
+            <operation>equals</operation>
+            <value>Community User</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DOF__c.Bio_Email_To_Send_To__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DOF__c.Created_By_Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DOF__c.Hospital_Email_Address__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DOF__c.Dof_items_match__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DOF__c.Send_Process_Has_Completed__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Mobile_App_Email_Sent</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Mobile App Email Sent</subject>
+    </tasks>
+</Workflow>

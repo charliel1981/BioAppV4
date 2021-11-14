@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_Manager_Check</fullName>
+    <active>true</active>
+    <description>Checks if the user is a US Regional Manager and stops them from editing the currency and name for the account.  This is required because Salesforce field level security is limited and you can&#39;t do this a standard function.</description>
+    <errorConditionFormula>AND ( $User.ProfileId = &quot;00eU0000000JKs7&quot;,
+
+OR(
+ISCHANGED( Name ),
+TEXT(CurrencyIsoCode) &lt;&gt; &quot;USD&quot;
+)
+
+)</errorConditionFormula>
+    <errorMessage>You are not allowed to change the following fields: Account Name, Account Currency</errorMessage>
+</ValidationRule>

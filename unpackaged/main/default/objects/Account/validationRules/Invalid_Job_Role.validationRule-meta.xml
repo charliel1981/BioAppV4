@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invalid_Job_Role</fullName>
+    <active>true</active>
+    <description>Checks that the selected Job Role is valid for the Country.</description>
+    <errorConditionFormula>AND
+(
+TEXT(Account_type__pc) = &quot;Surgeon&quot;,
+
+
+OR 
+( 
+
+AND 
+( 
+TEXT(Country__c) = &quot;USA&quot;, 
+OR ( 
+TEXT(Job_Role__pc) = &quot;Registrar&quot;, 
+TEXT(Job_Role__pc) = &quot;Professor&quot;, 
+TEXT(Job_Role__pc) = &quot;Consultant&quot; 
+) 
+) 
+, 
+AND 
+( 
+TEXT(Country__c) = &quot;UK&quot;, 
+OR ( 
+TEXT(Job_Role__pc) = &quot;Surgeon&quot;, 
+TEXT(Job_Role__pc) = &quot;Fellow&quot;, 
+TEXT(Job_Role__pc) = &quot;Resident&quot; 
+) 
+) 
+,
+OR 
+( 
+TEXT(Job_Role__pc) = &quot;-- For US only --&quot;, TEXT(Job_Role__pc) = &quot;-- For UK only --&quot; 
+) 
+
+
+)
+
+)</errorConditionFormula>
+    <errorDisplayField>Job_Role__pc</errorDisplayField>
+    <errorMessage>Invalid Job Role selected</errorMessage>
+</ValidationRule>

@@ -1,0 +1,74 @@
+<apex:page controller="UserDetailsEditCon" sidebar="false" showHeader="false">
+<style>
+ .globalHeaderBar{
+  display:none !important;
+}
+.divClass{
+    padding-left: 560px;
+    float: left;   
+    margin-top: 26px;
+}
+
+</style>
+    <apex:form >
+       <apex:pageBlock title="User Details Edit">
+         <div id="divId" class="divClass">
+         
+          <table width="100%">
+            <tr>
+               <td>
+                  First name
+               </td>
+               <td>
+                  <apex:inputField value="{!userObj.FirstName}" id="namefId"/><br/>
+               </td>
+            </tr>
+            
+            <tr>
+               <td>
+                  Last name
+               </td>
+               <td>
+                  <apex:inputField value="{!userObj.LastName}" id="namelId"/><br/>
+               </td>
+            </tr>
+            
+            <tr>
+               <td>
+                  Company
+               </td>
+               <td>
+                  <apex:outputField value="{!userObj.CompanyName}" id="complId"/><br/>
+               </td>
+            </tr>
+            
+            <tr>
+               <td>
+                  Email
+               </td>
+               <td>
+                   <apex:inputField value="{!userObj.Email}" id="emailId"/><br/>
+               </td>
+            </tr>
+            
+            <tr>
+               <td>
+                  Phone
+               </td>
+               <td>
+                   <apex:inputField value="{!userObj.Phone}" id="phnId"/><br/>
+               </td>
+            </tr>
+            
+          </table>
+          
+          </div>
+      
+      <apex:pageBlockButtons location="bottom">
+       <apex:commandButton value="Save" action="{!saveDetails}" style="margin-left: 218px;"/>
+       <apex:commandButton value="Cancel" action="{!cancelDetails}" style="margin-left: 10px;" immediate="true"/>
+      </apex:pageBlockButtons>      
+      
+</apex:pageBlock>
+    </apex:form>
+</apex:page>

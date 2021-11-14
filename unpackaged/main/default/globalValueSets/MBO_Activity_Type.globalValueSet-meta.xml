@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Informal meeting (e.g. coffee chat)</fullName>
+        <default>false</default>
+        <label>Informal meeting (e.g. coffee chat)</label>
+    </customValue>
+    <customValue>
+        <fullName>Formal presentation or department meeting</fullName>
+        <default>false</default>
+        <label>Formal presentation or department meeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Meeting with hospital decision maker</fullName>
+        <default>false</default>
+        <label>Meeting with hospital decision maker</label>
+    </customValue>
+    <customValue>
+        <fullName>Meeting with hospital decision maker (could be procurement)</fullName>
+        <default>false</default>
+        <label>Meeting with hospital decision maker (could be procurement)</label>
+    </customValue>
+    <customValue>
+        <fullName>Staff training</fullName>
+        <default>false</default>
+        <label>Staff training</label>
+    </customValue>
+    <customValue>
+        <fullName>First case</fullName>
+        <default>false</default>
+        <label>First case</label>
+    </customValue>
+    <customValue>
+        <fullName>Second case</fullName>
+        <default>false</default>
+        <label>Second case</label>
+    </customValue>
+    <customValue>
+        <fullName>Third case</fullName>
+        <default>false</default>
+        <label>Third case</label>
+    </customValue>
+    <customValue>
+        <fullName>Regular use (2 cases/month)</fullName>
+        <default>false</default>
+        <label>Regular use (2 cases/month)</label>
+    </customValue>
+    <customValue>
+        <fullName>External clinician presentation to target clinicians (for example KOL dinner presentation)</fullName>
+        <default>false</default>
+        <label>External clinician presentation to target clinicians (e.g. KOL dinner presentation)</label>
+    </customValue>
+    <customValue>
+        <fullName>Target clinician presents internally</fullName>
+        <default>false</default>
+        <label>Target clinician presents internally</label>
+    </customValue>
+    <customValue>
+        <fullName>Target clinician presents externally</fullName>
+        <default>false</default>
+        <label>Target clinician presents externally</label>
+    </customValue>
+    <customValue>
+        <fullName>Case study write-up</fullName>
+        <default>false</default>
+        <label>Case study write-up</label>
+    </customValue>
+    <customValue>
+        <fullName>Poster presentation</fullName>
+        <default>false</default>
+        <label>Poster presentation</label>
+    </customValue>
+    <customValue>
+        <fullName>Podium presentation</fullName>
+        <default>false</default>
+        <label>Podium presentation</label>
+    </customValue>
+    <customValue>
+        <fullName>Article published</fullName>
+        <default>false</default>
+        <label>Article published</label>
+    </customValue>
+    <customValue>
+        <fullName>Product presentation to surgeon</fullName>
+        <default>false</default>
+        <label>Product presentation to surgeon</label>
+    </customValue>
+    <customValue>
+        <fullName>Dry26 presentation to surgeon</fullName>
+        <default>false</default>
+        <label>Dry26 presentation to surgeon</label>
+    </customValue>
+    <customValue>
+        <fullName>Product presentation to other</fullName>
+        <default>false</default>
+        <label>Product presentation to other</label>
+    </customValue>
+    <customValue>
+        <fullName>Scientific exchange with surgeons</fullName>
+        <default>false</default>
+        <label>Scientific exchange with surgeons</label>
+    </customValue>
+    <customValue>
+        <fullName>Grand rounds/journal club/resident day</fullName>
+        <default>false</default>
+        <label>Grand rounds/journal club/resident day</label>
+    </customValue>
+    <customValue>
+        <fullName>Informal chat with surgeon</fullName>
+        <default>false</default>
+        <label>Informal chat with surgeon</label>
+    </customValue>
+    <customValue>
+        <fullName>Cover case</fullName>
+        <default>false</default>
+        <label>Cover case</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgeon – 1st case</fullName>
+        <default>false</default>
+        <label>Surgeon – 1st case</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgeon – 2nd case</fullName>
+        <default>false</default>
+        <label>Surgeon – 2nd case</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgeon – 3rd case</fullName>
+        <default>false</default>
+        <label>Surgeon – 3rd case</label>
+    </customValue>
+    <customValue>
+        <fullName>In-service training</fullName>
+        <default>false</default>
+        <label>In-service training</label>
+    </customValue>
+    <customValue>
+        <fullName>Structured rep training</fullName>
+        <default>false</default>
+        <label>Structured rep training</label>
+    </customValue>
+    <customValue>
+        <fullName>DRy26 rep training</fullName>
+        <default>false</default>
+        <label>DRy26 rep training</label>
+    </customValue>
+    <customValue>
+        <fullName>CE seminar</fullName>
+        <default>false</default>
+        <label>CE seminar</label>
+    </customValue>
+    <customValue>
+        <fullName>Snack and chat</fullName>
+        <default>false</default>
+        <label>Snack and chat</label>
+    </customValue>
+    <customValue>
+        <fullName>New FMS activities</fullName>
+        <default>false</default>
+        <label>New FMS activities</label>
+    </customValue>
+    <customValue>
+        <fullName>VAC Approval</fullName>
+        <default>false</default>
+        <label>VAC Approval</label>
+    </customValue>
+    <customValue>
+        <fullName>Re-engage former user (&gt;90 days)</fullName>
+        <default>false</default>
+        <label>Re-engage former user (&gt;90 days)</label>
+    </customValue>
+    <customValue>
+        <fullName>Knee messaging delivered</fullName>
+        <default>false</default>
+        <label>Knee messaging delivered</label>
+    </customValue>
+    <customValue>
+        <fullName>Revised approval messaging delivered</fullName>
+        <default>false</default>
+        <label>Revised approval messaging delivered</label>
+    </customValue>
+    <customValue>
+        <fullName>Presentation to new surgeon</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1. Presenting to new surgeon</label>
+    </customValue>
+    <customValue>
+        <fullName>Deliver product presentation (min 3/month)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1. Deliver product presentation (min 3/month)</label>
+    </customValue>
+    <customValue>
+        <fullName>Ride along with rep and RM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. Ride along with rep and RM</label>
+    </customValue>
+    <customValue>
+        <fullName>Snack and Chat session</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. Snack and Chat session</label>
+    </customValue>
+    <customValue>
+        <fullName>Arrange senior manager meeting with surgeon</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1. Arrange senior manager meeting with surgeon</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgeon office lunch/dinner</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2. Surgeon office lunch/dinner</label>
+    </customValue>
+    <customValue>
+        <fullName>Top 5 updates completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. Top 5 updates completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Case Support</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Case Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Exhibition</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Exhibition</label>
+    </customValue>
+    <customValue>
+        <fullName>Ride along</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ride along</label>
+    </customValue>
+    <customValue>
+        <fullName>2. Presentation to a new surgeon</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2. Presentation to a new surgeon</label>
+    </customValue>
+    <customValue>
+        <fullName>3. New FMS - generate mapping for Top 5 Report</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. New FMS - generate mapping for Top 5 Report</label>
+    </customValue>
+    <customValue>
+        <fullName>3. New FMS - completion of e-learning modules</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. New FMS - completion of e-learning modules</label>
+    </customValue>
+    <customValue>
+        <fullName>3. New FMS - first 90 days</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. New FMS - first 90 days</label>
+    </customValue>
+    <customValue>
+        <fullName>One to one training</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. One to one training</label>
+    </customValue>
+    <customValue>
+        <fullName>New rep - completion of e-learning modules</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. New rep - completion of e-learning modules</label>
+    </customValue>
+    <customValue>
+        <fullName>New rep -  mapping for Top 5 Report</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. New rep -  mapping for Top 5 Report</label>
+    </customValue>
+    <customValue>
+        <fullName>Min of 2 other orthopedic surgeons - 3rd case</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2. Min of 2 other orthopedic surgeons - 3rd case</label>
+    </customValue>
+    <customValue>
+        <fullName>Min of 2 new orthopedic surgeons - 1st case</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2. Min of 2 new orthopedic surgeons - 1st case</label>
+    </customValue>
+    <customValue>
+        <fullName>Materials Manager meeting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1. Materials Manager meeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Journal Club attendance</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1. Journal Club attendance</label>
+    </customValue>
+    <customValue>
+        <fullName>Group rep training session</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. Group rep training session</label>
+    </customValue>
+    <customValue>
+        <fullName>Fracture Conference attendance (min of 4/qtr)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1. Fracture Conference attendance (min of 4/qtr)</label>
+    </customValue>
+    <customValue>
+        <fullName>First 90 days completed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. First 90 days completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing surgeons - new technique third case</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>2. Existing surgeons - new technique third case</label>
+    </customValue>
+    <customValue>
+        <fullName>Observe case with new technique</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1. Observe case with new technique</label>
+    </customValue>
+    <customValue>
+        <fullName>Attend case with rep</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>3. Attend case with rep</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales representative training</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sales representative training</label>
+    </customValue>
+    <customValue>
+        <fullName>Distributor team training</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Distributor team training</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgeon presentation / dinner</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Surgeon presentation / dinner</label>
+    </customValue>
+    <customValue>
+        <fullName>Surgeon meeting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Surgeon meeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Completed Grand Rounds presentation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>1. Completed Grand Rounds presentation</label>
+    </customValue>
+    <customValue>
+        <fullName>Table top meeting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Table top meeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Admin meeting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Admin meeting</label>
+    </customValue>
+    <masterLabel>MBO Activity Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

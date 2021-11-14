@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used to capture Requested Information on Unsolicited Request --></help>
+        <label><!-- Requested Information --></label>
+        <name>Requested_Information__c</name>
+    </CustomFieldTranslation>

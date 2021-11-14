@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If you are entering info for the surgeon hub this is the text text in the tile --></help>
+        <label><!-- Text For Brainshark Tile --></label>
+        <name>Text_For_Brainshark_Tile__c</name>
+    </CustomFieldTranslation>

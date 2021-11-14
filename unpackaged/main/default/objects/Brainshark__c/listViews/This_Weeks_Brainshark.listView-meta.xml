@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>This_Weeks_Brainshark</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact__c</columns>
+    <columns>Community_Item__c</columns>
+    <columns>DateTime__c</columns>
+    <columns>GBFirstName__c</columns>
+    <columns>GBLastName__c</columns>
+    <columns>PercentScore__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>This Weeks Brainshark</label>
+</ListView>

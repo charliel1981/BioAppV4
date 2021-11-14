@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Title__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( Stimulan_Value__c &gt; 0,  Account.Account_Alias__c  &amp; &#39;/&#39; &amp;  Surgeon__r.LastName &amp; &#39;/Stimulan&#39;, 
+IF ( Genex_Value__c &gt; 0, Account.Account_Alias__c &amp; &#39;/&#39; &amp;  Surgeon__r.LastName &amp; &#39;/Genex&#39;, 
+IF ( Sports_Medicine_Value__c &gt; 0, Account.Account_Alias__c &amp; &#39;/&#39; &amp;  Surgeon__r.LastName &amp; &#39;/Sports&#39;, 
+IF ( Allogran_Value__c &gt; 0, Account.Account_Alias__c &amp; &#39;/&#39; &amp;  Surgeon__r.LastName &amp; &#39;/Allogran&#39;, 
+left(Account.Name,5) &amp; &#39;/&#39; &amp;  Account.Account_Alias__c &amp; &#39;/No Value&#39;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Opportunity Title</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_this_surgeon_to_a_hospital</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Link this surgeon to a hospital</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a0B/e?CF00NU0000003fvGk={!Account.Name}&amp;CF00NU0000003fvGk_lkid={!Contact.Id}&amp;retURL=%2F{!Contact.Id}</url>
+</WebLink>

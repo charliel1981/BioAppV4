@@ -1,0 +1,134 @@
+<ion-view hide-back-button="true">
+  <ion-nav-title>
+    {{vm.title}}
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button ng-click="vm.goBack()" class="button back-button buttons button-clear header-item">
+      <i class="icon ion-ios-arrow-back"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-android-close" ng-click="vm.goHome()"></button>
+  </ion-nav-buttons>
+
+  <div ng-include="vm.contentItemTemplate" style="height:100%;width:100%;"></div>
+</ion-view>
+
+<script id="Portrait_Image.html" type="text/ng-template">
+  <ion-content class="bio-content-item-slider">
+    <ion-slides slider="vm.slider" class="bio-slides" id="{{vm.slidesId}}">
+      <ion-slide-page ng-repeat="slide in vm.slides" class="bio-content-item-slide-page">
+        <div class="bio-content-item-header-text bio-content-item-header-text-portrait" ng-bind-html="vm.slideHeadings[vm.slider.activeIndex] | trusted"></div>
+        <img ng-show="slide.image" ng-src="data:image/jpg;base64,{{::slide.image}}" class="bio-swiper-slide-image-portrait {{vm.imageCSSClass}}" ng-click="vm.showImageModal($index,'imageModal')" />
+        <div ng-show="slide.caption" class="hide bio-content-item-slide-caption-text1 {{vm.imageCaptionCSSClass}}">{{slide.caption}}</div>
+        <div ng-show="slide.text" ng-bind-html="slide.text | trusted" class="bio-image-or-copy-text"></div>
+      </ion-slide-page>
+    </ion-slides>
+    <div class="bio-content-item-footer-text1">{{vm.slideFooters[vm.slider.activeIndex]}}</div>
+  </ion-content>
+</script>
+
+<script id="Portrait_Image_Fixed_Heading.html" type="text/ng-template">
+  <ion-content class="bio-content-item-slider">
+    <div class="bio-content-item-header-text bio-content-item-header-text-portrait" ng-bind-html="vm.slideHeadings[vm.slider.activeIndex] | trusted"></div>
+    <ion-slides slider="vm.slider" class="bio-slides-fixed-header" id="{{vm.slidesId}}">
+      <ion-slide-page ng-repeat="slide in vm.slides" class="bio-content-item-slide-page">
+        <img ng-show="slide.image" ng-src="data:image/jpg;base64,{{::slide.image}}" class="{{vm.imageCSSClass}}" ng-click="vm.showImageModal($index,'imageModal')" />
+        <div ng-show="slide.caption" class="hide bio-content-item-slide-caption-text1 {{vm.imageCaptionCSSClass}}">{{slide.caption}}</div>
+        <div ng-show="slide.text" ng-bind-html="slide.text | trusted" class="bio-image-or-copy-text"></div>
+      </ion-slide-page>
+    </ion-slides>
+    <div class="bio-content-item-footer-text">{{vm.slideFooters[vm.slider.activeIndex]}}</div>
+  </ion-content>
+</script>
+
+<script id="Twin_Images.html" type="text/ng-template">
+  <ion-content class="bio-content-item-slider">
+    <div class="bio-content-item-header-text" ng-bind-html="vm.slideHeadings[vm.slider.activeIndex] | trusted"></div>
+    <ion-slides slider="vm.slider" options="vm.twinImagesSliderOptions" class="bio-slides-twin bio-image-slider-twin">
+      <ion-slide-page ng-repeat="slide in vm.slides" class="bio-content-item-slide-page">
+        <div ng-show="slide.heading" class="bio-content-item-header-text bio-twin-heading-on-slide" ng-bind-html="slide.heading | trusted"></div>
+        <img ng-show="slide.image" ng-src="data:image/jpg;base64,{{::slide.image}}" class="bio-swiper-slide-image-twin {{vm.imageCSSClass}}" ng-click="vm.showImageModal($index,'imageModal')" />
+        <div ng-show="slide.caption" class="hide bio-content-item-slide-caption-text2 {{vm.imageCaptionCSSClass}}">{{::slide.caption}}</div>
+      </ion-slide-page>
+    </ion-slides>
+    <div class="bio-content-item-footer-text1">{{vm.slideFooters[vm.slider.activeIndex]}}</div>
+  </ion-content>
+</script>
+
+<script id="Landscape_Image.html" type="text/ng-template">
+  <ion-content class="bio-content-item-slider">
+    <ion-slides slider="vm.slider" class="bio-slides" id="{{vm.slidesId}}">
+      <ion-slide-page ng-repeat="slide in vm.slides" class="bio-content-item-slide-page">
+        <div class="bio-content-item-header-text" ng-bind-html="vm.slideHeadings[vm.slider.activeIndex] | trusted"></div>
+        <img ng-show="slide.image" ng-src="data:image/jpg;base64,{{::slide.image}}" class="bio-swiper-slide-image-landscape {{vm.imageCSSClass}}" ng-click="vm.showImageModal($index,'imageModal')" />
+        <div ng-show="slide.caption" class="hide bio-content-item-slide-caption-text3 {{vm.imageCaptionCSSClass}}">{{::slide.caption}}</div>
+      </ion-slide-page>
+    </ion-slides>
+    <div class="bio-content-item-footer-text">{{vm.slideFooters[vm.slider.activeIndex]}}</div>
+  </ion-content>
+</script>
+
+<script id="Image_and_Copy.html" type="text/ng-template">
+  <ion-slides slider="vm.slider" class="bio-image-and-copy-slides" id="{{vm.slidesId}}">
+    <ion-slide-page ng-repeat="slide in vm.slides" class="bio-content-item-slide-page bio-image-and-copy-slide">
+      <ion-content class="bio-content-item-slider">
+        <div class="bio-content-item-header-text" ng-bind-html="vm.slideHeadings[vm.slider.activeIndex] | trusted"></div>
+        <div class="bio-image-and-copy-content">
+          <div ng-show="slide.text" ng-bind-html="slide.text | trusted" class="bio-image-and-copy-text"></div>
+          <img ng-show="slide.image" ng-src="data:image/jpg;base64,{{::slide.image}}" class="bio-image-and-copy-image {{vm.imageCSSClass}}" ng-click="vm.showImageModal($index,'imageModalSlides')" />
+          <img ng-show="slide.image2" ng-src="data:image/jpg;base64,{{::slide.image2}}" class="bio-image-and-copy-image {{vm.imageCSSClass}}" ng-click="vm.showImageModal($index,'imageModalSlides')" />
+        </div>
+        <div class="bio-content-item-footer-text2">{{vm.slideFooters[vm.slider.activeIndex]}}</div>
+      </ion-content>
+    </ion-slide-page>
+  </ion-slides>
+</script>
+
+<script id="Image_or_Copy.html" type="text/ng-template">
+  <ion-slides slider="vm.slider" class="bio-image-or-copy-slides" id="{{vm.slidesId}}">
+    <ion-slide-page ng-repeat="slide in vm.slides" class="bio-content-item-slide-page bio-image-or-copy-slide">
+      <ion-content class="bio-content-item-slider">
+        <div ng-show="slide.headerText" class="bio-content-item-header-text" ng-bind-html="slide.headerText | trusted"></div>
+        <div ng-show="slide.text" ng-bind-html="slide.text | trusted" class="bio-image-or-copy-text"></div>
+        <img ng-show="slide.image" ng-src="data:image/jpg;base64,{{::slide.image}}" class="bio-image-or-copy-image {{vm.imageCSSClass}}" ng-click="vm.showImageModal($index,'imageModal')" />
+        <div ng-show="slide.externalURL" class="padding">
+          <button class="button button-positive" ng-click="vm.openWindow('{{slide.externalURL}}')">Read full article</button>
+        </div>
+        <div ng-show="slide.footerText" class="bio-content-item-footer-text" ng-bind-html="slide.footerText | trusted"></div>
+      </ion-content>
+    </ion-slide-page>
+  </ion-slides>
+</script>
+
+<script id="Menu_List.html" type="text/ng-template">
+  <ion-content>
+    <ion-list>
+      <span ng-repeat="menuItem in vm.menuItems">
+        <ion-item ng-show="menuItem.Menu_Item__c!=='e-learn'&&!menuItem.Text3__c" ng-click="vm.gotoPage('{{menuItem.Sub_Menu_Item__c}}','{{menuItem.Text1__c}}')" class="item item-text-wrap item-icon-right bio-history-list-item-add-gold-line bio-list-item">
+          <span ng-show="!menuItem.Use_Text2_As_Menu_Title__c">{{menuItem.Text1__c}}</span>
+          <span ng-show="menuItem.Use_Text2_As_Menu_Title__c">{{menuItem.Text2__c}}</span>
+          <i class="icon ion-ios-arrow-right bio-list-item-icon"></i>
+        </ion-item>
+        <ion-item ng-show="menuItem.Menu_Item__c!=='e-learn'&&menuItem.Text3__c" ng-click="vm.openWindow('{{menuItem.Text3__c}}')" class="item item-text-wrap item-icon-right bio-history-list-item-add-gold-line bio-list-item">
+          <span ng-show="!menuItem.Use_Text2_As_Menu_Title__c">{{menuItem.Text1__c}}</span>
+          <span ng-show="menuItem.Use_Text2_As_Menu_Title__c">{{menuItem.Text2__c}}</span>
+          <div class="bio-text item-text-wrap">{{menuItem.Text2__c}}</div>
+          <i class="icon ion-ios-arrow-right bio-list-item-icon-bottom"></i>
+        </ion-item>
+        <ion-item ng-show="menuItem.Menu_Item__c==='e-learn'&&menuItem.Brainshark_URL__c!==''" ng-click="vm.openWindow('{{menuItem.Brainshark_URL__c}}')" class="item item-text-wrap item-icon-right bio-history-list-item-add-gold-line bio-list-item">
+          <span ng-show="!menuItem.Use_Text2_As_Menu_Title__c">{{menuItem.Text1__c}}</span>
+          <span ng-show="menuItem.Use_Text2_As_Menu_Title__c">{{menuItem.Text2__c}}</span>
+          <div class="bio-text item-text-wrap">{{menuItem.Text2__c}}</div>
+          <i class="icon ion-ios-arrow-right bio-list-item-icon-bottom"></i>
+        </ion-item>
+        <ion-item ng-show="menuItem.Menu_Item__c==='e-learn'&&menuItem.Brainshark_URL__c===''" ng-click="vm.gotoPage('{{menuItem.Sub_Menu_Item__c}}','{{menuItem.Text1__c}}')" class="item item-text-wrap item-icon-right bio-history-list-item-add-gold-line bio-list-item">
+          <span ng-show="!menuItem.Use_Text2_As_Menu_Title__c">{{menuItem.Text1__c}}</span>
+          <span ng-show="menuItem.Use_Text2_As_Menu_Title__c">{{menuItem.Text2__c}}</span>
+          <div class="bio-text item-text-wrap">{{menuItem.Text2__c}}</div>
+          <i class="icon ion-ios-arrow-right bio-list-item-icon-bottom"></i>
+        </ion-item>
+      </span>
+    </ion-list>
+  </ion-content>
+</script>

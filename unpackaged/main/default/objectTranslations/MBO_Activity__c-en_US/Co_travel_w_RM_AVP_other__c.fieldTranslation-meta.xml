@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Co-travel w/ RM, AVP, other --></label>
+        <name>Co_travel_w_RM_AVP_other__c</name>
+    </CustomFieldTranslation>

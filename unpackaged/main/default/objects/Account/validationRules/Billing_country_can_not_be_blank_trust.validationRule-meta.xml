@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_country_can_not_be_blank_trust</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+BillingCountry = &quot;&quot;,
+RecordTypeId = &quot;012U00000005XVt&quot;)</errorConditionFormula>
+    <errorDisplayField>BillingCountry</errorDisplayField>
+    <errorMessage>Billing country can not be blank</errorMessage>
+</ValidationRule>

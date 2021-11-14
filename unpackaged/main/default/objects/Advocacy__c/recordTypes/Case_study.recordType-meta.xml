@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_study</fullName>
+    <active>true</active>
+    <description>Case study / series on Stimulan that can be used for marketing purposes</description>
+    <label>Case study</label>
+</RecordType>

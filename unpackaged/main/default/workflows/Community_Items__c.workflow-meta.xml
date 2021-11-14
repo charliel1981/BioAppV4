@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Comm_Item_URL_for_image_blank</fullName>
+        <field>URL_For_Image__c</field>
+        <formula>&quot;/servlet/servlet.FileDownload?file=&quot;&amp; URL_For_Image__c</formula>
+        <name>Comm Item / URL for image blank</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>comm_item_type_brainshark</fullName>
+        <field>Type__c</field>
+        <literalValue>Brainshark Training</literalValue>
+        <name>comm item type - brainshark</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>created_date</fullName>
+        <field>Start_Date_For_New_Icon__c</field>
+        <formula>CreatedDate</formula>
+        <name>created date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Comm Item %2F URL for image blank</fullName>
+        <actions>
+            <name>Comm_Item_URL_for_image_blank</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Community_Items__c.URL_For_Image__c</field>
+            <operation>notContain</operation>
+            <value>/servlet/servlet.FileDownload?file=</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Community_Items__c.URL_For_Image__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>if the url for images doesnt start with /servlet then rename enter the field</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>copy created date</fullName>
+        <actions>
+            <name>created_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Community_Items__c.CreatedDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>record type brainshark training</fullName>
+        <actions>
+            <name>comm_item_type_brainshark</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Community_Items__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Brainshark Training</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

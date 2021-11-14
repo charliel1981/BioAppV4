@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Hospital_Group_Practice__c</fullName>
+    <description>The name of the Hospital this Fellow will attend after current Fellowship has compleated</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is to record the hospital  and Group Practice Affiliate (if applicable) that the Fellow will be moving to upon completion of their fellowship.
+NOTE: If ANY text is added to this field, the &#39;Receiving RSM&#39; field becomes mandatory.</inlineHelpText>
+    <label>Target Hospital / Group Practice</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

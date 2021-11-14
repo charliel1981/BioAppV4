@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Please describe any adverse consequences to patient / user. Please include specific patient symptoms associated with the reported incident. --></help>
+        <label><!-- Adverse consequences to patient / user --></label>
+        <name>Adverse_consequences_to_patient_user__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIC_Tracking</fullName>
+    <columns>NAME</columns>
+    <columns>Hospital__c</columns>
+    <columns>Hospital_Name__c</columns>
+    <columns>Surgeon__c</columns>
+    <columns>Surgeon_First_Name__c</columns>
+    <columns>Surgeon_Last_Name__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Procedure_Date__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Distributor__c</columns>
+    <columns>Procedure_Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>3/1/2020 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>lessOrEqual</operation>
+        <value>3/5/2020 12:00 AM</value>
+    </filters>
+    <label>SIC Tracking</label>
+    <sharedTo>
+        <role>US_Marketing</role>
+    </sharedTo>
+</ListView>

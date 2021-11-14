@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Amount of &quot;Surgeon in hospital record&quot; --></label>
+        <name>Amount_of_Surgeon_in_hospital_record__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Job Role --></label>
+        <name>Job_Role__c</name>
+        <picklistValues>
+            <masterLabel>Administration</masterLabel>
+            <translation><!-- Administration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultant</masterLabel>
+            <translation><!-- Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentist</masterLabel>
+            <translation><!-- Dentist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance Officer</masterLabel>
+            <translation><!-- Finance Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inventory Officer</masterLabel>
+            <translation><!-- Inventory Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management</masterLabel>
+            <translation><!-- Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Microbiologist</masterLabel>
+            <translation><!-- Microbiologist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Owner</masterLabel>
+            <translation><!-- Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacist</masterLabel>
+            <translation><!-- Pharmacist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Procurement / Purchasing Officer</masterLabel>
+            <translation><!-- Procurement / Purchasing Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professor</masterLabel>
+            <translation><!-- Professor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registrar</masterLabel>
+            <translation><!-- Registrar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Manager</masterLabel>
+            <translation><!-- Sales Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Representative</masterLabel>
+            <translation><!-- Sales Representative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theatre / OR Manager</masterLabel>
+            <translation><!-- Theatre / OR Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theatre / OR Nurse</masterLabel>
+            <translation><!-- Theatre / OR Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theatre / OR Support</masterLabel>
+            <translation><!-- Theatre / OR Support --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,76 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-light">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-show="vm.showSideMenu"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+    <div id="feedbackMsg" ng-show="vm.showFeedbackMsg" class="bio-feedback-msg">{{vm.feedbackMsgText}}</div>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" ng-class="{'bio-side-menu':!vm.selectedItem}">
+    <ion-header-bar class="bio-header-bar-no-padding">
+      <div ng-show="vm.selectedItem" class="bio-side-submenu-header-item">
+        <button ng-show="vm.selectedItem" ng-click="vm.goBack()" class="button back-button buttons button-clear {{!vm.selectedItem ? 'bio-side-menu' : 'bio-side-submenu'}}">
+          <i class="icon ion-ios-arrow-back bio-side-submenu-header-icon"></i>
+          &nbsp;&nbsp;
+          <span ng-show="vm.selectedItem.name==='genex'">gene<b>x</b></span>
+          <span ng-show="vm.selectedItem.name!=='genex'">{{vm.selectedItem.name}}</span>
+        </button>
+      </div>
+      <a ng-show="!vm.selectedItem"
+         class="bio-side-menu-header">
+      </a>
+    </ion-header-bar>
+
+    <ion-content>
+      <ion-list class="bio-side-menu-list">
+        <div ng-repeat="menuOption in vm.menuOptions">
+          <a ng-if="!menuOption.node"
+             ng-click="vm.showSubmenu(menuOption)"
+             class="item {{menuOption.parentid==0 ? 'bio-side-menu' : 'bio-side-submenu'}}">
+            <img ng-if="menuOption.svg" ng-src="{{menuOption.svg}}" class="bio-side-menu-icon" />
+            <span ng-show="menuOption.name==='genex'">gene<b>x</b></span>
+            <span ng-show="menuOption.name!=='genex'">{{::menuOption.name}}</span>
+          </a>
+          <a ng-if="menuOption.node && menuOption.parentid==0 && menuOption.href"
+             class="item {{menuOption.parentid==0 ? 'bio-side-menu' : 'bio-side-submenu'}}"
+             ng-href="{{menuOption.href}}"
+             menu-close>
+            <img ng-if="menuOption.svg" ng-src="{{menuOption.svg}}" class="bio-side-menu-icon" />
+            {{::menuOption.name}}<spad ng-show="menuOption.href=='#/app/outbox'">{{vm.outboxCount}}<span>
+          </a>
+          <a ng-if="menuOption.node && menuOption.parentid==0 && menuOption.click"
+             class="item {{menuOption.parentid==0 ? 'bio-side-menu' : 'bio-side-submenu'}}"
+             ng-click="{{menuOption.click}}"
+             menu-close>
+            <img ng-if="menuOption.svg" ng-src="{{menuOption.svg}}" class="bio-side-menu-icon" />
+            {{::menuOption.name}}
+          </a>
+          <a ng-if="menuOption.node && menuOption.parentid==0 && menuOption.path"
+             class="item {{menuOption.parentid==0 ? 'bio-side-menu' : 'bio-side-submenu'}}"
+             ng-click="vm.gotoPage('{{menuOption.path}}')"
+             menu-close>
+            <img ng-if="menuOption.svg" ng-src="{{menuOption.svg}}" class="bio-side-menu-icon" />
+            {{::menuOption.name}}
+          </a>
+          <!-- sub menu option -->
+          <a ng-if="menuOption.node && menuOption.parentid!=0"
+             class="item item-icon-right bio-sub-menu-add-gold-line {{menuOption.parentid==0 ? 'bio-side-menu' : 'bio-side-submenu'}}"
+             ng-click="vm.gotoPage('{{menuOption.path}}')"
+             menu-close>
+            {{::menuOption.name}}
+            <i class="icon ion-ios-arrow-right bio-side-submenu-icon"></i>
+          </a>
+        </div>
+      </ion-list>
+    </ion-content>
+
+    <ion-footer-bar ng-show="!vm.selectedItem" ng-class="{'bio-side-menu':!vm.selectedItem}" class="bio-side-menu-footer bar-clear">
+      <div>© {{vm.currentYear}}, Biocomposites. All rights reserved.</div>
+    </ion-footer-bar>
+  </ion-side-menu>
+</ion-side-menus>

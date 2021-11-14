@@ -1,0 +1,241 @@
+<ion-view cache-view="false" hide-back-button="true">
+  <ion-nav-title>
+    Outbox
+  </ion-nav-title>
+  <ion-content>
+    <div ng-if="vm.showMsg" class="card bio-card">
+      <div class="text-center">
+        <p class="bio-text padding-top">No records to sync.</p>
+      </div>
+    </div>
+    <div ng-if="vm.showSyncButton" class="text-center bio-button-outbox-sync-padding">
+      <button class="button button-positive bio-button-outbox-sync-button" ng-click="vm.sync()" ng-disabled="vm.syncing">Sync</button>
+    </div>
+
+    <div class="card bio-card bio-slide-in-outbox" ng-repeat="order in vm.orders track by $index">
+      <div>
+        <h4 class="bio-history-item-heading padding-left">Order form</h4>
+      </div>
+      <div class="item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom">
+        <div class="bio-label bio-label-padded bio-label-font-sm bio-card-bold">{{::order.surgeonInHospitalRecord.Hospital_Name__c}}</div>
+      </div>
+      <div ng-repeat="product in order.products track by $index" class="card bio-card">
+        <div ng-show="product.productName" class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Product:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-card-bold">{{::product.productName}}</div>
+        </div>
+        <div ng-show="product.lotNumber" class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Lot number:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-card-bold">{{::product.lotNumber}}</div>
+        </div>
+        <div ng-show="product.price" class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Price:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-card-bold">{{vm.currencySymbol}}{{::product.price | number:2}}</div>
+        </div>
+        <div ng-show="product.expiryDate" class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Expiry date:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-card-bold">{{::product.expiryDate | dateYYYYMMDD}}</div>
+        </div>
+      </div>
+      <div class="card bio-card">
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Stock instruction:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-card-bold">{{::order.record.Stock_Instructions__c}}</div>
+        </div>
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label class="bio-no-padding-top bio-no-padding-bottom"></ion-label>
+          <div class="bio-label bio-label-font-sm bio-no-padding-top bio-no-padding-bottom bio-no-padding-right bio-item-wrap bio-card-bold">{{::order.record.Replace_Stock_Details__c}}</div>
+        </div>
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Surgeon name:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-card-bold">{{::order.surgeonInHospitalRecord.Salutation__c}} {{order.surgeonInHospitalRecord.First_Name__c}} {{order.surgeonInHospitalRecord.Last_Name__c}}</div>
+        </div>
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Type of procedure:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-card-bold">{{::order.record.Type_of_Procedure__c}}</div>
+        </div>
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Hospital notification:</ion-label>
+          <div class="bio-label bio-label-font-sm"></div>
+        </div>
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label class="bio-flex-align-top">Comments:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-no-padding-right bio-item-wrap bio-card-bold">{{::order.record.Procedure_Comments__c}}</div>
+        </div>
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Entered date:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-card-bold">{{::order.record.Date_Entered__c | dateDDMMMYYYYHHMM}}</div>
+        </div>
+        <div class="bio-row-spacer-sd">
+        </div>
+      </div>
+    </div>
+
+    <div class="card bio-card bio-slide-in-outbox" ng-repeat="lead in vm.leads track by $index">
+      <div>
+        <h4 class="bio-history-item-heading padding-left">Lead</h4>
+      </div>
+      <div class="item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom">
+        <div class="bio-label bio-label-padded bio-label-font-sm bio-card-bold">{{::lead.Event_Name__c}}</div>
+      </div>
+      <!-- Non Lead photo -->
+      <div ng-show="!lead.Lead_Photo_Base64__c">
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label class="bio-flex-align-top">Name/title/institute:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-no-padding-right bio-item-wrap bio-card-bold">{{::lead.Name_Title_Institution__c}}</div>
+        </div>
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label class="bio-flex-align-top">e-mail/telephone/address:</ion-label>
+          <div class="bio-label bio-label-font-sm bio-no-padding-right bio-item-wrap bio-card-bold">{{::lead.Contact_Information__c}}</div>
+        </div>
+      </div>
+      <!-- Lead photo -->
+      <div ng-show="lead.Lead_Photo_Base64__c">
+        <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+          <ion-label>Photo:</ion-label>
+          <div>
+            <img data-ng-src="data:image/jpg;base64,{{lead.Lead_Photo_Base64__c}}" class="bio-image-detail" />
+          </div>
+        </div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Product:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::lead.Product__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Notes:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-no-padding-right bio-item-wrap bio-card-bold">{{::lead.Notes__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Entered date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::lead.Date_Entered__c | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="bio-row-spacer-sd">
+      </div>
+    </div>
+
+    <div class="card bio-card bio-slide-in-outbox" ng-repeat="request in vm.requests track by $index">
+      <div>
+        <h4 class="bio-history-item-heading padding-left">Unsolicited request</h4>
+      </div>
+      <div class="item-input-inset bio-no-padding-top bio-no-padding-bottom">
+        <div class="bio-label bio-label-padded bio-label-font-sm bio-card-bold">{{::request.Requestors_Name__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Requestor's institution:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::request.Hospital_Institution__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Requestor's e-mail:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::request.Email__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Product:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::request.Product__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Requested information:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-no-padding-right bio-item-wrap bio-card-bold">{{::request.Requested_Information__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Request type:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::request.Request_Type__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Target response date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::request.Request_Target_Response_Date__c | dateDDMMMYYYY}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Entered date:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::request.Date_Entered__c | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="bio-row-spacer-sd">
+      </div>
+    </div>
+
+    <div class="card bio-card bio-slide-in-outbox" ng-repeat="account in vm.accounts track by $index">
+      <div>
+        <h4 class="bio-history-item-heading padding-left">New account</h4>
+      </div>
+      <div class="item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom">
+        <div class="bio-label bio-label-padded bio-label-font-sm bio-card-bold">{{::account.Hospital_Name__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Address:</ion-label>
+        <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::account.Address__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Billing address:</ion-label>
+        <div ng-show="account.Alternate_Billing_Address__c" class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::account.Alternate_Billing_Address_Details__c}}</div>
+        <div ng-show="!account.Alternate_Billing_Address__c" class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">Same as above</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Products:</ion-label>
+        <div>
+          <div ng-show="account.STIMULAN_Rapid_Cure_5cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 5cc</div>
+            <div ng-show="account.STIMULAN_Rapid_Cure_5cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::account.STIMULAN_Rapid_Cure_5cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="account.STIMULAN_Rapid_Cure_10cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 10cc</div>
+            <div ng-show="account.STIMULAN_Rapid_Cure_10cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::account.STIMULAN_Rapid_Cure_10cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="account.STIMULAN_Rapid_Cure_20cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Rapid Cure 20cc</div>
+            <div ng-show="account.STIMULAN_Rapid_Cure_20cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::account.STIMULAN_Rapid_Cure_20cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="account.STIMULAN_Kit_5cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Kit 5cc</div>
+            <div ng-show="account.STIMULAN_Kit_5cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::account.STIMULAN_Kit_5cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="account.STIMULAN_Kit_10cc__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm">STIMULAN Kit 10cc</div>
+            <div ng-show="account.STIMULAN_Kit_10cc_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::account.STIMULAN_Kit_10cc_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="account.STIMULAN_Bullet__c" class="bio-flex bio-new-account-product-confirm">
+            <div ng-show="account.STIMULAN_Bullet_Price__c" class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-md">STIMULAN Bullet Mat and...</div>
+            <div ng-show="!account.STIMULAN_Bullet_Price__c" class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-md">STIMULAN Bullet Mat and Introducer</div>
+            <div class="bio-label bio-label-font-sm bio-card-bold bio-product-name-confirm-hide-on-sd">STIMULAN Bullet Mat and Introducer</div>
+            <div ng-show="account.STIMULAN_Bullet_Price__c" class="bio-new-account-product-price">
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::vm.currencySymbol}}</div>
+              <div class="bio-label-no-padding bio-label-font-sm bio-card-bold">{{::account.STIMULAN_Bullet_Price__c}}</div>
+            </div>
+          </div>
+          <div ng-show="account.Other_Product__c" class="bio-flex bio-new-account-product-confirm">
+            <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::account.Other_Product_Details__c}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Hospital contact:</ion-label>
+        <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::account.Hospital_Contact_Info__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label class="bio-flex-align-top">Comments:</ion-label>
+        <div class="bio-label bio-confirmation-wrap bio-label-font-sm bio-card-bold">{{::account.Additional_Comments__c}}</div>
+      </div>
+      <div class="item item-input-inset bio-card-item bio-card-item-modal bio-no-padding-top bio-no-padding-bottom bio-display-block-sm">
+        <ion-label>Date entered:</ion-label>
+        <div class="bio-label bio-label-font-sm bio-card-bold">{{::account.Date_Entered__c | dateDDMMMYYYYHHMM}}</div>
+      </div>
+      <div class="bio-row-spacer-sd">
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

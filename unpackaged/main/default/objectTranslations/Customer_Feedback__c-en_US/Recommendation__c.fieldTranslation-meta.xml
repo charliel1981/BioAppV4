@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Recommendation --></label>
+        <name>Recommendation__c</name>
+        <picklistValues>
+            <masterLabel>Adverse Incident/ Quality Problem/ Complaint - Proceed with Part C</masterLabel>
+            <translation><!-- Adverse Incident/ Quality Problem/ Complaint - Proceed with Part C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Experience - Proceed with Part B</masterLabel>
+            <translation><!-- User Experience - Proceed with Part B --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

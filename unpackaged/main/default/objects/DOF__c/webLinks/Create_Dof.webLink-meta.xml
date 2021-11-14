@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Dof</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Dof</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/apex/aptk_weaver__WeaverURL?recordId={!DOF__c.Id}&amp;templateId=a1s7g0000005VGnAAM&amp;actionType=saveToRecord&amp;documentType=PDF&amp;fileName={!DOF__c.DOF_Attachment_Filename__c}</url>
+</WebLink>

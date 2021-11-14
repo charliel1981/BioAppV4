@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Hospital_in_a_Distributor__c$Hospital__c</field>
+    </columns>
+    <columns>
+        <field>Hospital_in_a_Distributor__c$Distributor_City__c</field>
+    </columns>
+    <columns>
+        <field>Hospital_in_a_Distributor__c$Distributor_State__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>US Marketing Team Dashboard report</description>
+    <filter>
+        <criteriaItems>
+            <column>Hospital_in_a_Distributor__c$Distributor__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Biocomposites</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Hospital_in_a_Distributor__c$Distributor__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Hospitals In Distributorship</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Hospital_In_Distributor__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Hospital_in_a_Distributor__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

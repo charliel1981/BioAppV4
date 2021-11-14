@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dist_Email__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>this field is popukated with the the emal address from the distributor **When the distributor lookup is populated**</inlineHelpText>
+    <label>Distributor email address for DOF</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- How many times was the driver used before this case? --></help>
+        <label><!-- Times Driver used --></label>
+        <name>Times_Driver_used__c</name>
+    </CustomFieldTranslation>

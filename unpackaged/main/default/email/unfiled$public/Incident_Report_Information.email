@@ -1,0 +1,45 @@
+Incident Report Information
+Please see below the Incident Report created in the system. 
+
+Date: {!Customer_Feedback__c.Date__c}
+Date Closed: {!Customer_Feedback__c.Date_Closed__c}
+Status: {!Customer_Feedback__c.Status__c}
+
+Hospital: {!Customer_Feedback__c.Hospital_Facility__c}
+Person Reporting the Incident / Feedback: {!Customer_Feedback__c.Contact_Name__c}	  
+Surgeon: {!Customer_Feedback__c.Surgeon__c}	  
+Distributor: {!Customer_Feedback__c.Distributor__c}	 
+
+Product Information
+Device Name:	{!Customer_Feedback__c.Device_Name__c}  
+Device Lot #: {!Customer_Feedback__c.Device_Lot__c}
+Device Size: {!Customer_Feedback__c.Device_Size__c}
+Build: Small: {!Customer_Feedback__c.Build_Small__c}	
+Build: Medium: {!Customer_Feedback__c.Build_Medium__c}	 
+Build: Large: {!Customer_Feedback__c.Build_Large__c}
+Build: Extra Large: {!Customer_Feedback__c.Build_Extra_Large__c}
+
+Patient Information 	 
+Sex: Male: {!Customer_Feedback__c.Sex__c}	 
+Sex: Female: {!Customer_Feedback__c.Sex_Female__c} 	 
+Patient Age: {!Customer_Feedback__c.Patient_Age__c}
+Patient Ref: {!Customer_Feedback__c.Patient_Ref__c}
+Patient Pathology: {!Customer_Feedback__c.Patient_Pathology__c}	 
+
+Descriptions
+Description of Event: 
+{!Customer_Feedback__c.Description_of_Event__c}	 
+
+Surgeon Experience with Product:
+{!Customer_Feedback__c.Surgeon_Experience_with_product__c}
+
+Other Devices / Substances Used:
+{!Customer_Feedback__c.Other_Devices_Substances_Used__c}
+
+Further Action Taken:
+{!Customer_Feedback__c.Further_Action_Taken__c}
+	 
+Device Available for Return: {!Customer_Feedback__c.Is_the_device_available_for_return__c} 
+
+Conclusions: 
+{!Customer_Feedback__c.Conclusions__c}

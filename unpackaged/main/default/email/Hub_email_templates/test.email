@@ -1,0 +1,6 @@
+<messaging:emailTemplate subject="test" recipientType="User" relatedToType="DOF__c">
+<messaging:plainTextEmailBody >
+Congratulations!
+This is your new Visualforce Email Template.
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

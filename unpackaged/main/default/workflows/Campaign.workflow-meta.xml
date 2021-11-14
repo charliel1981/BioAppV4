@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Active_Campaign</fullName>
+        <field>IsActive</field>
+        <literalValue>1</literalValue>
+        <name>Active Campaign</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Org_Wide_Email_USA</fullName>
+        <field>Orgwide_Email_addresess__c</field>
+        <literalValue>americas@biocomposites.com</literalValue>
+        <name>Org Wide Email USA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>show_in_hub_push</fullName>
+        <field>Show_In_Hub_Push__c</field>
+        <literalValue>1</literalValue>
+        <name>show in hub push</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Child Campaign USA</fullName>
+        <actions>
+            <name>Active_Campaign</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Org_Wide_Email_USA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>show_in_hub_push</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.ParentId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>contains</operation>
+            <value>segment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>contains</operation>
+            <value>USA</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

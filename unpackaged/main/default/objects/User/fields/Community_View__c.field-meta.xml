@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community_View__c</fullName>
+    <externalId>false</externalId>
+    <label>Community View</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Biocomposites - MANAGEMENT</fullName>
+                <default>false</default>
+                <label>Biocomposites - MANAGEMENT</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - MARKET DEVELOPMENT MANAGER UK</fullName>
+                <default>false</default>
+                <label>Biocomposites - MARKET DEVELOPMENT MANAGER UK</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - REGIONAL MANAGER CANADA</fullName>
+                <default>false</default>
+                <label>Biocomposites - REGIONAL MANAGER CANADA</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - REGIONAL MANAGER USA</fullName>
+                <default>false</default>
+                <label>Biocomposites - REGIONAL MANAGER USA</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - SALES MANAGER CHINA</fullName>
+                <default>false</default>
+                <label>Biocomposites - SALES MANAGER CHINA</label>
+            </value>
+            <value>
+                <fullName>Biocomposites - SALES MANAGER INDIA</fullName>
+                <default>false</default>
+                <label>Biocomposites - SALES MANAGER INDIA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR CANADA</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR CANADA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR EU (English)</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR EU (English)</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR INDIA</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR INDIA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR SOUTH AMERICA</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR SOUTH AMERICA</label>
+            </value>
+            <value>
+                <fullName>Community - DISTRIBUTOR USA</fullName>
+                <default>false</default>
+                <label>Community - DISTRIBUTOR USA</label>
+            </value>
+            <value>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+                <label>System Administrator</label>
+            </value>
+            <value>
+                <fullName>Surgeon</fullName>
+                <default>false</default>
+                <label>Surgeon</label>
+            </value>
+            <value>
+                <fullName>Surgeon - Canada</fullName>
+                <default>false</default>
+                <label>Surgeon - Canada</label>
+            </value>
+            <value>
+                <fullName>Surgeon - EU</fullName>
+                <default>false</default>
+                <label>Surgeon - EU</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

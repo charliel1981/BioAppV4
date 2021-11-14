@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Icon --></label>
+            <section>Icon</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact Layout SDoc</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact Layout US</layout>
+        <sections>
+            <label><!-- Icon --></label>
+            <section>Icon</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Quick MBO Activity --></label>
+        <name>MBO_Activity</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Contact --></label>
+        <name>Contact</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Invalid combination of Employment Status / Historic From --></errorMessage>
+        <name>Historic_Date_Check</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Hub_Statistics --></label>
+        <name>Hub_Statistics</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Surgeon --></label>
+        <name>New_Surgeon</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Quick_MBO_Activity --></label>
+        <name>Quick_MBO_Activity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+</CustomObjectTranslation>

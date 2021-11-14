@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Fellowship Leader / STIMULAN Influencer --></label>
+        <name>Fellowship_Leader_STIMULAN_Influencer__c</name>
+        <relationshipLabel><!-- Accounts (Fellowship Leader / STIMULAN Influencer) --></relationshipLabel>
+    </CustomFieldTranslation>

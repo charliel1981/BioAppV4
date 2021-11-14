@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    <folderShares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>US_Marketing</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <name>06. FMS Reports</name>
+</ReportFolder>

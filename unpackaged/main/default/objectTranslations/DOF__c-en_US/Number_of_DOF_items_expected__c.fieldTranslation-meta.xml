@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Number of DOF items expected --></label>
+        <name>Number_of_DOF_items_expected__c</name>
+    </CustomFieldTranslation>

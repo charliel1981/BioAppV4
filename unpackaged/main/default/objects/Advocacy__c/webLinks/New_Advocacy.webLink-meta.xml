@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Advocacy</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Advocacy</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/setup/ui/recordtypeselect.jsp?ent=01IU00000008API
+&amp;retURL=%2F{!Contact.Id}&amp;save_new_url=%2Fa0I%2Fe%3FCF00NU0000003rQ29%3D{!Contact.Salutation}%2B{!Contact.FirstName}%2B{!Contact.LastName}%26CF00NU0000003rQ29_lkid%3D{!Contact.Id}%26retURL%3D%252F{!Contact.Id}
+&amp;saveURL=%2F{!Contact.Id}</url>
+</WebLink>

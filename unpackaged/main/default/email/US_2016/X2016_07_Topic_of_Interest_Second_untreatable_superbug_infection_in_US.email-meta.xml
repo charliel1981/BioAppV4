@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>July 2017 Topic of Interest Notification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2016 07 Topic of Interest: Second untreatable superbug infection in US</name>
+    <style>none</style>
+    <subject>Topic of Interest: Second untreatable superbug infection in the US identified</subject>
+    <textOnly>Dear  {!Contact.FirstName},
+News for you...
+Researchers have identified a patient in New York infected with a strain of  E. coli  containing the mcr-1 gene, which makes the bacteria highly resistant to even last-resort antibiotic treatments,  Reuters reports.  This is the second U.S. patient with the untreatable superbug infection. CDC Director Tom Frieden, MD, warned that the end of the antibiotic era was not far off.
+
+This article can be found under the Topics of Interest section of the Distributor Hub. Please login here to read the full article.
+{!User.FirstName} {!User.LastName}.
+{!User.Title}
+{!User.CompanyName}
+{!User.Street}
+{!User.City}, {!User.StateCode} {!User.PostalCode}
+Cell: {!User.MobilePhone}
+Office: {!User.Phone}
+Fax: {!User.Fax}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

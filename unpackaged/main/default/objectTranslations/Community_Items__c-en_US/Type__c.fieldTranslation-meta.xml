@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Account management</masterLabel>
+            <translation><!-- Account management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brainshark Training</masterLabel>
+            <translation><!-- Brainshark Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact us</masterLabel>
+            <translation><!-- Contact us --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Continuing Education</masterLabel>
+            <translation><!-- Continuing Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured Item</masterLabel>
+            <translation><!-- Featured Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured Video</masterLabel>
+            <translation><!-- Featured Video --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal only</masterLabel>
+            <translation><!-- Internal only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing collateral</masterLabel>
+            <translation><!-- Marketing collateral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Details</masterLabel>
+            <translation><!-- Personal Details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Publication Library</masterLabel>
+            <translation><!-- Publication Library --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales tools</masterLabel>
+            <translation><!-- Sales tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon</masterLabel>
+            <translation><!-- Surgeon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Topic of Interest / Notices</masterLabel>
+            <translation><!-- Topic of Interest / Notices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tutorial</masterLabel>
+            <translation><!-- Tutorial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Video box</masterLabel>
+            <translation><!-- Video box --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

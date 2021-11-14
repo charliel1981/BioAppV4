@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technique__c</fullName>
+    <externalId>false</externalId>
+    <label>Technique</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Event_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-mix</fullName>
+                <default>false</default>
+                <label>Pre-mix</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Pre-mix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Case Support</controllingFieldValue>
+            <valueName>Standard</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<table>
+<tr><td style="height:10px;"><div style="padding-top:4px;padding-bottom:3px;">Dear  {!Contact.FirstName},</br></br></div></td></tr>
+
+<tr><td><div style="color:#31B404;padding-top:0px;padding-bottom:2px;"><H1 style="margin:10px 0px"><span style="font-family:Arial;font-size:18px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:31B404;">
+Don't let unanswered questions interfere with your sales calls.</span></H1></br></div></td></tr>
+
+<tr><td ><div style="padding-bottom:25px;">Do you have questions about the indications, mixing and setting times or compressive strength of STIMULAN? Do you ever receive questions from your surgeons related to drainage, heterotopic ossification or the risk of hypercalcemia when discussing STIMULAN? 
+If so...your questions are now answered! 
+<br /><br />
+An updated FAQs document is now available that answers the questions above and many more. This document can be found under the sales tools section of the Distributor Hub. Please login <a href=http://hub.biocomposites.com>here</a> to view the new FAQs document.<br><br>Kind regards,</br></div></td></tr>
+
+<tr><td colspan="3" ><div style="padding-bottom:10px;"></div></td>
+<tr><td>{!User.FirstName} {!User.LastName} M.S.<br />
+{!User.Title} <br />
+{!User.CompanyName} <br />
+{!User.Street} <br />
+{!User.City}, {!User.StateCode} {!User.PostalCode} <br />
+Office: {!User.Phone} <br />
+Fax: {!User.Fax}<br />
+</td></tr>
+</table>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_UK_Surgeons</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PC_TITLE</columns>
+    <columns>Job_Role__pc</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>PC_EMAIL</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>Customer_Code__c</columns>
+    <columns>Employment_Status__pc</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.Surgeons</value>
+    </filters>
+    <filters>
+        <field>Country__c</field>
+        <operation>equals</operation>
+        <value>UK</value>
+    </filters>
+    <label>All UK Surgeons</label>
+    <sharedTo>
+        <group>UK_Sales_Team</group>
+    </sharedTo>
+</ListView>

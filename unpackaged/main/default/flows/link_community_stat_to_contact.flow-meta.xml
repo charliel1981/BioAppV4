@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>link community stat to contact {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>link community stat to contact</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>lookup_contact</name>
+        <label>lookup contact</label>
+        <locationX>234</locationX>
+        <locationY>138</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>update_community_stat</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_user_ID</elementReference>
+            </value>
+        </filters>
+        <object>User</object>
+        <outputAssignments>
+            <assignToReference>var_contact_ID</assignToReference>
+            <field>ContactId</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>update_community_stat</name>
+        <label>update community stat</label>
+        <locationX>230</locationX>
+        <locationY>310</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_community_stat_ID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Contact__c</field>
+            <value>
+                <elementReference>var_contact_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Community_Stat__c</object>
+    </recordUpdates>
+    <startElementReference>lookup_contact</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>var_community_stat_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>var_contact_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>var_user_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

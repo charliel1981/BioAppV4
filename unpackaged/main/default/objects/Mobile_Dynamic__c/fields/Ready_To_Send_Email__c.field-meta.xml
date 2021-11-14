@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_To_Send_Email__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Is_this_from_a_distributor__c = TRUE, 
+IF(
+AND
+(NOT( ISBLANK( Email_for_distributor__c ))
+,NOT( ISBLANK(App_User_Email_Address__c)),
+NOT( ISBLANK(Email_for_Regional_New_Account__c))), true, NULL) , 
+IF(
+AND(NOT( ISBLANK( App_User_Email_Address__c )),
+NOT( ISBLANK( Email_for_Regional_New_Account__c ))), true, NULL))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Ready To Send Email?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

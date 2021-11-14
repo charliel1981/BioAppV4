@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>June 2016 AAOS Testimonial Videos for Canada</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2016 06 AAOS Testimonial Videos</name>
+    <style>none</style>
+    <subject>What do surgeons and sales reps have to say about STIMULAN?</subject>
+    <textOnly>Dear  {!Contact.FirstName},
+
+New surgeon and sales rep testimonial videos are now available!
+
+
+What do surgeons have to say about STIMULAN?
+A new surgeon testimonial video is available on the STIMULAN page of the Biocomposites website. Click here to listen to what your surgeons have to say.
+
+Why should I sell STIMULAN?
+A new sales rep testimonial video is  located on the Distributor Hub. Please login here to discover the first-hand advantages of selling STIMULAN.
+
+What makes a good sales rep?
+A new surgeon testimonial video has been posted to the Distributor Hub. Please login here to listen to feedback provided directly from your surgeons.
+
+
+Kind regards,
+{!User.FirstName} {!User.LastName} M.S.
+{!User.Title}
+{!User.CompanyName}
+{!User.Street}
+{!User.City}, {!User.StateCode} {!User.PostalCode}
+Office: {!User.Phone}
+Fax: {!User.Fax}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Left_Panel</fullName>
+    <active>true</active>
+    <label>Left Panel</label>
+    <picklistValues>
+        <picklist>Featured_Item_Type__c</picklist>
+        <values>
+            <fullName>Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Profile__c</picklist>
+        <values>
+            <fullName>Biocomposites - SALES MANAGER CHINA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Administrator</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subtype__c</picklist>
+        <values>
+            <fullName>External Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stimulan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>genex</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Account management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales tools</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,30 @@
+<ion-view cache-view="false" hide-back-button="true">
+  <ion-nav-title>
+    Lead capture
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button ng-click="$ionicGoBack()" class="button back-button buttons button-clear header-item">
+      <i class="icon ion-ios-arrow-back"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-android-close" ng-click="vm.goHome()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div>
+      <h4 class="bio-sub-heading">Lead history</h4>
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="lead in vm.leads track by $index" ng-click="vm.showModal(lead)" class="item item-icon-right bio-history-list-item-add-gold-line bio-history-list-item">
+        <div ng-show="!lead.Lead_Photo_Base64__c && !lead.Name_Title_Institution__c" class="bio-history-item-heading">{{::lead.Title_Designation__c}} {{::lead.First_Name__c}} {{::lead.Last_Name__c}}</div>
+        <div ng-show="!lead.Lead_Photo_Base64__c && lead.Name_Title_Institution__c" class="bio-history-item-heading">{{::lead.Date_Entered__c | dateDDMMMYYYY}} - {{::lead.Event_Name__c}}</div>
+        <div ng-show="lead.Lead_Photo_Base64__c" class="bio-history-item-heading">{{::lead.Date_Entered__c | dateDDMMMYYYY}} - {{::lead.Event_Name__c}}</div>
+
+        <div ng-show="!lead.Lead_Photo_Base64__c && !lead.Name_Title_Institution__c" class="bio-text item-text-wrap">{{::lead.Event_Name__c}}</div>
+        <div ng-show="!lead.Lead_Photo_Base64__c && lead.Name_Title_Institution__c" class="bio-text item-text-wrap">{{::lead.Name_Title_Institution__c}}</div>
+        <div ng-show="lead.Lead_Photo_Base64__c" class="bio-text item-text-wrap">Photo</div>
+        <i class="icon ion-ios-arrow-right bio-history-item-more">more</i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

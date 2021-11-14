@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Job Role --></label>
+        <name>Job_Role__c</name>
+        <picklistValues>
+            <masterLabel>-- For UK only --</masterLabel>
+            <translation><!-- - -  For UK only - -  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>-- For US only --</masterLabel>
+            <translation><!-- - -  For US only - -  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administration</masterLabel>
+            <translation><!-- Administration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultant</masterLabel>
+            <translation><!-- Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dentist</masterLabel>
+            <translation><!-- Dentist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diabetic Nurse Lead Acute</masterLabel>
+            <translation><!-- Diabetic Nurse Lead Acute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diabetic Nurse Lead Community</masterLabel>
+            <translation><!-- Diabetic Nurse Lead Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diabetic Specialist Nurse</masterLabel>
+            <translation><!-- Diabetic Specialist Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fellow</masterLabel>
+            <translation><!-- Fellow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field Marketing Specialist</masterLabel>
+            <translation><!-- Field Marketing Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance Officer</masterLabel>
+            <translation><!-- Finance Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inventory Officer</masterLabel>
+            <translation><!-- Inventory Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management</masterLabel>
+            <translation><!-- Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicines Manager</masterLabel>
+            <translation><!-- Medicines Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicines Optimisation Mgr</masterLabel>
+            <translation><!-- Medicines Optimisation Mgr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Microbiologist</masterLabel>
+            <translation><!-- Microbiologist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Owner</masterLabel>
+            <translation><!-- Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacist</masterLabel>
+            <translation><!-- Pharmacist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Podiatry Nurse Lead Acute</masterLabel>
+            <translation><!-- Podiatry Nurse Lead Acute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Podiatry Nurse Lead Community</masterLabel>
+            <translation><!-- Podiatry Nurse Lead Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practise Development/Education Nurse</masterLabel>
+            <translation><!-- Practise Development/Education Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Procurement/Purchasing Officer</masterLabel>
+            <translation><!-- Procurement/Purchasing Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professor</masterLabel>
+            <translation><!-- Professor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registrar</masterLabel>
+            <translation><!-- Registrar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resident</masterLabel>
+            <translation><!-- Resident --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Manager</masterLabel>
+            <translation><!-- Sales Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Representative</masterLabel>
+            <translation><!-- Sales Representative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon</masterLabel>
+            <translation><!-- Surgeon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon General</masterLabel>
+            <translation><!-- Surgeon General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon Oncology</masterLabel>
+            <translation><!-- Surgeon Oncology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon Orthopaedic</masterLabel>
+            <translation><!-- Surgeon Orthopaedic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon Plastics</masterLabel>
+            <translation><!-- Surgeon Plastics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon Podiatry</masterLabel>
+            <translation><!-- Surgeon Podiatry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon Specialist Orthopaedic</masterLabel>
+            <translation><!-- Surgeon Specialist Orthopaedic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surgeon Vascular</masterLabel>
+            <translation><!-- Surgeon Vascular --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theatre / OR Manager</masterLabel>
+            <translation><!-- Theatre / OR Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theatre / OR Nurse</masterLabel>
+            <translation><!-- Theatre / OR Nurse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Theatre / OR Support</masterLabel>
+            <translation><!-- Theatre / OR Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tissue Viabilty Nurse Acute</masterLabel>
+            <translation><!-- Tissue Viabilty Nurse Acute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tissue Viabilty Nurse Community</masterLabel>
+            <translation><!-- Tissue Viabilty Nurse Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vascular Nurse Lead Acute</masterLabel>
+            <translation><!-- Vascular Nurse Lead Acute --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

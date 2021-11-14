@@ -1,0 +1,33 @@
+<table>
+<tr><td style="height:10px;"><div style="padding-top:4px;padding-bottom:3px;">Dear  {!Contact.FirstName},</br></br></div></td></tr>
+
+<tr><td><br><span style="font-family:Arial;font-size:18px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:#31B404;">
+New surgeon and sales rep testimonial videos are now available!<br><br></div></span></td></tr>
+
+<tr><td ><br><span style="font-family:Arial;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:#4C4646;">
+What do surgeons have to say about STIMULAN?</span></H1></td></tr>
+
+<tr><td >A new surgeon testimonial video is available on the STIMULAN page of the Biocomposites website. Click <a href=http://www.biocomposites.com/our-products/stimulan/>here<a/a> to listen to what your surgeons have to say.<br><br>
+
+<tr><td><span style="font-family:Arial;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:#4C4646;">
+Why should I sell STIMULAN?</span></H1></td></tr>
+
+<tr><td >A new sales rep testimonial video is  located on the Distributor Hub. Please login <a href=http://hub.biocomposites.com>here</a> to discover the first-hand advantages of selling STIMULAN.<br><br>
+
+<tr><td><span style="font-family:Arial;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:#4C4646;">
+What makes a good sales rep?</span></H1></td></tr>
+
+<tr><td >A new surgeon testimonial video has been posted to the Distributor Hub. Please login <a href=http://hub.biocomposites.com>here</a> to listen to feedback provided directly from your surgeons.
+
+<br><br><br>Kind regards,</br></div></td></tr>
+
+<tr><td colspan="3" ><div style="padding-bottom:10px;"></div></td>
+<tr><td>{!User.FirstName} {!User.LastName} M.S.<br />
+{!User.Title} <br />
+{!User.CompanyName} <br />
+{!User.Street} <br />
+{!User.City}, {!User.StateCode} {!User.PostalCode} <br />
+Office: {!User.Phone} <br />
+Fax: {!User.Fax}<br />
+</td></tr>
+</table>

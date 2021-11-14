@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If there is a new Hospital this is the ZIP/Postcode --></help>
+        <label><!-- Hospital ZIP/Postocde --></label>
+        <name>Hospital_ZIP_Postocde__c</name>
+    </CustomFieldTranslation>

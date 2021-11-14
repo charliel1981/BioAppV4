@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UK_MBO</fullName>
+    <active>true</active>
+    <label>UK MBO</label>
+    <picklistValues>
+        <picklist>Sub_Type__c</picklist>
+        <values>
+            <fullName>Admin Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distributor Group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exhibition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grand Rounds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Journal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One to one</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgeon Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Table Top</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Article published</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case study write-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External clinician presentation to target clinicians %28for example KOL dinner presentation%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal presentation or department meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informal meeting %28e%2Eg%2E coffee chat%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Knee messaging delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting with hospital decision maker %28could be procurement%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Podium presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poster presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular use %282 cases%2Fmonth%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revised approval messaging delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Second case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target clinician presents externally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Target clinician presents internally</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third case</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

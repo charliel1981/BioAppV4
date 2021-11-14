@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Sets whether the menu and sub menu items are processed for a specific version of the application. If a value is selected ie V001 then this menu or sub menu item will be returned in the initial query to return to the user - but this will be further reduced --></help>
+        <label><!-- Available in Version --></label>
+        <name>Available_in_Version__c</name>
+        <picklistValues>
+            <masterLabel>V001</masterLabel>
+            <translation><!-- V001 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V002</masterLabel>
+            <translation><!-- V002 --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

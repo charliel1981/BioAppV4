@@ -1,0 +1,148 @@
+<messaging:emailTemplate subject="Order form for Biocomposites Customer Services {!relatedTo.From_Field_for_Email__c}" recipientType="User" relatedToType="DOF__c">
+<messaging:htmlEmailBody >
+<html>
+    <body>
+        <Style type="text/css">
+            body {
+  font-family: 'Arial', sans-serif;
+}
+
+td {
+  font-size: 14px;
+  border: 1px solid #000;
+  text-align: left;
+  line-height: 40px;
+}
+
+tr {
+  border: 1px solid #000;
+  border-width: 1;
+}
+
+table {
+  border: 1px solid #000;
+  border-width: 1;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+}
+
+.rowOne {
+  width:1%;
+    height: 60px;
+    padding-right: 10px;
+    white-space:nowrap;
+}
+table.prod td {
+ text-align:center !important;
+ 
+}
+        </Style>
+        
+        <p>To Biocomposites Customer Service Team</p>
+        <p>Can you please process the following order: </p>        
+        <table>
+            <tr>
+                <td class="rowOne">Hospital name: </td>
+                <td>{!relatedTo.Hospital_for_DOF_email__c}</td>
+            </tr>
+            <tr>
+                <td class="rowOne">PO number:</td> 
+                <td>{!relatedTo.PO_Number__c}</td>
+            </tr>
+            <tr>
+                <td class="rowOne">Stock instruction: </td>
+                <td>{!relatedTo.Stock_Instructions__c} &nbsp; {!relatedTo.Replace_Stock_Details__c} </td>
+            </tr>
+            <tr>
+                <td class="rowOne">Surgeon name:</td>
+                <td>{!relatedTo.Surgeon_For_Email__c}</td>
+            </tr>
+            <tr>
+                <td class="rowOne">Type of procedure: </td>
+                <td>{!relatedTo.Type_of_Procedure__c}</td>
+            </tr>
+            <tr>
+                <td class="rowOne">Procedure date:</td> 
+                <td>
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                       <apex:param value="{!relatedTo.Procedure_Date__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td class="rowOne">Hospital notification: </td>
+                <td>
+                    {!relatedTo.Hospital_Notifiaction__c}
+                </td>
+            </tr>
+            <tr>
+                <td class="rowOne">Hospital representative:</td>
+                <td>{!relatedTo.Hospital_Rep__c}</td> 
+            </tr>
+            <tr>
+                <td class="rowOne">Comments: </td>
+                <td>{!relatedTo.Procedure_Comments__c}</td>
+            </tr>
+            <tr>
+                <td class="rowOne">Date entered: </td>
+                <td>
+                    <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                       <apex:param value="{!relatedTo.Date_Entered__c}" />
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td class="rowOne">Sync date</td>
+                <td>
+                   <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                       <apex:param value="{!relatedTo.CreatedDate}" />
+                   </apex:outputText>
+                </td>
+            </tr>
+            <tr>
+                <td class="rowOne">DOF number</td>
+                <td>{!relatedTo.Name}</td>
+            </tr>
+        </table>
+        <br></br>
+        <br></br>
+         <span class="prod">
+        <table class="prod">
+            <tr>
+                <th>Product</th>
+                <th>Lot number</th>
+                <th>Expiry date</th>
+                <th>Price</th>        
+            </tr>
+            <apex:repeat var="item" value="{!relatedTo.DOF_Items__r}">            
+                <tr>
+                    <td>{!item.Product_Name__c}</td>
+                    <td>{!item.Lot_Number__c}</td>
+                    <td>
+                        <apex:outputText value="{0,date, MMMM d','  yyyy}">
+                           <apex:param value="{!item.Expiry_Date__c}" />
+                        </apex:outputText>
+                    </td>
+                    <td>
+                        <apex:outputField value="{!item.price_for_order_form__c}"/>
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+        </span>
+        <br></br>
+        Yours sincerely,<br></br><br></br>
+          <apex:outputField value="{!relatedTo.Owner.Name}"/><br></br>
+          <apex:outputField value="{!relatedTo.job_title_for_email__c}"/><br></br>
+          <apex:outputField value="{!relatedTo.Email_for_address_block__c}"/><br></br>
+          <apex:outputField value="{!relatedTo.Owner_Phone__c}"/><br></br>
+          <apex:outputField value="{!relatedTo.Distributor__r.Name}"/><br></br>
+          <apex:outputField value="{!relatedTo.Distributor_Address__c}"/><br></br>
+          
+          <p>--- end of order</p>
+    </body>
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

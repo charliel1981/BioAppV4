@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Key_Account_Plan__c$Name</field>
+    </columns>
+    <columns>
+        <field>Key_Account_Plan__c$Hospital__c</field>
+    </columns>
+    <columns>
+        <field>Key_Account_Plan__c$Planned_Account_Tactics__c</field>
+    </columns>
+    <columns>
+        <field>Key_Account_Plan__c$Account_Update__c</field>
+    </columns>
+    <columns>
+        <field>Key_Account_Plan__c$LastModifiedBy</field>
+    </columns>
+    <columns>
+        <field>Key_Account_Plan__c$LastModifiedDate</field>
+    </columns>
+    <currency>GBP</currency>
+    <format>Tabular</format>
+    <name>Top 5 Account Plans</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Key_Account_Plans__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Key_Account_Plan__c$LastModifiedDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Key_Account_Plan__c$LastModifiedDate</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

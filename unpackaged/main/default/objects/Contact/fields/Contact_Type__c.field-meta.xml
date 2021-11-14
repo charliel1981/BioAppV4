@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Surgeon</fullName>
+                <default>false</default>
+                <label>Surgeon</label>
+            </value>
+            <value>
+                <fullName>Microbiologists</fullName>
+                <default>false</default>
+                <label>Microbiologists</label>
+            </value>
+            <value>
+                <fullName>Theatre manager</fullName>
+                <default>false</default>
+                <label>Theatre manager</label>
+            </value>
+            <value>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+                <label>Registrar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
